@@ -2,7 +2,7 @@
 
 ## **Install** all plugin :
 ```
-:PackerSync
+git clone https://github.com/Zeddnyx/Znvim ~/.config/
 ```
 
 ## **List** plugin
@@ -28,10 +28,7 @@
 
 - tsserver
 - html
--	jdtls
 - sumenko_lua
-- intelephense
-- phpactor
 
 Just install it...
 
@@ -40,8 +37,6 @@ Just install it...
 
 leader = 'Space'
 
-normal_mode = 'jk' -- i'm actually get into normal mode when type jk in this readme file 
-write = 'Space + w'
 
 comments = 'gcc' -- on normal mode 
 comments_visual = 'gc'
@@ -59,4 +54,5 @@ trigger_completion = 'Ctrl + Space'
 
 telescope = 'Space + ff' -- find file 
 
+terminal = 'Space + ;' -- open/close terminal 
 ```
