@@ -1,4 +1,8 @@
-# my-neovim-setup
+# Znvim
+
+# **Screenshot** 
+![Screenshot at 2022-10-06 17-12-41](https://user-images.githubusercontent.com/96564938/194288101-99d79a71-be7d-4ce9-96bf-1343e25c06c9.png)
+
 
 ## **Install** all plugin :
 ```
