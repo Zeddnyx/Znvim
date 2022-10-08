@@ -3,7 +3,9 @@
 
 ## **Install** 
 ```
-git clone https://github.com/Zeddnyx/Znvim ~/.config/
+git clone https://github.com/Zeddnyx/Znvim ~/.config/nvim
+
+nvim +PackerSync
 ```
 
 ## **List** plugin
