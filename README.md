@@ -1,5 +1,14 @@
 # Znvim
 
+## screenshot
+![tree](https://user-images.githubusercontent.com/96564938/194686523-9a5fd11c-14da-4c84-bf19-f13f85cfdcc9.png)
+
+![jsx](https://user-images.githubusercontent.com/96564938/194686517-bec704d5-b1ae-4c65-bca4-67347bf35f4e.png)
+
+![autocomplite](https://user-images.githubusercontent.com/96564938/194686526-b2a2857c-9b33-424d-88c1-cb2fd4614428.png)
+
+
+
 
 ## **Install** 
 ```
@@ -25,7 +34,7 @@ nvim +PackerSync
 - [LSP Signature](https://github.com/ray-x/lsp_signature.nvim)
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim)
 - [Telescope UI](https://github.com/nvim-telescope/telescope-ui-select.nvim)
--[Terminal](https://github.com/akinsho/toggleterm.nvim)
+-[ Terminal.nvim](https://github.com/akinsho/toggleterm.nvim)
 
 
 ## **LSP** Server 
