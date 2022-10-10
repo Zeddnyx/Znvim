@@ -1,7 +1,8 @@
 # Znvim
 
 ## screenshot
-![tree](https://user-images.githubusercontent.com/96564938/194686523-9a5fd11c-14da-4c84-bf19-f13f85cfdcc9.png)
+![tree3](https://user-images.githubusercontent.com/96564938/194785776-e86480cd-9579-4ec0-a22d-8d7d3ae63bfc.png)
+
 
 ![jsx](https://user-images.githubusercontent.com/96564938/194686517-bec704d5-b1ae-4c65-bca4-67347bf35f4e.png)
 
