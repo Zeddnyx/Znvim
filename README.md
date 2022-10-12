@@ -1,6 +1,6 @@
 # Znvim
 
-## screenshot
+## Screenshot
 ![tree3](https://user-images.githubusercontent.com/96564938/194785776-e86480cd-9579-4ec0-a22d-8d7d3ae63bfc.png)
 
 
@@ -17,9 +17,10 @@ git clone https://github.com/Zeddnyx/Znvim ~/.config/nvim
 
 nvim +PackerSync
 ```
-## required
-- Neovim 7+
-- NerdFont ( for icons )
+
+## Required
+- ![Neovim 7+](https://neovim.io/)
+- ![NerdFonts](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts)
 
 ## **List** plugin
 
