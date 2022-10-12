@@ -17,6 +17,9 @@ git clone https://github.com/Zeddnyx/Znvim ~/.config/nvim
 
 nvim +PackerSync
 ```
+## required
+- Neovim 7+
+- NerdFont ( for icons )
 
 ## **List** plugin
 
