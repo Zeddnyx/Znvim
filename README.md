@@ -19,8 +19,8 @@ nvim +PackerSync
 ```
 
 ## Required
-- ![Neovim 7+](https://neovim.io/)
-- ![NerdFonts](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts)
+- [Neovim 7+](https://neovim.io/)
+- [NerdFonts](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts)
 
 ## **List** plugin
 
@@ -39,7 +39,7 @@ nvim +PackerSync
 - [LSP Signature](https://github.com/ray-x/lsp_signature.nvim)
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim)
 - [Telescope UI](https://github.com/nvim-telescope/telescope-ui-select.nvim)
-- [ Terminal.nvim](https://github.com/akinsho/toggleterm.nvim)
+- [Terminal.nvim](https://github.com/akinsho/toggleterm.nvim)
 
 
 ## **LSP** Server 
@@ -47,10 +47,8 @@ nvim +PackerSync
 - tsserver (javascript, typescript)
 - sumenko_lua  (lua)
 
-
-
 ## Keybind 
-```lua 
+```
 
 leader = 'Space'
 
@@ -79,7 +77,7 @@ terminal float = 'Space + f'
 ```
 
 ## Thanks
-- [AdiCahyaSaputra](https://github.com/AdiCahyaSaputra)
+- [AdiCahyaSaputra](https://github.com/AdiCahyaSaputra) for helping
 
 
 # Uninstall
