@@ -1,0 +1,68 @@
+# Znvim
+personal neovim config for react development
+
+## **Install**
+```
+git clone https://github.com/ZeddNyx/Znvim
+
+nvim +PackerSync
+```
+type `:LspInstall` for install leangue parser
+
+
+## required
+- Neovim v7+ or latest
+- NerdFonts ( for icons ) 
+
+## **List** plugin
+
+- [LSP Config](https://github.com/neovim/nvim-lspconfig)
+- [LSP Kind](https://github.com/onsails/lspkind.nvim)
+- [Mason](https://github.com/williamboman/mason.nvim)
+- [Nvim CMP](https://github.com/hrsh7th/nvim-cmp)
+- [Auto Pairs](https://github.com/windwp/nvim-autopairs)
+- [Onedark](https://github.com/navarasu/onedark.nvim)
+- [Nvimtree](https://github.com/kyazdani42/nvim-tree.lua)
+- [Barbar Nvim](https://github.com/romgrk/barbar.nvim)
+- [Lualine](https://github.com/nvim-lualine/lualine.nvim)
+- [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+- [Comments](https://github.com/numToStr/Comment.nvim)
+- [Indent Blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
+- [Friendly Snippets](https://github.com/rafamadriz/friendly-snippets)
+- [LSP Signature](https://github.com/ray-x/lsp_signature.nvim)
+- [Telescope](https://github.com/nvim-telescope/telescope.nvim)
+- [Telescope UI](https://github.com/nvim-telescope/telescope-ui-select.nvim)
+- [Terminal](https://github.com/akinsho/toggleterm.nvim)
+
+
+## **LSP** Server 
+
+- tsserver
+- sumenko_lua
+
+## Keybind 
+```
+
+leader = 'Space'
+
+
+comments = 'gcc' -- on normal mode 
+comments_visual = 'gc'
+
+neo_tree_toggle = 'Space + e'
+neo_tree_focus = 'Space + o'
+
+buffer_prev = 'Shift + h'
+buffer_next = 'Shift + l'
+buffer_close = 'Shift + c'
+
+code_action = 'Space + c'
+format_code = 'Space + lf'
+trigger_completion = 'Ctrl + Space'
+
+telescope = 'Space + ff' -- find file 
+
+terminal horizontal = 'Space + h'
+terminal vertical   = 'Space + v'
+terminal float      = 'Space + f'
+```
