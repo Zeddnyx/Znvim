@@ -24,7 +24,7 @@ type `:LspInstall` for install leangue parser
 
 
 ## required
-- Neovim v7+ or latest
+- Neovim v0.7 or higher
 - Packer nvim ( for install plugin )
 - NerdFonts ( for icons ) 
 
