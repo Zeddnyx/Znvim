@@ -1,12 +1,15 @@
 # Znvim
-personal neovim config for react development
+personal neovim config for react development, 
 easy to modify.
 
 ## Screenshot
+lua file
 ![withlua](https://user-images.githubusercontent.com/96564938/195473058-d77720c2-4ae5-4640-abb8-3cdbdd9dc104.png)
 
+lua file with nvim tree
 ![treelua](https://user-images.githubusercontent.com/96564938/195473066-3034fe02-b4e5-4844-85f8-4f9b4d8c1b0e.png)
 
+jsx file with nvim tree
 ![javas](https://user-images.githubusercontent.com/96564938/195473071-4bcbe338-05ff-4b13-bd7d-f0dbd2b73a56.png)
 
 
