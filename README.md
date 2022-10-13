@@ -83,4 +83,16 @@ terminal float      = 'Space + f'
 
 
 ## Thanks
-[AdiCahyaSaputra](https://github.com/AdiCahyaSaputra) 
+- [AdiCahyaSaputra](https://github.com/AdiCahyaSaputra) 
+
+## Uninstall
+```
+# linux/macos (unix)
+rm -rf ~/.config/nvim
+rm -rf ~/.local/share/nvim
+rm -rf ~/.cache/nvim
+
+# windows
+rd -r ~\AppData\Local\nvim
+rd -r ~\AppData\Local\nvim-data
+```
