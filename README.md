@@ -16,7 +16,7 @@ jsx file with nvim tree
 
 ## **Install**
 ```
-git clone https://github.com/ZeddNyx/Znvim
+git clone https://github.com/ZeddNyx/Znvim ~/.config/nvim
 
 nvim +PackerSync
 ```
