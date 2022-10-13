@@ -86,4 +86,7 @@ packer.startup(function(use)
   -- Lspkind
   use 'onsails/lspkind.nvim'
 
+  -- Indent blankline
+   use "lukas-reineke/indent-blankline.nvim"
+
 end)

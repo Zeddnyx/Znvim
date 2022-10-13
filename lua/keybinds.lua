@@ -13,7 +13,6 @@ end
 
 vim.g.mapleader = ' ' -- Space
 imap('jk', '<Esc>')
-nmap('<space>w', '<cmd>w<cr>')
 
 -- Lsp Diagnostic
 local opts = { noremap = true, silent = true }
@@ -23,8 +22,8 @@ nmap('<space>c', '<cmd>lua vim.lsp.buf.code_action()<cr>')
 nmap('<space>lf', '<cmd>lua vim.lsp.buf.formatting()<cr>')
 
 -- Neo tree
-nmap('<Leader>e', '<cmd>NvimTreeToggle<cr>') -- Toggle Window
-nmap('<Leader>o', '<cmd>NvimTreeFocus<cr>') -- Toggle Window
+nmap('<Leader>e', '<cmd>NvimTreeToggle<cr>') 
+nmap('<Leader>o', '<cmd>NvimTreeFocus<cr>') 
 
 -- Bufferline
 nmap('<S-h>', '<cmd>BufferPrevious<cr>')
@@ -34,10 +33,10 @@ nmap('<S-c>', '<cmd>BufferClose<cr>')
 -- Telescope
 nmap('<space>ff', '<cmd>Telescope find_files<cr>')
 
--- save and exit
+-- Save and exit
 nmap('<space>x', '<cmd>wq!<cr>')
 
--- exit 
+-- Exit 
 nmap('<space>q', '<cmd>q!<cr>')
 
 -- Auto save
