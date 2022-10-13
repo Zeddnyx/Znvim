@@ -1,5 +1,15 @@
 # Znvim
 personal neovim config for react development
+easy to modify.
+
+## Screenshot
+![withlua](https://user-images.githubusercontent.com/96564938/195473058-d77720c2-4ae5-4640-abb8-3cdbdd9dc104.png)
+
+![treelua](https://user-images.githubusercontent.com/96564938/195473066-3034fe02-b4e5-4844-85f8-4f9b4d8c1b0e.png)
+
+![javas](https://user-images.githubusercontent.com/96564938/195473071-4bcbe338-05ff-4b13-bd7d-f0dbd2b73a56.png)
+
+
 
 ## **Install**
 ```
@@ -40,6 +50,7 @@ type `:LspInstall` for install leangue parser
 - tsserver
 - sumenko_lua
 
+
 ## Keybind 
 ```
 
@@ -66,3 +77,7 @@ terminal horizontal = 'Space + h'
 terminal vertical   = 'Space + v'
 terminal float      = 'Space + f'
 ```
+
+
+## Thanks
+[AdiCahyaSaputra](https://github.com/AdiCahyaSaputra) 
