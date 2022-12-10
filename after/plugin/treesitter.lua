@@ -4,11 +4,9 @@ if not ok then return end
 ts.setup {
 	ensure_installed = { "lua", "javascript", "tsx", "typescript", "html" },
 	auto_install = true,
-	ignore_install = { "javascript" },
 
 	highlight = {
 		enable = true,
-		disable = { 'html' },
 		additional_vim_regex_highlighting = false
 	},
 
