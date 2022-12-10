@@ -3,14 +3,15 @@ personal neovim config for react development,
 easy to modify.
 
 ## Screenshot
-lua file
-![withlua](https://user-images.githubusercontent.com/96564938/195473058-d77720c2-4ae5-4640-abb8-3cdbdd9dc104.png)
+lua file, tree
+![screen_000](https://user-images.githubusercontent.com/96564938/206824413-07de9ac1-ec30-4202-9ea3-d972885c00a2.png)
 
-lua file with nvim tree
-![treelua](https://user-images.githubusercontent.com/96564938/195473066-3034fe02-b4e5-4844-85f8-4f9b4d8c1b0e.png)
+telescope
+![screen_001](https://user-images.githubusercontent.com/96564938/206824475-ad07d283-d161-4af2-987f-c71b591fa655.png)
 
-jsx file with nvim tree
-![javas](https://user-images.githubusercontent.com/96564938/195473071-4bcbe338-05ff-4b13-bd7d-f0dbd2b73a56.png)
+jsx file 
+![screen_004](https://user-images.githubusercontent.com/96564938/206824512-852f0fb4-9f08-403f-995c-4eee78654549.png)
+
 
 
 
