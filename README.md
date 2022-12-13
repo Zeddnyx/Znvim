@@ -5,17 +5,17 @@ Znvim is config/preconfig neovim for React development, easy to use with a great
 lua file, tree
 ![screen_000](https://user-images.githubusercontent.com/96564938/206824413-07de9ac1-ec30-4202-9ea3-d972885c00a2.png)
 
-telescope
+Telescope
 ![screen_001](https://user-images.githubusercontent.com/96564938/206824475-ad07d283-d161-4af2-987f-c71b591fa655.png)
 
-jsx file 
+Jsx file 
 ![screen_004](https://user-images.githubusercontent.com/96564938/206824512-852f0fb4-9f08-403f-995c-4eee78654549.png)
 
 
 
 
 ## **Install**
-[packer](https://github.com/wbthomason/packer.nvim)
+- [packer](https://github.com/wbthomason/packer.nvim)
 ```
 git clone https://github.com/ZeddNyx/Znvim ~/.config/nvim
 
@@ -28,6 +28,11 @@ type `:LspInstall` for install leangue parser
 - Neovim v0.7 or higher
 - Packer nvim ( for install plugin )
 - NerdFonts ( for icons ) 
+
+## **LSP** Server 
+
+- tsserver
+
 
 ## **List** plugin
 
@@ -51,10 +56,6 @@ type `:LspInstall` for install leangue parser
 - [ColorPreview](https://github.com/NvChad/nvim-colorizer)
 
 
-## **LSP** Server 
-
-- tsserver
-
 ## Keybind 
 ```
 
@@ -62,7 +63,6 @@ leader = 'Space'
 
 
 comments = 'gcc' -- on normal mode 
-comments_visual = 'gc'
 
 tree toggle = 'Space + e'
 tree focus = 'Space + o'
@@ -70,8 +70,6 @@ tree focus = 'Space + o'
 buffer prev = 'Shift + h'
 buffer next = 'Shift + l'
 buffer close = 'Shift + c'
-
-comment code = 'gcc'
 
 trigger_completion = 'Ctrl + Space'
 
