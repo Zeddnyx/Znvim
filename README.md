@@ -1,6 +1,5 @@
 # Znvim
-personal neovim config for react development, 
-easy to modify.
+Neovim config/preconfig for React development
 
 ## Screenshot
 lua file, tree
@@ -16,6 +15,7 @@ jsx file
 
 
 ## **Install**
+[packer](https://github.com/wbthomason/packer.nvim)
 ```
 git clone https://github.com/ZeddNyx/Znvim ~/.config/nvim
 
@@ -54,8 +54,6 @@ type `:LspInstall` for install leangue parser
 ## **LSP** Server 
 
 - tsserver
-- sumenko_lua
-
 
 ## Keybind 
 ```
@@ -66,15 +64,15 @@ leader = 'Space'
 comments = 'gcc' -- on normal mode 
 comments_visual = 'gc'
 
-neo_tree_toggle = 'Space + e'
-neo_tree_focus = 'Space + o'
+tree toggle = 'Space + e'
+tree focus = 'Space + o'
 
-buffer_prev = 'Shift + h'
-buffer_next = 'Shift + l'
-buffer_close = 'Shift + c'
+buffer prev = 'Shift + h'
+buffer next = 'Shift + l'
+buffer close = 'Shift + c'
 
-code_action = 'Space + c'
-format_code = 'Space + lf'
+comment code = 'gcc'
+
 trigger_completion = 'Ctrl + Space'
 
 telescope = 'Space + ff' -- find file 
