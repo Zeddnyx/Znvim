@@ -1,5 +1,5 @@
 # Znvim
-Neovim config/preconfig for React development
+Znvim is config/preconfig neovim for React development, easy to use with a great set of plugins 
 
 ## Screenshot
 lua file, tree
