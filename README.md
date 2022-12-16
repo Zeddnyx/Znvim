@@ -2,6 +2,10 @@
 Znvim is config/preconfig neovim for React development, easy to use with a great set of plugins 
 
 ## Screenshot
+
+nvim
+![screen] (/home/zedd/screen_004.png)
+
 lua file, tree
 ![screen_000](https://user-images.githubusercontent.com/96564938/206824413-07de9ac1-ec30-4202-9ea3-d972885c00a2.png)
 
@@ -31,13 +35,13 @@ type `:LspInstall` for install leangue parser
 
 ## **LSP** Server 
 
-- tsserver
+- tsservr
 
 
 ## **List** plugin
 
-- [NeoVim Lsp configuration with ](https://github.com/neovim/nvim-lspconfig)[,](https://github.com/onsails/lspkind.nvim)
-[and](https://github.com/williamboman/mason.nvim)
+<<<<<<< HEAD
+- [NeoVim Lsp configuration with ](https://github.com/neovim/nvim-lspconfig)[,](https://github.com/onsails/lspkind.nvim)[and](https://github.com/williamboman/mason.nvim)
 - [Autocompletion with ](https://github.com/hrsh7th/nvim-cmp)
 - [Autoclosing braces and html tags with ](https://github.com/windwp/nvim-autopairs)
 - [Theme ](https://github.com/navarasu/onedark.nvim)
@@ -53,6 +57,25 @@ type `:LspInstall` for install leangue parser
 - [terminal toggling with ](https://github.com/akinsho/toggleterm.nvim)
 - [Color Preview with](https://github.com/NvChad/nvim-colorizer)
 - [Git diffs and more with ](https://github.com/lewis6991/gitsigns.nvim)
+- [LSP Config](https://github.com/neovim/nvim-lspconfig)
+- [LSP Kind](https://github.com/onsails/lspkind.nvim)
+- [Mason](https://github.com/williamboman/mason.nvim)
+- [Nvim CMP](https://github.com/hrsh7th/nvim-cmp)
+- [Auto Pairs](https://github.com/windwp/nvim-autopairs)
+- [Onedark](https://github.com/navarasu/onedark.nvim)
+- [Nvimtree](https://github.com/kyazdani42/nvim-tree.lua)
+- [Barbar Nvim](https://github.com/romgrk/barbar.nvim)
+- [Lualine](https://github.com/nvim-lualine/lualine.nvim)
+- [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+- [Comments](https://github.com/numToStr/Comment.nvim)
+- [Indent Blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
+- [Friendly Snippets](https://github.com/rafamadriz/friendly-snippets)
+- [LSP Signature](https://github.com/ray-x/lsp_signature.nvim)
+- [Telescope](https://github.com/nvim-telescope/telescope.nvim)
+- [Telescope UI](https://github.com/nvim-telescope/telescope-ui-select.nvim)
+- [Terminal](https://github.com/akinsho/toggleterm.nvim)
+- [Color Preview](https://github.com/NvChad/nvim-colorizer)
+>>>>>>> origin/master
 
 
 ## Keybind 
