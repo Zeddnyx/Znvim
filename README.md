@@ -44,7 +44,7 @@ type `:LspInstall` for install leangue parser
 
 ## **List** plugin
 
-- NeoVim Lsp configuration with [lsp ](https://github.com/neovim/nvim-lspconfig),[lspkind](https://github.com/onsails/lspkind.nvim) and [mason(https://github.com/williamboman/mason.nvim)
+- NeoVim Lsp configuration with [lsp ](https://github.com/neovim/nvim-lspconfig), [lspkind](https://github.com/onsails/lspkind.nvim) and [mason](https://github.com/williamboman/mason.nvim)
 - Autocompletion with [cmp](https://github.com/hrsh7th/nvim-cmp)
 - Autoclosing braces and html tags with [autopairs](https://github.com/windwp/nvim-autopairs)
 - Themes [onedark ](https://github.com/navarasu/onedark.nvim)
@@ -55,7 +55,7 @@ type `:LspInstall` for install leangue parser
 - Comment syntax with [comment](https://github.com/numToStr/Comment.nvim)
 - Indentlines with [indent blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
 - Useful snippets with [freandly](https://github.com/rafamadriz/friendly-snippets)
-- File searching, previewing image and text files and more with [telescope](https://github.com/nvim-telescope/telescope.nvim)[and](https://github.com/nvim-telescope/telescope-ui-select.nvim)
+- File searching, previewing image and text files and more with [telescope](https://github.com/nvim-telescope/telescope.nvim) and [ui](https://github.com/nvim-telescope/telescope-ui-select.nvim)
 - Color preview with [colorizer](https://github.com/NvChad/nvim-colorizer)
 - Git diffs and more with [gitsigns](https://github.com/lewis6991/gitsigns.nvim)
 
