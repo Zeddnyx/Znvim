@@ -2,19 +2,15 @@
 Znvim is config/preconfig neovim for React development, easy to use with a great set of plugins 
 
 ## Screenshot
+![nvim](https://user-images.githubusercontent.com/96564938/208032822-0fb1cfe7-2911-4c8c-b5bb-efcd3ba53fd1.png)
 
-nvim
-![screen] (/home/zedd/screen_004.png)
+![nvim-lua](https://user-images.githubusercontent.com/96564938/208032840-2180f141-0b2d-4a5c-b92e-3df738f6f693.png)
 
-lua file, tree
-![screen_000](https://user-images.githubusercontent.com/96564938/206824413-07de9ac1-ec30-4202-9ea3-d972885c00a2.png)
+![nvim-jsx-file](https://user-images.githubusercontent.com/96564938/208032850-4fa1e84d-5ffc-4354-a4bf-2586d34a25c5.png)
 
-Telescope
-![screen_001](https://user-images.githubusercontent.com/96564938/206824475-ad07d283-d161-4af2-987f-c71b591fa655.png)
+![nvim-tree](https://user-images.githubusercontent.com/96564938/208032861-bf1070aa-0094-44b7-b56b-91a3089c876f.png)
 
-Jsx file 
-![screen_004](https://user-images.githubusercontent.com/96564938/206824512-852f0fb4-9f08-403f-995c-4eee78654549.png)
-
+![nvim-telescope](https://user-images.githubusercontent.com/96564938/208032869-1a2734f7-0372-4dfa-bd06-b9fa93a192e1.png)
 
 
 
@@ -71,11 +67,9 @@ type `:LspInstall` for install leangue parser
 - [Indent Blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
 - [Friendly Snippets](https://github.com/rafamadriz/friendly-snippets)
 - [LSP Signature](https://github.com/ray-x/lsp_signature.nvim)
-- [Telescope](https://github.com/nvim-telescope/telescope.nvim)
-- [Telescope UI](https://github.com/nvim-telescope/telescope-ui-select.nvim)
-- [Terminal](https://github.com/akinsho/toggleterm.nvim)
+- [Telescope](https://github.com/nvim-telescope/telescope.nvim)[Telescope UI](https://github.com/nvim-telescope/telescope-ui-select.nvim)
 - [Color Preview](https://github.com/NvChad/nvim-colorizer)
->>>>>>> origin/master
+>>>>>>> 
 
 
 ## Keybind 
