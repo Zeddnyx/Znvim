@@ -32,6 +32,7 @@ nmap('<S-c>', '<cmd>BufferClose<cr>')
 
 -- Telescope
 nmap('<space>ff', '<cmd>Telescope find_files<cr>')
+nmap('<space>of', '<cmd>Telescope old_files<cr>')
 
 -- Save and exit
 nmap('<space>x', '<cmd>wq!<cr>')
@@ -42,7 +43,3 @@ nmap('<space>q', '<cmd>q!<cr>')
 -- Auto save
 nmap('<ESC>', '<cmd>w<cr>')
 
--- Terminal 
-nmap('<space>h', '<cmd>ToggleTerm size=10 direction=horizontal<cr>')
-nmap('<space>v', '<cmd>ToggleTerm size=40 direction=vertical<cr>')
-nmap('<space>f', '<cmd>ToggleTerm size=10 direction=float<cr>')

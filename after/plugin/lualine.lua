@@ -9,18 +9,19 @@ if not ok then return end
 local colors = {
   blue   = '#80a0ff',
   cyan   = '#79dac8',
-  black  = '#aa080808',
-  white  = '#c6c6c6',
+  black  = '#080808',
+  white  = '#aaaaaa',
   red    = '#ff5189',
   violet = '#CB16CF',
   grey   = '#303030',
+  trans  = '#aa080808'
 }
 
 local bubbles_theme = {
   normal = {
     a = { fg = colors.black, bg = colors.violet },
     b = { fg = colors.white, bg = colors.grey },
-    c = { fg = colors.black, bg = colors.black },
+    c = { fg = colors.black, bg = colors.trans },
   },
 
   insert = { a = { fg = colors.black, bg = colors.blue } },

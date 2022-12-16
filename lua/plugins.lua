@@ -25,7 +25,7 @@ packer.startup(function(use)
   -- Auto Pairs
   use "windwp/nvim-autopairs"
 
-  -- Onedark
+  -- Themes
   use 'navarasu/onedark.nvim'
 
   -- Neo tree
@@ -70,11 +70,6 @@ packer.startup(function(use)
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
 
--- terminal
-  use {"akinsho/toggleterm.nvim", tag = '*', config = function()
-    require("toggleterm").setup()
-  end}
-
   use 'nvim-telescope/telescope-ui-select.nvim'
 
   -- Lsp Signature
@@ -87,9 +82,11 @@ packer.startup(function(use)
   use 'onsails/lspkind.nvim'
 
   -- Indent blankline
-   use "lukas-reineke/indent-blankline.nvim"
+  use "lukas-reineke/indent-blankline.nvim"
 
-  -- color example
-   use 'NvChad/nvim-colorizer.lua'
+  -- Color preview
+  use 'NvChad/nvim-colorizer.lua'
 
+  -- Dashboard
+  use {'glepnir/dashboard-nvim'}
 end)

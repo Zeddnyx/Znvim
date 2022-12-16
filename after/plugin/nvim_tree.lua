@@ -21,7 +21,7 @@ tree.setup {
     full_name = false,
     highlight_opened_files = "none",
     root_folder_modifier = ":~",
-    indent_width = 2,
+    indent_width = 1,
     indent_markers = {
       enable = false,
       inline_arrows = true,
@@ -46,13 +46,13 @@ tree.setup {
       },
       glyphs = {
         git = {
-          unstaged = "✗",
-          staged = "✓",
+          unstaged = "u",
+          staged = "",
           unmerged = "",
           renamed = "➜",
-          untracked = "★",
-          deleted = "",
-          ignored = "◌",
+          untracked = "",
+          deleted = "﫧",
+          ignored = "",
         },
       },
     },
@@ -79,9 +79,9 @@ tree.setup {
     debounce_delay = 50,
     icons = {
       hint = "-",
-      info = "i",
-      warning = "!",
-      error = "x",
+      info = "",
+      warning = "",
+      error = "",
     },
   }
 } 
