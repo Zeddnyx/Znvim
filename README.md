@@ -4,14 +4,19 @@ Znvim is config/preconfig neovim for React development, easy to use with a great
 ## Screenshot
 ![nvim](https://user-images.githubusercontent.com/96564938/208032822-0fb1cfe7-2911-4c8c-b5bb-efcd3ba53fd1.png)
 
+![nvim-tree](https://user-images.githubusercontent.com/96564938/208032861-bf1070aa-0094-44b7-b56b-91a3089c876f.png)
+
 ![nvim-lua](https://user-images.githubusercontent.com/96564938/208032840-2180f141-0b2d-4a5c-b92e-3df738f6f693.png)
 
 ![nvim-jsx-file](https://user-images.githubusercontent.com/96564938/208032850-4fa1e84d-5ffc-4354-a4bf-2586d34a25c5.png)
 
-![nvim-tree](https://user-images.githubusercontent.com/96564938/208032861-bf1070aa-0094-44b7-b56b-91a3089c876f.png)
-
 ![nvim-telescope](https://user-images.githubusercontent.com/96564938/208032869-1a2734f7-0372-4dfa-bd06-b9fa93a192e1.png)
 
+
+## required
+- Neovim v0.7 or higher
+- Packer nvim ( for install plugin )
+- NerdFonts ( for icons ) 
 
 
 ## **Install**
@@ -24,14 +29,9 @@ nvim +PackerSync
 type `:LspInstall` for install leangue parser
 
 
-## required
-- Neovim v0.7 or higher
-- Packer nvim ( for install plugin )
-- NerdFonts ( for icons ) 
-
 ## **LSP** Server 
 
-- tsservr
+- tsserver
 
 
 ## **List** plugin
