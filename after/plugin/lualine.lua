@@ -2,10 +2,10 @@ local ok, lualine = pcall(require, 'lualine')
 if not ok then return end
 
 -- Bubbles config for lualine
---Author: lokesh-krishna
+--Author: lokesh-krishnablack 
+--Reedit: Zedd
 -- MIT license, see LICENSE for more details.
 
--- stylua: ignore
 local colors = {
   blue   = '#80a0ff',
   cyan   = '#79dac8',
@@ -29,9 +29,9 @@ local bubbles_theme = {
   replace = { a = { fg = colors.black, bg = colors.red } },
 
   inactive = {
-    a = { fg = colors.white, bg = colors.black },
-    b = { fg = colors.white, bg = colors.black },
-    c = { fg = colors.black, bg = colors.black },
+    a = { fg = colors.white, bg = colors.grey},
+    b = { fg = colors.white, bg = colors.black},
+    c = { fg = colors.black, bg = colors.trans},
   },
 }
 
