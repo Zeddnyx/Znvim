@@ -3,7 +3,8 @@ Znvim is config/preconfig neovim for React development, easy to use with a great
 
 ## Screenshot
 Nvim
-![nvim](https://user-images.githubusercontent.com/96564938/208034855-732c0c3e-38af-4c9c-adf1-6b10cd00e001.png)
+![screen](https://user-images.githubusercontent.com/96564938/208217319-68e725b1-982f-4d90-80a3-421c33d8f810.png)
+
 
 Lua file with open tree file
 ![nvim-tree-lua](https://user-images.githubusercontent.com/96564938/208034884-890e5d99-183a-44f3-9feb-27b0e968959a.png)
