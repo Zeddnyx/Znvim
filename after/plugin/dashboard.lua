@@ -1,6 +1,9 @@
 local home = os.getenv('HOME')
-  local db = require('dashboard')
-  db.custom_header = {
+local db = require('dashboard')
+
+db.height = 20
+db.width  = 20
+db.custom_header = {
     [[                                                     i\                   ]],
     [[                 i                                   00\                  ]],
     [[                :h-                                  Nhy`                 ]],
@@ -14,43 +17,43 @@ local home = os.getenv('HOME')
     [[          y.   `mNNNmhhhdy+/++++//+/////++//+++///++////-` `/oos:         ]],
     [[     .    Nmy:  :NNNNmhhhhdy+/++/+++///:.....--:////+++///:.`:s+          ]],
     [[     h-   dNmNmy oNNNNNdhhhhy:/+/+++/-         ---:/+++//++//.`           ]],
-    [[     hd+` -NNNy`./dNNNNNhhhh+-://///    -+oo:`  ::-:+////++///:`          ]],
-    [[     /Nmhs+oss-:++/dNNNmhho:--::///    /mmmmmo  ../-///++///////.         ]],
-    [[      oNNdhhhhhhhs//osso/:---:::///    /yyyyso  ..o+-//////////:/.        ]],
+    [[     hd+` -NNNy`./dNNNNNhhhh+-://///    +oo:`  ::-:+////++///:`          ]],
+    [[     /Nmhs+oss-:++/dNNNmhho:--::///    /mmmmo  ../-///++///////.         ]],
+    [[      oNNdhhhhhhhs//osso/:---:::///    /yyyso  ..o+-//////////:/.        ]],
     [[       /mNNNmdhhhh/://+///::://////     -:::- ..+sy+:////////::/:/.       ]],
     [[         /hNNNdhhs--:/+++////++/////.      ..-/yhhs-/////////::/::/`      ]],
     [[           .ooo+/-::::/+///////++++//-/ossyyhhhhs/:///////:::/::::/:      ]],
     [[           -///:::::::////++///+++/////:/+ooo+/::///////.::://::---+`     ]],
-    [[           /////+//++++/////+////-..//////////::-:::--`.:///:---:::/:     ]],
-    [[           //+++//++++++////+++///::--                 .::::-------::     ]],
-    [[           :/++++///////////++++//////.                -:/:----::../-     ]],
-    [[           -/++++//++///+//////////////               .::::---:::-.+`     ]],
-    [[           `////////////////////////////:.            --::-----...-/      ]],
-    [[            -///://////////////////////::::-..      :-:-:-..-::.`.+`      ]],
-    [[             :/://///:///::://::://::::::/:::::::-:---::-.-....``/- -     ]],
-    [[               ::::://::://::::::::::::::----------..-:....`.../- -+oo/   ]],
-    [[                -/:::-:::::---://:-::-::::----::---.-.......`-/.      ``  ]],
-    [[               s-`::--:::------:////----:---.-:::...-.....`./:            ]],
-    [[              yMNy.`::-.--::..-dmmhhhs-..-.-.......`.....-/:`             ]],
-    [[             oMNNNh. `-::--...:NNNdhhh/.--.`..``.......:/-                ]],
-    [[            :dy+:`      .-::-..NNNhhd+``..`...````.-::-`                  ]],
-    [[                            .-:mNdhh:.......--::::-`                      ]],
-    [[                               yNh/..------..`                            ]],
-    [[                                                                          ]],
-    [[                             {           }                        ]],
-    }
-
-  db.custom_center = {
-      {icon = '  ',
-      desc = 'Recently Opened Files                   ',
+    [[]],
+    [[]],
+    [[]],
+}
+db.custom_center = {
+    {
+      icon = '  ',
+      desc = 'Recently Opened Files     ',
       action =  'Telescope oldfiles',
-      shortcut = 'SPC o f'},
-      {icon = '  ',
-      desc = 'Find  File                              ',
+    },
+    {
+      icon = '  ',
+      desc = 'New File                  ',
+      action =  'DashboardNewFile',
+    },
+    {
+      icon = '  ',
+      desc = 'Find  File                ',
       action = 'Telescope find_files',
-      shortcut = 'SPC f f'},
-      {icon = '  ',
-      desc = 'Exit Neovim                             ',
+    },
+    {
+      icon = '  ',
+      desc = 'Configuration             ',
+      action = ':e ~/.config/nvim/',
+    },
+    {
+      icon = '  ',
+      desc = 'Exit Neovim               ',
       action = ':q!',
-      shortcut = 'CMD q !'},
-   }
+    }
+}
+
+db.custume_footer = { "Zedd" }

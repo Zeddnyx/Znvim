@@ -47,7 +47,7 @@ tree.setup {
       glyphs = {
         git = {
           unstaged = "u",
-          staged = "",
+          staged = "✓",
           unmerged = "",
           renamed = "➜",
           untracked = "",
