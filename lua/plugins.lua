@@ -82,7 +82,7 @@ packer.startup(function(use)
   use 'onsails/lspkind.nvim'
 
   -- Indent blankline
-  use "lukas-reineke/indent-blankline.nvim"
+  -- use "lukas-reineke/indent-blankline.nvim"
 
   -- Color preview
   use 'NvChad/nvim-colorizer.lua'
