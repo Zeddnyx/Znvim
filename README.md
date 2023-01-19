@@ -18,6 +18,10 @@ Snippet sugestion
 Snippet on select
 ![nvim-jsx-file](https://user-images.githubusercontent.com/96564938/208035025-f6d280ac-19dc-421f-bdda-889fc4554292.png)
 
+New feature (chatgpt in neovim)
+![screenshot](https://user-images.githubusercontent.com/96564938/213336400-31f549f8-1b20-4bde-bed8-04f4db0c317f.png)
+
+
 
 
 
@@ -87,6 +91,8 @@ terminal float      = 'Space + f'
 
 ## Thanks
 - [AdiCahyaSaputra](https://github.com/AdiCahyaSaputra) 
+
+
 
 ## Uninstall
 ```
