@@ -43,3 +43,6 @@ nmap('<space>q', '<cmd>q!<cr>')
 -- Auto save
 nmap('<ESC>', '<cmd>w<cr>')
 
+-- ChatGPT
+nmap('<space>b', '<cmd>ChatGPT<cr>')
+
