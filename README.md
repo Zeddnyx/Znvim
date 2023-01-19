@@ -1,6 +1,8 @@
 # Znvim
 Znvim is config/preconfig neovim for React development, easy to use with a great set of plugins 
 
+New feature ( add chatgpt )
+
 ## Screenshot
 Nvim
 ![screen](https://user-images.githubusercontent.com/96564938/208217319-68e725b1-982f-4d90-80a3-421c33d8f810.png)
@@ -18,7 +20,7 @@ Snippet sugestion
 Snippet on select
 ![nvim-jsx-file](https://user-images.githubusercontent.com/96564938/208035025-f6d280ac-19dc-421f-bdda-889fc4554292.png)
 
-New feature (chatgpt in neovim)
+ChatGPT 
 ![screenshot](https://user-images.githubusercontent.com/96564938/213336400-31f549f8-1b20-4bde-bed8-04f4db0c317f.png)
 
 
