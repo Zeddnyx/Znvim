@@ -16,11 +16,6 @@ cmp.setup {
 			end
 		})
 	},
-  
-  -- for acces files system path
-  sources = {
-    { name = 'path' },
-  },
 	snippet = {
 		expand = function(args)
 			luasnip.lsp_expand(args.body)
@@ -56,6 +51,7 @@ cmp.setup {
 	sources = {
 		{ name = 'nvim_lsp' },
 		{ name = 'luasnip' },
-		{ name = "buffer" }
+		{ name = "buffer" },
+    { name = "path"}
 	},
 }
