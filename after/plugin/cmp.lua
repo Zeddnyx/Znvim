@@ -16,6 +16,11 @@ cmp.setup {
 			end
 		})
 	},
+  
+  -- for acces files system path
+  sources = {
+    { name = 'path' },
+  },
 	snippet = {
 		expand = function(args)
 			luasnip.lsp_expand(args.body)
