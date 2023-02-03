@@ -20,11 +20,6 @@ Snippet sugestion
 Snippet on select
 ![nvim-jsx-file](https://user-images.githubusercontent.com/96564938/208035025-f6d280ac-19dc-421f-bdda-889fc4554292.png)
 
-ChatGPT 
-![screenshot](https://user-images.githubusercontent.com/96564938/213336400-31f549f8-1b20-4bde-bed8-04f4db0c317f.png)
-
-
-
 
 
 
@@ -51,7 +46,7 @@ type `:LspInstall` for install leangue parser
 
 ## **List** plugin
 
-- NeoVim Lsp configuration with [lsp ](https://github.com/neovim/nvim-lspconfig), [lspkind](https://github.com/onsails/lspkind.nvim) and [mason](https://github.com/williamboman/mason.nvim)
+- Lsp configuration with [lsp ](https://github.com/neovim/nvim-lspconfig), [lspkind](https://github.com/onsails/lspkind.nvim) and [mason](https://github.com/williamboman/mason.nvim)
 - Autocompletion with [cmp](https://github.com/hrsh7th/nvim-cmp)
 - Autoclosing braces and html tags with [autopairs](https://github.com/windwp/nvim-autopairs)
 - Themes [onedark ](https://github.com/navarasu/onedark.nvim)
@@ -73,6 +68,7 @@ leader = 'Space'
 
 
 comments = 'gcc' -- on normal mode 
+comments = 'gc'  -- on visual mode
 
 tree toggle = 'Space + e'
 tree focus = 'Space + o'
@@ -85,22 +81,20 @@ trigger_completion = 'Ctrl + Space'
 
 telescope = 'Space + ff' -- find file 
 
-terminal horizontal = 'Space + h'
-terminal vertical   = 'Space + v'
-terminal float      = 'Space + f'
+save = 'Esc' -- double click Esc to save
 ```
 
 
 ## Thanks
-- [AdiCahyaSaputra](https://github.com/AdiCahyaSaputra) 
+Speacial thanks to [AdiCahyaSaputra](https://github.com/AdiCahyaSaputra) 
 
 
 
 ## Uninstall
 ```
 # linux/macos (unix)
-rm -rf ~/.config/nvim
 rm -rf ~/.local/share/nvim
+rm -rf ~/.config/nvim
 rm -rf ~/.cache/nvim
 
 # windows
