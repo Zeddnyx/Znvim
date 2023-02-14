@@ -27,7 +27,7 @@ packer.startup(function(use)
   use "windwp/nvim-autopairs"
 
   -- Themes
-  use 'navarasu/onedark.nvim'
+  use "olimorris/onedarkpro.nvim"
 
   -- Neo tree
   use {
