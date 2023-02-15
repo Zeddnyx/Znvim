@@ -14,6 +14,7 @@ packer.startup(function(use)
   use "williamboman/mason.nvim"
   use "williamboman/mason-lspconfig.nvim"
   use 'neovim/nvim-lspconfig'
+  use 'kabouzeid/nvim-lspinstall'
 
   -- Auto Complete
   use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
@@ -54,7 +55,8 @@ packer.startup(function(use)
     'nvim-treesitter/nvim-treesitter',
     run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
   }
-
+  
+  -- Auto tag
   use 'windwp/nvim-ts-autotag'
   use 'p00f/nvim-ts-rainbow'
 
@@ -70,7 +72,6 @@ packer.startup(function(use)
     -- or                            , branch = '0.1.x',
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
-
   use 'nvim-telescope/telescope-ui-select.nvim'
 
   -- Lsp Signature
@@ -79,7 +80,7 @@ packer.startup(function(use)
   -- Git sign
   use 'lewis6991/gitsigns.nvim'
 
-  -- Lspkind
+  -- Lsp kind
   use 'onsails/lspkind.nvim'
 
   -- Indent blankline

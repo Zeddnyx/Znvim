@@ -1,8 +1,13 @@
-local ok, mason = pcall(require, "mason")
-if not ok then return end
+local status, mason = pcall(require, "mason")
+if (not status) then return end
+local status2, lspconfig = pcall(require, "mason-lspconfig")
+if (not status2) then return end
 
-mason.setup {}
-require("mason-lspconfig").setup {
-	ensured_installed = { "tsserver", "eslint" },
+mason.setup({
+
+})
+
+lspconfig.setup {
+  ensure_installed = { "tailwindcss", "tsserver" },
 	automatic_installation = true
 }

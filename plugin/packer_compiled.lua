@@ -134,6 +134,11 @@ _G.packer_plugins = {
     path = "/home/zedd/.local/share/nvim/site/pack/packer/start/lspkind.nvim",
     url = "https://github.com/onsails/lspkind.nvim"
   },
+  ["lspsaga.nvim"] = {
+    loaded = true,
+    path = "/home/zedd/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
+    url = "https://github.com/kkharji/lspsaga.nvim"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/home/zedd/.local/share/nvim/site/pack/packer/start/lualine.nvim",
@@ -168,6 +173,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/zedd/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-lspinstall"] = {
+    loaded = true,
+    path = "/home/zedd/.local/share/nvim/site/pack/packer/start/nvim-lspinstall",
+    url = "https://github.com/kabouzeid/nvim-lspinstall"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
