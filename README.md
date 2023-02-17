@@ -2,6 +2,8 @@
 Config/preconfig neovim for front end development,
 easy to use with a great set of plugins
 
+![screenshot_001](https://user-images.githubusercontent.com/96564938/219565801-3d360244-8a2c-4309-8077-cea4674a3d06.png)
+
 
 ## required
 - Neovim v0.7 or higher
