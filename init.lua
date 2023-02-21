@@ -1,4 +1,5 @@
 require('keybinds')
 require('options')
+require('higlights')
 require('plugins')
 require('theme')

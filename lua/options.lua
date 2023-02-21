@@ -11,15 +11,15 @@ vim.opt.cmdheight = 1
 vim.opt.laststatus = 2
 vim.opt.expandtab = true
 vim.opt.scrolloff = 10
+vim.opt.shell = 'fish'
 vim.opt.smarttab = true
-vim.opt.breakindent = true
 vim.opt.swapfile = false
 vim.o.shiftwidth = 2
 vim.o.tabstop = 2
 vim.o.softtabstop = 2
 vim.opt.autoindent = true
 vim.opt.smartindent = true
-vim.opt.backspace = { 'start', 'eol', 'indent' } 
+vim.opt.breakindent = true
+vim.opt.backspace = 'start,eol,indent'
 vim.opt.list = true
--- vim.opt.listchars = { tab="|  "}
--- multispace= "|  "
+vim.opt.wildignore:append { '*/node_modules/*' }
