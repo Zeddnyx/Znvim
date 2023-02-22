@@ -16,11 +16,14 @@ packer.startup(function(use)
   use 'neovim/nvim-lspconfig'
   use 'kabouzeid/nvim-lspinstall'
 
+  -- Lsp kind
+  use 'onsails/lspkind.nvim'
+
   -- Auto Complete
   use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
   use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
   use 'hrsh7th/cmp-buffer' -- Completion source for buffer words
-  use 'hrsh7th/cmp-path'  -- Autocompletion for path file
+  use 'hrsh7th/cmp-path' -- Autocompletion for path file
   use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
   use 'L3MON4D3/LuaSnip'
 
@@ -55,7 +58,7 @@ packer.startup(function(use)
     'nvim-treesitter/nvim-treesitter',
     run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
   }
-  
+
   -- Auto tag
   use 'windwp/nvim-ts-autotag'
   use 'p00f/nvim-ts-rainbow'
@@ -80,13 +83,9 @@ packer.startup(function(use)
   -- Git sign
   use 'lewis6991/gitsigns.nvim'
 
-  -- Lsp kind
-  use 'onsails/lspkind.nvim'
-
   -- Indent blankline
   use "lukas-reineke/indent-blankline.nvim"
 
   -- Color preview
   use 'NvChad/nvim-colorizer.lua'
-
 end)
