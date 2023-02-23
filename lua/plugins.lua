@@ -88,4 +88,19 @@ packer.startup(function(use)
 
   -- Color preview
   use 'NvChad/nvim-colorizer.lua'
+
+  -- Dashboard
+  use {
+    'goolord/alpha-nvim',
+    requires = { 'nvim-tree/nvim-web-devicons' },
+    config = function()
+      require 'alpha'.setup(require 'alpha.themes.startify'.config)
+    end
+  }
+  use {
+    "klen/nvim-test",
+    config = function()
+      require('nvim-test').setup()
+    end
+  }
 end)
