@@ -97,10 +97,4 @@ packer.startup(function(use)
       require 'alpha'.setup(require 'alpha.themes.startify'.config)
     end
   }
-  use {
-    "klen/nvim-test",
-    config = function()
-      require('nvim-test').setup()
-    end
-  }
 end)
