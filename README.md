@@ -1,6 +1,8 @@
 # Znvim
 Config Neovim for FrontEnd Development
-(html, css, JavaScript, ReactJS, Tailwindcss, NextJS)
+(JavaScript, ReactJS, Tailwindcss, NextJS)
+
+startup time 240ms.
 
 ![screenshot_001](https://user-images.githubusercontent.com/96564938/219565801-3d360244-8a2c-4309-8077-cea4674a3d06.png)
 
@@ -47,7 +49,6 @@ type `:LspInstall` for install leangue parser
 
 ## Keybind 
 ```
-leader = 'Space'
 
 // Comment
 comments = 'gcc' -- on normal mode 
@@ -57,19 +58,13 @@ comments = 'gc'  -- on visual mode
 tree toggle = 'Space + e'
 tree focus = 'Space + o'
 
-// Move tab and close
-buffer prev = 'Shift + h'
-buffer next = 'Shift + l'
-buffer close = 'Shift + c'
 
-// Format
-format code = 'leader + f'
-action code = 'leader + c'
+// Telescope
+find files = 'leader + ff'
+find buffer = 'leader + fb'
+live grep = 'leader + fg'
 
-// Find file
-telescope = 'leader + ff'
-
-trigger_completion = 'Ctrl + Space'
+j/k = Next/Previus (normal mode)
 ```
 
 

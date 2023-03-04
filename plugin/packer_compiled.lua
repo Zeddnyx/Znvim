@@ -90,11 +90,6 @@ _G.packer_plugins = {
     path = "/home/zedd/.local/share/nvim/site/pack/packer/start/alpha-nvim",
     url = "https://github.com/goolord/alpha-nvim"
   },
-  ["barbar.nvim"] = {
-    loaded = true,
-    path = "/home/zedd/.local/share/nvim/site/pack/packer/start/barbar.nvim",
-    url = "https://github.com/romgrk/barbar.nvim"
-  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/zedd/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -120,11 +115,6 @@ _G.packer_plugins = {
     path = "/home/zedd/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
-  ["gitsigns.nvim"] = {
-    loaded = true,
-    path = "/home/zedd/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
-    url = "https://github.com/lewis6991/gitsigns.nvim"
-  },
   ["indent-blankline.nvim"] = {
     loaded = true,
     path = "/home/zedd/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
@@ -139,11 +129,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/zedd/.local/share/nvim/site/pack/packer/start/lspkind.nvim",
     url = "https://github.com/onsails/lspkind.nvim"
-  },
-  ["lualine.nvim"] = {
-    loaded = true,
-    path = "/home/zedd/.local/share/nvim/site/pack/packer/start/lualine.nvim",
-    url = "https://github.com/nvim-lualine/lualine.nvim"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,

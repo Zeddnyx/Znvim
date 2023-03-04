@@ -33,24 +33,13 @@ packer.startup(function(use)
   -- Themes
   use "olimorris/onedarkpro.nvim"
 
-  -- Neo tree
+  -- Neo tree file
   use {
     'kyazdani42/nvim-tree.lua',
     requires = {
       'kyazdani42/nvim-web-devicons', -- optional, for file icons
     },
     tag = 'nightly' -- optional, updated every week. (see issue #1193)
-  }
-  -- Barbar
-  use {
-    'romgrk/barbar.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons' }
-  }
-
-  -- Lualine
-  use {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
 
   -- Treesitter
@@ -80,8 +69,8 @@ packer.startup(function(use)
   -- Lsp Signature
   use 'ray-x/lsp_signature.nvim'
 
-  -- Git sign
-  use 'lewis6991/gitsigns.nvim'
+  -- -- Git sign
+  -- use 'lewis6991/gitsigns.nvim'
 
   -- Indent blankline
   use "lukas-reineke/indent-blankline.nvim"

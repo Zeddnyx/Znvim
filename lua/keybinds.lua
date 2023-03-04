@@ -18,20 +18,11 @@ imap('jk', '<Esc>')
 
 -- local opts = { noremap = true, silent = true }
 
--- Lsp Formatting / Code Action
-nmap('<space>c', '<cmd>lua vim.lsp.buf.code_action()<cr>')
-nmap('<space>f', '<cmd>lua vim.lsp.buf.formatting()<cr>')
-
 -- Tree file
 nmap('<Leader>e', '<cmd>NvimTreeToggle<cr>')
 nmap('<Leader>o', '<cmd>NvimTreeFocus<cr>')
 
--- Bufferline ( Tab move/close )
---  S (SHIFT+h)
-nmap('<S-h>', '<cmd>BufferPrevious<cr>')
-nmap('<S-l>', '<cmd>BufferNext<cr>')
-nmap('<S-c>', '<cmd>BufferClose<cr>')
-
 -- Telescope
 nmap('<space>ff', '<cmd>Telescope find_files<cr>')
-nmap('<space>of', '<cmd>Telescope old_files<cr>')
+nmap('<space>fg', '<cmd>Telescope live_grep<cr>')
+nmap('<space>fb', '<cmd>Telescope buffers<cr>')

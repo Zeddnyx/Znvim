@@ -21,8 +21,8 @@ dashboard.section.buttons.val = {
   dashboard.button('e', ' New file', ':ene <BAR> startinsert<CR>'),
   dashboard.button('r', ' Recent files', ':Telescope oldfiles <CR>'),
   dashboard.button('f', ' Find file', ':Telescope find_files<CR>'),
-  dashboard.button('s', ' Settings', ':cd ~/.config/nvim/<CR> :e .<CR>'),
-  dashboard.button('q', ' Quit', ':qa<CR>'),
+  dashboard.button('s', ' Config', ':cd ~/.config/nvim/<CR> :e .<CR>'),
+  dashboard.button('q', ' Exit', ':qa<CR>'),
 }
 
 local function footer()

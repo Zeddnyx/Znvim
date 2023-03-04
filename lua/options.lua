@@ -4,7 +4,7 @@ vim.opt.fileencoding = 'utf-8'
 
 vim.o.wrap = false
 vim.o.number = true
-vim.o.showmode = false
+vim.o.showmode = true -- show insert, visual or normal mode
 vim.opt.hlsearch = true
 vim.opt.showcmd = true
 vim.opt.cmdheight = 1
