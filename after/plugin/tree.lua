@@ -12,27 +12,18 @@ tree.setup {
     },
   },
   filters = {
-    dotfiles = false,
+    dotfiles = true,
+    custom = { "^.git$", "^node_modules$" }
   },
   renderer = {
     add_trailing = false,
     group_empty = false,
-    highlight_git = false,
+    highlight_git = true,
     full_name = false,
     highlight_opened_files = "none",
     root_folder_modifier = ":~",
-    indent_width = 1,
-    indent_markers = {
-      enable = false,
-      inline_arrows = true,
-      icons = {
-        corner = "",
-        edge = "",
-        item = "",
-        bottom = "",
-        none = " ",
-      },
-    },
+    indent_width = 2,
+
     icons = {
       webdev_colors = true,
       git_placement = "before",
@@ -41,16 +32,16 @@ tree.setup {
       show = {
         file = true,
         folder = true,
-        folder_arrow = true,
+        folder_arrow = false,
         git = true,
       },
       glyphs = {
         git = {
-          unstaged = "u",
-          staged = "✓",
+          unstaged = "U",
+          untracked = "",
+          staged = " ",
           unmerged = "",
-          renamed = "",
-          untracked = "?",
+          renamed = "",
           deleted = "﫧",
           ignored = "",
         },
@@ -64,8 +55,8 @@ tree.setup {
     auto_open = true,
   },
   update_focused_file = {
-    enable = false,
-    update_root = false,
+    enable = true,
+    update_root = true,
     ignore_list = {},
   },
   ignore_ft_on_setup = {},
@@ -78,10 +69,10 @@ tree.setup {
     show_on_dirs = false,
     debounce_delay = 50,
     icons = {
-      hint = "-",
+      hint = " ",
       info = "",
       warning = "",
-      error = "",
+      error = " ",
     },
   }
-} 
+}

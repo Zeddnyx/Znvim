@@ -2,15 +2,13 @@
 Config Neovim for FrontEnd Development
 (JavaScript, ReactJS, Tailwindcss, NextJS)
 
-startup time 240ms.
-
-![screenshot_001](https://user-images.githubusercontent.com/96564938/219565801-3d360244-8a2c-4309-8077-cea4674a3d06.png)
+`startup time 230ms`
 
 
 ## required
-- Neovim v0.7 or higher
-- Packer nvim ( for install plugin )
-- NerdFonts ( for icons ) 
+- Neovim (v0.7) or the latest neovim 
+<!-- - --> Packer nvim ( manager plugin )
+- NerdFonts ( font for icons ) 
 
 
 ## **Install**
@@ -23,12 +21,13 @@ git clone https://github.com/ZeddNyx/Znvim ~/.config/nvim
 nvim +PackerSync
 ```
 
-type `:LspInstall` for install leangue parser
 
 
 ## **LSP** Server 
-- tsserver
-- tailwindcss
+type `:LspInstall` for install leangue parser
+ex `:LspInstall tsserver`
+
+you can configurate in /plugin/lspconfig.lua
 
 ## **List** plugin
 - Lsp configuration with [lsp ](https://github.com/neovim/nvim-lspconfig), [lspkind](https://github.com/onsails/lspkind.nvim) and [mason](https://github.com/williamboman/mason.nvim)
@@ -36,19 +35,21 @@ type `:LspInstall` for install leangue parser
 - Autoclosing braces and html tags with [autopairs](https://github.com/windwp/nvim-autopairs)
 - Themes [onedarkpro](https://github.com/olimorris/onedarkpro.nvim)
 - File navigation with [nvim tree](https://github.com/kyazdani42/nvim-tree.lua)
-- Bar line with [barbar](https://github.com/romgrk/barbar.nvim)
-- Lua line with [lualine](https://github.com/nvim-lualine/lualine.nvim)
 - Syntax highlighting with [treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - Comment syntax with [comment](https://github.com/numToStr/Comment.nvim)
 - Indentlines with [indent blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
-- Useful snippets with [freandly](https://github.com/rafamadriz/friendly-snippets)
-- File searching, previewing image and text files and more with [telescope](https://github.com/nvim-telescope/telescope.nvim) and [ui](https://github.com/nvim-telescope/telescope-ui-select.nvim)
+- Snippets with [freandly](https://github.com/rafamadriz/friendly-snippets)
+- File searching, previewing and more with [telescope](https://github.com/nvim-telescope/telescope.nvim) [ui](https://github.com/nvim-telescope/telescope-ui-select.nvim)
 - Color preview with [colorizer](https://github.com/NvChad/nvim-colorizer)
-- Git diffs and more with [gitsigns](https://github.com/lewis6991/gitsigns.nvim)
 
 
 ## Keybind 
 ```
+
+// Save and exit
+save = 'Space + w'
+exit = 'Space + q'
+save and exit = 'Space + wq'
 
 // Comment
 comments = 'gcc' -- on normal mode 
@@ -62,14 +63,15 @@ tree focus = 'Space + o'
 // Telescope
 find files = 'leader + ff'
 find buffer = 'leader + fb'
-live grep = 'leader + fg'
+live grep = 'leader + lg'
+file git = 'leader + fg'
 
 j/k = Next/Previus (normal mode)
 ```
 
-
 ## Thanks
-Speacial thanks to [AdiCahyaSaputra](https://github.com/AdiCahyaSaputra) 
+Speacial thanks to [AdiCahyaSaputra](https://github.com/AdiCahyaSaputra)
+And thanks to admin and all members of [Vim Indonesia](https://t.me/VimID)
 
 
 ## Uninstall

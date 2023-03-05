@@ -2,7 +2,6 @@ local ok, alpha = pcall(require, 'alpha')
 if not ok then return end
 
 local dashboard = require 'alpha.themes.dashboard'
-
 local banner = {
   '',
   '                                  ▄▄                    ',
@@ -13,7 +12,7 @@ local banner = {
   '    ███   ▄ █   ▀██▄█    ██ ▄█     ██   ██    ██    ██  ',
   '   ███   ▄█ █     ███     ███      ██   ██    ██    ██  ',
   '  ████████████▄    ██      █     ▄████▄████  ████  ████▄',
-  '  Zeddnyx',
+  '  https://github.com/Zeddnyx',
   '',
 }
 
@@ -21,8 +20,9 @@ dashboard.section.buttons.val = {
   dashboard.button('e', ' New file', ':ene <BAR> startinsert<CR>'),
   dashboard.button('r', ' Recent files', ':Telescope oldfiles <CR>'),
   dashboard.button('f', ' Find file', ':Telescope find_files<CR>'),
+  dashboard.button('g', ' Live grep', ':Telescope live_grep<CR>'),
   dashboard.button('s', ' Config', ':cd ~/.config/nvim/<CR> :e .<CR>'),
-  dashboard.button('q', ' Exit', ':qa<CR>'),
+  dashboard.button('q', ' Exit', ':q!<CR>'),
 }
 
 local function footer()
@@ -33,7 +33,6 @@ local function footer()
   --local datetime = os.date '%d.%m.%Y %H:%M'
   return ' ' .. print_version .. '   ' .. pluginCount --[[ .. '   ' .. date ]]
 end
-
 
 dashboard.section.header.val = banner
 dashboard.section.footer.val = footer()

@@ -17,6 +17,9 @@ vim.g.mapleader = ' ' -- Space
 imap('jk', '<Esc>')
 
 -- local opts = { noremap = true, silent = true }
+nmap('<leader>w', '<cmd>w!<cr>')
+nmap('<leader>q', '<cmd>q!<cr>')
+nmap('<leader>wq', '<cmd>wq<cr>')
 
 -- Tree file
 nmap('<Leader>e', '<cmd>NvimTreeToggle<cr>')
@@ -24,5 +27,6 @@ nmap('<Leader>o', '<cmd>NvimTreeFocus<cr>')
 
 -- Telescope
 nmap('<space>ff', '<cmd>Telescope find_files<cr>')
-nmap('<space>fg', '<cmd>Telescope live_grep<cr>')
+nmap('<space>lg', '<cmd>Telescope live_grep<cr>') -- required to install ripgrep!
+nmap('<space>gf', '<cmd>Telescope git_files<cr>')
 nmap('<space>fb', '<cmd>Telescope buffers<cr>')
