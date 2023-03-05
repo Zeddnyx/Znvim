@@ -1,8 +1,13 @@
 # Znvim
 Config Neovim for FrontEnd Development
-(JavaScript, ReactJS, Tailwindcss, NextJS)
+(CSS, JavaScript, ReactJS, NextJS)
 
-`startup time 230ms`
+`startup time 225ms`
+
+# Screenshot
+![screenshot_000](https://user-images.githubusercontent.com/96564938/222938244-7d82a34c-4754-475b-9641-eae8087b6b3c.png)
+
+![screenshot_002](https://user-images.githubusercontent.com/96564938/222938250-28b1be25-b551-477c-9ffe-d161b49fe24e.png)
 
 
 ## required
