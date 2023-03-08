@@ -69,8 +69,8 @@ packer.startup(function(use)
   -- Lsp Signature
   use 'ray-x/lsp_signature.nvim'
 
-  -- -- Git sign
-  -- use 'lewis6991/gitsigns.nvim'
+  -- bar
+  use { 'romgrk/barbar.nvim', requires = 'nvim-web-devicons' }
 
   -- Indent blankline
   use "lukas-reineke/indent-blankline.nvim"
