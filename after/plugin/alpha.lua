@@ -4,15 +4,24 @@ if not ok then return end
 local dashboard = require 'alpha.themes.dashboard'
 local banner = {
   '',
-  '                                  ▄▄                    ',
-  ' ███▀▀▀██████▄   ▀███▀            ██                    ',
-  '  █▀   ███  ███▄    █                                   ',
-  '  ▀   ███   █ ███   █ ▀██▀   ▀██▀▀███ ▀████████▄█████▄  ',
-  '     ███    █  ▀██▄ █   ██   ▄█    ██   ██    ██    ██  ',
-  '    ███   ▄ █   ▀██▄█    ██ ▄█     ██   ██    ██    ██  ',
-  '   ███   ▄█ █     ███     ███      ██   ██    ██    ██  ',
-  '  ████████████▄    ██      █     ▄████▄████  ████  ████▄',
-  '  https://github.com/Zeddnyx',
+  -- '                                  ▄▄                    ',
+  -- ' ███▀▀▀██████▄   ▀███▀            ██                    ',
+  -- '  █▀   ███  ███▄    █                                   ',
+  -- '  ▀   ███   █ ███   █ ▀██▀   ▀██▀▀███ ▀████████▄█████▄  ',
+  -- '     ███    █  ▀██▄ █   ██   ▄█    ██   ██    ██    ██  ',
+  -- '    ███   ▄ █   ▀██▄█    ██ ▄█     ██   ██    ██    ██  ',
+  -- '   ███   ▄█ █     ███     ███      ██   ██    ██    ██  ',
+  -- '  ████████████▄    ██      █     ▄████▄████  ████  ████▄',
+  -- '  https://github.com/Zeddnyx',
+  '',
+  '',
+  '',
+  '',
+  'Code can be poetry to.',
+  '',
+  '',
+  '',
+  '',
   '',
 }
 
@@ -21,7 +30,8 @@ dashboard.section.buttons.val = {
   dashboard.button('r', ' Recent files', ':Telescope oldfiles <CR>'),
   dashboard.button('f', ' Find file', ':Telescope find_files<CR>'),
   dashboard.button('g', ' Live grep', ':Telescope live_grep<CR>'),
-  dashboard.button('s', ' Config', ':cd ~/.config/nvim/<CR> :e .<CR>'),
+  dashboard.button('n', ' Configuration', ':cd ~/.config/nvim/<CR> :e .<CR>'),
+  dashboard.button('d', ' Dotfiles', ':cd ~/.config/<CR> :e .<CR>'),
   dashboard.button('q', ' Exit', ':q!<CR>'),
 }
 
@@ -36,4 +46,5 @@ end
 
 dashboard.section.header.val = banner
 dashboard.section.footer.val = footer()
+alpha.setup(dashboard.config)
 alpha.setup(dashboard.config)
