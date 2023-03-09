@@ -11,6 +11,7 @@ function vmap(shortcut, command) map('v', shortcut, command) end
 
 vim.g.mapleader = ' ' -- Space
 
+-- save and exit
 nmap('<leader>w', '<cmd>w<cr>')
 nmap('<leader>q', '<cmd>q<cr>')
 nmap('<leader>x', '<cmd>wq<cr>')
@@ -25,6 +26,10 @@ nmap('<space>lg', '<cmd>Telescope live_grep<cr>') -- required to install ripgrep
 nmap('<space>gf', '<cmd>Telescope git_files<cr>')
 nmap('<space>fb', '<cmd>Telescope buffers<cr>')
 
+-- Barbar
 nmap('<S-l>', '<cmd>BufferNext<cr>')
 nmap('<S-h>', '<cmd>BufferPrevious<cr>')
 nmap('<S-c>', '<cmd>BufferClose<cr>')
+
+-- Select all
+nmap('<S-s>', 'gg<S-v>G')
