@@ -9,15 +9,12 @@ vim.cmd([[packadd packer.nvim]])
 packer.startup(function(use)
   use 'wbthomason/packer.nvim'
 
-  -- Lsp
-  -- use 'williamboman/nvim-lsp-installer' -- futher dev has moved to mason.nvim
+  -- Lsp, prettier
   use "williamboman/mason.nvim"
   use "williamboman/mason-lspconfig.nvim"
   use 'neovim/nvim-lspconfig'
-  use 'kabouzeid/nvim-lspinstall'
-
-  -- Lsp kind
   use 'onsails/lspkind.nvim'
+  use 'kabouzeid/nvim-lspinstall'
 
   -- Auto Complete
   use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
@@ -26,6 +23,7 @@ packer.startup(function(use)
   use 'hrsh7th/cmp-path' -- Autocompletion for path file
   use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
   use 'L3MON4D3/LuaSnip'
+  use "rafamadriz/friendly-snippets"
 
   -- Auto Pairs
   use "windwp/nvim-autopairs"
@@ -55,8 +53,6 @@ packer.startup(function(use)
   -- Comment
   use 'numToStr/Comment.nvim'
 
-  -- Friendly Snippets
-  use "rafamadriz/friendly-snippets"
 
   -- Telescope
   use {
@@ -69,7 +65,7 @@ packer.startup(function(use)
   -- Lsp Signature
   use 'ray-x/lsp_signature.nvim'
 
-  -- bar
+  -- Barbar
   use { 'romgrk/barbar.nvim', requires = 'nvim-web-devicons' }
 
   -- Indent blankline
