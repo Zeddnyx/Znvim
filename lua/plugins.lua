@@ -25,11 +25,11 @@ packer.startup(function(use)
   use 'L3MON4D3/LuaSnip'
   use "rafamadriz/friendly-snippets"
 
+  -- themes
+  use "olimorris/onedarkpro.nvim"
+
   -- Auto Pairs
   use "windwp/nvim-autopairs"
-
-  -- Themes
-  use "olimorris/onedarkpro.nvim"
 
   -- Neo tree file
   use {
