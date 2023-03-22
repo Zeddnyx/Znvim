@@ -114,6 +114,11 @@ _G.packer_plugins = {
     path = "/home/zedd/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
+  ["gruvbox.nvim"] = {
+    loaded = true,
+    path = "/home/zedd/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
+    url = "https://github.com/ellisonleao/gruvbox.nvim"
+  },
   ["indent-blankline.nvim"] = {
     loaded = true,
     path = "/home/zedd/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
@@ -188,11 +193,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/zedd/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
-  },
-  ["onedarkpro.nvim"] = {
-    loaded = true,
-    path = "/home/zedd/.local/share/nvim/site/pack/packer/start/onedarkpro.nvim",
-    url = "https://github.com/olimorris/onedarkpro.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,

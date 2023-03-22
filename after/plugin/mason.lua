@@ -6,6 +6,6 @@ if (not status2) then return end
 mason.setup()
 
 lspconfig.setup {
-  ensure_installed = { "tsserver", "lua" },
+  ensure_installed = { "tsserver" },
   automatic_installation = true
 }

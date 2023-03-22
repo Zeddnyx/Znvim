@@ -2,12 +2,12 @@ vim.scriptencoding = 'utf-8'
 vim.opt.encoding = 'utf-8'
 vim.opt.fileencoding = 'utf-8'
 
-vim.opt.wrap = false -- wrap line code
-vim.opt.number = true -- show a list number
+vim.opt.wrap = false     -- wrap line code
+vim.opt.number = true    -- show a list number
 vim.opt.showmode = false -- show insert, visual or normal mode
 vim.opt.hlsearch = true
 vim.opt.showcmd = true
-vim.opt.cmdheight = 1 -- height of statusline at the bottom
+vim.opt.cmdheight = 0  -- height of statusline at the bottom
 vim.opt.laststatus = 2 -- show where are you in file what
 vim.opt.scrolloff = 5
 vim.opt.shell = 'fish'

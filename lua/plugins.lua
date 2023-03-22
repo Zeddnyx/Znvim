@@ -31,7 +31,7 @@ packer.startup(function(use)
   use "rafamadriz/friendly-snippets"
 
   -- Themes
-  use "olimorris/onedarkpro.nvim"
+  use "ellisonleao/gruvbox.nvim"
 
   -- Auto Pairs
   use "windwp/nvim-autopairs"
