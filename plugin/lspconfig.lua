@@ -67,21 +67,11 @@ protocol.CompletionItemKind = {
 -- Set up completion using nvim_cmp with LSP source
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
--- static type checker for js
-nvim_lsp.flow.setup {
-  on_attach = on_attach,
-  capabilities = capabilities
-}
 
--- css
--- nvim_lsp.cssls.setup {
---   on_attach = on_attach,
---   capabilities = capabilities
--- }
-
+-- npm i -g typescript-language-server
 nvim_lsp.tsserver.setup {
   on_attach = on_attach,
-  filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
+  filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript", "javascriptreact" },
   cmd = { "typescript-language-server", "--stdio" },
   capabilities = capabilities
 }
@@ -111,11 +101,6 @@ nvim_lsp.lua_ls.setup {
 -- tailwind snippet
 -- npm i -g @tailwindcss/language-server
 -- nvim_lsp.tailwindcss.setup {
---   on_attach = on_attach,
---   capabilities = capabilities
--- }
---
--- nvim_lsp.astro.setup {
 --   on_attach = on_attach,
 --   capabilities = capabilities
 -- }

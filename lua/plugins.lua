@@ -16,28 +16,32 @@ packer.startup(function(use)
   use 'onsails/lspkind.nvim'
   use 'kabouzeid/nvim-lspinstall'
 
+  -- Lsp Signature
+  use 'ray-x/lsp_signature.nvim'
+
   -- Auto Complete
-  use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
-  use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
-  use 'hrsh7th/cmp-buffer' -- Completion source for buffer words
-  use 'hrsh7th/cmp-path' -- Autocompletion for path file
+  use 'hrsh7th/nvim-cmp'         -- Autocompletion plugin
+  use 'hrsh7th/cmp-nvim-lsp'     -- LSP source for nvim-cmp
+  use 'hrsh7th/cmp-buffer'       -- Completion source for buffer words
+  use 'hrsh7th/cmp-path'         -- Autocompletion for path file
   use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
+
+  -- Snippet
   use 'L3MON4D3/LuaSnip'
   use "rafamadriz/friendly-snippets"
 
-  -- themes
+  -- Themes
   use "olimorris/onedarkpro.nvim"
 
   -- Auto Pairs
   use "windwp/nvim-autopairs"
 
-  -- Neo tree file
+  -- Neo Tree
   use {
     'kyazdani42/nvim-tree.lua',
     requires = {
-      'kyazdani42/nvim-web-devicons', -- optional, for file icons
-    },
-    tag = 'nightly' -- optional, updated every week. (see issue #1193)
+      'kyazdani42/nvim-web-devicons',
+    }
   }
 
   -- Treesitter
@@ -46,24 +50,14 @@ packer.startup(function(use)
     run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
   }
 
-  -- Auto tag
+  -- Auto Tag
   use 'windwp/nvim-ts-autotag'
   use 'p00f/nvim-ts-rainbow'
 
   -- Comment
   use 'numToStr/Comment.nvim'
 
-
-  -- Telescope
-  use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.0',
-    -- or                            , branch = '0.1.x',
-    requires = { { 'nvim-lua/plenary.nvim' } }
-  }
-  use 'nvim-telescope/telescope-ui-select.nvim'
-
-  -- Lsp Signature
-  use 'ray-x/lsp_signature.nvim'
+  use 'nvim-lua/plenary.nvim'
 
   -- Barbar
   use { 'romgrk/barbar.nvim', requires = 'nvim-web-devicons' }
@@ -73,13 +67,4 @@ packer.startup(function(use)
 
   -- Color preview
   use 'NvChad/nvim-colorizer.lua'
-
-  -- Dashboard
-  use {
-    'goolord/alpha-nvim',
-    requires = { 'nvim-tree/nvim-web-devicons' },
-    config = function()
-      require 'alpha'.setup(require 'alpha.themes.startify'.config)
-    end
-  }
 end)

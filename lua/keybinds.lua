@@ -20,12 +20,6 @@ nmap('<leader>x', '<cmd>wq<cr>')
 nmap('<leader>e', '<cmd>NvimTreeToggle<cr>')
 nmap('<leader>o', '<cmd>NvimTreeFocus<cr>')
 
--- Telescope
-nmap('<space>ff', '<cmd>Telescope find_files<cr>')
-nmap('<space>lg', '<cmd>Telescope live_grep<cr>') -- required to install ripgrep!
-nmap('<space>gf', '<cmd>Telescope git_files<cr>')
-nmap('<space>fb', '<cmd>Telescope buffers<cr>')
-
 -- Barbar
 nmap('<S-l>', '<cmd>BufferNext<cr>')
 nmap('<S-h>', '<cmd>BufferPrevious<cr>')
@@ -33,3 +27,6 @@ nmap('<S-c>', '<cmd>BufferClose<cr>')
 
 -- Select all
 nmap('<S-s>', 'gg<S-v>G')
+
+-- Format
+nmap('<leader>f', '<cmd>lua vim.lsp.buf.format({timeout_ms = 1000})<cr>')
