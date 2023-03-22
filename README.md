@@ -3,7 +3,6 @@ Config Neovim for FrontEnd Development
 (HTML, CSS, JavaScript, ReactJS, TypeScript, NextJS)
 
 `startup time 188ms`
-![screenshot_002](https://user-images.githubusercontent.com/96564938/226806807-b227a91b-6f05-4558-a009-90ff1db17331.png)
 
 
 
@@ -18,7 +17,7 @@ Config Neovim for FrontEnd Development
 git clone https://github.com/ZeddNyx/Znvim ~/.config/nvim
 
 ```
-'nvim +PackerSync'
+`nvim +PackerSync`
 
 
 ## List plugin
@@ -54,18 +53,15 @@ format = 'Space + f'
 ```
 
 ## Thanks
-Speacial thanks to
 - [AdiCahyaSaputra](https://github.com/AdiCahyaSaputra)
-
-And thanks to admin and all members of
 - [Vim Indonesia](https://t.me/VimID)
 
 
 ## Uninstall
 ```
 # linux/macos (unix)
-rm -rf ~/.config/nvim
 rm -rf ~/.local/share/nvim
+rm -rf ~/.config/nvim
 rm -rf ~/.cache/nvim
 
 # windows
