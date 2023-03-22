@@ -2,12 +2,9 @@
 Config Neovim for FrontEnd Development
 (HTML, CSS, JavaScript, ReactJS, TypeScript, NextJS)
 
-`startup time 180ms`
+`startup time 188ms`
+![screenshot_002](https://user-images.githubusercontent.com/96564938/226806807-b227a91b-6f05-4558-a009-90ff1db17331.png)
 
-## Screenshot
-![screenshot_000](https://user-images.githubusercontent.com/96564938/222938244-7d82a34c-4754-475b-9641-eae8087b6b3c.png)
-
-![screenshot_002](https://user-images.githubusercontent.com/96564938/222938250-28b1be25-b551-477c-9ffe-d161b49fe24e.png)
 
 
 ## required
