@@ -1,132 +1,58 @@
---vim.lsp.set_log_level("debug")
-
-local status, nvim_lsp = pcall(require, "lspconfig")
-if (not status) then return end
-
-local protocol = require('vim.lsp.protocol')
-
-local augroup_format = vim.api.nvim_create_augroup("Format", { clear = true })
-local enable_format_on_save = function(_, bufnr)
-  vim.api.nvim_clear_autocmds({ group = augroup_format, buffer = bufnr })
-  vim.api.nvim_create_autocmd("BufWritePre", {
-    group = augroup_format,
-    buffer = bufnr,
-    callback = function()
-      vim.lsp.buf.format({ bufnr = bufnr })
-    end,
-  })
+local lspconfig_status, lspconfig = pcall(require, "lspconfig")
+if not lspconfig_status then
+  return
 end
 
--- Use an on_attach function to only map the following keys
--- after the language server attaches to the current buffer
+local cmp_nvim_lsp_status, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
+if not cmp_nvim_lsp_status then
+  return
+end
+
+local keymap = vim.keymap
+
+-- enable keybinds for available lsp server
 local on_attach = function(client, bufnr)
-  local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
+  local opts = { noremap = true, silent = true, buffer = bufnr }
 
-  --Enable completion triggered by <c-x><c-o>
-  --local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
-  --buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
+  -- set keybinds
+  -- keymap.set("n", "gf", "<cmd>Lspsaga lsp_finder<CR>", opts)               -- show definition, references
+  keymap.set("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)    -- got to declaration
+  -- keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<CR>", opts)          -- see definition and make edits in window
+  keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts) -- go to implementation
+  -- keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opts)      -- see available code actions
+  -- keymap.set("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", opts)           -- smart rename
 
-  -- Mappings.
-  local opts = { noremap = true, silent = true }
+  -- show diagnostic
+  -- keymap.set("n", "<leader>D", "<cmd>Lspsaga show_line_diagnostics<CR>", opts) -- show  diagnostics for line
+  -- keymap.set("n", "<leader>d", "<cmd>Lspsaga show_cursor_diagnostics<CR>", opts) -- show diagnostics for cursor
+  vim.diagnostic.config({
+    virtual_text = false
+  })
+  -- Show line diagnostics automatically in hover window
+  vim.o.updatetime = 250
+  vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
 
-  -- See `:help vim.lsp.*` for documentation on any of the below functions
-  buf_set_keymap('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
-  --buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
-  buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
-  --buf_set_keymap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
+
+  -- keymap.set("n", "[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts) -- jump to previous diagnostic in buffer
+  -- keymap.set("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts) -- jump to next diagnostic in buffer
+  -- keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts)             -- show documentation for what is under cursor
+  keymap.set("n", "<leader>o", "<cmd>LSoutlineToggle<CR>", opts)       -- see outline on right hand side
 end
 
-protocol.CompletionItemKind = {
-  '', -- Text
-  '', -- Method
-  '', -- Function
-  '', -- Constructor
-  '', -- Field
-  '', -- Variable
-  '', -- Class
-  'ﰮ', -- Interface
-  '', -- Module
-  '', -- Property
-  '', -- Unit
-  '', -- Value
-  '', -- Enum
-  '', -- Keyword
-  '﬌', -- Snippet
-  '', -- Color
-  '', -- File
-  '', -- Reference
-  '', -- Folder
-  '', -- EnumMember
-  '', -- Constant
-  '', -- Struct
-  '', -- Event
-  'ﬦ', -- Operator
-  '', -- TypeParameter
-}
 
--- Set up completion using nvim_cmp with LSP source
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
+-- used to enable autocompletion
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-
--- npm i -g typescript-language-server
-nvim_lsp.tsserver.setup {
-  on_attach = on_attach,
-  filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript", "javascriptreact" },
-  cmd = { "typescript-language-server", "--stdio" },
-  capabilities = capabilities
-}
-
-nvim_lsp.lua_ls.setup {
-  capabilities = capabilities,
-  on_attach = function(client, bufnr)
-    on_attach(client, bufnr)
-    enable_format_on_save(client, bufnr)
-  end,
-  settings = {
-    Lua = {
-      diagnostics = {
-        -- Get the language server to recognize the `vim` global
-        globals = { 'vim' },
-      },
-
-      workspace = {
-        -- Make the server aware of Neovim runtime files
-        library = vim.api.nvim_get_runtime_file("", true),
-        checkThirdParty = false
-      },
-    },
-  },
-}
-
--- tailwind snippet
--- npm i -g @tailwindcss/language-server
--- nvim_lsp.tailwindcss.setup {
---   on_attach = on_attach,
---   capabilities = capabilities
--- }
-
-vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-  vim.lsp.diagnostic.on_publish_diagnostics, {
-  underline = true,
-  update_in_insert = false,
-  virtual_text = { spacing = 4, prefix = "●" },
-  severity_sort = true,
-}
-)
-
--- Diagnostic symbols in the sign column (gutter)
-local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+-- Change the Diagnostic symbols in the sign column (gutter)
+-- (not in youtube nvim video)
+local signs = { Error = " ", Warn = " ", Hint = "ﴞ ", Info = " " }
 for type, icon in pairs(signs) do
   local hl = "DiagnosticSign" .. type
   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 end
 
-vim.diagnostic.config({
-  virtual_text = {
-    prefix = '●'
-  },
-  update_in_insert = true,
-  float = {
-    source = "always", -- Or "if_many"
-  },
+lspconfig["tsserver"].setup({
+  capabilities = capabilities,
+  on_attach = on_attach,
+  root_dir = vim.loop.cwd
 })

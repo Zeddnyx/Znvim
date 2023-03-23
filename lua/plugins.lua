@@ -9,7 +9,7 @@ vim.cmd([[packadd packer.nvim]])
 packer.startup(function(use)
   use 'wbthomason/packer.nvim'
 
-  -- Lsp, prettier
+  -- Lsp
   use "williamboman/mason.nvim"
   use "williamboman/mason-lspconfig.nvim"
   use 'neovim/nvim-lspconfig'
@@ -20,14 +20,18 @@ packer.startup(function(use)
   use 'ray-x/lsp_signature.nvim'
 
   -- Auto Complete
-  use 'hrsh7th/nvim-cmp'         -- Autocompletion plugin
-  use 'hrsh7th/cmp-nvim-lsp'     -- LSP source for nvim-cmp
-  use 'hrsh7th/cmp-buffer'       -- Completion source for buffer words
-  use 'hrsh7th/cmp-path'         -- Autocompletion for path file
-  use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
+  use 'hrsh7th/nvim-cmp'     -- Autocompletion plugin
+  use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
+  use 'hrsh7th/cmp-buffer'   -- Completion source for buffer words
+  use 'hrsh7th/cmp-path'     -- Autocompletion for path file
+
+  -- Prettier
+  use 'jose-elias-alvarez/null-ls.nvim'
+  use 'MunifTanjim/prettier.nvim'
 
   -- Snippet
   use 'L3MON4D3/LuaSnip'
+  use 'saadparwaiz1/cmp_luasnip'
   use "rafamadriz/friendly-snippets"
 
   -- Themes
