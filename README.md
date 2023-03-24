@@ -11,8 +11,9 @@ Config Neovim for FrontEnd Development
 ## required
 
 - [Neovim >= 0.7](https://neovim.io)
-- [Packer](https://github.com/wbthomason/packer.nvim)
-- [NerdFonts](https://nerdfonts.com)
+- [Packer](https://github.com/wbthomason/packer.nvim) -- plugin manager
+- [NerdFonts](https://nerdfonts.com) -- icons
+- [Prettierd](https://www.npmjs.com/package/@fsouza/prettierd) -- format and prettier code
 
 ## Install
 
@@ -45,16 +46,23 @@ exit = 'Space + q'
 save and exit = 'Space + wq'
 
 // Comment
-comments = 'gcc' -- on normal mode
-comments = 'gc'  -- on visual mode
+comments = 'gcc' -- normal mode
+comments = 'gc'  -- visual mode
 
 // File navigation
 tree toggle = 'Space + e'
 tree focus = 'Space + o'
 
-// Format
-// Automaticly format and prettier code when save
-format = 'Space + f'
+// buffer/bar
+move previous = 'Shift + h' -- normal mode
+move next = 'Shift + l'  -- normal mode
+close tab = 'Shift + c'  -- normal mode
+
+// Format and Prettier
+'Space + f'
+
+// Find and replace all word match
+'Space + s'
 
 ```
 
