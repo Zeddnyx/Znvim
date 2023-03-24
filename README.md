@@ -3,10 +3,7 @@
 Config Neovim for FrontEnd Development
 (HTML, CSS, JavaScript, ReactJS, TypeScript, NextJS)
 
-`startup time 188ms`
-![screenshot_002](https://user-images.githubusercontent.com/96564938/226897059-cbe43805-758e-4d65-9905-6f4875c8a628.png)
-
-![screenshot_003](https://user-images.githubusercontent.com/96564938/226897549-3d60721a-2b9a-45db-a3b0-47d79f1a05b8.png)
+`startup time 177ms`
 
 ## required
 
@@ -43,7 +40,7 @@ run `nvim +PackerSync`
 // Save and exit
 save = 'Space + w'
 exit = 'Space + q'
-save and exit = 'Space + wq'
+save and exit = 'Space + x'
 
 // Comment
 comments = 'gcc' -- normal mode
@@ -51,12 +48,18 @@ comments = 'gc'  -- visual mode
 
 // File navigation
 tree toggle = 'Space + e'
-tree focus = 'Space + o'
+tree focus  = 'Space + o'
 
-// buffer/bar
-move previous = 'Shift + h' -- normal mode
-move next = 'Shift + l'  -- normal mode
-close tab = 'Shift + c'  -- normal mode
+// Multi File
+move previous = 'Shift + h'
+move next     = 'Shift + l' 
+close tab     = 'Shift + c'
+show opened   = 'Shift + l'
+
+// Split Screen 
+horizontal    = 'Space + h'
+verticale     = 'Space + v'
+Switch screen = 'Space + c'
 
 // Format and Prettier
 'Space + f'

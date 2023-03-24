@@ -27,7 +27,6 @@ packer.startup(function(use)
 
   -- Prettier
   use 'jose-elias-alvarez/null-ls.nvim'
-  use 'MunifTanjim/prettier.nvim'
 
   -- Snippet
   use 'L3MON4D3/LuaSnip'
@@ -62,9 +61,6 @@ packer.startup(function(use)
   use 'numToStr/Comment.nvim'
 
   use 'nvim-lua/plenary.nvim'
-
-  -- Barbar
-  use { 'romgrk/barbar.nvim', requires = 'nvim-web-devicons' }
 
   -- Indent blankline
   use "lukas-reineke/indent-blankline.nvim"
