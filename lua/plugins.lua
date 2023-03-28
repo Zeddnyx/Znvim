@@ -25,7 +25,7 @@ packer.startup(function(use)
   use 'hrsh7th/cmp-buffer'   -- Completion source for buffer words
   use 'hrsh7th/cmp-path'     -- Autocompletion for path file
 
-  -- Prettier
+  -- Null Ls
   use 'jose-elias-alvarez/null-ls.nvim'
 
   -- Snippet
@@ -36,9 +36,6 @@ packer.startup(function(use)
   -- Themes
   use "ellisonleao/gruvbox.nvim"
 
-  -- Auto Pairs
-  use "windwp/nvim-autopairs"
-
   -- Neo Tree
   use {
     'kyazdani42/nvim-tree.lua',
@@ -47,13 +44,17 @@ packer.startup(function(use)
     }
   }
 
+  -- Bar
+  use {'romgrk/barbar.nvim', require = 'nvim-web-devicons'}
+
   -- Treesitter
   use {
     'nvim-treesitter/nvim-treesitter',
     run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
   }
 
-  -- Auto Tag
+  -- Auto Pairs & Auto Tag
+  use "windwp/nvim-autopairs"
   use 'windwp/nvim-ts-autotag'
   use 'p00f/nvim-ts-rainbow'
 

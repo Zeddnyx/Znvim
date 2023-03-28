@@ -33,6 +33,7 @@ run `nvim +PackerSync`
 - Indentlines with [indent blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
 - Snippets with [freandly](https://github.com/rafamadriz/friendly-snippets)
 - Color preview with [colorizer](https://github.com/NvChad/nvim-colorizer)
+- Bar navigation with [Barbar](https://github.com/romgrk/barbar.nvim)
 
 ## Keybind
 
@@ -54,12 +55,12 @@ tree focus  = 'Space + o'
 move previous = 'Shift + h'
 move next     = 'Shift + l' 
 close tab     = 'Shift + c'
-show opened   = 'Shift + l'
+Pin tab       = 'Shift + m'
 
 // Split Screen 
 horizontal    = 'Space + h'
 verticale     = 'Space + v'
-Switch screen = 'Space + c'
+Switch screen = 'Shift + w'
 
 // Format and Prettier
 'Space + f'

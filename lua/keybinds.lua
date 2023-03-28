@@ -31,22 +31,16 @@ nmap('<leader>o', '<cmd>NvimTreeFocus<cr>')
 nmap('<leader>f', '<cmd>lua vim.lsp.buf.format({ bufnr = bufnr })<cr>')
 
 -- Multi file 
-nmap('<S-l>', '<cmd>bn<cr>') -- Next
-nmap('<S-h>', '<cmd>bp<cr>') -- Previous
-nmap('<S-c>', '<cmd>bd<cr>') -- Close
-nmap('<leader>l', '<cmd>ls<cr>') -- Show Opened List File
+nmap('<S-h>', '<cmd>BufferPrevious<cr>') -- Previuos
+nmap('<S-l>', '<cmd>BufferNext<cr>') -- Next
+nmap('<S-c>', '<cmd>BufferClose<cr>') -- Close
+nmap('<S-m>', '<cmd>BufferPin<cr>') -- Close
+
 
 -- Split Screen
 nmap('<leader>h', '<C-w>s<cr>') -- Horizontal
 nmap('<leader>v', '<C-w>v<cr>') -- Vertical
-nmap('<leader>m', '<C-w>w<cr>') -- Switch view
-
--- Size Split  Screen
-nmap('<S-+>', '<C-w>+<cr>') -- Decrease
-nmap('<S-->', '<C-w>-<cr>') -- Increase
-nmap('<leader>=', '<C-w>=<cr>') -- Restart Height Width
-nmap('<S-|>', '<C-w>|<cr>') -- Expand Vertical
-nmap('<S-_>', '<C-w>_<cr>') -- Expand Horizontal
+nmap('<S-w>', '<C-w>w<cr>') -- Switch view
 
 -- Select all
 nmap('<S-s>', 'gg<S-v>G')
