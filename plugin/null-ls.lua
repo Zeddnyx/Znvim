@@ -15,7 +15,7 @@ null_ls.setup({
     -- diagnostics.eslint_d,
     -- action.eslint_d
   },
-  -- configure format on save
+  -- configure format on save, uncomment if u want to automaticly format code when save
   -- on_attach = function(client, bufnr)
   --   if client.supports_method("textDocument/formatting") then
   --     vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })

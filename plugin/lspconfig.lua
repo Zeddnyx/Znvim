@@ -15,39 +15,39 @@ local on_attach = function(client, bufnr)
   local opts = { noremap = true, silent = true, buffer = bufnr }
 
   -- set keybinds
-  -- keymap.set("n", "gf", "<cmd>Lspsaga lsp_finder<CR>", opts)               -- show definition, references
   keymap.set("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)    -- got to declaration
-  -- keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<CR>", opts)          -- see definition and make edits in window
-  keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts) -- go to implementation
-  -- keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opts)      -- see available code actions
-  -- keymap.set("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", opts)           -- smart rename
 
-  -- show diagnostic
-  -- keymap.set("n", "<leader>D", "<cmd>Lspsaga show_line_diagnostics<CR>", opts) -- show  diagnostics for line
-  -- keymap.set("n", "<leader>d", "<cmd>Lspsaga show_cursor_diagnostics<CR>", opts) -- show diagnostics for cursor
   vim.diagnostic.config({
-    virtual_text = false
+   virtual_text = false,
+   signs = true,
+   update_in_insert = true,
   })
   -- Show line diagnostics automatically in hover window
   vim.o.updatetime = 250
   vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
 
+  -- show diagnostic error line on number
+  vim.cmd [[
+    highlight! DiagnosticLineNrError guibg=#51202A guifg=#FF0000 gui=bold
+    highlight! DiagnosticLineNrWarn guibg=#51412A guifg=#FFA500 gui=bold
+    highlight! DiagnosticLineNrInfo guibg=#1E535D guifg=#00FFFF gui=bold
+    highlight! DiagnosticLineNrHint guibg=#1E205D guifg=#0000FF gui=bold
 
-  -- keymap.set("n", "[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts) -- jump to previous diagnostic in buffer
-  -- keymap.set("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts) -- jump to next diagnostic in buffer
-  -- keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts)             -- show documentation for what is under cursor
-  keymap.set("n", "<leader>o", "<cmd>LSoutlineToggle<CR>", opts)       -- see outline on right hand side
+    sign define DiagnosticSignError text= texthl=DiagnosticSignError linehl= numhl=DiagnosticLineNrError
+    sign define DiagnosticSignWarn text= texthl=DiagnosticSignWarn linehl= numhl=DiagnosticLineNrWarn
+    sign define DiagnosticSignInfo text= texthl=DiagnosticSignInfo linehl= numhl=DiagnosticLineNrInfo
+    sign define DiagnosticSignHint text= texthl=DiagnosticSignHint linehl= numhl=DiagnosticLineNrHint
+  ]]
 end
 
+-- local signs = { Error = " ", Warn = " ", Hint = "ﴞ ", Info = " " }
+-- for type, icon in pairs(signs) do
+--   local hl = "DiagnosticSign" .. type
+--   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+-- end
 
 -- used to enable autocompletion
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
-local signs = { Error = " ", Warn = " ", Hint = "ﴞ ", Info = " " }
-for type, icon in pairs(signs) do
-  local hl = "DiagnosticSign" .. type
-  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
-end
 
 lspconfig["tsserver"].setup({
   capabilities = capabilities,

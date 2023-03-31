@@ -3,7 +3,7 @@
 Config Neovim for FrontEnd Development
 (HTML, CSS, JavaScript, ReactJS, TypeScript, NextJS)
 
-`startup time 177ms`
+`startup time 189ms`
 
 ## required
 
@@ -51,7 +51,7 @@ comments = 'gc'  -- visual mode
 tree toggle = 'Space + e'
 tree focus  = 'Space + o'
 
-// Multi File
+// Multi Tab File
 move previous = 'Shift + h'
 move next     = 'Shift + l' 
 close tab     = 'Shift + c'
@@ -68,6 +68,11 @@ Switch screen = 'Shift + w'
 // Find and replace all word match
 'Space + s'
 
+// Select all
+'Shift + s'
+
+// Diagnostic
+go to diagnostic = 'Shift + d'
 ```
 
 ## Thanks

@@ -42,8 +42,11 @@ nmap('<leader>h', '<C-w>s<cr>') -- Horizontal
 nmap('<leader>v', '<C-w>v<cr>') -- Vertical
 nmap('<S-w>', '<C-w>w<cr>') -- Switch view
 
+-- find all and replace all
+nshort('<leader>s', [[:%s/]])
+
 -- Select all
 nmap('<S-s>', 'gg<S-v>G')
 
--- find all and replace all
-nshort('<leader>s', [[:%s/]])
+-- Go to diagnostic line code
+nmap('<S-d>', '<cmd>lua vim.diagnostic.goto_next()<cr>')
