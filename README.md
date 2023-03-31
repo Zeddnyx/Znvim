@@ -3,7 +3,7 @@
 Config Neovim for FrontEnd Development
 (HTML, CSS, JavaScript, ReactJS, TypeScript, NextJS)
 
-`startup time 180ms`
+`startup time 173ms`
 
 ## required
 
@@ -20,6 +20,14 @@ git clone https://github.com/ZeddNyx/Znvim ~/.config/nvim
 ```
 
 run `nvim +PackerSync`
+
+## Error on eslint
+'Error: No Eslint configuration found in /home/bla/bla'
+run `npm init @eslint/config` on your root project
+
+'React, must be in scope when using jsx'
+add `import React from 'react'` on your file project
+
 
 ## List plugin
 
