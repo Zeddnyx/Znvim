@@ -11,10 +11,10 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 null_ls.setup({
   sources = {
     -- npm i -g @fsouzi/prettierd
-    -- npm i -g eslint_d
+    -- npm i -g vscode-langservers-extracted
     formatting.prettierd,
-    diagnostics.eslint_d,
-    action.eslint_d
+    diagnostics.eslint,
+    action.eslint
   },
   -- configure format on save, uncomment if u want to automaticly format code when save
   -- on_attach = function(client, bufnr)
