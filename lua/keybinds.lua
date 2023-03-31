@@ -18,12 +18,7 @@ function nshort(shortcut, command) short('n', shortcut, command) end
 
 vim.g.mapleader = ' ' -- Space
 
--- save and exit
-nmap('<leader>w', '<cmd>w<cr>')
-nmap('<leader>q', '<cmd>q<cr>')
-nmap('<leader>x', '<cmd>wq<cr>')
-
--- Tree file
+-- Nvim Tree File
 nmap('<leader>e', '<cmd>NvimTreeToggle<cr>')
 nmap('<leader>o', '<cmd>NvimTreeFocus<cr>')
 
@@ -42,11 +37,12 @@ nmap('<leader>h', '<C-w>s<cr>') -- Horizontal
 nmap('<leader>v', '<C-w>v<cr>') -- Vertical
 nmap('<S-w>', '<C-w>w<cr>') -- Switch view
 
--- find all and replace all
-nshort('<leader>s', [[:%s/]])
-
 -- Select all
 nmap('<S-s>', 'gg<S-v>G')
 
 -- Go to diagnostic line
 nmap('<S-f>', '<cmd>lua vim.diagnostic.goto_next()<cr>')
+
+-- find all and replace all
+nshort('<leader>s', [[:%s/]])
+

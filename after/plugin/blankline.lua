@@ -4,7 +4,7 @@ if not ok then return end
 vim.opt.list = true
 vim.opt.termguicolors = true
 
-vim.cmd [[highlight IndentBlanklineIndent1 guifg=#2B2F36 gui=nocombine]]
+vim.cmd [[highlight IndentBlanklineIndent1 guifg=#1D2021 gui=nocombine]]
 
 indent_blankline.setup {
   space_char_blankline = " ",

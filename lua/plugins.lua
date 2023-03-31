@@ -36,7 +36,7 @@ packer.startup(function(use)
   -- Themes
   use "ellisonleao/gruvbox.nvim"
 
-  -- Neo Tree
+  -- Nvim Tree File
   use {
     'kyazdani42/nvim-tree.lua',
     requires = {
