@@ -48,5 +48,5 @@ nshort('<leader>s', [[:%s/]])
 -- Select all
 nmap('<S-s>', 'gg<S-v>G')
 
--- Go to diagnostic line code
-nmap('<S-d>', '<cmd>lua vim.diagnostic.goto_next()<cr>')
+-- Go to diagnostic line
+nmap('<S-f>', '<cmd>lua vim.diagnostic.goto_next()<cr>')

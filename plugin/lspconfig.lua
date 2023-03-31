@@ -26,7 +26,7 @@ local on_attach = function(client, bufnr)
   vim.o.updatetime = 250
   vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
 
-  -- show diagnostic error line on number
+  -- show diagnostic on line number
   vim.cmd [[
     highlight! DiagnosticLineNrError guibg=#51202A guifg=#FF0000 gui=bold
     highlight! DiagnosticLineNrWarn guibg=#51412A guifg=#FFA500 gui=bold
@@ -38,19 +38,22 @@ local on_attach = function(client, bufnr)
     sign define DiagnosticSignInfo text= texthl=DiagnosticSignInfo linehl= numhl=DiagnosticLineNrInfo
     sign define DiagnosticSignHint text= texthl=DiagnosticSignHint linehl= numhl=DiagnosticLineNrHint
   ]]
+
+  -- used to enable autocompletion
+  local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+  -- block tsserver
+  if client.name == "tsserver" then 
+    client.resolved_capabilities.documentFormattingProvider = false -- 0.8 and later
+  end
+
+  -- use null-ls for formatting, diagnostics, actions
+  vim.lsp.buf.format({
+    capabilities = capabilities,
+    bufnr = bufnr,
+    filter = function(client)
+      return client.name == "null-ls"
+    end,
+  })
+
 end
-
--- local signs = { Error = " ", Warn = " ", Hint = "ﴞ ", Info = " " }
--- for type, icon in pairs(signs) do
---   local hl = "DiagnosticSign" .. type
---   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
--- end
-
--- used to enable autocompletion
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
-lspconfig["tsserver"].setup({
-  capabilities = capabilities,
-  on_attach = on_attach,
-  root_dir = vim.loop.cwd
-})

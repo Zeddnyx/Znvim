@@ -3,7 +3,7 @@
 Config Neovim for FrontEnd Development
 (HTML, CSS, JavaScript, ReactJS, TypeScript, NextJS)
 
-`startup time 189ms`
+`startup time 180ms`
 
 ## required
 
@@ -72,7 +72,7 @@ Switch screen = 'Shift + w'
 'Shift + s'
 
 // Diagnostic
-go to diagnostic = 'Shift + d'
+go to diagnostic = 'Shift + f'
 ```
 
 ## Thanks
