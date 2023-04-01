@@ -8,8 +8,8 @@ local diagnostics = null_ls.builtins.diagnostics
 local action = null_ls.builtins.code_actions
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
-
 local on_attach = function(client, bufnr)
+
   vim.diagnostic.config({
    virtual_text = false,
    signs = true,
@@ -37,9 +37,7 @@ null_ls.setup({
   on_attach = on_attach,
   sources = {
     -- npm i -g @fsouzi/prettierd
-    -- npm i -g eslint_d
     formatting.prettierd,
-    diagnostics.eslint_d,
-    action.eslint_d
+    diagnostics.eslint
   },
 })
