@@ -3,14 +3,12 @@
 Config Neovim for FrontEnd Development
 (HTML, CSS, JavaScript, ReactJS, TypeScript, NextJS)
 
-`startup time 160ms`
+`startup time 110ms`
 
 ## required
 
 - [Neovim >= 0.7](https://neovim.io)
-- [Packer](https://github.com/wbthomason/packer.nvim) -- plugin manager
-- [NerdFonts](https://nerdfonts.com) -- icons
-- [Prettierd](https://www.npmjs.com/package/@fsouza/prettierd) -- format and prettier code
+- [NerdFonts](https://nerdfonts.com) -- icons (optional)
 
 ## Install
 
@@ -19,8 +17,7 @@ git clone https://github.com/ZeddNyx/Znvim ~/.config/nvim
 
 ```
 
-run `nvim +PackerSync`
-
+run `nvim +Lazy`
 
 ## List plugin
 
@@ -54,11 +51,11 @@ tree focus  = 'Space + o'
 
 // Multi Tab File
 move previous = 'Shift + h'
-move next     = 'Shift + l' 
+move next     = 'Shift + l'
 close tab     = 'Shift + c'
 Pin tab       = 'Shift + m'
 
-// Split Screen 
+// Split Screen
 horizontal    = 'Space + h'
 verticale     = 'Space + v'
 Switch screen = 'Shift + w'

@@ -1,101 +1,105 @@
-local ok, packer = pcall(require, 'packer')
-if not ok then
-  print("Packer Not Installed!")
-  return
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
 end
+vim.opt.rtp:prepend(lazypath)
 
-vim.cmd([[packadd packer.nvim]])
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
 
-packer.startup(function(use)
-  use 'wbthomason/packer.nvim'
+require("lazy").setup({
 
-  -- Lsp
-  use {
-    "williamboman/mason.nvim",
-    config = function()
-      require("mason").setup()
-    end
-  }
-  use {
-    'neovim/nvim-lspconfig',
-    dependencies = {
-      'jose-elias-alvarez/null-ls.nvim',
-    },
-    config = function()
-      require("configs.lsp.lspconfig")
-    end
-  }
-  use 'ray-x/lsp_signature.nvim'
-  use 'onsails/lspkind.nvim'
-  use 'kabouzeid/nvim-lspinstall'
+-- Lsp
+{
+"williamboman/mason.nvim",
+build = ":masonUpdate",
+config = function()
+  require("mason").setup()
+end,
+},
 
-  -- Auto Complete
-  use {
-    'hrsh7th/nvim-cmp',
-    requires = {
-      'hrsh7th/cmp-nvim-lsp',
-      'hrsh7th/cmp-buffer',
-      'hrsh7th/cmp-path'
-    }
-  }
+{"neovim/nvim-lspconfig"},
+{"jose-elias-alvarez/null-ls.nvim"},
+{"ray-x/lsp_signature.nvim"},
+{"onsails/lspkind.nvim"},
+{"kabouzeid/nvim-lspinstall"},
 
-  -- Snippet
-  use 'L3MON4D3/LuaSnip'
-  use {
-    "rafamadriz/friendly-snippets",
-    config = function()
-      require('luasnip.loaders.from_vscode').lazy_load()
-    end
-  }
+-- Auto Complete
+{
+"hrsh7th/nvim-cmp",
+dependencies = {
+  "hrsh7th/cmp-nvim-lsp",
+  "hrsh7th/cmp-buffer",
+  "hrsh7th/cmp-path",
+},
+},
 
-  -- Theme
-  use {
-    "ellisonleao/gruvbox.nvim",
-    config = function()
-      require("configs.theme.theme")
-    end
-  }
+-- Snippet
+{"L3MON4D3/LuaSnip"},
+{
+"rafamadriz/friendly-snippets",
+config = function()
+  require("luasnip.loaders.from_vscode").lazy_load()
+end,
+},
 
-  -- Nvim Tree File
-  use {
-    'kyazdani42/nvim-tree.lua',
-    requires = {
-      'kyazdani42/nvim-web-devicons',
-    }
-  }
+-- Theme
+{
+"ellisonleao/gruvbox.nvim",
+config = function()
+  require("configs.theme.theme")
+end
+},
 
-  -- Bar
-  use {'romgrk/barbar.nvim', require = 'nvim-web-devicons'}
+-- Nvim Tree File
+{
+"kyazdani42/nvim-tree.lua",
+dependencies = {
+  "kyazdani42/nvim-web-devicons",
+},
+},
 
-  -- Treesitter
-  use {
-    'nvim-treesitter/nvim-treesitter',
-    run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
-  }
+-- Bar
+{ "romgrk/barbar.nvim", require = "nvim-web-devicons" },
 
-  -- Auto Pairs & Auto Tag
-  use {
-    "windwp/nvim-autopairs",
-    config = function()
-      require("nvim-autopairs").setup()
-    end
-  }
-  use 'windwp/nvim-ts-autotag'
-  use 'p00f/nvim-ts-rainbow'
+-- Treesitter
+{
+"nvim-treesitter/nvim-treesitter",
+build = function()
+  require("nvim-treesitter.install").update({ with_sync = true })
+end
+},
 
-  -- Comment
-  use {
-    'numToStr/Comment.nvim',
-    config = function()
-      require("Comment").setup()
-    end
-  }
+-- Auto Pairs & Auto Tag
+{
+"windwp/nvim-autopairs",
+config = function()
+  require("nvim-autopairs").setup()
+end,
+},
+{"windwp/nvim-ts-autotag"},
+{"p00f/nvim-ts-rainbow"},
 
-  use 'nvim-lua/plenary.nvim'
+-- Comment
+{
+"numToStr/Comment.nvim",
+config = function()
+  require("Comment").setup()
+end,
+},
 
-  -- Indent blankline
-  use "lukas-reineke/indent-blankline.nvim"
+{"nvim-lua/plenary.nvim"},
 
-  -- Color preview
-  use 'NvChad/nvim-colorizer.lua'
-end)
+-- Indent blankline
+{"lukas-reineke/indent-blankline.nvim"},
+
+-- Color preview
+{"NvChad/nvim-colorizer.lua"},
+})

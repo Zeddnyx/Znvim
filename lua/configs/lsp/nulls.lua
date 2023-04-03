@@ -1,12 +1,13 @@
-local setup, null_ls = pcall(require, "null-ls")
-if not setup then return end
+local nullls_status, nulls = pcall(require, "null-ls")
+if not nullls_status then
+	return
+end
 
-local formatting = null_ls.builtins.formatting
-
-null_ls.setup({
-  sources = {
-    -- npm i -g @fsouzi/prettierd
-    formatting.prettierd,
-    formatting.stylua,
-  }
+local formatting = nulls.builtins.formatting
+nulls.setup({
+	debug = true,
+	sources = {
+		formatting.prettier,
+		formatting.stylua,
+	},
 })
