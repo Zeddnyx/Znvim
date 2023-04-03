@@ -37,12 +37,9 @@ local on_attach = function(client, bufnr)
     client.resolved_capabilities.documentFormattingProvider = false -- 0.8 and later
   end
 
-  -- used to enable autocompletion
-  local capabilities = cmp_nvim_lsp.default_capabilities()
 
   -- use null-ls for formatting, diagnostics, actions
   vim.lsp.buf.format({
-    capabilities = capabilities,
     bufnr = bufnr,
     filter = function(client)
       return client.name == "null-ls"
@@ -54,11 +51,21 @@ end
 -- used to enable autocompletion
 local capabilities = cmp_nvim_lsp.default_capabilities()
 
--- using tsserver diagnostic and action
--- is better and complete action but take 700Mb - 1gb Memory
--- sudo npm i -g typecsript-language-server 
--- lspconfig["tsserver"].setup({
---   capabilities = capabilities,
---   on_attach = on_attach,
---   root_dir = vim.loop.cwd
--- })
+-- sudo npm i -g typecsript-language-server
+lspconfig["tsserver"].setup({
+  capabilities = capabilities,
+  on_attach = on_attach,
+  root_dir = vim.loop.cwd,
+  javascript = {
+    autoClosingTags = true,
+    suggest = {
+      autoImports = true,
+    },
+    autoImportsOnFileMove = {
+      enable = true,
+    },
+    suggestionActions = {
+      enabled = true,
+    }
+  }
+})

@@ -10,31 +10,51 @@ packer.startup(function(use)
   use 'wbthomason/packer.nvim'
 
   -- Lsp
-  use "williamboman/mason.nvim"
-  use "williamboman/mason-lspconfig.nvim"
-  use 'neovim/nvim-lspconfig'
+  use {
+    "williamboman/mason.nvim",
+    config = function()
+      require("mason").setup()
+    end
+  }
+  use {
+    'neovim/nvim-lspconfig',
+    dependencies = {
+      'jose-elias-alvarez/null-ls.nvim',
+    },
+    config = function()
+      require("configs.lsp.lspconfig")
+    end
+  }
+  use 'ray-x/lsp_signature.nvim'
   use 'onsails/lspkind.nvim'
   use 'kabouzeid/nvim-lspinstall'
 
-  -- Lsp Signature
-  use 'ray-x/lsp_signature.nvim'
-
   -- Auto Complete
-  use 'hrsh7th/nvim-cmp'     -- Autocompletion plugin
-  use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
-  use 'hrsh7th/cmp-buffer'   -- Completion source for buffer words
-  use 'hrsh7th/cmp-path'     -- Autocompletion for path file
-
-  -- Null Ls
-  use 'jose-elias-alvarez/null-ls.nvim'
+  use {
+    'hrsh7th/nvim-cmp',
+    requires = {
+      'hrsh7th/cmp-nvim-lsp',
+      'hrsh7th/cmp-buffer',
+      'hrsh7th/cmp-path'
+    }
+  }
 
   -- Snippet
   use 'L3MON4D3/LuaSnip'
-  use 'saadparwaiz1/cmp_luasnip'
-  use "rafamadriz/friendly-snippets"
+  use {
+    "rafamadriz/friendly-snippets",
+    config = function()
+      require('luasnip.loaders.from_vscode').lazy_load()
+    end
+  }
 
-  -- Themes
-  use "ellisonleao/gruvbox.nvim"
+  -- Theme
+  use {
+    "ellisonleao/gruvbox.nvim",
+    config = function()
+      require("configs.theme.theme")
+    end
+  }
 
   -- Nvim Tree File
   use {
@@ -54,12 +74,22 @@ packer.startup(function(use)
   }
 
   -- Auto Pairs & Auto Tag
-  use "windwp/nvim-autopairs"
+  use {
+    "windwp/nvim-autopairs",
+    config = function()
+      require("nvim-autopairs").setup()
+    end
+  }
   use 'windwp/nvim-ts-autotag'
   use 'p00f/nvim-ts-rainbow'
 
   -- Comment
-  use 'numToStr/Comment.nvim'
+  use {
+    'numToStr/Comment.nvim',
+    config = function()
+      require("Comment").setup()
+    end
+  }
 
   use 'nvim-lua/plenary.nvim'
 
