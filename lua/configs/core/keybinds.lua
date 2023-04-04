@@ -24,8 +24,6 @@ function nshort(shortcut, command)
 	short("n", shortcut, command)
 end
 
-vim.g.mapleader = " " -- Space
-
 -- Nvim Tree File
 nmap("<leader>e", "<cmd>NvimTreeToggle<cr>")
 nmap("<leader>o", "<cmd>NvimTreeFocus<cr>")
@@ -47,5 +45,5 @@ nmap("<S-s>", "gg<S-v>G")
 -- Go to diagnostic line
 nmap("<S-f>", "<cmd>lua vim.diagnostic.goto_next()<cr>")
 
--- find all match word and replace all matched word
+-- Find and replace all matched word
 nshort("<leader>s", [[:%s/]])

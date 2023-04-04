@@ -37,7 +37,6 @@ local capabilities = cmp_nvim_lsp.default_capabilities()
 lspconfig.tsserver.setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
-	globals = { "vim" },
 	root_dir = vim.loop.cwd,
 	javascript = {
 		autoClosingTags = true,
@@ -51,4 +50,8 @@ lspconfig.tsserver.setup({
 			enabled = true,
 		},
 	},
+})
+lspconfig.lua_ls.setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
 })

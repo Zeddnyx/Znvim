@@ -3,8 +3,6 @@
 Config Neovim for FrontEnd Development
 (HTML, CSS, JavaScript, ReactJS, TypeScript, NextJS)
 
-`startup time 104ms`
-
 ## required
 
 - [Neovim >= 0.7](https://neovim.io)
@@ -18,6 +16,7 @@ git clone https://github.com/ZeddNyx/Znvim ~/.config/nvim
 ```
 
 run `nvim +Lazy`
+and `:MasonInstall tsserver stylua prettier`
 
 ## List plugin
 
@@ -55,12 +54,7 @@ move next     = 'Shift + l'
 close tab     = 'Shift + c'
 Pin tab       = 'Shift + m'
 
-// Split Screen
-horizontal    = 'Space + h'
-verticale     = 'Space + v'
-Switch screen = 'Shift + w'
-
-// Format and Prettier
+// Format and prettier
 'Space + f'
 
 // Find and replace all word match

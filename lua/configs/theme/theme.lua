@@ -1,4 +1,4 @@
-local  gruvbox = require("gruvbox")
+local gruvbox = require("gruvbox")
 
 gruvbox.setup({
 	contrast = "hard", -- hard, soft
