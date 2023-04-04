@@ -1,7 +1,4 @@
-local ok, treesitter = pcall(require, 'nvim-treesitter')
-if not ok then
-  return
-end
+local treesitter = require('nvim-treesitter')
 
 treesitter.setup({
 ensure_installed = { "lua", "javascript", "tsx", "typescript", "html" },

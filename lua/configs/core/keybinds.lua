@@ -30,14 +30,11 @@ vim.g.mapleader = " " -- Space
 nmap("<leader>e", "<cmd>NvimTreeToggle<cr>")
 nmap("<leader>o", "<cmd>NvimTreeFocus<cr>")
 
--- Format
-nmap("<leader>f", "<cmd>lua vim.lsp.buf.format({ bufnr = bufnr })<cr>")
-
 -- Multi file
 nmap("<S-h>", "<cmd>BufferPrevious<cr>") -- Previuos
 nmap("<S-l>", "<cmd>BufferNext<cr>") -- Next
 nmap("<S-c>", "<cmd>BufferClose<cr>") -- Close
-nmap("<S-m>", "<cmd>BufferPin<cr>") -- Close
+nmap("<S-m>", "<cmd>BufferPin<cr>") -- Pin
 
 -- Split Screen
 nmap("<leader>h", "<C-w>s<cr>") -- Horizontal
@@ -50,5 +47,5 @@ nmap("<S-s>", "gg<S-v>G")
 -- Go to diagnostic line
 nmap("<S-f>", "<cmd>lua vim.diagnostic.goto_next()<cr>")
 
--- find all and replace all
+-- find all match word and replace all matched word
 nshort("<leader>s", [[:%s/]])

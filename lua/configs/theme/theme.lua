@@ -1,7 +1,4 @@
-local ok, gruvbox = pcall(require, "gruvbox")
-if not ok then
-	return
-end
+local  gruvbox = require("gruvbox")
 
 gruvbox.setup({
 	contrast = "hard", -- hard, soft

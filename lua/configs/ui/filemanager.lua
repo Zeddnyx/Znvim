@@ -1,7 +1,4 @@
-local ok, tree = pcall(require, "nvim-tree")
-if not ok then
-	return
-end
+local tree = require("nvim-tree")
 
 tree.setup({
 	sort_by = "case_sensitive",

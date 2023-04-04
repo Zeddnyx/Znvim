@@ -1,7 +1,4 @@
-local nullls_status, nulls = pcall(require, "null-ls")
-if not nullls_status then
-	return
-end
+local nulls = require("null-ls")
 
 local formatting = nulls.builtins.formatting
 nulls.setup({
@@ -11,3 +8,9 @@ nulls.setup({
 		formatting.stylua,
 	},
 })
+
+local function format()
+  vim.lsp.buf.format({ bufnr = bufnr })
+end
+
+vim.keymap.set('n', '<leader>f', format, { desc = "LSP: Format the current buffer"})

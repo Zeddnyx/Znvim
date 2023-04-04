@@ -1,10 +1,8 @@
-require("configs.completion.cmp")
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
 
 require("configs.core.options")
 require("configs.core.keybinds")
-
-require("configs.lsp.lspconfig")
-require("configs.lsp.nulls")
 
 require("configs.plugins")
 
