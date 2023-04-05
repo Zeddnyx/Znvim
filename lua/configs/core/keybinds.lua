@@ -25,8 +25,7 @@ function nshort(shortcut, command)
 end
 
 -- Nvim Tree File
-nmap("<leader>e", "<cmd>NvimTreeToggle<cr>")
-nmap("<leader>o", "<cmd>NvimTreeFocus<cr>")
+nmap("<leader>e", "<cmd>:Lex<cr>:vertical resize 30<cr>")
 
 -- Multi file
 nmap("<S-h>", "<cmd>BufferPrevious<cr>") -- Previuos

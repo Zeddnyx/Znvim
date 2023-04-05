@@ -38,7 +38,6 @@ local plugins = {
       require("configs.lsp.lspconfig")
     end,
   },
-  { "onsails/lspkind.nvim" },
   { "kabouzeid/nvim-lspinstall" },
 
   -- Completion
@@ -68,7 +67,7 @@ local plugins = {
       require("configs.completion.cmp")
     end,
   },
-  { "windwp/nvim-ts-autotag" }, -- Auto tag
+  { "onsails/lspkind.nvim" },
 
   -- Themes
   {
@@ -79,15 +78,15 @@ local plugins = {
     end,
   },
 
-  {
-    "kyazdani42/nvim-tree.lua",
-    dependencies = {
-      "kyazdani42/nvim-web-devicons",
-    },
-    config = function()
-      require("configs.ui.filemanager")
-    end,
-  },
+  -- {
+  --   "kyazdani42/nvim-tree.lua",
+  --   dependencies = {
+  --     "kyazdani42/nvim-web-devicons",
+  --   },
+  --   config = function()
+  --     require("configs.ui.filemanager")
+  --   end,
+  -- },
 
   -- Barbar
   { "romgrk/barbar.nvim",   dependencies = { "kyazdani42/nvim-web-devicons" } },
