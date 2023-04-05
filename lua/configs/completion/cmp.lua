@@ -1,25 +1,46 @@
 local cmp = require("cmp")
-local luasnip = require("luasnip")
 
 local function has_words_before()
 	local line, col = unpack(vim.api.nvim_win_get_cursor(0))
 	return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
 end
 
+-- costume color
+vim.api.nvim_set_hl(0, 'MyMenu', {bg= "#1D2021", fg= '#DBCCA7'})
+vim.api.nvim_set_hl(0, 'MySelect', {bg= "#FB4934", fg= '#1D2021'})
+
+-- window color and border
 local window = cmp.config.window.bordered({
-	-- border = "single",
-	winhighlight = "Normal:NormalFloat,FloatBorder:FloatBorder,CursorLine:PmenuSel,Search:IncSearch",
+	border = "single",
+	winhighlight = "Normal:MyMenu,FloatBorder:FloatBorder,CursorLine:MySelect,Search:IncSearch",
 })
+
+-- icons in floating window
+local icons = {
+  Text = "",
+  Variable = "󰌹",
+  Snippet = ""
+}
 
 cmp.setup({
 	snippet = {
 		expand = function(args)
-			luasnip.lsp_expand(args.body)
+      vim.fn["vsnip#anonymous"](args.body)
 		end,
 	},
+
 	completion = {
 		autocomplete = { cmp.TriggerEvent.TextChanged },
 	},
+
+  -- format icons
+  formatting = {
+    format = function(_, vim_item)
+      vim_item.kind = icons[vim_item.kind] or ""
+      return vim_item
+    end
+  },
+
 	window = {
 		completion = window,
 		documentation = window,
@@ -27,8 +48,8 @@ cmp.setup({
 	sources = {
 		{ name = "nvim_lsp" },
 		{ name = "path" },
-		{ name = "luasnip" },
 		{ name = "nvim_lua" },
+		{ name = "vsnip" },
 		{
 			name = "buffer",
 			option = {

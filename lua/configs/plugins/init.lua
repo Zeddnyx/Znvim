@@ -16,28 +16,26 @@ local plugins = {
   -- LSP
   {
     "williamboman/mason.nvim",
-    cmd = { "Mason", "MasonUpdate", "MasonUninstall" },
+    -- cmd = { "Mason", "MasonUpdate", "MasonUninstall" },
     config = function()
-      require("mason").setup()
+      require("mason").setup({
+        PATH = "prephend"
+      })
     end,
   },
 
   {
     "neovim/nvim-lspconfig",
     dependencies = {
-      "jose-elias-alvarez/null-ls.nvim",
-      config = function()
-        require("configs.lsp.nulls")
-      end,
+      {
+        "jose-elias-alvarez/null-ls.nvim",
+        config = function()
+          require("configs.lsp.nulls")
+        end
+      }
     },
     config = function()
       require("configs.lsp.lspconfig")
-    end,
-  },
-  {
-    "ray-x/lsp_signature.nvim",
-    config = function()
-      require("configs.lsp.signature")
     end,
   },
   { "onsails/lspkind.nvim" },
@@ -48,9 +46,17 @@ local plugins = {
     "hrsh7th/nvim-cmp",
     event = "InsertEnter",
     dependencies = {
-      "hrsh7th/cmp-nvim-lsp",
       "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-nvim-lsp",
+      "hrsh7th/cmp-nvim-lua",
       "hrsh7th/cmp-path",
+      {
+        "hrsh7th/cmp-vsnip",
+        dependencies = "hrsh7th/vim-vsnip",
+        init = function()
+          vim.g.vsnip_snippet_dir = vim.fn.stdpath("config") .. "/snippets"
+        end,
+      },
       {
         "windwp/nvim-autopairs",
         config = function()
@@ -63,15 +69,6 @@ local plugins = {
     end,
   },
   { "windwp/nvim-ts-autotag" }, -- Auto tag
-
-  { "L3MON4D3/LuaSnip" },
-  { "saadparwaiz1/cmp_luasnip" },
-  {
-    "rafamadriz/friendly-snippets", -- bunch of cool snippet in every language
-    config = function()
-      require("luasnip.loaders.from_vscode").lazy_load()
-    end,
-  },
 
   -- Themes
   {
@@ -125,17 +122,7 @@ local plugins = {
     end,
   },
 
-  -- D
-  --
-  --
-  --
-  --
-  --
-  --
-  --
-  --
-  -- D
-  --
+  -- Dependecies
   {"nvim-lua/plenary.nvim"}
 }
 
