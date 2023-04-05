@@ -1,24 +1,26 @@
 # Znvim
 
-Config Neovim for FrontEnd Development
+Neovim for frontend dev
 (HTML, CSS, JavaScript, ReactJS, TypeScript, NextJS)
 
-`startuptime 90ms`
+`startuptime 89ms`
 
-## required
+![nvim](./preview/showcase.png)
 
-- [Neovim >= 0.7](https://neovim.io)
-- [NerdFonts](https://nerdfonts.com) -- icons (optional)
 
 ## Install
-
+clean up your config first
+```
+rm -rf ~/.local/share/nvim
+rm -rf ~/.cache/nvim
+```
+install
 ```
 git clone https://github.com/ZeddNyx/Znvim ~/.config/nvim
 
 ```
 
-run `nvim +Lazy`
-and `:MasonInstall tsserver stylua prettier`
+run `nvim`
 
 ## List plugin
 
