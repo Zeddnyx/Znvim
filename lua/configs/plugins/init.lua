@@ -15,16 +15,6 @@ local plugins = {
 
   -- LSP
   {
-    "williamboman/mason.nvim",
-    -- cmd = { "Mason", "MasonUpdate", "MasonUninstall" },
-    config = function()
-      require("mason").setup({
-        PATH = "prephend"
-      })
-    end,
-  },
-
-  {
     "neovim/nvim-lspconfig",
     dependencies = {
       {
@@ -74,19 +64,10 @@ local plugins = {
     "ellisonleao/gruvbox.nvim",
     lazy = false, --load during startup
     config = function()
-      require("configs.theme.theme")
+      require("configs.theme")
     end,
   },
 
-  -- {
-  --   "kyazdani42/nvim-tree.lua",
-  --   dependencies = {
-  --     "kyazdani42/nvim-web-devicons",
-  --   },
-  --   config = function()
-  --     require("configs.ui.filemanager")
-  --   end,
-  -- },
 
   -- Barbar
   { "romgrk/barbar.nvim",   dependencies = { "kyazdani42/nvim-web-devicons" } },

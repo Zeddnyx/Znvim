@@ -24,10 +24,20 @@ function nshort(shortcut, command)
 	short("n", shortcut, command)
 end
 
--- Nvim Tree File
-nmap("<leader>e", "<cmd>:Lex<cr>:vertical resize 30<cr>")
+-- File Manager
+-- -  -- go up
+-- %  -- make a new file
+-- d  -- make a directory
+-- D  -- delete a directory
+-- R  -- rename a directory
+-- gh -- hide/unhide dotfiles
+-- I  -- hide/unhide banner
+-- mb -- bookmark a directory
+-- mB -- delete bookmark directory
+-- gb -- move to bookmark directory
+nmap("<leader>e", "<cmd>:Lex<cr>:vertical resize 20<cr>")
 
--- Multi file
+-- Buffer
 nmap("<S-h>", "<cmd>BufferPrevious<cr>") -- Previuos
 nmap("<S-l>", "<cmd>BufferNext<cr>") -- Next
 nmap("<S-c>", "<cmd>BufferClose<cr>") -- Close
@@ -36,13 +46,14 @@ nmap("<S-m>", "<cmd>BufferPin<cr>") -- Pin
 -- Split Screen
 nmap("<leader>h", "<C-w>s<cr>") -- Horizontal
 nmap("<leader>v", "<C-w>v<cr>") -- Vertical
-nmap("<S-w>", "<C-w>w<cr>") -- Switch view
+nmap("<C-w>", "<C-w>w<cr>") -- Switch view
+nmap("<C-h>", "<C-w>h<cr>") -- Switch right
+nmap("<C-j>", "<C-w>j<cr>") -- Switch down
+nmap("<C-k>", "<C-w>k<cr>") -- Switch up
+nmap("<C-l>", "<C-w>l<cr>") -- Switch left
 
 -- Select all
-nmap("<S-s>", "gg<S-v>G")
-
--- Go to diagnostic line
-nmap("<S-f>", "<cmd>lua vim.diagnostic.goto_next()<cr>")
+nmap("<leader>s>", "gg<S-v>G")
 
 -- Find and replace all matched word
 nshort("<leader>s", [[:%s/]])

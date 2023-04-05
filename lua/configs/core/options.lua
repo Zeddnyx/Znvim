@@ -12,7 +12,7 @@ vim.opt.laststatus = 2 -- show where are you in file what
 vim.opt.scrolloff = 1
 vim.opt.shell = "fish"
 vim.opt.swapfile = false
-vim.opt.list = false
+vim.opt.list = true
 vim.opt.fillchars:append({ eob = " " }) -- hide ~ character
 
 vim.opt.expandtab = true
