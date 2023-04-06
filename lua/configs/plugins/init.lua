@@ -12,6 +12,9 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
+  -- Dependecies
+  { "kyazdani42/nvim-web-devicons", lazy = true },
+  { "nvim-lua/plenary.nvim", lazy = true },
 
   -- LSP
   {
@@ -28,7 +31,6 @@ local plugins = {
       require("configs.lsp.lspconfig")
     end,
   },
-  { "kabouzeid/nvim-lspinstall" },
 
   -- Completion
   {
@@ -62,7 +64,7 @@ local plugins = {
   -- Themes
   {
     "ellisonleao/gruvbox.nvim",
-    lazy = false, --load during startup
+    lazy = false,
     config = function()
       require("configs.theme")
     end,
@@ -70,7 +72,7 @@ local plugins = {
 
 
   -- Barbar
-  { "romgrk/barbar.nvim",   dependencies = { "kyazdani42/nvim-web-devicons" } },
+  { "romgrk/barbar.nvim"},
 
   {
     "nvim-treesitter/nvim-treesitter",
@@ -89,6 +91,15 @@ local plugins = {
   },
 
   {
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v2.x",
+    dependencies = { "MunifTanjim/nui.nvim" },
+    config = function()
+        require("configs.ui.filemanager")
+    end,
+  },
+
+  {
     "lukas-reineke/indent-blankline.nvim",
     config = function()
       require("configs.ui.indentline")
@@ -102,8 +113,6 @@ local plugins = {
     end,
   },
 
-  -- Dependecies
-  {"nvim-lua/plenary.nvim"}
 }
 
 require("lazy").setup(plugins, {

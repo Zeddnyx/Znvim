@@ -25,17 +25,7 @@ function nshort(shortcut, command)
 end
 
 -- File Manager
--- -  -- go up
--- %  -- make a new file
--- d  -- make a directory
--- D  -- delete a directory
--- R  -- rename a directory
--- gh -- hide/unhide dotfiles
--- I  -- hide/unhide banner
--- mb -- bookmark a directory
--- mB -- delete bookmark directory
--- gb -- move to bookmark directory
-nmap("<leader>e", "<cmd>:Lex<cr>:vertical resize 20<cr>")
+nmap("<leader>e", "<cmd>NeoTreeFocusToggle<cr>")
 
 -- Buffer
 nmap("<S-h>", "<cmd>BufferPrevious<cr>") -- Previuos
