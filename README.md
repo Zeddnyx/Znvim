@@ -3,8 +3,6 @@
 Neovim for frontend dev
 (HTML, CSS, JavaScript, ReactJS, TypeScript, NextJS)
 
-`startuptime 75ms`
-
 ![nvim](./preview/showcase.png)
 
 
@@ -20,55 +18,38 @@ git clone https://github.com/ZeddNyx/Znvim ~/.config/nvim
 
 ```
 
-run `nvim`
+run `nvim` and type `:Lazy`
 
 ## List plugin
 
-- Lsp configuration with [lsp ](https://github.com/neovim/nvim-lspconfig), [lspkind](https://github.com/onsails/lspkind.nvim) and [mason](https://github.com/williamboman/mason.nvim)
+- Lsp configuration with [lsp ](https://github.com/neovim/nvim-lspconfig) and [lspkind](https://github.com/onsails/lspkind.nvim)
 - Autocompletion with [cmp](https://github.com/hrsh7th/nvim-cmp)
-- Autoclosing braces and html tags with [autopairs](https://github.com/windwp/nvim-autopairs)
-- Themes [onedarkpro](https://github.com/olimorris/onedarkpro.nvim)
-- File navigation with [nvim tree](https://github.com/kyazdani42/nvim-tree.lua)
+- Autoclosing braces with [autopairs](https://github.com/windwp/nvim-autopairs)
+- Themes [gruvbox](https://github.com/ellisonleao/gruvbox.nvim)
 - Syntax highlighting with [treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - Comment syntax with [comment](https://github.com/numToStr/Comment.nvim)
 - Indentlines with [indent blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
-- Snippets with [freandly](https://github.com/rafamadriz/friendly-snippets)
+- Snippets with [vsnip](https://github.com/hrsh7th/cmp-vsnip)
 - Color preview with [colorizer](https://github.com/NvChad/nvim-colorizer)
 - Bar navigation with [Barbar](https://github.com/romgrk/barbar.nvim)
 
 ## Keybind
 
 ```
-// Save and exit
-save = 'Space + w'
-exit = 'Space + q'
-save and exit = 'Space + x'
-
 // Comment
-comments = 'gcc' -- normal mode
-comments = 'gc'  -- visual mode
+'gcc' -- Normal mode
+'gc'  -- Visual mode
 
-// File navigation
-tree toggle = 'Space + e'
-tree focus  = 'Space + o'
+// Buffer
+'Shift + h' -- Move previous
+'Shift + l' -- Move next
+'Shift + c' -- Close buffer
+'Shift + m' -- Pin buffer
 
-// Multi Tab File
-move previous = 'Shift + h'
-move next     = 'Shift + l'
-close tab     = 'Shift + c'
-Pin tab       = 'Shift + m'
-
-// Format and prettier
-'Space + f'
-
-// Find and replace all word match
-'Space + s'
-
-// Select all
-'Shift + s'
-
-// Diagnostic
-go to diagnostic = 'Shift + f'
+'Space + e' -- File navigation
+'Space + f' -- Format and prettier
+'Space + s' -- Find and replace all word match
+'Shift + s' -- Select all
 ```
 
 ## Thanks

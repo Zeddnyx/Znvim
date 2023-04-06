@@ -1,4 +1,5 @@
-vim.cmd([[highlight IndentBlanklineIndent1 guifg=#1D2021 gui=nocombine]])
+vim.opt.termguicolors = true
+vim.cmd [[highlight IndentBlanklineIndent1 guifg=#1D2021 gui=nocombine]]
 
 local indentline = {
 	space_char_blankline = " ",

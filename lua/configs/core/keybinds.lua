@@ -53,7 +53,7 @@ nmap("<C-k>", "<C-w>k<cr>") -- Switch up
 nmap("<C-l>", "<C-w>l<cr>") -- Switch left
 
 -- Select all
-nmap("<leader>s>", "gg<S-v>G")
+nmap("<S-s>", "gg<S-v>G")
 
 -- Find and replace all matched word
 nshort("<leader>s", [[:%s/]])
