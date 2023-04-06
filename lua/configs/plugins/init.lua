@@ -19,6 +19,7 @@ local plugins = {
   -- LSP
   {
     "neovim/nvim-lspconfig",
+    event = "BufRead",
     dependencies = {
       {
         "jose-elias-alvarez/null-ls.nvim",
@@ -46,10 +47,16 @@ local plugins = {
         dependencies = "hrsh7th/vim-vsnip",
         init = function()
           vim.g.vsnip_snippet_dir = vim.fn.stdpath("config") .. "/snippets"
+          vim.g.vsnip_filetypes = {
+            -- add snippet tailwindcss to jsx and tsx file
+            javascriptreact = {"javascript/javascriptreact", "tailwindcss"},
+            css = {"tailwindcss"},
+          }
         end,
       },
       {
         "windwp/nvim-autopairs",
+        event = "VeryLazy",
         config = function()
           require("configs.completion.autopairs")
         end,
@@ -59,7 +66,7 @@ local plugins = {
       require("configs.completion.cmp")
     end,
   },
-  { "onsails/lspkind.nvim" },
+  { "onsails/lspkind.nvim", event = "InsertEnter" },
 
   -- Themes
   {
@@ -72,10 +79,11 @@ local plugins = {
 
 
   -- Barbar
-  { "romgrk/barbar.nvim"},
+  { "romgrk/barbar.nvim", event = "BufWinEnter" },
 
   {
     "nvim-treesitter/nvim-treesitter",
+    event = "BufWinEnter",
     dependencies = { "p00f/nvim-ts-rainbow" },
     config = function()
       require("configs.ui.treesitter")
@@ -85,18 +93,17 @@ local plugins = {
   -- Editor
   {
     "numToStr/Comment.nvim",
+    event = "VeryLazy",
     config = function()
       require("Comment").setup()
     end,
   },
 
   {
-    "nvim-neo-tree/neo-tree.nvim",
-    branch = "v2.x",
-    dependencies = { "MunifTanjim/nui.nvim" },
+    "kyazdani42/nvim-tree.lua",
     config = function()
-        require("configs.ui.filemanager")
-    end,
+      require("configs.ui.filemanager")
+    end
   },
 
   {
@@ -108,6 +115,7 @@ local plugins = {
 
   {
     "NvChad/nvim-colorizer.lua",
+    event = "BufRead",
     config = function()
       require("configs.ui.colorizer")
     end,

@@ -25,7 +25,7 @@ function nshort(shortcut, command)
 end
 
 -- File Manager
-nmap("<leader>e", "<cmd>NeoTreeFocusToggle<cr>")
+nmap("<leader>e", "<cmd>NvimTreeToggle<cr>")
 
 -- Buffer
 nmap("<S-h>", "<cmd>BufferPrevious<cr>") -- Previuos
