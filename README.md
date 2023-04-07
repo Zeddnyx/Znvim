@@ -25,13 +25,12 @@ run `nvim` and type `:Lazy`
 - Lsp configuration with [lsp ](https://github.com/neovim/nvim-lspconfig) and [lspkind](https://github.com/onsails/lspkind.nvim)
 - Autocompletion with [cmp](https://github.com/hrsh7th/nvim-cmp)
 - Autoclosing braces with [autopairs](https://github.com/windwp/nvim-autopairs)
-- Themes [gruvbox](https://github.com/ellisonleao/gruvbox.nvim)
+- Themes with [gruvbox](https://github.com/ellisonleao/gruvbox.nvim)
 - Syntax highlighting with [treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - Comment syntax with [comment](https://github.com/numToStr/Comment.nvim)
 - Indentlines with [indent blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
 - Snippets with [vsnip](https://github.com/hrsh7th/cmp-vsnip)
 - Color preview with [colorizer](https://github.com/NvChad/nvim-colorizer)
-- Bar navigation with [Barbar](https://github.com/romgrk/barbar.nvim)
 
 ## Keybind
 
@@ -44,7 +43,6 @@ run `nvim` and type `:Lazy`
 'Shift + h' -- Move previous
 'Shift + l' -- Move next
 'Shift + c' -- Close buffer
-'Shift + m' -- Pin buffer
 
 'Space + e' -- File navigation
 'Space + f' -- Format and prettier

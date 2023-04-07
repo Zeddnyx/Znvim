@@ -10,11 +10,11 @@ require("neo-tree").setup({
             with_markers = true,
             indent_marker = "│",
             last_indent_marker = "└",
-            highlight = "NeoTreeIndentMarker",
+            highlight = "Normal",
             with_expanders = nil,
             expander_collapsed = "",
             expander_expanded = "",
-            expander_highlight = "Normal",
+            expander_highlight = "NeoTreeIndentMarker",
         },
         modified = {
             symbol = "",
@@ -22,22 +22,21 @@ require("neo-tree").setup({
         },
         name = {
             trailing_slash = false,
-            use_git_status_colors = true,
             highlight = "Normal",
         },
         git_status = {
-           symbols = {
-             added     = "+",
-             modified  = "m",
-             deleted   = "✖",
-             renamed   = "",
-             untracked = "",
-             ignored   = "",
-             unstaged  = "u",
-             staged    = "",
-             conflict  = "",
-           }
-         },
+          symbols = {
+            added     = "+",
+            modified  = "m",
+            deleted   = "✖",
+            renamed   = "",
+            untracked = "",
+            ignored   = "",
+            unstaged  = "u",
+            staged    = "",
+            conflict  = "",
+          }
+        },
     },
     window = {
         position = "float",
