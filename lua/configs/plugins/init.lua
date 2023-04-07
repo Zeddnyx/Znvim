@@ -100,6 +100,16 @@ local plugins = {
   },
 
   {
+      "nvim-neo-tree/neo-tree.nvim",
+      branch = "v2.x",
+      dependencies = { "MunifTanjim/nui.nvim" },
+      keys = "<leader>e",
+      config = function()
+          require("configs.ui.filemanager")
+      end,
+  },
+
+  {
     "lukas-reineke/indent-blankline.nvim",
     event = "BufRead",
     config = function()

@@ -3,7 +3,6 @@
 Neovim for frontend dev
 (HTML, CSS, Tailwindcss, JavaScript, ReactJS, TypeScript, NextJS)
 
-`startuptime 43ms`
 ![nvim](./preview/showcase.png)
 
 

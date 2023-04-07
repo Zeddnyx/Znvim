@@ -1,7 +1,7 @@
 {
   "aspect ration": {
     "prefix": "aspect",
-    "body": "aspect-${1|auto,square,video,[${1:val}]|}"
+    "body": "aspect-${1|auto,square,video,[]|}"
   },
   "display": {
     "prefix": "display",
@@ -40,7 +40,7 @@
     "body": "order-${1|1,2,3,4,5,6,7,8,9,10,11,12,first,last,none|}"
   },
   "grid template columns": {
-    "prefix": "gc",
+    "prefix": "gtc",
     "body": "grid-col-${1|1,2,3,4,5,6,7,8,9,10,11,12,none|}"
   },
   "grid column start": {
@@ -48,7 +48,7 @@
     "body": "col-${1|span-auto,span-1,span-2,span-3,span-4,span-5,span-6,span-7,span-8,span-9,span-10,span-11,span-12,span-full,start-1,start-2,start-3,start-4,start-5,start-6,start-7,start-8,start-9,start-10,start-11,start-12,start-13,start-auto,end-1,end-2,end-3,end-4,end-5,end-6,end-7,end-8,end-9,end-10,end-11,end-12,end-13,end-auto|}"
   },
   "grid template rows": {
-    "prefix": "gr",
+    "prefix": "gtr",
     "body": "grid-row-${1|1,2,3,4,5,6,none|}"
   },
   "gap": {
@@ -97,15 +97,15 @@
   },
   "max width": {
     "prefix": "maxw",
-    "body": "max-w-${1|0,none,xs,sm,md,lg,xl,2xl,3xl,4xl,5xl,6xl,7xl|}"
+    "body": "max-w-${1|[],0,none,xs,sm,md,lg,xl,2xl,3xl,4xl,5xl,6xl,7xl|}"
   },
   "max height": {
     "prefix": "maxh",
-    "body": "max-h-${1|0,none,xs,sm,md,lg,xl,2xl,3xl,4xl,5xl,6xl,7xl|}"
+    "body": "max-h-${1|[],0,none,xs,sm,md,lg,xl,2xl,3xl,4xl,5xl,6xl,7xl|}"
   },
   "text-size": {
     "prefix": "ts",
-    "body": "text-${1|xs,sm,md,lg,xl,2xl,3xl,4xl,5xl,6xl,7xl,8xl,9xl|}"
+    "body": "text-${1|[],xs,sm,md,lg,xl,2xl,3xl,4xl,5xl,6xl,7xl,8xl,9xl|}"
   },
   "text-weight": {
     "prefix": "fw",
@@ -113,7 +113,7 @@
   },
   "text indent": {
     "prefix": "ti",
-    "body": "indent-${1|px,1,2,3,4,5,6,7,8,9,8,9,10,11,12,14,16,20,24,28,32,36,40,44,48,52,56,60,64,70,72,80,96||}"
+    "body": "indent-${1|px,1,2,3,4,5,6,7,8,9,8,9,10,11,12,14,16,20,24,28,32,36,40,44,48,52,56,60,64,70,72,80,96|}"
   },
   "white space": {
     "prefix": "ws",
@@ -163,6 +163,18 @@
     "prefix": "bs",
     "body": "bg-${1|auto,cover,contain|}"
   },
+  "border": {
+    "prefix": "br",
+    "body": "border"
+  },
+  "border color": {
+    "prefix": "brc",
+    "body": "border-${1|[],blue-,red-,slate-,gray-,zinc-,neutral-,stone-,orange-,amber-,yellow-,lime-,green-,teal-,cyan-,sky-,indigo-,violet-,purple-,fuhcsia-,pink-,rose-|}"
+  },
+  "background color": {
+    "prefix": "bc",
+    "body": "bg-${1|[],blue-,red-,slate-,gray-,zinc-,neutral-,stone-,orange-,amber-,yellow-,lime-,green-,teal-,cyan-,sky-,indigo-,violet-,purple-,fuhcsia-,pink-,rose-|}"
+  },
   "rounded": {
     "prefix": "rd",
     "body": "rounded-${1|,none,sm,md,lg,xl,2xl,full|}"
@@ -178,5 +190,17 @@
   "outline": {
     "prefix": "ot",
     "body": "outline none"
+  },
+  "shadow": {
+    "prefix": "shadow",
+    "body": "shadow-${1|sm,,md,lg,xl,2xl,inner,none|}"
+  },
+  "shadow color": {
+    "prefix": "shadowc",
+    "body": "shadow-${1|inherit,current,transparent,black,white,blue-,red-,slate-,gray-,zinc-,neutral-,stone-,orange-,amber-,yellow-,lime-,green-,teal-,cyan-,sky-,indigo-,violet-,purple-,fuhcsia-,pink-,rose-|}"
+  },
+  "opacity": {
+    "prefix": "opacity",
+    "body": "opacity-${1|[],0,5,10,20,25,30,40,50,60,70,75,80,90,100,${1:val}|}"
   }
 }
