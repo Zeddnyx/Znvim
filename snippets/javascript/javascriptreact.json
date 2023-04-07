@@ -1,17 +1,29 @@
 {
+  "import React": {
+    "prefix": "imr",
+    "body": "import React, { ${1:val} } from 'react'"
+  },
+  "import": {
+    "prefix": "imp",
+    "body": "import ${1:val} from '${2:val}'"
+  },
+  "import statement": {
+    "prefix": "impo",
+    "body": "import { ${1:val} } from '${2:val}'"
+  },
   "if falsy return null": {
     "prefix": "ifr",
     "body": "if (!${1:condition}) {\n\treturn null\n}"
   },
-  "reactFunctionComponent": {
-    "prefix": "rfc",
-    "body": "\nconst ${TM_FILENAME_BASE} = () => {\n\treturn (\n\t\t<div>\n\t\t\t$0\n\t\t</div>\n\t)\n}\n\nexport default ${TM_FILENAME_BASE}",
-    "description": "Creates a React function component without PropTypes"
-  },
   "reactFunctionComponentWithEmotion": {
-    "prefix": "rfce",
+    "prefix": "rfc",
     "body": "import React from 'react'\n\nexport default function ${TM_FILENAME_BASE}(){\n\treturn (\n\t\t<div>\n\t\t\t$0\n\t\t</div>\n\t)\n}",
     "description": "Creates a React functional component with emotion"
+  },
+  "reactFunctionComponent": {
+    "prefix": "rfce",
+    "body": "\nconst ${TM_FILENAME_BASE} = () => {\n\treturn (\n\t\t<div>\n\t\t\t$0\n\t\t</div>\n\t)\n}\n\nexport default ${TM_FILENAME_BASE}",
+    "description": "Creates a React function component without PropTypes"
   },
   "componentWillReceiveProps": {
     "prefix": "cwr",
@@ -37,11 +49,6 @@
     "prefix": "jmr",
     "body": "{${1:array}.map((item) => {\n\treturn <${2:elementName} key={item.id}>\n\t$0\n</${2}>\n})}",
     "description": "an element self closed"
-  },
-  "jsx element wrap selection": {
-    "prefix": "jsx",
-    "body": "<${1:elementName}>\n\t{$TM_SELECTED_TEXT}\n</${1}>",
-    "description": "an element"
   },
   "useState": {
     "prefix": "us",
@@ -105,7 +112,7 @@
     "description": "useQuery destructure object"
   },
   "destructur object": {
-    "prefix": "do",
+    "prefix": "dest",
     "body": "const { ${1:var} } = ${2:func}(${3:val})$0",
     "description": "Destruture an object"
   },
@@ -121,7 +128,7 @@
   },
   "onSubmit": {
     "prefix": "onsubmit",
-    "body": "onSubmit(handle${1:func})",
+    "body": "onSubmit={handle${1:func}}",
     "description": "handle onSubmit events"
   },
   "className": {
@@ -131,11 +138,7 @@
   },
   "handle events tag element": {
     "prefix": "hand",
-    "body": [
-      "const handle${1:func} = () => {",
-      "\t$2",
-      "}"
-    ],
+    "body": ["const handle${1:func} = () => {", "\t$2", "}"],
     "description": "handle events"
   }
 }

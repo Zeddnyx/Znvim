@@ -24,7 +24,7 @@ function nshort(shortcut, command)
 	short("n", shortcut, command)
 end
 
--- File Manager
+-- file manager
 -- -   -- back to up directory
 -- %   -- create a file
 -- d   -- create a directory
@@ -36,23 +36,26 @@ end
 -- u   -- back to recently visited directory
 nmap("<leader>e", "<cmd>:Lex<cr>:vertical resize 24<cr>")
 
--- Buffer
-nmap("<S-h>", "<cmd>BufferPrevious<cr>") -- Previuos
-nmap("<S-l>", "<cmd>BufferNext<cr>") -- Next
-nmap("<S-c>", "<cmd>BufferClose<cr>") -- Close
-nmap("<S-m>", "<cmd>BufferPin<cr>") -- Pin
+-- buffer
+nmap("<S-h>", "<CMD>bprevious<CR>", { desc = "Buffer: focus to previous buffer" })
+nmap("<S-l>", "<CMD>bnext<CR>", { desc = "Buffer: focus to next buffer" })
+nmap("<S-c>", "<CMD>bd<CR>", { desc = "Buffer: delete buffer" })
+nmap("<S-q>q", "<CMD>%bd<CR>", { silent = true, desc = "Buffer: delete all buffer" })
+nmap("<S-q>a", "<CMD>%bd!<CR>", { silent = true, desc = "Buffer: force delete all buffer" })
+nmap("<S-q>o", "<CMD>%bd|e#<CR>", { silent = true, desc = "Buffer: delete all buffer except this one" })
 
--- Split Screen
-nmap("<leader>h", "<C-w>s<cr>") -- Horizontal
-nmap("<leader>v", "<C-w>v<cr>") -- Vertical
+
+-- split screen
+nmap("<C-s>", "<C-w>s<cr>") -- Horizontal
+nmap("<C-v>", "<C-w>v<cr>") -- Vertical
 nmap("<C-w>", "<C-w>w<cr>") -- Switch view
 nmap("<C-h>", "<C-w>h<cr>") -- Switch right
 nmap("<C-j>", "<C-w>j<cr>") -- Switch down
 nmap("<C-k>", "<C-w>k<cr>") -- Switch up
 nmap("<C-l>", "<C-w>l<cr>") -- Switch left
 
--- Select all
+-- select all
 nmap("<S-s>", "gg<S-v>G")
 
--- Find and replace all matched word
+-- find and replace all matched word
 nshort("<leader>s", [[:%s/]])

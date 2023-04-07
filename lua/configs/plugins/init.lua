@@ -77,10 +77,6 @@ local plugins = {
     end,
   },
 
-
-  -- Barbar
-  { "romgrk/barbar.nvim", event = "BufWinEnter" },
-
   {
     "nvim-treesitter/nvim-treesitter",
     event = "BufWinEnter",
@@ -93,7 +89,7 @@ local plugins = {
   -- Editor
   {
     "numToStr/Comment.nvim",
-    event = "VeryLazy",
+    event = "BufRead",
     config = function()
       require("Comment").setup()
     end,
