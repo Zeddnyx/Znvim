@@ -56,7 +56,7 @@ local plugins = {
       },
       {
         "windwp/nvim-autopairs",
-        event = "VeryLazy",
+        event = "InsertEnter",
         config = function()
           require("configs.completion.autopairs")
         end,
@@ -100,14 +100,8 @@ local plugins = {
   },
 
   {
-    "kyazdani42/nvim-tree.lua",
-    config = function()
-      require("configs.ui.filemanager")
-    end
-  },
-
-  {
     "lukas-reineke/indent-blankline.nvim",
+    event = "BufRead",
     config = function()
       require("configs.ui.indentline")
     end,

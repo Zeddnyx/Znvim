@@ -25,7 +25,16 @@ function nshort(shortcut, command)
 end
 
 -- File Manager
-nmap("<leader>e", "<cmd>NvimTreeToggle<cr>")
+-- -   -- back to up directory
+-- %   -- create a file
+-- d   -- create a directory
+-- D   -- remove a directory or file
+-- R   -- rename/move a directory or file
+-- I   -- hide/unhide banner
+-- gh  -- hide/unhide dotfile
+-- iii -- list tree file
+-- u   -- back to recently visited directory
+nmap("<leader>e", "<cmd>:Lex<cr>:vertical resize 24<cr>")
 
 -- Buffer
 nmap("<S-h>", "<cmd>BufferPrevious<cr>") -- Previuos
