@@ -32,7 +32,7 @@
     "body": "z-${1|10,20,30,40,50,auto|}"
   },
   "flex direction": {
-    "prefix": "flex-di",
+    "prefix": "fd",
     "body": "flex-${1|row,col,row-reverse,col-reverse|}"
   },
   "order": {
@@ -44,12 +44,28 @@
     "body": "grid-col-${1|1,2,3,4,5,6,7,8,9,10,11,12,none|}"
   },
   "grid column start": {
-    "prefix": "col",
+    "prefix": "gts",
     "body": "col-${1|span-auto,span-1,span-2,span-3,span-4,span-5,span-6,span-7,span-8,span-9,span-10,span-11,span-12,span-full,start-1,start-2,start-3,start-4,start-5,start-6,start-7,start-8,start-9,start-10,start-11,start-12,start-13,start-auto,end-1,end-2,end-3,end-4,end-5,end-6,end-7,end-8,end-9,end-10,end-11,end-12,end-13,end-auto|}"
   },
   "grid template rows": {
     "prefix": "gtr",
     "body": "grid-row-${1|1,2,3,4,5,6,none|}"
+  },
+  "grid rows start": {
+    "prefix": "grs",
+    "body": "ow-${1|auto,span-1,span-2,span-3,span-4,span-5,span-6,span-full,start-1,start-2,start-3,start-4,start-5,start-6,start-7,start-auto,end-1,end-2,end-3,end-4,end-5,end-6,end-7,end-auto|}"
+  },
+  "grid auto flows": {
+    "prefix": "gaf",
+    "body": "grid-flow-${1|row,col,dense,row-dense,co-dense|}"
+  },
+  "grid auto columns": {
+    "prefix": "gac",
+    "body": "grid-cols-${1|auto,min,max,fr|}"
+  },
+  "grid auto rows": {
+    "prefix": "gar",
+    "body": "grid-row-${1|auto,min,max,fr|}"
   },
   "gap": {
     "prefix": "gap",
@@ -79,6 +95,18 @@
     "prefix": "as",
     "body": "self-${1|auto,start,end,center,stretch,baseline|}"
   },
+  "Place content": {
+    "prefix": "pc",
+    "body": "place-content-${1|evenly,start,end,center,between,around,baseline,stretch|}"
+  },
+  "Place items": {
+    "prefix": "pi",
+    "body": "place-items-${1|start,end,center,baseline,stretch|}"
+  },
+  "Place self": {
+    "prefix": "ps",
+    "body": "place-self-${1|auto,start,end,center,stretch|}"
+  },
   "padding": {
     "prefix": "p",
     "body": "p-${1|0,1,2,3,4,5,6,7,8,9,8,9,10,11,12,14,16,20,24,28,32,36,40,44,48,52,56,60,64,70,72,80,96|}"
@@ -96,11 +124,11 @@
     "body": "h-${1|px,1,2,3,4,5,6,7,8,9,8,9,10,11,12,14,16,20,24,28,32,36,40,44,48,52,56,60,64,70,72,80,96|}"
   },
   "max width": {
-    "prefix": "maxw",
+    "prefix": "mw",
     "body": "max-w-${1|[],0,none,xs,sm,md,lg,xl,2xl,3xl,4xl,5xl,6xl,7xl|}"
   },
   "max height": {
-    "prefix": "maxh",
+    "prefix": "mh",
     "body": "max-h-${1|[],0,none,xs,sm,md,lg,xl,2xl,3xl,4xl,5xl,6xl,7xl|}"
   },
   "text-size": {
@@ -163,6 +191,14 @@
     "prefix": "bs",
     "body": "bg-${1|auto,cover,contain|}"
   },
+  "background image": {
+    "prefix": "bi",
+    "body": "bg-gradient-to-${1|t,tr,r,br,b,bl,l,tl|}"
+  },
+  "background gradient": {
+    "prefix": "bi",
+    "body": "${1|from-blue-,from-red-,from-slate-,from-gray-,from-zinc-,from-neutral-,from-stone-,from-orange-,from-amber-,from-yellow-,from-lime-,from-green-,from-teal-,from-cyan-,from-sky-,from-indigo-,from-violet-,from-purple-,from-fuhcsia-,from-pink-,from-rose-|}"
+  },
   "border": {
     "prefix": "br",
     "body": "border"
@@ -192,15 +228,59 @@
     "body": "outline none"
   },
   "shadow": {
-    "prefix": "shadow",
+    "prefix": "sh",
     "body": "shadow-${1|sm,,md,lg,xl,2xl,inner,none|}"
   },
   "shadow color": {
-    "prefix": "shadowc",
+    "prefix": "shc",
     "body": "shadow-${1|inherit,current,transparent,black,white,blue-,red-,slate-,gray-,zinc-,neutral-,stone-,orange-,amber-,yellow-,lime-,green-,teal-,cyan-,sky-,indigo-,violet-,purple-,fuhcsia-,pink-,rose-|}"
   },
   "opacity": {
     "prefix": "opacity",
     "body": "opacity-${1|[],0,5,10,20,25,30,40,50,60,70,75,80,90,100,${1:val}|}"
-  }
+  },
+  "blur": {
+    "prefix": "blur",
+    "body": "blur-${1|none,sm,,md,lg,xl,2xl,3xl|}"
+  },
+  "backdrop blur": {
+    "prefix": "bb",
+    "body": "backdrop-blur-${1|none,sm,,md,lg,xl,2xl,3xl|}"
+  },
+  "brightness": {
+    "prefix": "brightness",
+    "body": "brightness-${1|0,50,75,90,95,100,105,110,125,150,200|}"
+  },
+  "table": {
+    "prefix": "table",
+    "body": "table-${1|auto,fixed|}"
+  },
+  "transition propery": {
+    "prefix": "trans",
+    "body": "transition-${1|none,all,,colors,opacity,shadow,transform|}"
+  },
+  "transition timing functions": {
+    "prefix": "transition",
+    "body": "ease-${1|linear,in,out,in-out|}"
+  },
+  "duration": {
+    "prefix": "duration",
+    "body": "duration-${1|0,75,100,150,200,300,500,700,1000|}"
+  },
+  "delay": {
+    "prefix": "delay",
+    "body": "delay-${1|0,75,100,150,200,300,500,700,1000|}"
+  },
+  "animation": {
+    "prefix": "animate",
+    "body": "animate-${1|none,spin,ping,pulse,bounce|}"
+  },
+  "rotate": {
+    "prefix": "rotate",
+    "body": "rotate-${1|0,1,2,3,6,12,45,90,180|}"
+  },
+  "translate": {
+    "prefix": "translate",
+    "body": "translate-${1|x-1,x-2,x-3,x-4,x-5,x-6,x-7,x-8,x-9,x-10,x-11,x-12,x-14,x-16,x-20,x-24,x-28,x-32,x-36,x-40,x-44,x-48,x-52,x-56,x-60,x-64,x-70,x-72,x-80,x-96,y-1,y-2,y-3,y-4,y-5,y-6,y-7,y-8,y-9,y-10,y-11,y-12,y-14,y-16,y-20,y-24,y-28,y-32,y-36,y-40,y-44,y-48,y-52,y-56,y-60,y-64,y-70,y-72,y-80,y-96|}"
+  },
 }
