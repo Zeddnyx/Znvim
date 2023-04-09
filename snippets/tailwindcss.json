@@ -8,11 +8,11 @@
     "body": "${1|flex,grid,block,inline,hidden|}"
   },
   "object fit": {
-    "prefix": "object",
+    "prefix": "obj",
     "body": "object-${1|contain,cover,fill,none,scale-down|}"
   },
   "object position": {
-    "prefix": "object position",
+    "prefix": "op",
     "body": "object-${1|bottom,center,left,left-bottom,left-top,right,right-bottom,right-top,top|}"
   },
   "overflow": {
@@ -109,19 +109,19 @@
   },
   "padding": {
     "prefix": "p",
-    "body": "p-${1|0,1,2,3,4,5,6,7,8,9,8,9,10,11,12,14,16,20,24,28,32,36,40,44,48,52,56,60,64,70,72,80,96|}"
+    "body": "p-${1|[],0,1,2,3,4,5,6,7,8,9,8,9,10,11,12,14,16,20,24,28,32,36,40,44,48,52,56,60,64,70,72,80,96|}"
   },
   "margin": {
     "prefix": "m",
-    "body": "m-${1|0,1,2,3,4,5,6,7,8,9,8,9,10,11,12,14,16,20,24,28,32,36,40,44,48,52,56,60,64,70,72,80,96|}"
+    "body": "m-${1|[],0,1,2,3,4,5,6,7,8,9,8,9,10,11,12,14,16,20,24,28,32,36,40,44,48,52,56,60,64,70,72,80,96|}"
   },
   "width": {
     "prefix": "w",
-    "body": "w-${1|px,1,2,3,4,5,6,7,8,9,8,9,10,11,12,14,16,20,24,28,32,36,40,44,48,52,56,60,64,70,72,80,96|}"
+    "body": "w-${1|[],px,1,2,3,4,5,6,7,8,9,8,9,10,11,12,14,16,20,24,28,32,36,40,44,48,52,56,60,64,70,72,80,96|}"
   },
   "height": {
     "prefix": "h",
-    "body": "h-${1|px,1,2,3,4,5,6,7,8,9,8,9,10,11,12,14,16,20,24,28,32,36,40,44,48,52,56,60,64,70,72,80,96|}"
+    "body": "h-${1|[],px,1,2,3,4,5,6,7,8,9,8,9,10,11,12,14,16,20,24,28,32,36,40,44,48,52,56,60,64,70,72,80,96|}"
   },
   "max width": {
     "prefix": "mw",
@@ -229,7 +229,7 @@
   },
   "shadow": {
     "prefix": "sh",
-    "body": "shadow-${1|sm,,md,lg,xl,2xl,inner,none|}"
+    "body": "shadow-${1|sm,md,lg,xl,2xl,inner,none|}"
   },
   "shadow color": {
     "prefix": "shc",
@@ -237,15 +237,15 @@
   },
   "opacity": {
     "prefix": "opacity",
-    "body": "opacity-${1|[],0,5,10,20,25,30,40,50,60,70,75,80,90,100,${1:val}|}"
+    "body": "opacity-${1|0,5,10,20,25,30,40,50,60,70,75,80,90,100,${1:val}|}"
   },
   "blur": {
     "prefix": "blur",
-    "body": "blur-${1|none,sm,,md,lg,xl,2xl,3xl|}"
+    "body": "blur-${1|none,sm,md,lg,xl,2xl,3xl|}"
   },
   "backdrop blur": {
     "prefix": "bb",
-    "body": "backdrop-blur-${1|none,sm,,md,lg,xl,2xl,3xl|}"
+    "body": "backdrop-blur-${1|none,sm,md,lg,xl,2xl,3xl|}"
   },
   "brightness": {
     "prefix": "brightness",
@@ -257,11 +257,15 @@
   },
   "transition propery": {
     "prefix": "trans",
-    "body": "transition-${1|none,all,,colors,opacity,shadow,transform|}"
+    "body": "transition-${1|none,all,colors,opacity,shadow,transform|}"
   },
   "transition timing functions": {
     "prefix": "transition",
     "body": "ease-${1|linear,in,out,in-out|}"
+  },
+  "transform origin": {
+    "prefix": "transform",
+    "body": "origin-${1|top-right,right,bottom-right,bottom,bottom-left,left,top-left|}"
   },
   "duration": {
     "prefix": "duration",
@@ -283,4 +287,9 @@
     "prefix": "translate",
     "body": "translate-${1|x-1,x-2,x-3,x-4,x-5,x-6,x-7,x-8,x-9,x-10,x-11,x-12,x-14,x-16,x-20,x-24,x-28,x-32,x-36,x-40,x-44,x-48,x-52,x-56,x-60,x-64,x-70,x-72,x-80,x-96,y-1,y-2,y-3,y-4,y-5,y-6,y-7,y-8,y-9,y-10,y-11,y-12,y-14,y-16,y-20,y-24,y-28,y-32,y-36,y-40,y-44,y-48,y-52,y-56,y-60,y-64,y-70,y-72,y-80,y-96|}"
   },
+  "appearance": {
+    "prefix": "appearance",
+    "body": "appearance-none",
+    "description": "remove default element appearance, like arrow on select element"
+  }
 }

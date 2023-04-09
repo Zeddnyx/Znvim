@@ -1,27 +1,7 @@
 {
-  "setImmediate": {
-    "prefix": "sim",
-    "body": "setImmediate(() => {\n\t${0}\n})"
-  },
   "await": {
     "prefix": "a",
     "body": "await ${0}"
-  },
-  "await Promise.all": {
-    "prefix": "apa",
-    "body": "await Promise.all(${1:value})"
-  },
-  "await Promise.all with destructuring": {
-    "prefix": "apad",
-    "body": "const [${0}] = await Promise.all(${1:value})"
-  },
-  "await Promise.all map": {
-    "prefix": "apm",
-    "body": "await Promise.all(${1:array}.map(async (${2:value}) => {\n\t${0}\n}))"
-  },
-  "await sleep": {
-    "prefix": "ast",
-    "body": "await new Promise((r) => setTimeout(r, ${0}))"
   },
   "Node callback": {
     "prefix": "cb",
@@ -30,82 +10,6 @@
   "process.env": {
     "prefix": "pe",
     "body": "process.env"
-  },
-  "Promise.all": {
-    "prefix": "pa",
-    "body": "Promise.all(${1:value})"
-  },
-  "Promise.resolve": {
-    "prefix": "prs",
-    "body": "Promise.resolve(${1:value})"
-  },
-  "Promise.reject": {
-    "prefix": "prj",
-    "body": "Promise.reject(${1:value})"
-  },
-  "Promise": {
-    "prefix": "p",
-    "body": "Promise"
-  },
-  "new Promise": {
-    "prefix": "np",
-    "body": "new Promise((resolve, reject) => {\n\t${0}\n})"
-  },
-  "Promise.then": {
-    "prefix": "pt",
-    "body": "${1:promise}.then((${2:value}) => {\n\t${0}\n})"
-  },
-  "Promise.catch": {
-    "prefix": "pc",
-    "body": "${1:promise}.catch(error => {\n\t${0}\n})"
-  },
-  "describe": {
-    "prefix": "desc",
-    "body": "describe('${1:description}', () => {\n\t${0}\n})"
-  },
-  "describe top level": {
-    "prefix": "dt",
-    "body": "describe('${TM_FILENAME_BASE}', () => {\n\t${0}\n})"
-  },
-  "it asynchronous": {
-    "prefix": "it",
-    "body": "it('${1:description}', async () => {\n\t${0}\n})"
-  },
-  "it.todo": {
-    "prefix": "itt",
-    "body": "it.todo('${1:description}')"
-  },
-  "it with a callback": {
-    "prefix": "itd",
-    "body": "it('${1:description}', (done) => {\n\t${0}\n})"
-  },
-  "it synchronous": {
-    "prefix": "its",
-    "body": "it('${1:description}', () => {\n\t${0}\n})"
-  },
-  "test asynchronous": {
-    "prefix": "ta",
-    "body": "test('${1:test title}', async () => {\n\t${0}\n})"
-  },
-  "before": {
-    "prefix": "bf",
-    "body": "before(async () => {\n\t${0}\n})"
-  },
-  "beforeAll": {
-    "prefix": "ba",
-    "body": "beforeAll(async () => {\n\t${0}\n})"
-  },
-  "beforeEach": {
-    "prefix": "bfe",
-    "body": "beforeEach(async () => {\n\t${0}\n})"
-  },
-  "after": {
-    "prefix": "aft",
-    "body": "after(() => {\n\t${0}\n})"
-  },
-  "afterEach": {
-    "prefix": "afe",
-    "body": "afterEach(() => {\n\t${0}\n})"
   },
   "require": {
     "prefix": "rq",
@@ -346,10 +250,6 @@
   "instanceof": {
     "prefix": "iof",
     "body": "${1:source} instanceof ${2:Object}"
-  },
-  "Array.isArray()": {
-    "prefix": "ia",
-    "body": "Array.isArray(${1:source})"
   },
   "let and if statement": {
     "prefix": "lif",
@@ -665,11 +565,6 @@
     "body": ["while (${1:condition}) {", "\t$0", "}"],
     "description": "While Statement"
   },
-  "Do-While Statement": {
-    "prefix": "dowhile",
-    "body": ["do {", "\t$0", "} while (${1:condition});"],
-    "description": "Do-While Statement"
-  },
   "Try-Catch Statement": {
     "prefix": "trycatch",
     "body": ["try {", "\t$0", "} catch (${1:error}) {", "\t", "}"],
@@ -689,16 +584,6 @@
     "prefix": "import statement",
     "body": ["import { $0 } from \"${1:module}\";"],
     "description": "Import external module."
-  },
-  "Region Start": {
-    "prefix": "#region",
-    "body": ["//#region $0"],
-    "description": "Folding Region Start"
-  },
-  "Region End": {
-    "prefix": "#endregion",
-    "body": ["//#endregion"],
-    "description": "Folding Region End"
   },
   "Log warning to console": {
     "prefix": "warn",
