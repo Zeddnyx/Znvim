@@ -4,6 +4,7 @@ Neovim for frontend dev
 (HTML, CSS, Tailwindcss, JavaScript, ReactJS, TypeScript, NextJS)
 
 ![nvim](./preview/showcase.png)
+![snippets](./preview/snippet-and-show.png)
 
 
 ## Install
