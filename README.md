@@ -1,10 +1,8 @@
 # Znvim
+A Neovim config designed for FrontEnd Dev
+(Html, Tailwind, JavaScript, ReactJS, TypeScript)
 
-Neovim for frontend dev
-(HTML, CSS, Tailwindcss, JavaScript, ReactJS, TypeScript, NextJS)
-
-![nvim](./preview/showcase.png)
-![snippets](./preview/snippet-and-show.png)
+![nvim](./preview/nvim.png)
 
 
 ## Install
@@ -18,8 +16,7 @@ install
 git clone https://github.com/ZeddNyx/Znvim ~/.config/nvim
 
 ```
-
-run `nvim` and type `:Lazy`
+run `nvim`
 
 ## List plugin
 
@@ -32,24 +29,6 @@ run `nvim` and type `:Lazy`
 - Indentlines with [indent blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
 - Snippets with [vsnip](https://github.com/hrsh7th/cmp-vsnip)
 - Color preview with [colorizer](https://github.com/NvChad/nvim-colorizer)
-
-## Keybind
-
-```
-// Comment
-'gcc' -- Normal mode
-'gc'  -- Visual mode
-
-// Buffer
-'Shift + h' -- Move previous
-'Shift + l' -- Move next
-'Shift + c' -- Close buffer
-
-'Space + e' -- File navigation
-'Space + f' -- Format and prettier
-'Space + s' -- Find and replace all word match
-'Shift + s' -- Select all
-```
 
 ## Thanks
 

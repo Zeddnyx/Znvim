@@ -19,22 +19,6 @@
     "prefix": "cr",
     "body": "const ${1:module} = require('${1:module}')"
   },
-  "exports.member": {
-    "prefix": "em",
-    "body": "exports.${1:member} = ${2:value}"
-  },
-  "module.exports": {
-    "prefix": "me",
-    "body": "module.exports = ${1:name}"
-  },
-  "module as class": {
-    "prefix": "mec",
-    "body": "class ${1:name} {\n\tconstructor (${2:arguments}) {\n\t\t${0}\n\t}\n}\n\nmodule.exports = ${1:name}\n"
-  },
-  "event handler": {
-    "prefix": "on",
-    "body": "${1:emitter}.on('${2:event}', (${3:arguments}) => {\n\t${0}\n})"
-  },
   "dom event cancel default and propagation": {
     "prefix": "evc",
     "body": "ev.preventDefault()\nev.stopPropagation()\nreturn false"
