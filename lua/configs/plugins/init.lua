@@ -76,7 +76,7 @@ local plugins = {
     "ellisonleao/gruvbox.nvim",
     lazy = false,
     config = function()
-      require("configs.theme")
+      require("configs.themes")
     end,
   },
 

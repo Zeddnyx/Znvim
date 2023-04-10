@@ -12,7 +12,7 @@
     "body": "object-${1|contain,cover,fill,none,scale-down|}"
   },
   "object position": {
-    "prefix": "op",
+    "prefix": "objp",
     "body": "object-${1|bottom,center,left,left-bottom,left-top,right,right-bottom,right-top,top|}"
   },
   "overflow": {
@@ -28,7 +28,7 @@
     "body": "position-${1|fixed,relative,static,sticky,absolute|}"
   },
   "z-index": {
-    "prefix": "z",
+    "prefix": "zi",
     "body": "z-${1|10,20,30,40,50,auto|}"
   },
   "flex direction": {
@@ -72,15 +72,15 @@
     "body": "gap-${1|0,px,1,2,3,4,5,6,7,8,9,10,11,12,14,16,20,24,28,32,36,40,44,48,52,56,60,64,70,72,80,96,x-0,x-px,x-1,x-2,x-3,x-4,x-5,x-6,x-7,x-8,x-9,x-10,x-11,x-12,x-14,x-16,x-20,x-24,x-28,x-32,x-36,x-40,x-42,x-44,x-48,x-52,x-56,x-60,x-64,x-70,x-72,x-80,x-96,y-0,y-px,y-1,y-2,y-3,y-4,y-5,y-6,y-7,y-8,y-9,y-10,y-11,y-12,y-14,y-16,y-20,y-24,y-28,y-32,y-36,y-40,y-44,y-48,y-52,y-56,y-60,y-64,y-70,y-72,y-80,y-96|}"
   },
   "justify content": {
-    "prefix": "jc",
+    "prefix": "juc",
     "body": "justify-${1|normal,start,end,between,evenly,around,stretch|}"
   },
   "justify items": {
-    "prefix": "ji",
+    "prefix": "jui",
     "body": "justify-items-${1|start,end,center,stretch|}"
   },
   "justify self": {
-    "prefix": "js",
+    "prefix": "jus",
     "body": "justify-self-${1|auto,start,end,center,stretch|}"
   },
   "align content ": {
@@ -88,39 +88,39 @@
     "body": "content-${1|normal,start,end,center,stretch,between,around,evenly,baseline|}"
   },
   "align items": {
-    "prefix": "ai",
+    "prefix": "ali",
     "body": "items-${1|start,end,center,stretch,baseline|}"
   },
   "align self": {
-    "prefix": "as",
+    "prefix": "als",
     "body": "self-${1|auto,start,end,center,stretch,baseline|}"
   },
   "Place content": {
-    "prefix": "pc",
+    "prefix": "plc",
     "body": "place-content-${1|evenly,start,end,center,between,around,baseline,stretch|}"
   },
   "Place items": {
-    "prefix": "pi",
+    "prefix": "pli",
     "body": "place-items-${1|start,end,center,baseline,stretch|}"
   },
   "Place self": {
-    "prefix": "ps",
+    "prefix": "pls",
     "body": "place-self-${1|auto,start,end,center,stretch|}"
   },
   "padding": {
-    "prefix": "p",
+    "prefix": "pla",
     "body": "p-${1|[],0,1,2,3,4,5,6,7,8,9,8,9,10,11,12,14,16,20,24,28,32,36,40,44,48,52,56,60,64,70,72,80,96|}"
   },
   "margin": {
-    "prefix": "m",
+    "prefix": "ma",
     "body": "m-${1|[],0,1,2,3,4,5,6,7,8,9,8,9,10,11,12,14,16,20,24,28,32,36,40,44,48,52,56,60,64,70,72,80,96|}"
   },
   "width": {
-    "prefix": "w",
+    "prefix": "wi",
     "body": "w-${1|[],px,1,2,3,4,5,6,7,8,9,8,9,10,11,12,14,16,20,24,28,32,36,40,44,48,52,56,60,64,70,72,80,96|}"
   },
   "height": {
-    "prefix": "h",
+    "prefix": "he",
     "body": "h-${1|[],px,1,2,3,4,5,6,7,8,9,8,9,10,11,12,14,16,20,24,28,32,36,40,44,48,52,56,60,64,70,72,80,96|}"
   },
   "max width": {
@@ -132,15 +132,15 @@
     "body": "max-h-${1|[],0,none,xs,sm,md,lg,xl,2xl,3xl,4xl,5xl,6xl,7xl|}"
   },
   "text-size": {
-    "prefix": "ts",
+    "prefix": "tes",
     "body": "text-${1|[],xs,sm,md,lg,xl,2xl,3xl,4xl,5xl,6xl,7xl,8xl,9xl|}"
   },
   "text-weight": {
-    "prefix": "fw",
+    "prefix": "fow",
     "body": "font-${1|tight,normal,medium,semobold,bold|}"
   },
   "text indent": {
-    "prefix": "ti",
+    "prefix": "tei",
     "body": "indent-${1|px,1,2,3,4,5,6,7,8,9,8,9,10,11,12,14,16,20,24,28,32,36,40,44,48,52,56,60,64,70,72,80,96|}"
   },
   "white space": {
@@ -152,11 +152,11 @@
     "body": "break-${1|normal,words,all,keep|}"
   },
   "letter spacing": {
-    "prefix": "ls",
+    "prefix": "les",
     "body": "tracking-${1|tighter,tight,normal,wide,wider,wildest|}"
   },
   "line height": {
-    "prefix": "lh",
+    "prefix": "lih",
     "body": "leading-${1|3,4,5,6,7,8,9,10,none,tight,snug,normal,relaxed,loose|}"
   },
   "list style position": {
@@ -168,39 +168,39 @@
     "body": "list-${1|disc,none,decimal|}"
   },
   "line clamp": {
-    "prefix": "lc",
+    "prefix": "lic",
     "body": "line-clamp-${1|1,2,3,4,5,6,none|}"
   },
   "text align": {
-    "prefix": "ta",
+    "prefix": "tea",
     "body": "text-${1|center,start,end,left,right,justify|}"
   },
   "text decoration": {
-    "prefix": "td",
+    "prefix": "ted",
     "body": "${1|underline,overline,line-through,no-underline|}"
   },
   "decoration color": {
-    "prefix": "dc",
+    "prefix": "dec",
     "body": "underline-${1:color}"
   },
   "background attcachment": {
-    "prefix": "ba",
+    "prefix": "baa",
     "body": "bg-${1|fixed,local,scroll|}"
   },
   "background Size": {
-    "prefix": "bs",
+    "prefix": "bas",
     "body": "bg-${1|auto,cover,contain|}"
   },
   "background image": {
-    "prefix": "bi",
+    "prefix": "bai",
     "body": "bg-gradient-to-${1|t,tr,r,br,b,bl,l,tl|}"
   },
   "background gradient": {
-    "prefix": "bi",
+    "prefix": "bai",
     "body": "${1|from-blue-,from-red-,from-slate-,from-gray-,from-zinc-,from-neutral-,from-stone-,from-orange-,from-amber-,from-yellow-,from-lime-,from-green-,from-teal-,from-cyan-,from-sky-,from-indigo-,from-violet-,from-purple-,from-fuhcsia-,from-pink-,from-rose-|}"
   },
   "border": {
-    "prefix": "br",
+    "prefix": "bor",
     "body": "border"
   },
   "border color": {
@@ -208,15 +208,15 @@
     "body": "border-${1|[],blue-,red-,slate-,gray-,zinc-,neutral-,stone-,orange-,amber-,yellow-,lime-,green-,teal-,cyan-,sky-,indigo-,violet-,purple-,fuhcsia-,pink-,rose-|}"
   },
   "background color": {
-    "prefix": "bc",
+    "prefix": "bac",
     "body": "bg-${1|[],blue-,red-,slate-,gray-,zinc-,neutral-,stone-,orange-,amber-,yellow-,lime-,green-,teal-,cyan-,sky-,indigo-,violet-,purple-,fuhcsia-,pink-,rose-|}"
   },
   "rounded": {
-    "prefix": "rd",
+    "prefix": "rod",
     "body": "rounded-${1|,none,sm,md,lg,xl,2xl,full|}"
   },
   "divide width": {
-    "prefix": "dw",
+    "prefix": "diw",
     "body": "divide-${1|y-0,y-2,y-4,y-8,y,x-0,x-2,x-4,x-8,x|}"
   },
   "divide color": {
@@ -224,15 +224,15 @@
     "body": "divide-${1:color}"
   },
   "outline": {
-    "prefix": "ot",
+    "prefix": "otl",
     "body": "outline none"
   },
   "shadow": {
-    "prefix": "sh",
+    "prefix": "sha",
     "body": "shadow-${1|sm,md,lg,xl,2xl,inner,none|}"
   },
   "shadow color": {
-    "prefix": "shc",
+    "prefix": "shac",
     "body": "shadow-${1|inherit,current,transparent,black,white,blue-,red-,slate-,gray-,zinc-,neutral-,stone-,orange-,amber-,yellow-,lime-,green-,teal-,cyan-,sky-,indigo-,violet-,purple-,fuhcsia-,pink-,rose-|}"
   },
   "opacity": {
@@ -244,7 +244,7 @@
     "body": "blur-${1|none,sm,md,lg,xl,2xl,3xl|}"
   },
   "backdrop blur": {
-    "prefix": "bb",
+    "prefix": "blurb",
     "body": "backdrop-blur-${1|none,sm,md,lg,xl,2xl,3xl|}"
   },
   "brightness": {
