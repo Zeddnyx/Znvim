@@ -32,7 +32,7 @@
     "body": "z-${1|10,20,30,40,50,auto|}"
   },
   "flex direction": {
-    "prefix": "fd",
+    "prefix": "fl",
     "body": "flex-${1|row,col,row-reverse,col-reverse|}"
   },
   "order": {
@@ -40,31 +40,31 @@
     "body": "order-${1|1,2,3,4,5,6,7,8,9,10,11,12,first,last,none|}"
   },
   "grid template columns": {
-    "prefix": "gtc",
+    "prefix": "gridc",
     "body": "grid-col-${1|1,2,3,4,5,6,7,8,9,10,11,12,none|}"
   },
   "grid column start": {
-    "prefix": "gts",
+    "prefix": "gridcs",
     "body": "col-${1|span-auto,span-1,span-2,span-3,span-4,span-5,span-6,span-7,span-8,span-9,span-10,span-11,span-12,span-full,start-1,start-2,start-3,start-4,start-5,start-6,start-7,start-8,start-9,start-10,start-11,start-12,start-13,start-auto,end-1,end-2,end-3,end-4,end-5,end-6,end-7,end-8,end-9,end-10,end-11,end-12,end-13,end-auto|}"
   },
   "grid template rows": {
-    "prefix": "gtr",
+    "prefix": "gridr",
     "body": "grid-row-${1|1,2,3,4,5,6,none|}"
   },
   "grid rows start": {
-    "prefix": "grs",
-    "body": "ow-${1|auto,span-1,span-2,span-3,span-4,span-5,span-6,span-full,start-1,start-2,start-3,start-4,start-5,start-6,start-7,start-auto,end-1,end-2,end-3,end-4,end-5,end-6,end-7,end-auto|}"
+    "prefix": "gridrs",
+    "body": "row-${1|auto,span-1,span-2,span-3,span-4,span-5,span-6,span-full,start-1,start-2,start-3,start-4,start-5,start-6,start-7,start-auto,end-1,end-2,end-3,end-4,end-5,end-6,end-7,end-auto|}"
   },
   "grid auto flows": {
-    "prefix": "gaf",
+    "prefix": "gridf",
     "body": "grid-flow-${1|row,col,dense,row-dense,co-dense|}"
   },
   "grid auto columns": {
-    "prefix": "gac",
+    "prefix": "gridco",
     "body": "grid-cols-${1|auto,min,max,fr|}"
   },
   "grid auto rows": {
-    "prefix": "gar",
+    "prefix": "gridro",
     "body": "grid-row-${1|auto,min,max,fr|}"
   },
   "gap": {
@@ -73,7 +73,7 @@
   },
   "justify content": {
     "prefix": "juc",
-    "body": "justify-${1|normal,start,end,between,evenly,around,stretch|}"
+    "body": "justify-${1|center,normal,start,end,between,evenly,around,stretch|}"
   },
   "justify items": {
     "prefix": "jui",
@@ -88,151 +88,151 @@
     "body": "content-${1|normal,start,end,center,stretch,between,around,evenly,baseline|}"
   },
   "align items": {
-    "prefix": "ali",
+    "prefix": "items",
     "body": "items-${1|start,end,center,stretch,baseline|}"
   },
   "align self": {
-    "prefix": "als",
+    "prefix": "self",
     "body": "self-${1|auto,start,end,center,stretch,baseline|}"
   },
   "Place content": {
-    "prefix": "plc",
+    "prefix": "place",
     "body": "place-content-${1|evenly,start,end,center,between,around,baseline,stretch|}"
   },
   "Place items": {
-    "prefix": "pli",
+    "prefix": "placei",
     "body": "place-items-${1|start,end,center,baseline,stretch|}"
   },
   "Place self": {
-    "prefix": "pls",
+    "prefix": "places",
     "body": "place-self-${1|auto,start,end,center,stretch|}"
   },
   "padding": {
-    "prefix": "pla",
-    "body": "p-${1|[],0,1,2,3,4,5,6,7,8,9,8,9,10,11,12,14,16,20,24,28,32,36,40,44,48,52,56,60,64,70,72,80,96|}"
+    "prefix": "pad",
+    "body": "p-${1|[px],0,1,2,3,4,5,6,7,8,9,8,9,10,11,12,14,16,20,24,28,32,36,40,44,48,52,56,60,64,70,72,80,96|}"
   },
   "margin": {
     "prefix": "ma",
-    "body": "m-${1|[],0,1,2,3,4,5,6,7,8,9,8,9,10,11,12,14,16,20,24,28,32,36,40,44,48,52,56,60,64,70,72,80,96|}"
+    "body": "m-${1|[px],0,1,2,3,4,5,6,7,8,9,8,9,10,11,12,14,16,20,24,28,32,36,40,44,48,52,56,60,64,70,72,80,96|}"
   },
   "width": {
     "prefix": "wi",
-    "body": "w-${1|[],px,1,2,3,4,5,6,7,8,9,8,9,10,11,12,14,16,20,24,28,32,36,40,44,48,52,56,60,64,70,72,80,96|}"
+    "body": "w-${1|[px],px,1,2,3,4,5,6,7,8,9,8,9,10,11,12,14,16,20,24,28,32,36,40,44,48,52,56,60,64,70,72,80,96|}"
   },
   "height": {
     "prefix": "he",
-    "body": "h-${1|[],px,1,2,3,4,5,6,7,8,9,8,9,10,11,12,14,16,20,24,28,32,36,40,44,48,52,56,60,64,70,72,80,96|}"
+    "body": "h-${1|[px],px,1,2,3,4,5,6,7,8,9,8,9,10,11,12,14,16,20,24,28,32,36,40,44,48,52,56,60,64,70,72,80,96|}"
   },
   "max width": {
-    "prefix": "mw",
-    "body": "max-w-${1|[],0,none,xs,sm,md,lg,xl,2xl,3xl,4xl,5xl,6xl,7xl|}"
+    "prefix": "maxw",
+    "body": "max-w-${1|[px],0,none,xs,sm,md,lg,xl,2xl,3xl,4xl,5xl,6xl,7xl|}"
   },
   "max height": {
-    "prefix": "mh",
+    "prefix": "minh",
     "body": "max-h-${1|[],0,none,xs,sm,md,lg,xl,2xl,3xl,4xl,5xl,6xl,7xl|}"
   },
   "text-size": {
-    "prefix": "tes",
+    "prefix": "texs",
     "body": "text-${1|[],xs,sm,md,lg,xl,2xl,3xl,4xl,5xl,6xl,7xl,8xl,9xl|}"
   },
   "text-weight": {
     "prefix": "fow",
-    "body": "font-${1|tight,normal,medium,semobold,bold|}"
+    "body": "font-${1|tight,normal,medium,semibold,bold|}"
   },
   "text indent": {
-    "prefix": "tei",
+    "prefix": "texti",
     "body": "indent-${1|px,1,2,3,4,5,6,7,8,9,8,9,10,11,12,14,16,20,24,28,32,36,40,44,48,52,56,60,64,70,72,80,96|}"
   },
   "white space": {
-    "prefix": "ws",
+    "prefix": "whites",
     "body": "whitespace-${1|normal,nowrap,pre,pre-line,pre,wrap,break-spaces|}"
   },
   "word break": {
-    "prefix": "wb",
+    "prefix": "break",
     "body": "break-${1|normal,words,all,keep|}"
   },
   "letter spacing": {
-    "prefix": "les",
+    "prefix": "tracking",
     "body": "tracking-${1|tighter,tight,normal,wide,wider,wildest|}"
   },
   "line height": {
-    "prefix": "lih",
+    "prefix": "leading",
     "body": "leading-${1|3,4,5,6,7,8,9,10,none,tight,snug,normal,relaxed,loose|}"
   },
   "list style position": {
-    "prefix": "lsp",
+    "prefix": "list",
     "body": "list-${1|inside,outside|}"
   },
   "list style type": {
-    "prefix": "lst",
+    "prefix": "lists",
     "body": "list-${1|disc,none,decimal|}"
   },
   "line clamp": {
-    "prefix": "lic",
+    "prefix": "linec",
     "body": "line-clamp-${1|1,2,3,4,5,6,none|}"
   },
   "text align": {
-    "prefix": "tea",
+    "prefix": "textc",
     "body": "text-${1|center,start,end,left,right,justify|}"
   },
   "text decoration": {
-    "prefix": "ted",
+    "prefix": "textd",
     "body": "${1|underline,overline,line-through,no-underline|}"
   },
   "decoration color": {
-    "prefix": "dec",
+    "prefix": "underline",
     "body": "underline-${1:color}"
   },
   "background attcachment": {
-    "prefix": "baa",
+    "prefix": "bg",
     "body": "bg-${1|fixed,local,scroll|}"
   },
   "background Size": {
-    "prefix": "bas",
+    "prefix": "bgs",
     "body": "bg-${1|auto,cover,contain|}"
   },
   "background image": {
-    "prefix": "bai",
+    "prefix": "bgg",
     "body": "bg-gradient-to-${1|t,tr,r,br,b,bl,l,tl|}"
   },
   "background gradient": {
-    "prefix": "bai",
+    "prefix": "bgr",
     "body": "${1|from-blue-,from-red-,from-slate-,from-gray-,from-zinc-,from-neutral-,from-stone-,from-orange-,from-amber-,from-yellow-,from-lime-,from-green-,from-teal-,from-cyan-,from-sky-,from-indigo-,from-violet-,from-purple-,from-fuhcsia-,from-pink-,from-rose-|}"
   },
   "border": {
-    "prefix": "bor",
+    "prefix": "border",
     "body": "border"
   },
   "border color": {
-    "prefix": "brc",
+    "prefix": "borderc",
     "body": "border-${1|[],blue-,red-,slate-,gray-,zinc-,neutral-,stone-,orange-,amber-,yellow-,lime-,green-,teal-,cyan-,sky-,indigo-,violet-,purple-,fuhcsia-,pink-,rose-|}"
   },
   "background color": {
-    "prefix": "bac",
+    "prefix": "bgc",
     "body": "bg-${1|[],blue-,red-,slate-,gray-,zinc-,neutral-,stone-,orange-,amber-,yellow-,lime-,green-,teal-,cyan-,sky-,indigo-,violet-,purple-,fuhcsia-,pink-,rose-|}"
   },
   "rounded": {
-    "prefix": "rod",
+    "prefix": "rounded",
     "body": "rounded-${1|,none,sm,md,lg,xl,2xl,full|}"
   },
   "divide width": {
-    "prefix": "diw",
+    "prefix": "divide",
     "body": "divide-${1|y-0,y-2,y-4,y-8,y,x-0,x-2,x-4,x-8,x|}"
   },
   "divide color": {
-    "prefix": "dic",
+    "prefix": "dividec",
     "body": "divide-${1:color}"
   },
   "outline": {
     "prefix": "otl",
-    "body": "outline none"
+    "body": "outline-none"
   },
   "shadow": {
-    "prefix": "sha",
+    "prefix": "shadow",
     "body": "shadow-${1|sm,md,lg,xl,2xl,inner,none|}"
   },
   "shadow color": {
-    "prefix": "shac",
+    "prefix": "shadowc",
     "body": "shadow-${1|inherit,current,transparent,black,white,blue-,red-,slate-,gray-,zinc-,neutral-,stone-,orange-,amber-,yellow-,lime-,green-,teal-,cyan-,sky-,indigo-,violet-,purple-,fuhcsia-,pink-,rose-|}"
   },
   "opacity": {
@@ -256,11 +256,11 @@
     "body": "table-${1|auto,fixed|}"
   },
   "transition propery": {
-    "prefix": "trans",
+    "prefix": "transition",
     "body": "transition-${1|none,all,colors,opacity,shadow,transform|}"
   },
   "transition timing functions": {
-    "prefix": "transition",
+    "prefix": "ease",
     "body": "ease-${1|linear,in,out,in-out|}"
   },
   "transform origin": {

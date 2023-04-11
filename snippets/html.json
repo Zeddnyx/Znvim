@@ -368,7 +368,7 @@
   },
   "label": {
     "prefix": "label",
-    "body": "<label HtmlFor=\"$1\">$2</label>$3",
+    "body": "<label htmlFor=\"$1\">$2</label>$3",
     "description": "HTML - Defines an inline window",
     "scope": "text.html"
   },

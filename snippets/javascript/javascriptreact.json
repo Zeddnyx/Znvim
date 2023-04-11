@@ -1,6 +1,6 @@
 {
   "import React": {
-    "prefix": "imr",
+    "prefix": "im",
     "body": "import React, { ${1:val} } from 'react'"
   },
   "import": {
@@ -10,6 +10,14 @@
   "import statement": {
     "prefix": "impo",
     "body": "import { ${1:val} } from '${2:val}'"
+  },
+  "const": {
+    "prefix": "const",
+    "body": "const ${1:val} = ${2:val}"
+  },
+  "let": {
+    "prefix": "let",
+    "body": "let ${1:val} = ${2:val}"
   },
   "if falsy return null": {
     "prefix": "ifr",
@@ -24,11 +32,6 @@
     "prefix": "rfce",
     "body": "\nconst ${TM_FILENAME_BASE} = () => {\n\treturn (\n\t\t<div>\n\t\t\t$0\n\t\t</div>\n\t)\n}\n\nexport default ${TM_FILENAME_BASE}",
     "description": "Creates a React function component without PropTypes"
-  },
-  "componentWillReceiveProps": {
-    "prefix": "cwr",
-    "body": "componentWillReceiveProps (nextProps) {\n\t$0\n}\n",
-    "description": "Invoked when a component is receiving new props. This method is not called for the initial render."
   },
   "jsx element": {
     "prefix": "j",
@@ -109,12 +112,12 @@
       "if (isLoading) return 'Loading ...'",
       "if (isError) return <p>{error.message}</p>"
     ],
-    "description": "useQuery destructure object"
+    "description": "useQuery"
   },
   "destructur object": {
     "prefix": "dest",
     "body": "const { ${1:var} } = ${2:func}(${3:val})$0",
-    "description": "Destruture an object"
+    "description": "Destruture an object from array"
   },
   "onClick": {
     "prefix": "onclick",
@@ -140,5 +143,10 @@
     "prefix": "hand",
     "body": ["const handle${1:func} = () => {", "\t$2", "}"],
     "description": "handle events"
+  },
+  "export variable": {
+    "prefix": "export",
+    "body": "export const ${1:val} = ${2:val}"
   }
+
 }
