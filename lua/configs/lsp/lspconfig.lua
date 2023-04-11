@@ -1,14 +1,1 @@
 local lspconfig = require("lspconfig")
--- local cmp_nvim_lsp = require("cmp_nvim_lsp")
---
--- local on_attach = function(client, bufnr)
--- 	vim.diagnostic.config({
--- 		virtual_text = false,
--- 		signs = false,
--- 		update_in_insert = true,
--- 	})
--- 	-- Show line diagnostics automatically in hover window
--- 	vim.o.updatetime = 250
--- 	vim.cmd([[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]])
--- end
---

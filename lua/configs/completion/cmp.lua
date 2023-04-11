@@ -5,17 +5,17 @@ local function has_words_before()
 	return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
 end
 
--- costume color
+-- costume color pop up snippet
 vim.api.nvim_set_hl(0, 'MyMenu', {bg= "#1D2021", fg= '#DBCCA7'})
 vim.api.nvim_set_hl(0, 'MySelect', {bg= "#FB4934", fg= '#1D2021'})
 
--- window color and border
+-- window color and border pop up snippet
 local window = cmp.config.window.bordered({
 	border = "single",
 	winhighlight = "Normal:MyMenu,FloatBorder:FloatBorder,CursorLine:MySelect,Search:IncSearch",
 })
 
--- icons in floating window
+-- icons in snippet
 local icons = {
   Text = "",
   Variable = "󰌹",
@@ -37,7 +37,7 @@ cmp.setup({
 		autocomplete = { cmp.TriggerEvent.TextChanged },
 	},
 
-  -- format icons
+  -- icons snippet
   formatting = {
     format = function(_, vim_item)
       vim_item.kind = icons[vim_item.kind] or ""
@@ -45,6 +45,7 @@ cmp.setup({
     end
   },
 
+  -- window snippet
 	window = {
 		completion = window,
 		documentation = window,
@@ -92,7 +93,3 @@ cmp.setup({
 		}),
 	},
 })
-
--- If you want insert `(` after select function or method item
--- local cmp_autopairs = require("nvim-autopairs.completion.cmp")
--- cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
