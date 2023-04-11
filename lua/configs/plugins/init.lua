@@ -28,9 +28,9 @@ local plugins = {
         end
       }
     },
-    config = function()
-      require("configs.lsp.lspconfig")
-    end,
+    -- config = function()
+    --   require("configs.lsp.lspconfig")
+    -- end,
   },
 
   -- Completion
