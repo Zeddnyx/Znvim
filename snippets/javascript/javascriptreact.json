@@ -121,7 +121,7 @@
   },
   "onClick": {
     "prefix": "onclick",
-    "body": "onCLick={${1:doSomething}}",
+    "body": "onClick={${1:doSomething}}",
     "description": "handle onClick events"
   },
   "onChange": {

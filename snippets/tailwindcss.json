@@ -32,7 +32,7 @@
     "body": "z-${1|10,20,30,40,50,auto|}"
   },
   "flex direction": {
-    "prefix": "fl",
+    "prefix": "flexd",
     "body": "flex-${1|row,col,row-reverse,col-reverse|}"
   },
   "order": {
