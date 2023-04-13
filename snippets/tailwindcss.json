@@ -41,7 +41,7 @@
   },
   "grid template columns": {
     "prefix": "gridc",
-    "body": "grid-col-${1|1,2,3,4,5,6,7,8,9,10,11,12,none|}"
+    "body": "grid-cols-${1|1,2,3,4,5,6,7,8,9,10,11,12,none|}"
   },
   "grid column start": {
     "prefix": "gridcs",

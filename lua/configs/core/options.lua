@@ -26,7 +26,8 @@ vim.opt.breakindent = true
 vim.opt.backspace = "start,eol,indent"
 
 -- highlight cursorline
-vim.opt.cursorline = true
+vim.opt.cursorline = true -- cursorline will be highlight
+vim.opt.cursorlineopt = "number" -- only number will be highlight
 vim.opt.termguicolors = true
 vim.opt.winblend = 0
 vim.opt.wildoptions = "pum"

@@ -47,10 +47,6 @@
     "prefix": "qsa",
     "body": "Array.from(${1:document}.querySelectorAll('${2:selector}'))"
   },
-  "createDocumentFragment": {
-    "prefix": "cdf",
-    "body": "${1:document}.createDocumentFragment(${2:elem})"
-  },
   "createElement": {
     "prefix": "cel",
     "body": "${1:document}.createElement(${2:elem})"
