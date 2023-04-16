@@ -32,7 +32,7 @@ nulls.setup({
 	debug = true,
 	sources = {
 		formatting.prettier,
-    diagnostic.eslint
+    -- diagnostic.eslint
 	},
 })
 

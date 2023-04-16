@@ -1,6 +1,6 @@
 # Znvim
-A Neovim config designed for FrontEnd Dev
-(Html, Tailwind, JavaScript, ReactJS, TypeScript)
+A Neovim config designed for Frontend dev
+(Html, Tailwind, JavaScript, TypeScript, ReactJS, NextJS )
 
 ![nvim](./preview/nvim.png)
 
@@ -19,7 +19,6 @@ git clone https://github.com/ZeddNyx/Znvim ~/.config/nvim
 run `nvim`
 
 ## List plugin
-
 - Lsp configuration with [lsp ](https://github.com/neovim/nvim-lspconfig) and [lspkind](https://github.com/onsails/lspkind.nvim)
 - Autocompletion with [cmp](https://github.com/hrsh7th/nvim-cmp)
 - Autoclosing braces with [autopairs](https://github.com/windwp/nvim-autopairs)
@@ -31,12 +30,10 @@ run `nvim`
 - Color preview with [colorizer](https://github.com/NvChad/nvim-colorizer)
 
 ## Thanks
-
 - [AdiCahyaSaputra](https://github.com/AdiCahyaSaputra)
 - [Vim Indonesia](https://t.me/VimID)
 
 ## Uninstall
-
 ```
 # linux/macos (unix)
 rm -rf ~/.local/share/nvim

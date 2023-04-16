@@ -49,8 +49,8 @@ local plugins = {
           vim.g.vsnip_snippet_dir = vim.fn.stdpath("config") .. "/snippets"
           vim.g.vsnip_filetypes = {
             -- add snippet tailwindcss to jsx and tsx file
-            javascriptreact = {"javascript/javascriptreact", "/javascript/javascript", "tailwindcss", "html"},
-            typescriptreact = {"javascript/typescriptreact", "tailwindcss"},
+            javascriptreact = {"javascript/javascriptreact", "tailwindcss", "html"},
+            typescriptreact = {"javascript/typescriptreact", "tailwindcss", "html"},
             javascript = {"javascript/javascript"},
             typescript = {"javascript/typescript"},
             css = {"tailwindcss"},
