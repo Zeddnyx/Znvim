@@ -45,12 +45,12 @@
   },
   "jsx elements map": {
     "prefix": "jm",
-    "body": "{${1:array}.map((item) => <${2:elementName} key={item.id}>\n\t$0\n</${2}>)}",
+    "body": "{${1:array}.map((item, id) => <div key={id}>\n\t$0\n</div>)}",
     "description": "an element self closed"
   },
   "jsx elements map with return": {
     "prefix": "jmr",
-    "body": "{${1:array}.map((item) => {\n\treturn <${2:elementName} key={item.id}>\n\t$0\n</${2}>\n})}",
+    "body": "{${1:array}.map((item, id) => {\n\treturn <div key={id}>\n\t$0\n</div>\n})}",
     "description": "an element self closed"
   },
   "useState": {
