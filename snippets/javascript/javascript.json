@@ -1,14 +1,10 @@
 {
-  "await": {
-    "prefix": "a",
-    "body": "await ${0}"
-  },
   "process.env": {
-    "prefix": "pe",
+    "prefix": "env",
     "body": "process.env"
   },
   "require": {
-    "prefix": "rq",
+    "prefix": "req",
     "body": "require('${1:module}')"
   },
   "const module = require('module')": {
@@ -20,24 +16,16 @@
     "body": "ev.preventDefault()\nev.stopPropagation()\nreturn false"
   },
   "addEventListener": {
-    "prefix": "docu",
+    "prefix": "addEvent",
     "body": "document.addEventListener('${1:event}', ${2:ev} => {\n\t${0}\n})"
   },
   "removeEventListener": {
-    "prefix": "docum",
+    "prefix": "removeEvent",
     "body": "document.removeEventListener('${1:event}', ${22:listener})"
   },
   "getElementById": {
-    "prefix": "docume",
+    "prefix": "getClass",
     "body": "document.getElementById('${1:id}')"
-  },
-  "getElementsByClassName": {
-    "prefix": "gc",
-    "body": "Array.from(${1:document}.getElementsByClassName('${2:class}'))"
-  },
-  "getElementsByTagName": {
-    "prefix": "gt",
-    "body": "Array.from(${1:document}.getElementsByTagName('${2:tag}'))"
   },
   "querySelector": {
     "prefix": "qs",
@@ -48,43 +36,43 @@
     "body": "Array.from(${1:document}.querySelectorAll('${2:selector}'))"
   },
   "createElement": {
-    "prefix": "cel",
+    "prefix": "createElement",
     "body": "${1:document}.createElement(${2:elem})"
   },
   "classList.add": {
-    "prefix": "classadd",
+    "prefix": "addClass",
     "body": "${1:el}.classList.add('${2:class}')"
   },
   "classList.remove": {
-    "prefix": "classremove",
+    "prefix": "removeClass",
     "body": "${1:el}.classList.remove('${2:class}')"
   },
   "classList.toggle": {
-    "prefix": "classtoggle",
+    "prefix": "toggleClass",
     "body": "${1:el}.classList.toggle('${2:class}')"
   },
   "getAttribute": {
-    "prefix": "getatt",
+    "prefix": "getAtt",
     "body": "${1:el}.getAttribute('${2:attr}')"
   },
   "removeAttribute": {
-    "prefix": "removeatt",
+    "prefix": "removeAtt",
     "body": "${1:el}.removeAttribute('${2:attr}')"
   },
   "setAttribute": {
-    "prefix": "hesa",
+    "prefix": "setAtt",
     "body": "${1:el}.setAttribute('${2:attr}', ${3:value})"
   },
   "appendChild": {
-    "prefix": "heac",
+    "prefix": "appendChild",
     "body": "${1:el}.appendChild(${2:elem})"
   },
   "removeChild": {
-    "prefix": "herc",
+    "prefix": "removeChild",
     "body": "${1:el}.removeChild(${2:elem})"
   },
   "forEach loop": {
-    "prefix": "fe",
+    "prefix": "foreEch",
     "body": "${1:iterable}.forEach((${2:item}) => {\n\t${0}\n})"
   },
   "map": {
@@ -128,131 +116,71 @@
     "body": "const ${1:name}"
   },
   "const statement from destructuring": {
-    "prefix": "cd",
+    "prefix": "dest",
     "body": "const { ${2:prop} } = ${1:value}"
   },
   "const statement from array destructuring": {
-    "prefix": "cad",
+    "prefix": "destArray",
     "body": "const [ ${2:prop} ] = ${1:value}"
   },
   "const assignment awaited": {
-    "prefix": "ca",
+    "prefix": "constAwait",
     "body": "const ${1:name} = await ${2:value}"
   },
-  "const destructuring assignment awaited": {
-    "prefix": "cda",
-    "body": "const { ${1:name} } = await ${2:value}"
-  },
   "const arrow function assignment": {
-    "prefix": "cf",
+    "prefix": "arrowFunc",
     "body": "const ${1:name} = (${2:arguments}) => {\n\treturn ${0}\n}"
   },
-  "let assignment awaited": {
-    "prefix": "la",
-    "body": "let ${1:name} = await ${2:value}"
-  },
   "const assignment yielded": {
-    "prefix": "cy",
+    "prefix": "constYield",
     "body": "const ${1:name} = yield ${2:value}"
   },
-  "let assignment yielded": {
-    "prefix": "ly",
-    "body": "let ${1:name} = yield ${2:value}"
-  },
   "const object": {
-    "prefix": "co",
+    "prefix": "constObject",
     "body": "const ${1:name} = {\n\t${0}\n}"
   },
   "const array": {
-    "prefix": "car",
+    "prefix": "constArray",
     "body": "const ${1:name} = [\n\t${0}\n]"
-  },
-  "generate array of integers starting with 1": {
-    "prefix": "gari",
-    "body": "Array.from({ length: ${1:length} }, (v, k) => k + 1)"
-  },
-  "generate array of integers starting with 0": {
-    "prefix": "gari0",
-    "body": "[...Array(${1:length}).keys()]"
-  },
-  "class": {
-    "prefix": "cs",
-    "body": "class ${1:name} {\n\tconstructor (${2:arguments}) {\n\t\t${0}\n\t}\n}"
-  },
-  "class extends": {
-    "prefix": "csx",
-    "body": "class ${1:name} extends ${2:base} {\n\tconstructor (${3:arguments}) {\n\t\tsuper(${3:arguments})\n\t\t${0}\n\t}\n}"
   },
   "module export": {
     "prefix": "e",
     "body": "export ${1:member}"
   },
-  "module export const": {
-    "prefix": "ec",
-    "body": "export const ${1:member} = ${2:value}"
-  },
-  "export named function": {
-    "prefix": "ef",
-    "body": "export function ${1:member} (${2:arguments}) {\n\t${0}\n}"
-  },
   "module default export": {
-    "prefix": "ed",
+    "prefix": "exportDef",
     "body": "export default ${1:member}"
   },
-  "module default export function": {
-    "prefix": "edf",
-    "body": "export default function ${1:name} (${2:arguments}) {\n\t${0}\n}"
-  },
-  "import module": {
-    "prefix": "im",
-    "body": "import ${2:*} from '${1:module}'"
-  },
   "import module as": {
-    "prefix": "ia",
+    "prefix": "importAs",
     "body": "import ${2:*} as ${3:name} from '${1:module}'"
   },
   "import module destructured": {
-    "prefix": "id",
+    "prefix": "import",
     "body": "import {$2} from '${1:module}'"
-  },
-  "typeof": {
-    "prefix": "to",
-    "body": "typeof ${1:source} === '${2:undefined}'"
   },
   "this": {
     "prefix": "t",
     "body": "this."
   },
-  "instanceof": {
-    "prefix": "iof",
-    "body": "${1:source} instanceof ${2:Object}"
-  },
-  "let and if statement": {
-    "prefix": "lif",
-    "body": "let ${0} \n if (${2:condition}) {\n\t${1}\n}"
-  },
   "else statement": {
-    "prefix": "el",
+    "prefix": "else",
     "body": "else {\n\t${0}\n}"
   },
   "else if statement": {
-    "prefix": "ei",
+    "prefix": "elif",
     "body": "else if (${1:condition}) {\n\t${0}\n}"
   },
-  "while iteration decrementing": {
-    "prefix": "wid",
-    "body": "let ${1:array}Index = ${1:array}.length\nwhile (${1:array}Index--) {\n\t${0}\n}"
-  },
   "throw new Error": {
-    "prefix": "tn",
+    "prefix": "throw",
     "body": "throw new ${0:error}"
   },
   "try/catch": {
-    "prefix": "tc",
+    "prefix": "try",
     "body": "try {\n\t${0}\n} catch (${1:err}) {\n\t\n}"
   },
   "try/finally": {
-    "prefix": "tf",
+    "prefix": "tryFinally",
     "body": "try {\n\t${0}\n} finally {\n\t\n}"
   },
   "try/catch/finally": {
@@ -260,172 +188,60 @@
     "body": "try {\n\t${0}\n} catch (${1:err}) {\n\t\n} finally {\n\t\n}"
   },
   "anonymous function": {
-    "prefix": "fan",
+    "prefix": "anonymous",
     "body": "function (${1:arguments}) {${0}}"
   },
   "named function": {
-    "prefix": "fn",
+    "prefix": "function",
     "body": "function ${1:name} (${2:arguments}) {\n\t${0}\n}"
   },
   "async function": {
-    "prefix": "asf",
+    "prefix": "async",
     "body": "async function (${1:arguments}) {\n\t${0}\n}"
   },
-  "async arrow function": {
-    "prefix": "aa",
-    "body": "async (${1:arguments}) => {\n\t${0}\n}"
-  },
-  "immediately-invoked function expression": {
-    "prefix": "iife",
-    "body": ";(function (${1:arguments}) {\n\t${0}\n})(${2})"
-  },
-  "async immediately-invoked function expression": {
-    "prefix": "aiife",
-    "body": ";(async (${1:arguments}) => {\n\t${0}\n})(${2})"
-  },
-  "arrow function": {
-    "prefix": "af",
-    "body": "(${1:arguments}) => ${2:statement}"
-  },
-  "arrow function with destructuring": {
-    "prefix": "fd",
-    "body": "({${1:arguments}}) => ${2:statement}"
-  },
-  "arrow function with destructuring returning destructured": {
-    "prefix": "fdr",
-    "body": "({${1:arguments}}) => ${1:arguments}"
-  },
-  "arrow function with body": {
-    "prefix": "f",
-    "body": "(${1:arguments}) => {\n\t${0}\n}"
-  },
-  "arrow function with return": {
-    "prefix": "fr",
-    "body": "(${1:arguments}) => {\n\treturn ${0}\n}"
-  },
-  "generator function": {
-    "prefix": "gf",
-    "body": "function* (${1:arguments}) {\n\t${0}\n}"
-  },
-  "named generator": {
-    "prefix": "gfn",
-    "body": "function* ${1:name}(${2:arguments}) {\n\t${0}\n}"
-  },
   "console.log": {
-    "prefix": "cl",
+    "prefix": "console",
     "body": "console.log(${0})"
   },
   "console.log with JSON.stringify": {
-    "prefix": "clj",
+    "prefix": "consoleJson",
     "body": "console.log(JSON.stringify(${0}))"
   },
   "console.debug": {
-    "prefix": "cdb",
+    "prefix": "consoleDebug",
     "body": "console.debug(${0})"
   },
   "console.debug with JSON.stringify": {
-    "prefix": "cdbj",
+    "prefix": "consoleDebugJson",
     "body": "console.debug(JSON.stringify(${0}))"
   },
   "console.log a variable": {
-    "prefix": "cv",
+    "prefix": "consoleVariable",
     "body": "console.log('${0}:', ${0})"
   },
   "console.error": {
-    "prefix": "ce",
+    "prefix": "consoleErr",
     "body": "console.error(${0})"
   },
-  "console.warn": {
-    "prefix": "cw",
-    "body": "console.warn(${0})"
-  },
-  "console.dir": {
-    "prefix": "cod",
-    "body": "console.dir('${0}:', ${0})"
-  },
-  "constructor": {
-    "prefix": "cn",
-    "body": "constructor () {\n\t${0}\n}"
-  },
-  "use strict": {
-    "prefix": "uss",
-    "body": "'use strict'"
-  },
   "JSON.stringify()": {
-    "prefix": "js",
+    "prefix": "jsonStringify",
     "body": "JSON.stringify($0)"
   },
   "JSON.parse()": {
-    "prefix": "jp",
+    "prefix": "jsonParse",
     "body": "JSON.parse($0)"
-  },
-  "method": {
-    "prefix": "m",
-    "body": "${1:method} (${2:arguments}) {\n\t${0}\n}"
-  },
-  "getter": {
-    "prefix": "get",
-    "body": "get ${1:property} () {\n\t${0}\n}"
   },
   "setter": {
     "prefix": "set",
     "body": "set ${1:property} (${2:value}) {\n\t${0}\n}"
   },
-  "getter + setter": {
-    "prefix": "gs",
-    "body": "get ${1:property} () {\n\t${0}\n}\nset ${1:property} (${2:value}) {\n\t\n}"
-  },
-  "prototype method": {
-    "prefix": "proto",
-    "body": "${1:Class}.prototype.${2:method} = function (${3:arguments}) {\n\t${0}\n}"
-  },
-  "Object.assign": {
-    "prefix": "oa",
-    "body": "Object.assign(${1:dest}, ${2:source})"
-  },
-  "Object.create": {
-    "prefix": "oc",
-    "body": "Object.create(${1:obj})"
-  },
-  "Object.getOwnPropertyDescriptor": {
-    "prefix": "og",
-    "body": "Object.getOwnPropertyDescriptor(${1:obj}, '${2:prop}')"
-  },
   "ternary": {
     "prefix": "te",
     "body": "${1:cond} ? ${2:true} : ${3:false}"
   },
-  "ternary assignment": {
-    "prefix": "ta",
-    "body": "const ${0} = ${1:cond} ? ${2:true} : ${3:false}"
-  },
-  "Object.defineProperty": {
-    "prefix": "od",
-    "body": "Object.defineProperty(${1:dest}, '${2:prop}', {\n\t${0}\n})"
-  },
-  "Object.keys": {
-    "prefix": "ok",
-    "body": "Object.keys(${1:obj})"
-  },
-  "Object.values": {
-    "prefix": "ov",
-    "body": "Object.values(${1:obj})"
-  },
-  "Object.entries": {
-    "prefix": "oe",
-    "body": "Object.entries(${1:obj})"
-  },
   "return": {
     "prefix": "r",
     "body": "return ${0}"
-  },
-  "return arrow function": {
-    "prefix": "rf",
-    "body": "return (${1:arguments}) => ${2:statement}"
-  },
-  "yield": {
-    "prefix": "y",
-    "body": "yield ${0}"
   },
   "return this": {
     "prefix": "rt",
@@ -541,11 +357,6 @@
     "body": ["while (${1:condition}) {", "\t$0", "}"],
     "description": "While Statement"
   },
-  "Try-Catch Statement": {
-    "prefix": "trycatch",
-    "body": ["try {", "\t$0", "} catch (${1:error}) {", "\t", "}"],
-    "description": "Try-Catch Statement"
-  },
   "Set Timeout Function": {
     "prefix": "settimeout",
     "body": ["setTimeout(() => {", "\t$0", "}, ${1:timeout});"],
@@ -555,20 +366,5 @@
     "prefix": "setinterval",
     "body": ["setInterval(() => {", "\t$0", "}, ${1:interval});"],
     "description": "Set Interval Function"
-  },
-  "Import external module.": {
-    "prefix": "import statement",
-    "body": ["import { $0 } from \"${1:module}\";"],
-    "description": "Import external module."
-  },
-  "Log warning to console": {
-    "prefix": "warn",
-    "body": ["console.warn($1);", "$0"],
-    "description": "Log warning to the console"
-  },
-  "Log error to console": {
-    "prefix": "error",
-    "body": ["console.error($1);", "$0"],
-    "description": "Log error to the console"
   }
 }
