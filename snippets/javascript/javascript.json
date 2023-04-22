@@ -11,9 +11,9 @@
     "prefix": "cr",
     "body": "const ${1:module} = require('${1:module}')"
   },
-  "dom event cancel default and propagation": {
-    "prefix": "evc",
-    "body": "ev.preventDefault()\nev.stopPropagation()\nreturn false"
+  "dom event default": {
+    "prefix": "event",
+    "body": "e.preventDefault()"
   },
   "addEventListener": {
     "prefix": "addEvent",

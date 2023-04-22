@@ -16,23 +16,6 @@ local plugins = {
   { "kyazdani42/nvim-web-devicons", lazy = true },
   { "nvim-lua/plenary.nvim", lazy = true },
 
-  -- LSP
-  {
-    "neovim/nvim-lspconfig",
-    event = "BufRead",
-    dependencies = {
-      {
-        "jose-elias-alvarez/null-ls.nvim",
-        config = function()
-          require("configs.lsp.nulls")
-        end
-      }
-    },
-    -- config = function()
-    --   require("configs.lsp.lspconfig")
-    -- end,
-  },
-
   -- Completion
   {
     "hrsh7th/nvim-cmp",
@@ -68,6 +51,24 @@ local plugins = {
       require("configs.completion.cmp")
     end,
   },
+
+  -- LSP
+  {
+    "neovim/nvim-lspconfig",
+    event = "BufRead",
+    dependencies = {
+      {
+        "jose-elias-alvarez/null-ls.nvim",
+        config = function()
+          require("configs.lsp.nulls")
+        end
+      }
+    },
+    -- config = function()
+    --   require("configs.lsp.lspconfig")
+    -- end,
+  },
+
   { "onsails/lspkind.nvim", event = "InsertEnter" },
 
   -- Themes
@@ -98,16 +99,6 @@ local plugins = {
   },
 
   {
-      "nvim-neo-tree/neo-tree.nvim",
-      branch = "v2.x",
-      dependencies = { "MunifTanjim/nui.nvim" },
-      keys = "<leader>e",
-      config = function()
-          require("configs.ui.filemanager")
-      end,
-  },
-
-  {
     "lukas-reineke/indent-blankline.nvim",
     event = "BufRead",
     config = function()
@@ -127,6 +118,6 @@ local plugins = {
 
 require("lazy").setup(plugins, {
   ui = {
-    border = "single",
+    border = "none",
   },
 })
