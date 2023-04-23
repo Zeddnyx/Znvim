@@ -62,14 +62,13 @@ local plugins = {
         config = function()
           require("configs.lsp.nulls")
         end
-      }
+      },
+      { "onsails/lspkind.nvim", event = "InsertEnter" },
     },
     -- config = function()
     --   require("configs.lsp.lspconfig")
     -- end,
   },
-
-  { "onsails/lspkind.nvim", event = "InsertEnter" },
 
   -- Themes
   {
@@ -96,6 +95,15 @@ local plugins = {
     config = function()
       require("Comment").setup()
     end,
+  },
+
+  {
+    "nvim-telescope/telescope.nvim", tag = "0.1.1",
+    event = "BufWinEnter",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config = function ()
+      require("configs.ui.telescope")
+    end
   },
 
   {
