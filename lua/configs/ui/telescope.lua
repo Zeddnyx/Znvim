@@ -24,7 +24,7 @@ function M.config()
             file_sorter = sorters.get_fzy_sorter,
             generic_sorter = sorters.get_generic_fzy_sorter,
             path_display = { "absolute" },
-            winblend = 0,
+            winblend = 5,
             color_devicons = true,
             use_less = false,
             file_previewer = previewers.vim_buffer_cat.new,

@@ -54,21 +54,13 @@ local plugins = {
 
   -- LSP
   {
-    "neovim/nvim-lspconfig",
+    "jose-elias-alvarez/null-ls.nvim",
     event = "BufRead",
-    dependencies = {
-      {
-        "jose-elias-alvarez/null-ls.nvim",
-        config = function()
-          require("configs.lsp.nulls")
-        end
-      },
-      { "onsails/lspkind.nvim", event = "InsertEnter" },
-    },
-    -- config = function()
-    --   require("configs.lsp.lspconfig")
-    -- end,
+    config = function()
+      require("configs.lsp.nulls")
+    end
   },
+  { "onsails/lspkind.nvim", event = "InsertEnter" },
 
   -- Themes
   {
@@ -127,5 +119,20 @@ local plugins = {
 require("lazy").setup(plugins, {
   ui = {
     border = "none",
+  },
+   change_detection = {
+    -- automatically check for config file changes and reload the ui
+    enabled = true,
+    notify = true, -- get a notification when changes are found
+  },
+  performance = {
+    cache = {
+      enabled = true,
+    },
+    reset_packpath = true, -- reset the package path to improve startup time
+    rtp = {
+      reset = true, -- reset the runtime path to $VIMRUNTIME and your config directory
+      paths = {}, -- add any custom paths here that you want to includes in the rtp
+    },
   },
 })
