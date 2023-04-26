@@ -20,6 +20,7 @@ local plugins = {
   {
     "hrsh7th/nvim-cmp",
     event = "InsertEnter",
+    lazy = true,
     dependencies = {
       "hrsh7th/cmp-buffer",
       "hrsh7th/cmp-nvim-lsp",
@@ -42,6 +43,7 @@ local plugins = {
       {
         "windwp/nvim-autopairs",
         event = "InsertEnter",
+        lazy = true,
         config = function()
           require("configs.completion.autopairs")
         end,
@@ -52,15 +54,20 @@ local plugins = {
     end,
   },
 
-  -- LSP
   {
     "jose-elias-alvarez/null-ls.nvim",
-    event = "BufRead",
+    event = "BufEnter",
+    lazy = true,
     config = function()
       require("configs.lsp.nulls")
     end
   },
-  { "onsails/lspkind.nvim", event = "InsertEnter" },
+
+  {
+    "onsails/lspkind.nvim",
+    event = "InsertEnter",
+    lazy = true
+  },
 
   -- Themes
   {
@@ -73,25 +80,50 @@ local plugins = {
 
   {
     "nvim-treesitter/nvim-treesitter",
+    lazy = true,
     event = "BufWinEnter",
-    dependencies = { "p00f/nvim-ts-rainbow" },
+    dependencies = {
+      "p00f/nvim-ts-rainbow",
+      "JoosepAlviste/nvim-ts-context-commentstring",
+    },
     config = function()
       require("configs.ui.treesitter")
     end,
   },
 
   -- Editor
+
+  {
+		"JoosepAlviste/nvim-ts-context-commentstring",
+		lazy = true,
+		event = "BufRead",
+		dependencies = "nvim-treesitter/nvim-treesitter",
+	},
+
   {
     "numToStr/Comment.nvim",
     event = "BufRead",
+    lazy = true,
     config = function()
-      require("Comment").setup()
+      require("configs.ui.comment")
     end,
   },
 
   {
+		"lewis6991/gitsigns.nvim",
+		enabled = vim.fn.executable("git") == 1,
+		ft = "gitcommit",
+    lazy = true,
+		event = "BufRead",
+		config = function()
+			require("configs.ui.gitsigns")
+		end,
+	},
+
+  {
     "nvim-telescope/telescope.nvim", tag = "0.1.1",
     event = "BufWinEnter",
+    lazy = true,
     dependencies = { "nvim-lua/plenary.nvim" },
     config = function ()
       require("configs.ui.telescope")
@@ -109,6 +141,7 @@ local plugins = {
   {
     "NvChad/nvim-colorizer.lua",
     event = "BufRead",
+    lazy = true,
     config = function()
       require("configs.ui.colorizer")
     end,

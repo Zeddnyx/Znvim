@@ -1,6 +1,6 @@
 # Znvim
 A Neovim config designed for Frontend dev
-(Html, Tailwind, JavaScript, TypeScript, ReactJS, NextJS )
+(HTML, Tailwind, JavaScript, TypeScript, ReactJS, NextJS )
 
 ![nvim](./preview/nvim.png)
 
@@ -26,11 +26,11 @@ run `nvim`
 - Syntax highlighting with [treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - Comment syntax with [comment](https://github.com/numToStr/Comment.nvim)
 - Indentlines with [indent blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
-- Snippets with [vsnip](https://github.com/hrsh7th/cmp-vsnip)
+- Custome Snippets with [vsnip](https://github.com/hrsh7th/cmp-vsnip)
 - Color preview with [colorizer](https://github.com/NvChad/nvim-colorizer)
+- Find files with [Telescope](https://github.com/nvim-telescope/telescope.nvim)
 
 ## Thanks
-- [AdiCahyaSaputra](https://github.com/AdiCahyaSaputra)
 - [Vim Indonesia](https://t.me/VimID)
 
 ## Uninstall

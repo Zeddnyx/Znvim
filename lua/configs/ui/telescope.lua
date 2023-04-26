@@ -54,6 +54,17 @@ function M.config()
                     vim.fn.stdpath("log"),
                 },
             },
+            git_files = {
+              hidden = true,
+              show_untracked = true,
+            },
+            live_grep = {
+              --@usage don't include the filename in the search results
+              only_sort_text = true,
+            },
+            grep_string = {
+              only_sort_text = true,
+            },
         },
     }
 

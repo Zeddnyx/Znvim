@@ -31,6 +31,7 @@ nmap("<S-k>", "")
 -- telescope
 nmap("<S-b>", "<CMD>Telescope buffers<CR>")
 nmap("<S-f>", "<CMD>Telescope find_files<CR>")
+nmap("<S-e>", "<CMD>Telescope live_grep<CR>")
 
 -- buffer
 nmap("<S-h>", "<CMD>bprevious<CR>", { desc = "Buffer: previous buffer" })
