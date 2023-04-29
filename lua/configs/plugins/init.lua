@@ -110,6 +110,16 @@ local plugins = {
   },
 
   {
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v2.x",
+    dependencies = { "MunifTanjim/nui.nvim" },
+    keys = "<leader>e",
+    config = function()
+        require("configs.ui.filemanager")
+    end,
+  },
+
+  {
 		"lewis6991/gitsigns.nvim",
 		enabled = vim.fn.executable("git") == 1,
 		ft = "gitcommit",
