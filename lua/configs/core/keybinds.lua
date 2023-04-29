@@ -51,5 +51,6 @@ nmap("<leader>l", "<C-w>l<CR>") -- Switch left
 -- vim.g.netrw_banner = 0
 -- vim.g.netrw_liststyle = 3
 -- nmap("<leader>e", "<CMD>Lex<CR>:vertical resize 25<CR>") -- file manager (builtin)
+nmap("<leader>e", "<CMD>NvimTreeOpen<CR>") -- file manager
 nmap("<leader>a", "gg<S-v>G") -- select all
 nshort("<leader>s", [[:%s/]]) -- find and replace all matched word

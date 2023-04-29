@@ -93,12 +93,12 @@ local plugins = {
 
   -- Editor
 
-  {
-		"JoosepAlviste/nvim-ts-context-commentstring",
-		lazy = true,
-		event = "BufRead",
-		dependencies = "nvim-treesitter/nvim-treesitter",
-	},
+ --  {
+	-- 	"JoosepAlviste/nvim-ts-context-commentstring",
+	-- 	lazy = true,
+	-- 	event = "BufRead",
+	-- 	dependencies = "nvim-treesitter/nvim-treesitter",
+	-- },
 
   {
     "numToStr/Comment.nvim",
@@ -110,12 +110,14 @@ local plugins = {
   },
 
   {
-    "nvim-neo-tree/neo-tree.nvim",
-    branch = "v2.x",
-    dependencies = { "MunifTanjim/nui.nvim" },
-    keys = "<leader>e",
+    "nvim-tree/nvim-tree.lua",
+    version = "*",
     config = function()
-        require("configs.ui.filemanager")
+      require("nvim-tree").setup {
+        filters = {
+            dotfiles = true,
+        },
+      }
     end,
   },
 
@@ -162,20 +164,5 @@ local plugins = {
 require("lazy").setup(plugins, {
   ui = {
     border = "none",
-  },
-   change_detection = {
-    -- automatically check for config file changes and reload the ui
-    enabled = true,
-    notify = true, -- get a notification when changes are found
-  },
-  performance = {
-    cache = {
-      enabled = true,
-    },
-    reset_packpath = true, -- reset the package path to improve startup time
-    rtp = {
-      reset = true, -- reset the runtime path to $VIMRUNTIME and your config directory
-      paths = {}, -- add any custom paths here that you want to includes in the rtp
-    },
   },
 })
