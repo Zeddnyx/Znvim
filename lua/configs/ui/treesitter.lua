@@ -12,9 +12,9 @@ local option = {
 		extended_mode = false,
 		max_file_lines = nil,
 	},
-  context_commentstring = {
-    enable = true,
-    enable_autocmd = false,
+	context_commentstring = {
+		enable = true,
+		enable_autocmd = false,
 		-- config = {
 		-- 	-- Languages that have a single comment style
 		-- 	typescript = "// %s",
@@ -25,7 +25,7 @@ local option = {
 		-- 	vue = "<!-- %s -->",
 		-- 	json = "",
 		-- },
-  },
+	},
 }
 
 require("nvim-treesitter.configs").setup(option)

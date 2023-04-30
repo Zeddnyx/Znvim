@@ -12,7 +12,7 @@ local on_attach = function(client, bufnr)
 	vim.cmd([[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]])
 
 	-- show diagnostic color line number
-	vim.cmd [[
+	vim.cmd([[
 	  highlight! DiagnosticLineNrError guibg=#51202A guifg=#FF0000 gui=bold
 	  highlight! DiagnosticLineNrWarn guibg=#51412A guifg=#FFA500 gui=bold
 	  highlight! DiagnosticLineNrInfo guibg=#1E535D guifg=#00FFFF gui=bold
@@ -21,23 +21,25 @@ local on_attach = function(client, bufnr)
 	  sign define DiagnosticSignWarn text= texthl=DiagnosticSignWarn linehl= numhl=DiagnosticLineNrWarn
 	  sign define DiagnosticSignInfo text= texthl=DiagnosticSignInfo linehl= numhl=DiagnosticLineNrInfo
 	  sign define DiagnosticSignHint text= texthl=DiagnosticSignHint linehl= numhl=DiagnosticLineNrHint
-	]]
+	]])
 end
 
 local formatting = nulls.builtins.formatting
 local diagnostic = nulls.builtins.diagnostics
 
+-- npm i -g prettier @johnnymorganz/stylua-bin
 nulls.setup({
-  on_attach = on_attach,
+	on_attach = on_attach,
 	debug = true,
 	sources = {
 		formatting.prettier,
-    -- diagnostic.eslint
+		formatting.stylua,
+		-- diagnostic.eslint
 	},
 })
 
 local function format()
-  vim.lsp.buf.format({ bufnr = bufnr })
+	vim.lsp.buf.format({ bufnr = bufnr })
 end
 
-vim.keymap.set('n', '<leader>f', format, { desc = "LSP: Format the current buffer"})
+vim.keymap.set("n", "<leader>f", format, { desc = "LSP: Format the current buffer" })

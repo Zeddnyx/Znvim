@@ -1,4 +1,3 @@
-
 function map(mode, shortcut, command)
 	vim.api.nvim_set_keymap(mode, shortcut, command, { noremap = true, silent = true })
 end
@@ -27,7 +26,6 @@ end
 nmap("<S-j>", "")
 nmap("<S-k>", "")
 
-
 -- telescope
 nmap("<S-b>", "<CMD>Telescope buffers<CR>")
 nmap("<S-f>", "<CMD>Telescope find_files<CR>")
@@ -47,7 +45,7 @@ nmap("<leader>j", "<C-w>j<CR>") -- Switch down
 nmap("<leader>k", "<C-w>k<CR>") -- Switch up
 nmap("<leader>l", "<C-w>l<CR>") -- Switch left
 
--- costume shortcut
+-- costume file manager builtin
 -- vim.g.netrw_banner = 0
 -- vim.g.netrw_liststyle = 3
 -- nmap("<leader>e", "<CMD>Lex<CR>:vertical resize 25<CR>") -- file manager (builtin)
