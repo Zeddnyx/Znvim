@@ -5,6 +5,15 @@ A Neovim config designed for Frontend dev
 ![nvim](./preview/nvim.png)
 
 
+<p align="center">
+    <a href="https://github.com/Zeddnyx/Znvim">
+      <img src="https://img.shields.io/github/last-commit/Zeddnyx/Znvim?style=for-the-badge&logo=github&color=7dc4e4&logoColor=D9E0EE&labelColor=302D41"/>
+    </a>
+    <a href="https://github.com/Zeddnyx/Znvim">
+       <img src="https://img.shields.io/badge/-Neovim-green?style=for-the-badge&logo=neovim&color=7dc4e4&logoColor=D9E0EE&labelColor=302D41"/> 
+    </a>
+</p>
+
 ## Install
 clean up your config first
 ```
