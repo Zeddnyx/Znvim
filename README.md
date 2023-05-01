@@ -1,9 +1,17 @@
 # Znvim
+
 A Neovim config designed for Frontend dev
-(HTML, Tailwind, JavaScript, TypeScript, ReactJS, NextJS )
+
+<p align="center">
+<img src="https://img.shields.io/github/last-commit/Zeddnyx/Znvim?style=for-the-badge&logo=html&color=7dc4e4&logoColor=D9E0EE&labelColor=302D41"/>
+<img src="https://img.shields.io/github/last-commit/Zeddnyx/Znvim?style=for-the-badge&logo=tailwind&color=7dc4e4&logoColor=D9E0EE&labelColor=302D41"/>
+<img src="https://img.shields.io/github/last-commit/Zeddnyx/Znvim?style=for-the-badge&logo=javascript&color=7dc4e4&logoColor=D9E0EE&labelColor=302D41"/>
+<img src="https://img.shields.io/github/last-commit/Zeddnyx/Znvim?style=for-the-badge&logo=typescript&color=7dc4e4&logoColor=D9E0EE&labelColor=302D41"/>
+<img src="https://img.shields.io/github/last-commit/Zeddnyx/Znvim?style=for-the-badge&logo=reactjs&color=7dc4e4&logoColor=D9E0EE&labelColor=302D41"/>
+<img src="https://img.shields.io/github/last-commit/Zeddnyx/Znvim?style=for-the-badge&logo=nextjs&color=7dc4e4&logoColor=D9E0EE&labelColor=302D41"/>
+</p>
 
 ![nvim](./preview/nvim.png)
-
 
 <p align="center">
     <a href="https://github.com/Zeddnyx/Znvim">
@@ -15,19 +23,25 @@ A Neovim config designed for Frontend dev
 </p>
 
 ## Install
+
 clean up your config first
+
 ```
 rm -rf ~/.local/share/nvim
 rm -rf ~/.cache/nvim
 ```
+
 install
+
 ```
 git clone https://github.com/ZeddNyx/Znvim ~/.config/nvim
 
 ```
+
 run `nvim`
 
 ## List plugin
+
 - Lsp configuration with [lsp ](https://github.com/neovim/nvim-lspconfig) and [lspkind](https://github.com/onsails/lspkind.nvim)
 - Autocompletion with [cmp](https://github.com/hrsh7th/nvim-cmp)
 - Autoclosing braces with [autopairs](https://github.com/windwp/nvim-autopairs)
@@ -40,9 +54,11 @@ run `nvim`
 - Find files with [Telescope](https://github.com/nvim-telescope/telescope.nvim)
 
 ## Thanks
+
 - [Vim Indonesia](https://t.me/VimID)
 
 ## Uninstall
+
 ```
 # linux/macos (unix)
 rm -rf ~/.local/share/nvim
