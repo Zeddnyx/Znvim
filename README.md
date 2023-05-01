@@ -8,7 +8,7 @@
   <img src="https://img.shields.io/badge/-TypeScript-blue?style=for-the-badge&logo=typescript&labelColor=302D41" /> 
   <img src="https://img.shields.io/badge/-React-08BCDC?style=for-the-badge&logo=react&labelColor=302D41" /> 
   <img src="https://img.shields.io/badge/-Next-FFF?style=for-the-badge&logo=nextdotjs&labelColor=302D41" /> 
-  <img src="https://img.shields.io/badge/-Lua-0408F?style=for-the-badge&logo=lua&labelColor=302D41" /> 
+  <img src="https://img.shields.io/badge/-Lua-04008F?style=for-the-badge&logo=lua&labelColor=302D41" /> 
 </p>
 
 ![nvim](./preview/nvim.png)
