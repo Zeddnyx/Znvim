@@ -1,14 +1,13 @@
 # Znvim
-
-A Neovim config designed for Frontend dev
+<p align="center">A Neovim config designed for frontend dev</p>
 
 <p align="center">
-<img src="https://img.shields.io/github/badge/html?style=for-the-badge&logo=html&color=7dc4e4&logoColor=D9E0EE&labelColor=302D41"/>
-<img src="https://img.shields.io/github/badge/tailwind/Znvim?style=for-the-badge&logo=tailwind&color=7dc4e4&logoColor=D9E0EE&labelColor=302D41"/>
-<img src="https://img.shields.io/github/badge/javascript/Znvim?style=for-the-badge&logo=javascript&color=7dc4e4&logoColor=D9E0EE&labelColor=302D41"/>
-<img src="https://img.shields.io/github/badge/typescript/Znvim?style=for-the-badge&logo=typescript&color=7dc4e4&logoColor=D9E0EE&labelColor=302D41"/>
-<img src="https://img.shields.io/github/badge/reactjs/Znvim?style=for-the-badge&logo=reactjs&color=7dc4e4&logoColor=D9E0EE&labelColor=302D41"/>
-<img src="https://img.shields.io/github/badge/nextjs/Znvim?style=for-the-badge&logo=nextjs&color=7dc4e4&logoColor=D9E0EE&labelColor=302D41"/>
+  <img src="https://img.shields.io/badge/-HTML-orange?style=for-the-badge&logo=html5&labelColor=302D41" /> 
+  <img src="https://img.shields.io/badge/-Tailwind-blue?style=for-the-badge&logo=tailwindcss&labelColor=302D41" /> 
+  <img src="https://img.shields.io/badge/-JavaScript-yellow?style=for-the-badge&logo=javascript&labelColor=302D41" /> 
+  <img src="https://img.shields.io/badge/-TypeScript-blue?style=for-the-badge&logo=typescript&labelColor=302D41" /> 
+  <img src="https://img.shields.io/badge/-React-blue?style=for-the-badge&logo=react&labelColor=302D41" /> 
+  <img src="https://img.shields.io/badge/-Next-FFF?style=for-the-badge&logo=nextdotjs&labelColor=302D41" /> 
 </p>
 
 ![nvim](./preview/nvim.png)
@@ -18,7 +17,7 @@ A Neovim config designed for Frontend dev
       <img src="https://img.shields.io/github/last-commit/Zeddnyx/Znvim?style=for-the-badge&logo=github&color=7dc4e4&logoColor=D9E0EE&labelColor=302D41"/>
     </a>
     <a href="https://github.com/Zeddnyx/Znvim">
-       <img src="https://img.shields.io/badge/-Neovim-green?style=for-the-badge&logo=neovim&color=7dc4e4&logoColor=D9E0EE&labelColor=302D41"/> 
+       <img src="https://img.shields.io/badge/-Neovim-green?style=for-the-badge&logo=neovim&color=7dc4e4&labelColor=302D41"/>
     </a>
 </p>
 
