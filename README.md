@@ -3,12 +3,12 @@
 A Neovim config designed for Frontend dev
 
 <p align="center">
-<img src="https://img.shields.io/github/last-commit/Zeddnyx/Znvim?style=for-the-badge&logo=html&color=7dc4e4&logoColor=D9E0EE&labelColor=302D41"/>
-<img src="https://img.shields.io/github/last-commit/Zeddnyx/Znvim?style=for-the-badge&logo=tailwind&color=7dc4e4&logoColor=D9E0EE&labelColor=302D41"/>
-<img src="https://img.shields.io/github/last-commit/Zeddnyx/Znvim?style=for-the-badge&logo=javascript&color=7dc4e4&logoColor=D9E0EE&labelColor=302D41"/>
-<img src="https://img.shields.io/github/last-commit/Zeddnyx/Znvim?style=for-the-badge&logo=typescript&color=7dc4e4&logoColor=D9E0EE&labelColor=302D41"/>
-<img src="https://img.shields.io/github/last-commit/Zeddnyx/Znvim?style=for-the-badge&logo=reactjs&color=7dc4e4&logoColor=D9E0EE&labelColor=302D41"/>
-<img src="https://img.shields.io/github/last-commit/Zeddnyx/Znvim?style=for-the-badge&logo=nextjs&color=7dc4e4&logoColor=D9E0EE&labelColor=302D41"/>
+<img src="https://img.shields.io/github/badge/html?style=for-the-badge&logo=html&color=7dc4e4&logoColor=D9E0EE&labelColor=302D41"/>
+<img src="https://img.shields.io/github/badge/tailwind/Znvim?style=for-the-badge&logo=tailwind&color=7dc4e4&logoColor=D9E0EE&labelColor=302D41"/>
+<img src="https://img.shields.io/github/badge/javascript/Znvim?style=for-the-badge&logo=javascript&color=7dc4e4&logoColor=D9E0EE&labelColor=302D41"/>
+<img src="https://img.shields.io/github/badge/typescript/Znvim?style=for-the-badge&logo=typescript&color=7dc4e4&logoColor=D9E0EE&labelColor=302D41"/>
+<img src="https://img.shields.io/github/badge/reactjs/Znvim?style=for-the-badge&logo=reactjs&color=7dc4e4&logoColor=D9E0EE&labelColor=302D41"/>
+<img src="https://img.shields.io/github/badge/nextjs/Znvim?style=for-the-badge&logo=nextjs&color=7dc4e4&logoColor=D9E0EE&labelColor=302D41"/>
 </p>
 
 ![nvim](./preview/nvim.png)
