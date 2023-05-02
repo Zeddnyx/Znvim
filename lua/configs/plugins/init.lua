@@ -90,7 +90,7 @@ local plugins = {
 		event = "BufRead",
 		dependencies = {
 			"p00f/nvim-ts-rainbow",
-      "JoosepAlviste/nvim-ts-context-commentstring",
+			"JoosepAlviste/nvim-ts-context-commentstring",
 		},
 		config = function()
 			require("configs.ui.treesitter")
@@ -100,16 +100,16 @@ local plugins = {
 	{
 		"numToStr/Comment.nvim",
 		keys = { { "gc", mode = { "n", "v" } }, { "gb", mode = { "n", "v" } } },
-    lazy = true,
+		lazy = true,
 		config = function()
-      require("configs.ui.comment")
+			require("configs.ui.comment")
 		end,
 	},
 
 	{
 		"nvim-tree/nvim-tree.lua",
 		version = "*",
-		keys = { {"<leader>e", "<cmd>NvimTreeOpen<cr>"} },
+		keys = { { "<leader>e", "<cmd>NvimTreeOpen<cr>" } },
 		config = function()
 			require("configs.ui.nvimtree")
 		end,
@@ -129,7 +129,7 @@ local plugins = {
 	{
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.1",
-		keys = { {"<S-f>", "<cmd>Telescope find_files<cr>"} },
+		keys = { { "<leader>ff", "<cmd>Telescope find_files<cr>" }, { "<leader>fg", "<cmd>Telescope live_grep<cr>" } },
 		lazy = true,
 		dependencies = { "nvim-lua/plenary.nvim" },
 		config = function()

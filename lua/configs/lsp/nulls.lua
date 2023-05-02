@@ -42,4 +42,4 @@ local function format()
 	vim.lsp.buf.format({ bufnr = bufnr })
 end
 
-vim.keymap.set("n", "<leader>f", format, { desc = "LSP: Format the current buffer" })
+vim.keymap.set("n", "<S-f>", format, { desc = "LSP: Format the current buffer" })

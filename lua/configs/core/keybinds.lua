@@ -23,13 +23,11 @@ function nshort(shortcut, command)
 	short("n", shortcut, command)
 end
 
-nmap("<S-j>", "")
-nmap("<S-k>", "")
 
 -- telescope
-nmap("<S-b>", "<CMD>Telescope buffers<CR>")
-nmap("<S-f>", "<CMD>Telescope find_files<CR>")
-nmap("<S-e>", "<CMD>Telescope live_grep<CR>")
+nmap("<leader>fb", "<CMD>Telescope buffers<CR>")
+nmap("<leader>ff", "<CMD>Telescope find_files<CR>")
+nmap("<leader>fg", "<CMD>Telescope live_grep<CR>")
 
 -- buffer
 nmap("<S-h>", "<CMD>bprevious<CR>", { desc = "Buffer: previous buffer" })
@@ -52,3 +50,5 @@ nmap("<leader>l", "<C-w>l<CR>") -- Switch left
 nmap("<leader>e", "<CMD>NvimTreeOpen<CR>") -- file manager
 nmap("<leader>a", "gg<S-v>G") -- select all
 nshort("<leader>s", [[:%s/]]) -- find and replace all matched word
+nmap("<S-j>", "") -- disable default keybind
+nmap("<S-k>", "") -- disable default keybind

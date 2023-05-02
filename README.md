@@ -50,6 +50,28 @@ run `nvim`
 - Color preview with [colorizer](https://github.com/NvChad/nvim-colorizer)
 - Find files with [Telescope](https://github.com/nvim-telescope/telescope.nvim)
 
+## Keybind
+
+'Space + ff' - telescope find files
+'Space + fg' - telescope live grep
+'Space + fb' - telescope find buffer
+
+'Space + h' - switch left
+'Space + l' - switch right
+'Space + k' - switch up
+'Space + j' - switch down
+
+'Space + e' - file manager ('q' close file manager)
+'Space + s' - find all replace all
+'Space + a' - select all
+
+'Shift + h' - buffer previous
+'Shift + l' - buffer next
+'Shift + c' - buffer close
+'Shift + qo' - buffer close all except this one
+
+'Shift + f' - prettier
+
 ## Thanks
 
 - [Vim Indonesia](https://t.me/VimID)
