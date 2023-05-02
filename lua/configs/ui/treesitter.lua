@@ -15,16 +15,14 @@ local option = {
 	context_commentstring = {
 		enable = true,
 		enable_autocmd = false,
-		-- config = {
-		-- 	-- Languages that have a single comment style
-		-- 	typescript = "// %s",
-		-- 	css = "/* %s */",
-		-- 	scss = "/* %s */",
-		-- 	html = "<!-- %s -->",
-		-- 	svelte = "<!-- %s -->",
-		-- 	vue = "<!-- %s -->",
-		-- 	json = "",
-		-- },
+		config = {
+			-- Languages that have a single comment style
+			typescript = "// %s",
+			css = "/* %s */",
+			scss = "/* %s */",
+			html = "<!-- %s -->",
+			json = "",
+		},
 	},
 }
 

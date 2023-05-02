@@ -7,7 +7,7 @@ end
 
 -- costume color pop up snippet
 vim.api.nvim_set_hl(0, "MyMenu", { bg = "#1D2021", fg = "#DBCCA7" })
-vim.api.nvim_set_hl(0, "MySelect", { bg = "#FB4934", fg = "#1D2021" })
+vim.api.nvim_set_hl(0, "MySelect", { bg = "#B8BB26", fg = "#1D2021" })
 
 -- window color and border pop up snippet
 local window = cmp.config.window.bordered({
@@ -20,6 +20,11 @@ local icons = {
 	Text = "",
 	Variable = "󰌹",
 	Snippet = "",
+  Array = "[]",
+  Object = "{}",
+  Reference = "",
+  String = "",
+  Package = "",
 }
 
 local function feedkey(key, mode)
