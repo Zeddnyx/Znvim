@@ -42,6 +42,31 @@
     ],
     "description": "Lorem Ipsum Paragraph"
   },
+  "Lorem 60 Words Paragraph": {
+    "prefix": "lorem60",
+    "body": [
+      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
+      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
+      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
+      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
+      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
+      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit"
+    ],
+    "description": "Lorem Ipsum Paragraph"
+  },
+  "Lorem 70 Words Paragraph": {
+    "prefix": "lorem70",
+    "body": [
+      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
+      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
+      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
+      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
+      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
+      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
+      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit"
+    ],
+    "description": "Lorem Ipsum Paragraph"
+  },
   "MIT": {
     "prefix": "mitl",
     "description": "MIT License",

@@ -1,10 +1,10 @@
 {
   "import": {
-    "prefix": "imp",
+    "prefix": "import",
     "body": "import ${1:val} from '${2:val}'"
   },
   "import statement": {
-    "prefix": "impo",
+    "prefix": "import statement",
     "body": "import { ${1:val} } from '${2:val}'"
   },
   "const": {

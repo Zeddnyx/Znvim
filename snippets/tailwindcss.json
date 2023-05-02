@@ -8,11 +8,11 @@
     "body": "${1|flex,grid,block,inline,hidden|}"
   },
   "object fit": {
-    "prefix": "obj",
+    "prefix": "object fit",
     "body": "object-${1|contain,cover,fill,none,scale-down|}"
   },
   "object position": {
-    "prefix": "objp",
+    "prefix": "object position",
     "body": "object-${1|bottom,center,left,left-bottom,left-top,right,right-bottom,right-top,top|}"
   },
   "overflow": {
@@ -32,7 +32,7 @@
     "body": "z-${1|10,20,30,40,50,auto|}"
   },
   "flex direction": {
-    "prefix": "flexd",
+    "prefix": "flex direction",
     "body": "flex-${1|row,col,row-reverse,col-reverse|}"
   },
   "order": {
@@ -40,31 +40,31 @@
     "body": "order-${1|1,2,3,4,5,6,7,8,9,10,11,12,first,last,none|}"
   },
   "grid template columns": {
-    "prefix": "gridc",
+    "prefix": "grid cols",
     "body": "grid-cols-${1|1,2,3,4,5,6,7,8,9,10,11,12,none|}"
   },
   "grid column start": {
-    "prefix": "gridcs",
+    "prefix": "grid column start",
     "body": "col-${1|span-auto,span-1,span-2,span-3,span-4,span-5,span-6,span-7,span-8,span-9,span-10,span-11,span-12,span-full,start-1,start-2,start-3,start-4,start-5,start-6,start-7,start-8,start-9,start-10,start-11,start-12,start-13,start-auto,end-1,end-2,end-3,end-4,end-5,end-6,end-7,end-8,end-9,end-10,end-11,end-12,end-13,end-auto|}"
   },
   "grid template rows": {
-    "prefix": "gridr",
+    "prefix": "grid row",
     "body": "grid-row-${1|1,2,3,4,5,6,none|}"
   },
   "grid rows start": {
-    "prefix": "gridrs",
+    "prefix": "grid row start",
     "body": "row-${1|auto,span-1,span-2,span-3,span-4,span-5,span-6,span-full,start-1,start-2,start-3,start-4,start-5,start-6,start-7,start-auto,end-1,end-2,end-3,end-4,end-5,end-6,end-7,end-auto|}"
   },
   "grid auto flows": {
-    "prefix": "gridf",
+    "prefix": "grid flow",
     "body": "grid-flow-${1|row,col,dense,row-dense,co-dense|}"
   },
   "grid auto columns": {
-    "prefix": "gridco",
+    "prefix": "grid auto colums",
     "body": "grid-cols-${1|auto,min,max,fr|}"
   },
   "grid auto rows": {
-    "prefix": "gridro",
+    "prefix": "grid auto row",
     "body": "grid-row-${1|auto,min,max,fr|}"
   },
   "gap": {
@@ -72,15 +72,15 @@
     "body": "gap-${1|0,px,1,2,3,4,5,6,7,8,9,10,11,12,14,16,20,24,28,32,36,40,44,48,52,56,60,64,70,72,80,96,x-0,x-px,x-1,x-2,x-3,x-4,x-5,x-6,x-7,x-8,x-9,x-10,x-11,x-12,x-14,x-16,x-20,x-24,x-28,x-32,x-36,x-40,x-42,x-44,x-48,x-52,x-56,x-60,x-64,x-70,x-72,x-80,x-96,y-0,y-px,y-1,y-2,y-3,y-4,y-5,y-6,y-7,y-8,y-9,y-10,y-11,y-12,y-14,y-16,y-20,y-24,y-28,y-32,y-36,y-40,y-44,y-48,y-52,y-56,y-60,y-64,y-70,y-72,y-80,y-96|}"
   },
   "justify content": {
-    "prefix": "juc",
+    "prefix": "justify content",
     "body": "justify-${1|center,normal,start,end,between,evenly,around,stretch|}"
   },
   "justify items": {
-    "prefix": "jui",
+    "prefix": "justify items",
     "body": "justify-items-${1|start,end,center,stretch|}"
   },
   "justify self": {
-    "prefix": "jus",
+    "prefix": "justify self",
     "body": "justify-self-${1|auto,start,end,center,stretch|}"
   },
   "align content ": {
@@ -96,55 +96,55 @@
     "body": "self-${1|auto,start,end,center,stretch,baseline|}"
   },
   "Place content": {
-    "prefix": "place",
+    "prefix": "place content",
     "body": "place-content-${1|evenly,start,end,center,between,around,baseline,stretch|}"
   },
   "Place items": {
-    "prefix": "placei",
+    "prefix": "place items",
     "body": "place-items-${1|start,end,center,baseline,stretch|}"
   },
   "Place self": {
-    "prefix": "places",
+    "prefix": "places self",
     "body": "place-self-${1|auto,start,end,center,stretch|}"
   },
   "padding": {
-    "prefix": "pad",
+    "prefix": "pading",
     "body": "p-${1|[px],0,1,2,3,4,5,6,7,8,9,8,9,10,11,12,14,16,20,24,28,32,36,40,44,48,52,56,60,64,70,72,80,96|}"
   },
   "margin": {
-    "prefix": "ma",
+    "prefix": "margin",
     "body": "m-${1|[px],0,1,2,3,4,5,6,7,8,9,8,9,10,11,12,14,16,20,24,28,32,36,40,44,48,52,56,60,64,70,72,80,96|}"
   },
   "width": {
-    "prefix": "wi",
+    "prefix": "width",
     "body": "w-${1|[px],px,1,2,3,4,5,6,7,8,9,8,9,10,11,12,14,16,20,24,28,32,36,40,44,48,52,56,60,64,70,72,80,96|}"
   },
   "height": {
-    "prefix": "he",
+    "prefix": "height",
     "body": "h-${1|[px],px,1,2,3,4,5,6,7,8,9,8,9,10,11,12,14,16,20,24,28,32,36,40,44,48,52,56,60,64,70,72,80,96|}"
   },
   "max width": {
-    "prefix": "maxw",
+    "prefix": "max width",
     "body": "max-w-${1|[px],0,none,xs,sm,md,lg,xl,2xl,3xl,4xl,5xl,6xl,7xl|}"
   },
   "max height": {
-    "prefix": "minh",
-    "body": "max-h-${1|[],0,none,xs,sm,md,lg,xl,2xl,3xl,4xl,5xl,6xl,7xl|}"
+    "prefix": "min height",
+    "body": "max-h-${1|[px],0,none,xs,sm,md,lg,xl,2xl,3xl,4xl,5xl,6xl,7xl|}"
   },
   "text-size": {
-    "prefix": "texs",
-    "body": "text-${1|[],xs,sm,md,lg,xl,2xl,3xl,4xl,5xl,6xl,7xl,8xl,9xl|}"
+    "prefix": "text size",
+    "body": "text-${1|[px],xs,sm,md,lg,xl,2xl,3xl,4xl,5xl,6xl,7xl,8xl,9xl|}"
   },
   "text-weight": {
-    "prefix": "fow",
+    "prefix": "font style",
     "body": "font-${1|tight,normal,medium,semibold,bold|}"
   },
   "text indent": {
-    "prefix": "texti",
+    "prefix": "text indent",
     "body": "indent-${1|px,1,2,3,4,5,6,7,8,9,8,9,10,11,12,14,16,20,24,28,32,36,40,44,48,52,56,60,64,70,72,80,96|}"
   },
   "white space": {
-    "prefix": "whites",
+    "prefix": "whitespace",
     "body": "whitespace-${1|normal,nowrap,pre,pre-line,pre,wrap,break-spaces|}"
   },
   "word break": {
@@ -160,23 +160,23 @@
     "body": "leading-${1|3,4,5,6,7,8,9,10,none,tight,snug,normal,relaxed,loose|}"
   },
   "list style position": {
-    "prefix": "list",
+    "prefix": "list syle",
     "body": "list-${1|inside,outside|}"
   },
   "list style type": {
-    "prefix": "lists",
+    "prefix": "list style type",
     "body": "list-${1|disc,none,decimal|}"
   },
   "line clamp": {
-    "prefix": "linec",
+    "prefix": "line clamp",
     "body": "line-clamp-${1|1,2,3,4,5,6,none|}"
   },
   "text align": {
-    "prefix": "textc",
+    "prefix": "text align",
     "body": "text-${1|center,start,end,left,right,justify|}"
   },
   "text decoration": {
-    "prefix": "textd",
+    "prefix": "text decoration",
     "body": "${1|underline,overline,line-through,no-underline|}"
   },
   "decoration color": {
@@ -188,15 +188,15 @@
     "body": "bg-${1|fixed,local,scroll|}"
   },
   "background Size": {
-    "prefix": "bgs",
+    "prefix": "bg size",
     "body": "bg-${1|auto,cover,contain|}"
   },
   "background image": {
-    "prefix": "bgg",
+    "prefix": "bg gradient",
     "body": "bg-gradient-to-${1|t,tr,r,br,b,bl,l,tl|}"
   },
   "background gradient": {
-    "prefix": "bgr",
+    "prefix": "bg gradient from",
     "body": "${1|from-blue-,from-red-,from-slate-,from-gray-,from-zinc-,from-neutral-,from-stone-,from-orange-,from-amber-,from-yellow-,from-lime-,from-green-,from-teal-,from-cyan-,from-sky-,from-indigo-,from-violet-,from-purple-,from-fuhcsia-,from-pink-,from-rose-|}"
   },
   "border": {
@@ -204,11 +204,11 @@
     "body": "border"
   },
   "border color": {
-    "prefix": "borderc",
+    "prefix": "border color",
     "body": "border-${1|[],blue-,red-,slate-,gray-,zinc-,neutral-,stone-,orange-,amber-,yellow-,lime-,green-,teal-,cyan-,sky-,indigo-,violet-,purple-,fuhcsia-,pink-,rose-|}"
   },
   "background color": {
-    "prefix": "bgc",
+    "prefix": "bg color",
     "body": "bg-${1|[],blue-,red-,slate-,gray-,zinc-,neutral-,stone-,orange-,amber-,yellow-,lime-,green-,teal-,cyan-,sky-,indigo-,violet-,purple-,fuhcsia-,pink-,rose-|}"
   },
   "rounded": {
@@ -220,7 +220,7 @@
     "body": "divide-${1|y-0,y-2,y-4,y-8,y,x-0,x-2,x-4,x-8,x|}"
   },
   "divide color": {
-    "prefix": "dividec",
+    "prefix": "divide color",
     "body": "divide-${1:color}"
   },
   "outline": {
@@ -232,7 +232,7 @@
     "body": "shadow-${1|sm,md,lg,xl,2xl,inner,none|}"
   },
   "shadow color": {
-    "prefix": "shadowc",
+    "prefix": "shadow color",
     "body": "shadow-${1|inherit,current,transparent,black,white,blue-,red-,slate-,gray-,zinc-,neutral-,stone-,orange-,amber-,yellow-,lime-,green-,teal-,cyan-,sky-,indigo-,violet-,purple-,fuhcsia-,pink-,rose-|}"
   },
   "opacity": {
@@ -244,7 +244,7 @@
     "body": "blur-${1|none,sm,md,lg,xl,2xl,3xl|}"
   },
   "backdrop blur": {
-    "prefix": "blurb",
+    "prefix": "backdrop-blur",
     "body": "backdrop-blur-${1|none,sm,md,lg,xl,2xl,3xl|}"
   },
   "brightness": {

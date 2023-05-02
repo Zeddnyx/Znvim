@@ -1,5 +1,5 @@
 <h1 align="center">Znvim</h1>
-<p align="center">A Neovim config designed for frontend dev</p>
+<p align="center">Neovim config designed for frontend dev</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/-HTML-ED6428?style=for-the-badge&logo=html5&labelColor=302D41" /> 
@@ -52,6 +52,7 @@ run `nvim`
 
 ## Keybind
 
+```
 'Space + ff' - telescope find files
 'Space + fg' - telescope live grep
 'Space + fb' - telescope find buffer
@@ -71,7 +72,7 @@ run `nvim`
 'Shift + qo' - buffer close all except this one
 
 'Shift + f' - prettier
-
+```
 ## Thanks
 
 - [Vim Indonesia](https://t.me/VimID)
