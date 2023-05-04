@@ -16,12 +16,25 @@ local option = {
 		enable = true,
 		enable_autocmd = false,
 		config = {
-			-- Languages that have a single comment style
-			typescript = "// %s",
-			css = "/* %s */",
-			scss = "/* %s */",
-			html = "<!-- %s -->",
-			json = "",
+			tsx = {
+				jsx_element = {
+					__default = "{/* %s */}",
+					__parent = {
+						parenthesized_expression = "// %s",
+					},
+				},
+			},
+			javascript = {
+				__default = "// %s",
+				jsx_element = "{/* %s */}",
+				jsx_fragment = "{/* %s */}",
+				jsx_attribute = "// %s",
+				comment = "// %s",
+				__parent = {
+					-- if a node has this as the parent, use the `//` commentstring
+					jsx_expression = "// %s",
+				},
+			},
 		},
 	},
 }

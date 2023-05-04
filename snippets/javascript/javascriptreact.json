@@ -1,4 +1,8 @@
 {
+  "import env": {
+    "prefix": "import env",
+    "body": "import.meta.env"
+  },
   "import": {
     "prefix": "import",
     "body": "import ${1:val} from '${2:val}'"
@@ -145,8 +149,12 @@
     "description": "handle events"
   },
   "export variable": {
-    "prefix": "export",
+    "prefix": "export variable",
     "body": "export const ${1:val} = ${2:val}"
+  },
+  "export": {
+    "prefix": "export",
+    "body": "export ${1:var}"
   },
   "toggle menu navbar": {
     "prefix": "menu",

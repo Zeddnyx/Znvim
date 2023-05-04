@@ -99,10 +99,12 @@ local plugins = {
 
 	{
 		"numToStr/Comment.nvim",
-		keys = { { "gc", mode = { "n", "v" } }, { "gb", mode = { "n", "v" } } },
+		keys = { { "gc", mode = { "n", "v" }, "gcc"}, { "gb", mode = { "n", "v" } } },
 		lazy = true,
 		config = function()
-			require("configs.ui.comment")
+			require("Comment").setup {
+        pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
+      }
 		end,
 	},
 
@@ -111,7 +113,7 @@ local plugins = {
 		version = "*",
 		keys = { { "<leader>e", "<cmd>NvimTreeOpen<cr>" } },
 		config = function()
-			require("configs.ui.nvimtree")
+			require("configs.ui.filemanager")
 		end,
 	},
 

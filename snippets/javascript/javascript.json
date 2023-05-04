@@ -1,14 +1,10 @@
 {
-  "process.env": {
-    "prefix": "env",
-    "body": "process.env"
-  },
   "require": {
     "prefix": "req",
     "body": "require('${1:module}')"
   },
   "const module = require('module')": {
-    "prefix": "cr",
+    "prefix": "req module",
     "body": "const ${1:module} = require('${1:module}')"
   },
   "dom event default": {
@@ -16,59 +12,59 @@
     "body": "e.preventDefault()"
   },
   "addEventListener": {
-    "prefix": "addEvent",
+    "prefix": "add event listener",
     "body": "document.addEventListener('${1:event}', ${2:ev} => {\n\t${0}\n})"
   },
   "removeEventListener": {
-    "prefix": "removeEvent",
+    "prefix": "remove event listener",
     "body": "document.removeEventListener('${1:event}', ${22:listener})"
   },
   "getElementById": {
-    "prefix": "getClass",
+    "prefix": "get element by class",
     "body": "document.getElementById('${1:id}')"
   },
   "querySelector": {
-    "prefix": "qs",
+    "prefix": "query selector",
     "body": "document.querySelector('${1:selector}')"
   },
   "querySelectorAll": {
-    "prefix": "arrayFrom",
+    "prefix": "array from",
     "body": "Array.from(${1:document}.querySelectorAll('${2:selector}'))"
   },
   "createElement": {
-    "prefix": "createElement",
+    "prefix": "create element",
     "body": "${1:document}.createElement(${2:elem})"
   },
   "classList.add": {
-    "prefix": "addClass",
+    "prefix": "class add",
     "body": "${1:el}.classList.add('${2:class}')"
   },
   "classList.remove": {
-    "prefix": "removeClass",
+    "prefix": "class remove",
     "body": "${1:el}.classList.remove('${2:class}')"
   },
   "classList.toggle": {
-    "prefix": "toggleClass",
+    "prefix": "class toggle",
     "body": "${1:el}.classList.toggle('${2:class}')"
   },
   "getAttribute": {
-    "prefix": "getAtt",
+    "prefix": "attribute get",
     "body": "${1:el}.getAttribute('${2:attr}')"
   },
   "removeAttribute": {
-    "prefix": "removeAtt",
+    "prefix": "attribute remove",
     "body": "${1:el}.removeAttribute('${2:attr}')"
   },
   "setAttribute": {
-    "prefix": "setAtt",
+    "prefix": "attribute set",
     "body": "${1:el}.setAttribute('${2:attr}', ${3:value})"
   },
   "appendChild": {
-    "prefix": "appendChild",
+    "prefix": "append child",
     "body": "${1:el}.appendChild(${2:elem})"
   },
   "removeChild": {
-    "prefix": "removeChild",
+    "prefix": "remove child",
     "body": "${1:el}.removeChild(${2:elem})"
   },
   "forEach loop": {
@@ -148,7 +144,7 @@
     "body": "export ${1:member}"
   },
   "module default export": {
-    "prefix": "exportDef",
+    "prefix": "export default",
     "body": "export default ${1:member}"
   },
   "import module destructured": {
@@ -200,39 +196,35 @@
     "body": "console.log(${0})"
   },
   "console.log with JSON.stringify": {
-    "prefix": "consoleJson",
+    "prefix": "console json",
     "body": "console.log(JSON.stringify(${0}))"
   },
   "console.debug": {
-    "prefix": "consoleDebug",
+    "prefix": "console debug",
     "body": "console.debug(${0})"
   },
   "console.debug with JSON.stringify": {
-    "prefix": "consoleDebugJson",
+    "prefix": "console debug json",
     "body": "console.debug(JSON.stringify(${0}))"
   },
   "console.log a variable": {
-    "prefix": "consoleVariable",
+    "prefix": "console variable",
     "body": "console.log('${0}:', ${0})"
   },
   "console.error": {
-    "prefix": "consoleErr",
+    "prefix": "console err",
     "body": "console.error(${0})"
   },
   "JSON.stringify()": {
-    "prefix": "jsonStringify",
+    "prefix": "json stringify",
     "body": "JSON.stringify($0)"
   },
   "JSON.parse()": {
-    "prefix": "jsonParse",
+    "prefix": "json parse",
     "body": "JSON.parse($0)"
   },
-  "setter": {
-    "prefix": "set",
-    "body": "set ${1:property} (${2:value}) {\n\t${0}\n}"
-  },
   "ternary": {
-    "prefix": "te",
+    "prefix": "ternary",
     "body": "${1:cond} ? ${2:true} : ${3:false}"
   },
   "return": {

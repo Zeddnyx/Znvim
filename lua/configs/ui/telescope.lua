@@ -20,7 +20,7 @@ function M.config()
 			entry_prefix = "   ",
 			initial_mode = "insert",
 			selection_strategy = "reset",
-			file_ignore_patterns = { "^node_modules/" },
+			file_ignore_patterns = { "^node_modules/", ".git" },
 			file_sorter = sorters.get_fzy_sorter,
 			generic_sorter = sorters.get_generic_fzy_sorter,
 			path_display = { "absolute" },
