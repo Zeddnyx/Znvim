@@ -70,7 +70,7 @@ Space + d - find exact word
 Shift + h - buffer previous
 Shift + l - buffer next
 Shift + c - buffer close
-Shift + q + o' - buffer close all except this one
+Shift + q - buffer close all except this one
 
 Shift + f - prettier
 ```

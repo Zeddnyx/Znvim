@@ -9,6 +9,7 @@ vim.opt.hlsearch = true -- highlight when match search words
 vim.opt.showcmd = true
 vim.opt.cmdheight = 0 -- height of laststatus at the bottom
 vim.opt.laststatus = 2 -- show where are you in at the bottom
+vim.opt.clipboard = "unnamedplus" -- allow u to copy from nvim to ur clipboard
 vim.opt.scrolloff = 1
 vim.opt.shell = "fish"
 vim.opt.swapfile = false

@@ -131,7 +131,7 @@ local plugins = {
 	{
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.1",
-		keys = { { "<leader>ff", "<cmd>Telescope find_files<cr>" }, { "<leader>fg", "<cmd>Telescope live_grep<cr>" } },
+		keys = { { "<leader>ff", "<cmd>Telescope find_files<cr>" }, { "<leader>fg", "<cmd>Telescope live_grep<cr>" },{ "<leader>fb", "<cmd>Telescope buffers<cr>" } },
 		lazy = true,
 		dependencies = { "nvim-lua/plenary.nvim" },
 		config = function()
