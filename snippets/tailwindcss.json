@@ -205,11 +205,11 @@
   },
   "border color": {
     "prefix": "border color",
-    "body": "border-${1|[],blue-,red-,slate-,gray-,zinc-,neutral-,stone-,orange-,amber-,yellow-,lime-,green-,teal-,cyan-,sky-,indigo-,violet-,purple-,fuhcsia-,pink-,rose-|}"
+    "body": "border-${1|[#],blue-,red-,slate-,gray-,zinc-,neutral-,stone-,orange-,amber-,yellow-,lime-,green-,teal-,cyan-,sky-,indigo-,violet-,purple-,fuhcsia-,pink-,rose-|}"
   },
   "background color": {
     "prefix": "bg color",
-    "body": "bg-${1|[],blue-,red-,slate-,gray-,zinc-,neutral-,stone-,orange-,amber-,yellow-,lime-,green-,teal-,cyan-,sky-,indigo-,violet-,purple-,fuhcsia-,pink-,rose-|}"
+    "body": "bg-${1|[#],blue-,red-,slate-,gray-,zinc-,neutral-,stone-,orange-,amber-,yellow-,lime-,green-,teal-,cyan-,sky-,indigo-,violet-,purple-,fuhcsia-,pink-,rose-|}"
   },
   "rounded": {
     "prefix": "rounded",
