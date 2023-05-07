@@ -4,7 +4,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/-HTML-ED6428?style=for-the-badge&logo=html5&logoColor=FFF&labelColor=ED6428" /> 
   <img src="https://img.shields.io/badge/-Tailwind-08BCDC?style=for-the-badge&logo=tailwindcss&logoColor=FFF&labelColor=08BCDC" /> 
-  <img src="https://img.shields.io/badge/-JavaScript-3072BB?style=for-the-badge&logo=javascript&logoColor=302D41&labelColor=302D41" /> 
+  <img src="https://img.shields.io/badge/-JavaScript-302D41?style=for-the-badge&logo=javascript&logoColor=EFD922&labelColor=302D41" /> 
   <img src="https://img.shields.io/badge/-TypeScript-3072BB?style=for-the-badge&logo=typescript&logoColor=08BCDC&labelColor=3072BB" /> 
   <img src="https://img.shields.io/badge/-React-302D41?style=for-the-badge&logo=react&logoColor=08BCDC&labelColor=302D41" /> 
   <img src="https://img.shields.io/badge/-Next-FFF?style=for-the-badge&logo=nextdotjs&logoColor=000&labelColor=FFF" /> 
