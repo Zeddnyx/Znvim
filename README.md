@@ -63,8 +63,9 @@ Space + k - switch up
 Space + j - switch down
 
 Space + e - file manager ('q' close file manager)
-Space + s - find all replace all
 Space + a - select all
+Space + s - find all replace all
+Space + d - find exact word
 
 Shift + h - buffer previous
 Shift + l - buffer next

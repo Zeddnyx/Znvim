@@ -43,12 +43,12 @@ nmap("<leader>j", "<C-w>j<CR>") -- Switch down
 nmap("<leader>k", "<C-w>k<CR>") -- Switch up
 nmap("<leader>l", "<C-w>l<CR>") -- Switch left
 
--- costume file manager builtin
--- vim.g.netrw_banner = 0
--- vim.g.netrw_liststyle = 3
--- nmap("<leader>e", "<CMD>Lex<CR>:vertical resize 25<CR>") -- file manager (builtin)
+nmap("<S-j>", "") -- disable default keybind
+nmap("<S-k>", "") -- disable default keybind
+-- vim.g.netrw_banner = 0 -- custome file exporer (builtin)
+-- vim.g.netrw_liststyle = 3 -- custome file exporer (builtin)
+-- nmap("<leader>e", "<CMD>Lex<CR>:vertical resize 25<CR>") -- file exporer (builtin)
 nmap("<leader>e", "<CMD>NvimTreeOpen<CR>") -- file manager
 nmap("<leader>a", "gg<S-v>G") -- select all
 nshort("<leader>s", [[:%s/]]) -- find and replace all matched word
-nmap("<S-j>", "") -- disable default keybind
-nmap("<S-k>", "") -- disable default keybind
+nshort("<leader>d", [[/\<\word\>]]) -- /\<vim\> match 'vim' but not 'nvim'
