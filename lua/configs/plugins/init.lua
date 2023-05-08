@@ -13,7 +13,13 @@ vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
 	-- Dependecies
-	{ "kyazdani42/nvim-web-devicons", lazy = true },
+	{
+		"kyazdani42/nvim-web-devicons",
+		lazy = true,
+		config = function()
+			require("configs.ui.webdevicons")
+		end,
+	},
 	{ "nvim-lua/plenary.nvim", lazy = true },
 
 	-- Completion
@@ -99,12 +105,12 @@ local plugins = {
 
 	{
 		"numToStr/Comment.nvim",
-		keys = { { "gc", mode = { "n", "v" }, "gcc"}, { "gb", mode = { "n", "v" } } },
+		keys = { { "gc", mode = { "n", "v" }, "gcc" }, { "gb", mode = { "n", "v" } } },
 		lazy = true,
 		config = function()
-			require("Comment").setup {
-        pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
-      }
+			require("Comment").setup({
+				pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
+			})
 		end,
 	},
 
@@ -131,7 +137,11 @@ local plugins = {
 	{
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.1",
-		keys = { { "<leader>ff", "<cmd>Telescope find_files<cr>" }, { "<leader>fg", "<cmd>Telescope live_grep<cr>" },{ "<leader>fb", "<cmd>Telescope buffers<cr>" } },
+		keys = {
+			{ "<leader>ff", "<cmd>Telescope find_files<cr>" },
+			{ "<leader>fg", "<cmd>Telescope live_grep<cr>" },
+			{ "<leader>fb", "<cmd>Telescope buffers<cr>" },
+		},
 		lazy = true,
 		dependencies = { "nvim-lua/plenary.nvim" },
 		config = function()
