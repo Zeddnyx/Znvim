@@ -85,7 +85,7 @@ local plugins = {
 		"ellisonleao/gruvbox.nvim",
 		lazy = false,
 		config = function()
-			require("configs.themes")
+			require("configs.ui.gruvbox")
 		end,
 	},
 
@@ -96,7 +96,7 @@ local plugins = {
 		event = "BufRead",
 		dependencies = {
 			"p00f/nvim-ts-rainbow",
-			"JoosepAlviste/nvim-ts-context-commentstring",
+			"JoosepAlviste/nvim-ts-context-commentstring", -- jsx comment
 		},
 		config = function()
 			require("configs.ui.treesitter")

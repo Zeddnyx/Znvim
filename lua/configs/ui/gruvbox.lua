@@ -9,5 +9,8 @@ gruvbox.setup({
 	palette_overrides = {
 		yellow = "#D69820",
 	},
+	overrides = {
+		NvimTreeFolderIcon = { fg = "#D69820"},
+	},
 })
 gruvbox.load()
