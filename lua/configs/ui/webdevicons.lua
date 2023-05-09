@@ -343,6 +343,18 @@ webicon.setup {
       cterm_color = "185",
       name = "Cson",
     },
+    ["tailwind.config.js"] = {
+      icon = "󱏿",
+      color = "#42a5f5",
+      cterm_color = "113",
+      name = "tailwind.config.js",
+    },
+    ["postcss.config.js"] = {
+      icon = "󱏿",
+      color = "#42a5f5",
+      cterm_color = "75",
+      name = "postcss.config.js",
+    },
     ["css"] = {
       icon = "",
       color = "#42a5f5",
@@ -693,12 +705,12 @@ webicon.setup {
     },
     ["js"] = {
       icon = "",
-      color = "#efd81d",
+      color = "#efd82d",
       cterm_color = "220",
       name = "Js",
     },
     ["json"] = {
-      icon = "ﬥ",
+      icon = "",
       color = "#cbcb41",
       cterm_color = "185",
       name = "Json",
@@ -710,7 +722,7 @@ webicon.setup {
       name = "Json5",
     },
     ["jsx"] = {
-      icon = "ﰆ",
+      icon = "",
       color = "#519aba",
       cterm_color = "67",
       name = "Jsx",

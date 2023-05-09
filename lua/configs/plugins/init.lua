@@ -165,6 +165,14 @@ local plugins = {
 			require("configs.ui.colorizer")
 		end,
 	},
+	{
+		"nvim-lualine/lualine.nvim",
+    event = "BufRead",
+		dependencies = "kyazdani42/nvim-web-devicons",
+    config = function()
+      require("configs.ui.lualine")
+    end
+	},
 }
 
 require("lazy").setup(plugins, {
