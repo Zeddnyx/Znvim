@@ -13,20 +13,52 @@ local colors = {
 
 local custome_theme = {
 	normal = {
-		a = { fg = colors.green, bg = colors.transparent, gui = "bold" },
-		b = { fg = colors.white, bg = colors.transparent, gui = "bold" },
+		a = { fg = colors.black, bg = colors.white, gui = "bold" },
+		b = { fg = colors.white, bg = colors.transparent },
 	},
 	insert = {
-		a = { fg = colors.blue, bg = colors.transparent, gui = "bold" },
-		b = { fg = colors.red, bg = colors.transparent, gui = "bold" },
+		a = { fg = colors.black, bg = colors.white, gui = "bold" },
+		b = { fg = colors.white, bg = colors.transparent },
 	},
-	visual = { a = { fg = colors.violet, bg = colors.transparent, gui = "bold" } },
+	visual = { a = { fg = colors.black, bg = colors.white, gui = "bold" } },
 	replace = { a = { fg = colors.red, bg = colors.transparent, gui = "bold" } },
-	inactive = {
-		a = { fg = colors.white, bg = colors.grey },
-		b = { fg = colors.white, bg = colors.grey },
-		c = { fg = colors.black, bg = colors.grey },
-	},
+}
+local mode_map = {
+	["n"] = "N",
+	["no"] = "O-P",
+	["nov"] = "O-P",
+	["noV"] = "O-P",
+	["no�"] = "O-P",
+	["niI"] = "N",
+	["niR"] = "N",
+	["niV"] = "N",
+	["nt"] = "N",
+	["v"] = "V",
+	["vs"] = "V",
+	["V"] = "V-L",
+	["Vs"] = "V-L",
+	["�"] = "V-B",
+	["�s"] = "V-B",
+	["s"] = "S",
+	["S"] = "S-L",
+	["�"] = "S-B",
+	["i"] = "I",
+	["ic"] = "I",
+	["ix"] = "I",
+	["R"] = "R",
+	["Rc"] = "R",
+	["Rx"] = "R",
+	["Rv"] = "V-R",
+	["Rvc"] = "V-R",
+	["Rvx"] = "V-R",
+	["c"] = "C",
+	["cv"] = "EX",
+	["ce"] = "EX",
+	["r"] = "R",
+	["rm"] = "M",
+	["r?"] = "C",
+	["!"] = "SHELL",
+	["t"] = "T",
 }
 
 local opts = {
@@ -49,11 +81,18 @@ local opts = {
 		},
 	},
 	sections = {},
-	inactive_sections = {},
+	active_sections = {},
 	tabline = {},
 	winbar = {
-		lualine_a = { "mode" },
-		lualine_b = { { "windows", use_mode_colors = true } },
+		lualine_a = { {
+			function()
+				return mode_map[vim.api.nvim_get_mode().mode] or "__"
+			end,
+		} },
+		lualine_b = {
+			{ "windows", filetype_names = { TelescopePrompt = "Telescope" }, show_modified_status = true },
+			"filetype",
+		},
 		lualine_c = {},
 		lualine_x = {},
 		lualine_y = {},
