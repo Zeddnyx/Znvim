@@ -69,7 +69,7 @@ local opts = {
 		section_separators = "",
 		disabled_filetypes = {
 			statusline = { "NvimTree" },
-			winbar = { "NvimTree" },
+			winbar = { "NvimTree_1", "NvimTree" },
 		},
 		ignore_focus = {},
 		always_divide_middle = true,
@@ -98,7 +98,17 @@ local opts = {
 		lualine_y = {},
 		lualine_z = {},
 	},
-	inactive_winbar = {},
+	inactive_winbar = {
+    lualine_a = {},
+		lualine_b = {
+			{ "windows", filetype_names = { TelescopePrompt = "Telescope" }, show_modified_status = true },
+			"filetype",
+		},
+		lualine_c = {},
+		lualine_x = {},
+		lualine_y = {},
+		lualine_z = {},
+	},
 	extensions = {},
 }
 
