@@ -25,6 +25,7 @@ function M.config()
 				".git",
 				"%.svg$",
 				"%.png$",
+        ".png",
 				".jpeg",
 				".jpg",
 				"assets/**",

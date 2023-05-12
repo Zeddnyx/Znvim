@@ -8,10 +8,11 @@
   <img src="https://img.shields.io/badge/-TypeScript-302D41?style=for-the-badge&logo=typescript&logoColor=3072BB&labelColor=302D41" /> 
   <img src="https://img.shields.io/badge/-React-302D41?style=for-the-badge&logo=react&logoColor=08BCDC&labelColor=302D41" /> 
   <img src="https://img.shields.io/badge/-Next-FFF?style=for-the-badge&logo=nextdotjs&logoColor=000&labelColor=FFF" /> 
-  <img src="https://img.shields.io/badge/-Lua-04008F?style=for-the-badge&logo=lua&labelColor=04008F" /> 
+  <!-- <img src="https://img.shields.io/badge/-Lua-04008F?style=for-the-badge&logo=lua&labelColor=04008F" />  -->
 </p>
 
-![nvim](./preview/nvim.png)
+![nvim](./preview/preview.png)
+![startuptime](./preview/startuptime.png)
 
 <p align="center">
     <a href="https://github.com/Zeddnyx/Znvim">
