@@ -1,8 +1,7 @@
-<h1 align="center">Znvim</h1>
-<p align="center">Neovim config designed for frontend dev</p>
+## Znvim
+### Neovim config designed for Frontend Development
 
-<p align="center">
-  <img src="https://img.shields.io/badge/-HTML-ED6428?style=for-the-badge&logo=html5&logoColor=FFF&labelColor=ED6428" /> 
+<p align="start">
   <img src="https://img.shields.io/badge/-Tailwind-08BCDC?style=for-the-badge&logo=tailwindcss&logoColor=FFF&labelColor=08BCDC" /> 
   <img src="https://img.shields.io/badge/-JavaScript-302D41?style=for-the-badge&logo=javascript&logoColor=EFD922&labelColor=302D41" /> 
   <img src="https://img.shields.io/badge/-TypeScript-302D41?style=for-the-badge&logo=typescript&logoColor=3072BB&labelColor=302D41" /> 
