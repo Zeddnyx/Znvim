@@ -20,6 +20,18 @@
     </a>
 </p>
 
+## Features
+
+- Autocompletion with [cmp](https://github.com/hrsh7th/nvim-cmp)
+- Autoclosing braces with [autopairs](https://github.com/windwp/nvim-autopairs)
+- Themes with [gruvbox](https://github.com/ellisonleao/gruvbox.nvim)
+- Syntax highlighting with [treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+- Comment syntax with [comment](https://github.com/numToStr/Comment.nvim)
+- Indentlines with [indent blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
+- Custome Snippets with [vsnip](https://github.com/hrsh7th/cmp-vsnip)
+- Color preview with [colorizer](https://github.com/NvChad/nvim-colorizer)
+- Find files with [Telescope](https://github.com/nvim-telescope/telescope.nvim)
+
 ## Install
 
 clean up your config first
@@ -38,43 +50,81 @@ git clone https://github.com/ZeddNyx/Znvim ~/.config/nvim
 
 run `nvim`
 
-## List plugin
 
-- Lsp configuration with [lsp ](https://github.com/neovim/nvim-lspconfig) and [lspkind](https://github.com/onsails/lspkind.nvim)
-- Autocompletion with [cmp](https://github.com/hrsh7th/nvim-cmp)
-- Autoclosing braces with [autopairs](https://github.com/windwp/nvim-autopairs)
-- Themes with [gruvbox](https://github.com/ellisonleao/gruvbox.nvim)
-- Syntax highlighting with [treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
-- Comment syntax with [comment](https://github.com/numToStr/Comment.nvim)
-- Indentlines with [indent blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
-- Custome Snippets with [vsnip](https://github.com/hrsh7th/cmp-vsnip)
-- Color preview with [colorizer](https://github.com/NvChad/nvim-colorizer)
-- Find files with [Telescope](https://github.com/nvim-telescope/telescope.nvim)
+## Keybindings
 
-## Keybind
+Space (SPC) is my Leader key.
 
-```
-Space + ff - telescope find files
-Space + fg - telescope live grep
-Space + fb - telescope find buffer
+<details>
+<summary>Searching</summary>
 
-Space + h - switch left
-Space + l - switch right
-Space + k - switch up
-Space + j - switch down
+### Searching
 
-Space + e - file manager ('q' close file manager)
-Space + a - select all
-Space + s - find all replace all
-Space + d - find exact word
+| Key Bindings | Description          |
+|--------------|----------------------|
+| SPC ff       | Telescope find files |
+| SPC fg       | Telescope live grep  |
+| SPC fb       | Telescope buffers    |
 
-Shift + h - buffer previous
-Shift + l - buffer next
-Shift + c - buffer close
-Shift + q - buffer close all except this one
+</details>
 
-Shift + f - prettier
-```
+<details>
+<summary>Working with Project</summary>
+ 
+ ### Woriking with Project
+ 
+| Key Bindings | Description          |
+|--------------|----------------------|
+| SPC e        | File explorer        |
+| SPC a        | Select all           |
+| SPC s        | Find and replace all |
+| SPC d        | Find specific word   |
+| Shift f      | Prettier             |
+
+</details>
+
+<details>
+<summary>Commenting</summary>
+
+### Commenting
+
+| Key Bindings | Description                |
+|--------------|----------------------------|
+| gcc          | Create/remove comment      |
+| gc (visual)  | Create/remove comment      |
+  
+</details>
+  
+<details>
+<summary>Buffers </summary>
+  
+### Buffers
+
+| Key Bindings | Description      |
+|--------------|------------------|
+| Shift h      | buffer previous  |
+| Shift l      | buffer next      |
+| Shift c      | buffer close     |
+| Shift q      | buffer close all |
+  
+</details>
+  
+  
+<details>
+<summary>Other</summary>
+
+### Other VERY useful bindings
+
+| Key Bindings | Description      |
+|--------------|------------------|
+| SPC h        | Switch left      |
+| SPC j        | Switch down      |
+| SPC k        | Switch up        |
+| SPC l        | Switch right     |
+
+</details>
+
+
 ## Thanks
 
 - [Vim Indonesia](https://t.me/VimID)
