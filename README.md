@@ -10,7 +10,7 @@
   <!-- <img src="https://img.shields.io/badge/-Lua-04008F?style=for-the-badge&logo=lua&labelColor=04008F" />  -->
 </p>
 
-![nvim](./preview/nvim.png)
+![nvim](./preview/preview.png)
 ![startuptime](./preview/startuptime.png)
 
 <p align="center">

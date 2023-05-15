@@ -17,18 +17,9 @@ local window = cmp.config.window.bordered({
 
 -- icons in snippet
 local icons = {
-	Array = "",
-	Boolean = "",
-	Class = "",
-	Color = "",
 	Text = "",
 	Variable = "󰌹",
 	Snippet = "",
-	File = "",
-	Reference = "",
-	Folder = "",
-	String = "",
-	Package = "",
 }
 
 local function feedkey(key, mode)
