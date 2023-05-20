@@ -42,6 +42,7 @@ config.defaults = {
     "%.o$",
     "%.otf$",
     "%.out$",
+    "%.svg$",
     "%.pdf$",
     "%.png$",
     "%.PNG$",
@@ -78,7 +79,7 @@ config.defaults = {
 local pickers = {}
 
 pickers.find_files = {
-  layout_config = { height = 0.4 },
+  layout_config = { height = 0.5 },
   theme = "ivy",
   previewer = false,
 }
@@ -165,21 +166,5 @@ pickers.diagnostics = {
 }
 
 config.pickers = pickers
--- config.extensions = {
---   file_browser = {
---     prompt_prefix = "   ",
---     hide_parent_dir = true,
---     mappings = {
---       i = {
---         ["<C-e>"] = telescope.extensions.file_browser.actions.goto_parent_dir,
---         ["<M-f>"] = telescope.extensions.file_browser.actions.toggle_browser,
---       },
---     },
---   },
---   fzf = {},
--- }
 
 telescope.setup(config)
--- for extension, _ in pairs(config.extensions) do
---   telescope.load_extension(extension)
--- end

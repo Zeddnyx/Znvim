@@ -1,11 +1,11 @@
 {
   "import env": {
-    "prefix": "import env",
+    "prefix": "env vite",
     "body": "import.meta.env"
   },
   "import": {
     "prefix": "import",
-    "body": "import ${1:val} from '${2:val}'"
+    "body": "import ${1:val} from '${2:}'"
   },
   "import statement": {
     "prefix": "import statement",
@@ -161,6 +161,23 @@
     "body": [
       "const [ menu, setMenu ] = useState(false)",
       "const handleMenu = () => setMenu(!menu)"
+    ]
+  },
+  "zustant create": {
+    "prefix": "zustand create",
+    "body": [
+      "import { create } from 'zustand';",
+      "import { persist } from 'zustand/middleware';",
+      "export const store = create(","\tpersist(","\t\t(set) => ({","\t\t\tcount: 0,","\t\t}),","\t\t{ name: 'storage' }","\t)",");"
+    ]
+  },
+  "zustand store": {
+    "prefix": "zustand store",
+    "body": [
+      "import { store } from '$1'",
+      "import { shallow } from 'zustand/shallow'",
+      "",
+      "const [${2:val1}, ${3:val2}] = store((state) => {","\treturn [state.${2}, state.${3}];","}, shallow);//shallow: compare value from non primitive"
     ]
   }
 }

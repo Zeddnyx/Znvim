@@ -60,15 +60,15 @@
     "body": "${1:el}.setAttribute('${2:attr}', ${3:value})"
   },
   "appendChild": {
-    "prefix": "append child",
+    "prefix": "child append",
     "body": "${1:el}.appendChild(${2:elem})"
   },
   "removeChild": {
-    "prefix": "remove child",
+    "prefix": "child remove",
     "body": "${1:el}.removeChild(${2:elem})"
   },
   "forEach loop": {
-    "prefix": "foreEch",
+    "prefix": "foreEach",
     "body": "${1:iterable}.forEach((${2:item}) => {\n\t${0}\n})"
   },
   "map": {
@@ -95,52 +95,40 @@
     "prefix": "some",
     "body": "${1:iterable}.some((${2:item}) => {\n\t${0}\n})"
   },
-  "var statement": {
-    "prefix": "v",
-    "body": "var ${1:name}"
-  },
   "var assignment": {
     "prefix": "va",
     "body": "var ${1:name} = ${2:value}"
   },
   "let statement": {
-    "prefix": "l",
-    "body": "let ${1:name}"
+    "prefix": "let",
+    "body": "let ${1:name} = ${2:value}"
   },
   "const statement": {
     "prefix": "const",
-    "body": "const ${1:name}"
-  },
-  "const statement from destructuring": {
-    "prefix": "dest",
-    "body": "const { ${2:prop} } = ${1:value}"
+    "body": "const ${1:name} = ${2:value}"
   },
   "const statement from array destructuring": {
-    "prefix": "destArray",
+    "prefix": "destructuring array",
     "body": "const [ ${2:prop} ] = ${1:value}"
   },
   "const assignment awaited": {
-    "prefix": "constAwait",
+    "prefix": "await",
     "body": "const ${1:name} = await ${2:value}"
   },
   "const arrow function assignment": {
-    "prefix": "arrowFunc",
+    "prefix": "arrow func",
     "body": "const ${1:name} = (${2:arguments}) => {\n\treturn ${0}\n}"
   },
-  "const assignment yielded": {
-    "prefix": "constYield",
-    "body": "const ${1:name} = yield ${2:value}"
-  },
   "const object": {
-    "prefix": "constObject",
+    "prefix": "const object",
     "body": "const ${1:name} = {\n\t${0}\n}"
   },
   "const array": {
-    "prefix": "constArray",
+    "prefix": "const array",
     "body": "const ${1:name} = [\n\t${0}\n]"
   },
   "module export": {
-    "prefix": "e",
+    "prefix": "export",
     "body": "export ${1:member}"
   },
   "module default export": {
@@ -148,20 +136,12 @@
     "body": "export default ${1:member}"
   },
   "import module destructured": {
-    "prefix": "importDest",
+    "prefix": "import destructured",
     "body": "import {$2} from '${1:module}'"
   },
   "this": {
     "prefix": "t",
     "body": "this."
-  },
-  "else statement": {
-    "prefix": "else",
-    "body": "else {\n\t${0}\n}"
-  },
-  "else if statement": {
-    "prefix": "elif",
-    "body": "else if (${1:condition}) {\n\t${0}\n}"
   },
   "throw new Error": {
     "prefix": "throw",
@@ -228,41 +208,24 @@
     "body": "${1:cond} ? ${2:true} : ${3:false}"
   },
   "return": {
-    "prefix": "r",
+    "prefix": "return",
     "body": "return ${0}"
   },
-  "return this": {
-    "prefix": "rt",
-    "body": "return ${0:this}"
-  },
   "return null": {
-    "prefix": "rn",
+    "prefix": "return null",
     "body": "return null"
   },
   "return new object": {
-    "prefix": "ro",
+    "prefix": "return new obj",
     "body": "return {\n\t${0}\n}"
   },
   "return new array": {
-    "prefix": "ra",
+    "prefix": "return new array",
     "body": "return [\n\t${0}\n]"
   },
   "return promise": {
-    "prefix": "rp",
+    "prefix": "return promise",
     "body": "return new Promise((resolve, reject) => {\n\t${0}\n})"
-  },
-  "define module": {
-    "prefix": "define",
-    "body": [
-      "define([",
-      "\t'require',",
-      "\t'${1:dependency}'",
-      "], function(require, ${2:factory}) {",
-      "\t'use strict';",
-      "\t$0",
-      "});"
-    ],
-    "description": "define module"
   },
   "For Loop": {
     "prefix": "for",
@@ -301,15 +264,14 @@
     "body": ["function ${1:name}(${2:params}) {", "\t$0", "}"],
     "description": "Function Statement"
   },
-  "If Statement": {
-    "prefix": "if",
-    "body": ["if (${1:condition}) {", "\t$0", "}"],
-    "description": "If Statement"
-  },
   "If-Else Statement": {
-    "prefix": "ifelse",
+    "prefix": "if else",
     "body": ["if (${1:condition}) {", "\t$0", "} else {", "\t", "}"],
     "description": "If-Else Statement"
+  },
+  "else if statement": {
+    "prefix": "elif",
+    "body": "else if (${1:condition}) {\n\t${0}\n}"
   },
   "New Statement": {
     "prefix": "new",

@@ -91,7 +91,7 @@
   },
   "br": {
     "prefix": "br",
-    "body": "<br>",
+    "body": "<br/>",
     "description": "HTML - Inserts a single line break",
     "scope": "text.html"
   },
@@ -295,7 +295,7 @@
   },
   "hr": {
     "prefix": "hr",
-    "body": "<hr>",
+    "body": "<hr/>",
     "description": "HTML - Defines a horizontal rule",
     "scope": "text.html"
   },

@@ -12,7 +12,7 @@ local option = {
 		extended_mode = false,
 		max_file_lines = nil,
 	},
-	context_commentstring = {
+	kontext_commentstring = {
 		enable = true,
 		enable_autocmd = false,
 		config = {
