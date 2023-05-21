@@ -1,28 +1,4 @@
 {
-	"Constructor": {
-		"prefix": "ctor",
-		"body": [
-			"/**",
-			" *",
-			" */",
-			"constructor() {",
-			"\tsuper();",
-			"\t$0",
-			"}"
-		],
-		"description": "Constructor"
-	},
-	"Class Definition": {
-		"prefix": "class",
-		"body": [
-			"class ${1:name} {",
-			"\tconstructor(${2:parameters}) {",
-			"\t\t$0",
-			"\t}",
-			"}"
-		],
-		"description": "Class Definition"
-	},
 	"Public Method Definition": {
 		"prefix": "public method",
 		"body": [
@@ -63,7 +39,7 @@
 		"description": "Property getter"
 	},
 	"Log to the console": {
-		"prefix": "log",
+		"prefix": "console log",
 		"body": [
 			"console.log($1);",
 			"$0"
@@ -71,7 +47,7 @@
 		"description": "Log to the console"
 	},
 	"Log warning to console": {
-		"prefix": "warn",
+		"prefix": "console warn",
 		"body": [
 			"console.warn($1);",
 			"$0"
@@ -79,7 +55,7 @@
 		"description": "Log warning to the console"
 	},
 	"Log error to console": {
-		"prefix": "error",
+		"prefix": "console error",
 		"body": [
 			"console.error($1);",
 			"$0"
@@ -269,5 +245,33 @@
 			"//#endregion"
 		],
 		"description": "Folding Region End"
-	}
+	},
+  "toggle menu navbar": {
+    "prefix": "menu",
+    "body": [
+      "const [ menu, setMenu ] = useState(false)",
+      "const handleMenu = () => setMenu(!menu)"
+    ]
+  },
+  "zustant create": {
+    "prefix": "zustand create",
+    "body": [
+      "import { create } from 'zustand';",
+      "import { persist } from 'zustand/middleware';",
+      "export const store = create(","\tpersist(","\t\t(set) => ({","\t\t\tcount: 0,","\t\t}),","\t\t{ name: 'storage' }","\t)",");"
+    ]
+  },
+  "zustand store": {
+    "prefix": "zustand store",
+    "body": [
+      "import { store } from '$1'",
+      "import { shallow } from 'zustand/shallow'",
+      "",
+      "const [${2:val1}, ${3:val2}] = store((state) => {","\treturn [state.${2}, state.${3}];","}, shallow);//shallow: compare value from non primitive"
+    ]
+  },
+  "interface":{
+    "prefix": "interface",
+    "body": "interface ${1} = "
+  }
 }

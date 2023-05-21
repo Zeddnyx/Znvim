@@ -22,20 +22,10 @@
     "body": "import React, { Component, PropTypes } from 'react'\n\nclass ${TM_FILENAME_BASE} extends Component {\n\trender () {\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t$0\n\t\t\t</div>\n\t\t)\n\t}\n}\n\n${1}.propTypes = {\n\n}\n\nexport default ${1}",
     "description": "Creates a React component class with PropTypes"
   },
-  "reactClassCompomentWithMethods": {
-    "prefix": "rcfc",
-    "body": "import React, { Component, PropTypes } from 'react'\n\nclass ${TM_FILENAME_BASE} extends Component {\n\tconstructor(props) {\n\t\tsuper(props)\n\n\t}\n\n\tcomponentWillMount () {\n\n\t}\n\n\tcomponentDidMount () {\n\n\t}\n\n\tcomponentWillReceiveProps (nextProps) {\n\n\t}\n\n\tshouldComponentUpdate (nextProps, nextState) {\n\n\t}\n\n\tcomponentWillUpdate (nextProps, nextState) {\n\n\t}\n\n\tcomponentDidUpdate (prevProps, prevState) {\n\n\t}\n\n\tcomponentWillUnmount () {\n\n\t}\n\n\trender () {\n\t\treturn (\n\t\t\t<div>\n\n\t\t\t</div>\n\t\t)\n\t}\n}\n\n${1}.propTypes = {\n\n}\n\nexport default ${1}",
-    "description": "Creates a React component class with PropTypes and all lifecycle methods"
-  },
   "reactFunctionComponent": {
     "prefix": "rfc",
     "body": "import React from 'react'\n\nexport const ${TM_FILENAME_BASE}: React.FC<{}> = () => {\n\treturn (\n\t\t<div>\n\t\t\t$0\n\t\t</div>\n\t)\n}",
     "description": "Creates a React functional component without PropTypes"
-  },
-  "reactFunctionComponentWithEmotion": {
-    "prefix": "rfce",
-    "body": "import { css } from '@emotion/core'\nimport React from 'react'\n\nexport const ${TM_FILENAME_BASE}: React.FC<{}> = () => {\n\treturn (\n\t\t<div css={css``}>\n\t\t\t$0\n\t\t</div>\n\t)\n}",
-    "description": "Creates a React functional component with emotion import"
   },
   "classConstructor": {
     "prefix": "con",
@@ -284,7 +274,7 @@
   },
   "useState": {
     "prefix": "us",
-    "body": "const [${0:val}, set${1:setterName}] = useState(${2:defVal})",
+    "body": "const [${1:val}, set${2:setterName}] = useState(${3})",
     "description": "use state hook"
   },
   "useEffect": {
@@ -341,5 +331,51 @@
       "const ${1:memoizedValue} = useMemo(() => ${2:computeExpensiveValue}(${3:a}, ${4:b}), [${5:a}, ${6:b}])$0"
     ],
     "description": "React useMemo() hook"
+  },
+  "toggle menu navbar": {
+    "prefix": "menu",
+    "body": [
+      "const [ menu, setMenu ] = useState(false)",
+      "const handleMenu = () => setMenu(!menu)"
+    ]
+  },
+  "zustant create": {
+    "prefix": "zustand create",
+    "body": [
+      "import { create } from \"zustand\";",
+      "import { persist } from \"zustand/middleware\";",
+      "export const store = create(","\tpersist(","\t\t(set) => ({","\t\t\tcount: 0,","\t\t}),","\t\t{ name: 'storage' }","\t)",");"
+    ]
+  },
+  "zustand store": {
+    "prefix": "zustand store",
+    "body": [
+      "import { store } from \"$1\"",
+      "import { shallow } from \"zustand/shallow\"",
+      "",
+      "const [${2:val1}, ${3:val2}] = store((state) => {","\treturn [state.${2}, state.${3}];","}, shallow);//shallow: compare value from non primitive"
+    ]
+  },
+	"Import": {
+		"prefix": "import",
+		"body": [
+			"import $1 from \"${2}\";"
+		],
+		"description": "Import "
+	},
+	"Import external module.": {
+		"prefix": "import statement",
+		"body": [
+			"import { $1 } from \"${2}\";"
+		],
+		"description": "Import external module."
+	},
+  "interface":{
+    "prefix": "interface",
+    "body": "interface ${1} = "
+  },
+  "interface extends":{
+    "prefix": "interface extends",
+    "body": "interface $1 extends $2 "
   }
 }

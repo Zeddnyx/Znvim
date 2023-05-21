@@ -40,6 +40,7 @@ local plugins = {
 					vim.g.vsnip_filetypes = {
 						javascriptreact = {
 							"javascript/javascriptreact",
+							"javascript/typescriptreact",
 							"javascript/javascript",
 							"tailwindcss",
 							"html",
