@@ -274,7 +274,12 @@
   },
   "useState": {
     "prefix": "us",
-    "body": "const [${1:val}, set${2:setterName}] = useState(${3})",
+    "body": "const [${1:setterName}, set${1}] = useState(${2})$0",
+    "description": "use state hook"
+  },
+  "useState array": {
+    "prefix": "us array",
+    "body": "const [${1:val}, set${1}] = useState<Array<Any>>([${2}])",
     "description": "use state hook"
   },
   "useEffect": {
@@ -372,7 +377,7 @@
 	},
   "interface":{
     "prefix": "interface",
-    "body": "interface ${1} = "
+    "body": "interface ${1} "
   },
   "interface extends":{
     "prefix": "interface extends",

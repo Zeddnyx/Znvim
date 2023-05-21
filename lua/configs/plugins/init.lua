@@ -42,6 +42,7 @@ local plugins = {
 							"javascript/javascriptreact",
 							"javascript/typescriptreact",
 							"javascript/javascript",
+							"javascript/typescriptreact",
 							"tailwindcss",
 							"html",
 						},
