@@ -27,14 +27,14 @@ end
 local formatting = nulls.builtins.formatting
 local diagnostic = nulls.builtins.diagnostics
 
--- npm i -g prettier @johnnymorganz/stylua-bin
+-- npm i -g prettier @johnnymorganz/stylua-bin tsc-node
 nulls.setup({
 	on_attach = on_attach,
 	debug = true,
 	sources = {
 		formatting.prettier,
 		formatting.stylua,
-		-- diagnostic.eslint
+		diagnostic.tsc
 	},
 })
 
