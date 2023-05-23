@@ -372,5 +372,25 @@
   "children":{
     "prefix": "children",
     "body": "type Children = {\n\tchildren: React.ReactNode\n}\n"
+  },
+  "event click":{
+    "prefix": "event click",
+    "body": "event: React.MouseEvent<HTMLButtonElement>"
+  },
+  "event prevent":{
+    "prefix": "event prevent",
+    "body": "event.preventDefault()"
+  },
+  "event form":{
+    "prefix": "event get value",
+    "body": "event: React.ChangeEvent<HTMLInputlement>"
+  },
+  "hook useInput create":{
+    "prefix":"useInput create",
+    "body":"import React, { useState } from \"react\"\n\nexport interface UseInput {\n\tvalue: string;\n\tonChange: (event: React.ChangeEvent<HTMLInputElement>) => void;\n}\nexport const useInput = (initial: string): UseInput => {\n\tconst [value, setValue] = useState(initial);\n\tconst onChange = (event: React.ChangeEvent<HTMLInputElement>) => {\n\t\tsetValue(event.target.value);\n\t}\n\t\n\treturn {\n\t\tvalue,\n\t\tonChange,\n\t}\n}"
+  },
+  "hook useInput store":{
+    "prefix":"useInput store",
+    "body":"import React from \"react\"\nimport { useInput } from \"${1}\"\n\nexport default function ${TM_FILENAME_BASE}(){\n\tconst nameInput = useInput(\"\")\n\tconst emailInput = useInput(\"\")\n\n\tconst handleSubmit = (event: React.FormEvent) => {\n\t\tevent.preventDefault();\n\n\t\tconsole.log(nameInput.value)\n\t}\n\nreturn (\n\t<form onSubmit={handleSubmit}>\n\t\t<input type=\"text\" {...nameInput} />\n\t\t<button>Submit</button>\n\t</form>\n\t)\n}"
   }
 }
