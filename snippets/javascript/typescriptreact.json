@@ -335,7 +335,7 @@
       "import { create } from \"zustand\";",
       "import { persist } from \"zustand/middleware\";",
       "\ntype Store = {\n\tcount: number\n}",
-      "export const store = create<Store>(\n\tpersist(\n\t\t(set: void) => ({]n\t\t\tcount: 0,\n\t\t}),\n\t\t{ name: 'storage' }","\t)",");"
+      "export const store = create<Store>(\n\tpersist(\n\t\t(set: void) => (\n\t\t\tcount: 0,\n\t\t}),\n\t\t{ name: 'storage' }","\t)",");"
     ]
   },
   "zustand store": {
