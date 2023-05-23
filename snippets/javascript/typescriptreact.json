@@ -7,24 +7,14 @@
     "prefix": "ds",
     "body": ["const { ${1:name} } = this.state"]
   },
-  "reactClassCompoment": {
-    "prefix": "rcc",
-    "body": "import React, { Component } from 'react'\n\nclass ${TM_FILENAME_BASE} extends Component {\n\trender () {\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t$0\n\t\t\t</div>\n\t\t)\n\t}\n}\n\nexport default ${1}",
-    "description": "Creates a React component class"
+  "react function component with props": {
+    "prefix": "rfcp",
+    "body": "import React from 'react'\n\ntype ${1:Type} ={\n\t${2:val}: ${3}\n}\nexport default function ${TM_FILENAME_BASE}: React.FC<${1}>({${2}}) {\n\treturn (\n\t\t<div>\n\t\t\t{$2}\n\t\t</div>\n\t\t)\n\t}\n}\n\n",
+    "description": "Creates a React component with props"
   },
-  "reactJustClassCompoment": {
-    "prefix": "rcjc",
-    "body": "class ${TM_FILENAME_BASE} extends Component {\n\trender () {\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t$0\n\t\t\t</div>\n\t\t)\n\t}\n}\n",
-    "description": "Creates a React component class"
-  },
-  "reactClassCompomentPropTypes": {
-    "prefix": "rccp",
-    "body": "import React, { Component, PropTypes } from 'react'\n\nclass ${TM_FILENAME_BASE} extends Component {\n\trender () {\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t$0\n\t\t\t</div>\n\t\t)\n\t}\n}\n\n${1}.propTypes = {\n\n}\n\nexport default ${1}",
-    "description": "Creates a React component class with PropTypes"
-  },
-  "reactFunctionComponent": {
-    "prefix": "rfc",
-    "body": "import React from 'react'\n\nexport const ${TM_FILENAME_BASE}: React.FC<{}> = () => {\n\treturn (\n\t\t<div>\n\t\t\t$0\n\t\t</div>\n\t)\n}",
+  "FunctionComponent": {
+    "prefix": "rfce",
+    "body": "import React from 'react'\n\nexport default function ${TM_FILENAME_BASE}() {\n\treturn (\n\t\t<div>\n\t\t\t$0\n\t\t</div>\n\t)\n}",
     "description": "Creates a React functional component without PropTypes"
   },
   "classConstructor": {
@@ -259,32 +249,27 @@
   },
   "jsx elements map": {
     "prefix": "jm",
-    "body": "{${1:array}.map((item) => <${2:elementName} key={item.id}>\n\t$0\n</${2}>)}",
+    "body": "{${1:array}.map((item, id) => <div key={item.id}>\n\t$0\n</div>)}",
     "description": "an element self closed"
   },
   "jsx elements map with return": {
     "prefix": "jmr",
-    "body": "{${1:array}.map((item) => {\n\treturn <${2:elementName} key={item.id}>\n\t$0\n</${2}>\n})}",
+    "body": "{${1:array}.map((item, id) => {\n\treturn <div key={id}>\n\t$0\n</div>\n})}",
     "description": "an element self closed"
-  },
-  "jsx element wrap selection": {
-    "prefix": "jsx wrap selection with element",
-    "body": "<${1:elementName}>\n\t{$TM_SELECTED_TEXT}\n</${1}>",
-    "description": "an element"
   },
   "useState": {
     "prefix": "us",
     "body": "const [${1:setterName}, set${1}] = useState(${2})$0",
     "description": "use state hook"
   },
-  "useState array": {
-    "prefix": "us array",
-    "body": "const [${1:val}, set${1}] = useState<Array<Any>>([${2}])",
+  "useState any value": {
+    "prefix": "us any",
+    "body": "const [${1:val}, set${1}] = useState<null | ${2}>(null)",
     "description": "use state hook"
   },
   "useEffect": {
     "prefix": "ue",
-    "body": ["useEffect(() => {", "\t$1", "}, [${3:dependencies}])$0"],
+    "body": ["useEffect(() => {", "\t$1", "}, [])$0"],
     "description": "React useEffect() hook"
   },
   "useEffect with cleanup": {
@@ -295,7 +280,7 @@
       "\n\treturn () => {",
       "\t\t$2",
       "\t}",
-      "}, [${3:dependencies}])$0"
+      "}, [])$0"
     ],
     "description": "React useEffect() hook with a cleanup function"
   },
@@ -349,16 +334,17 @@
     "body": [
       "import { create } from \"zustand\";",
       "import { persist } from \"zustand/middleware\";",
-      "export const store = create(","\tpersist(","\t\t(set) => ({","\t\t\tcount: 0,","\t\t}),","\t\t{ name: 'storage' }","\t)",");"
+      "\ntype Store = {\n\tcount: number\n}",
+      "export const store = create<Store>(\n\tpersist(\n\t\t(set: void) => ({]n\t\t\tcount: 0,\n\t\t}),\n\t\t{ name: 'storage' }","\t)",");"
     ]
   },
   "zustand store": {
     "prefix": "zustand store",
     "body": [
       "import { store } from \"$1\"",
-      "import { shallow } from \"zustand/shallow\"",
-      "",
-      "const [${2:val1}, ${3:val2}] = store((state) => {","\treturn [state.${2}, state.${3}];","}, shallow);//shallow: compare value from non primitive"
+      "import { shallow } from \"zustand/shallow\"\n",
+      "interface State {\n\t${2}: ${3}\n\t${4}: ${5}\n}",
+      "const [${2:val1}, ${3:val2}] = store((state: State) => {\n\treturn [state.${2}, state.${4}];\n}, shallow);"
     ]
   },
 	"Import": {
@@ -377,10 +363,14 @@
 	},
   "interface":{
     "prefix": "interface",
-    "body": "interface ${1} "
+    "body": "interface ${1} {\n\t${2:val}: ${3:type}\n}"
   },
   "interface extends":{
     "prefix": "interface extends",
     "body": "interface $1 extends $2 "
+  },
+  "children":{
+    "prefix": "children",
+    "body": "type Children = {\n\tchildren: React.ReactNode\n}\n"
   }
 }

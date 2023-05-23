@@ -1,5 +1,4 @@
 local nulls = require("null-ls")
-local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
 local on_attach = function(client, bufnr)
 	vim.diagnostic.config({
@@ -8,7 +7,7 @@ local on_attach = function(client, bufnr)
 		update_in_insert = true,
 	})
 	-- Show line diagnostics automatically in hover window
-	vim.o.updatetime = 250
+	vim.o.updatetime = 150
 	vim.cmd([[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]])
 
 	-- show diagnostic color line number
