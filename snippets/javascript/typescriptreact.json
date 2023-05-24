@@ -322,6 +322,21 @@
     ],
     "description": "React useMemo() hook"
   },
+  "Log to the console": {
+    "prefix": "console log",
+    "body": ["console.log($1);", "$0"],
+    "description": "Log to the console"
+  },
+  "Log warning to console": {
+    "prefix": "console warn",
+    "body": ["console.warn($1);", "$0"],
+    "description": "Log warning to the console"
+  },
+  "Log error to console": {
+    "prefix": "console error",
+    "body": ["console.error($1);", "$0"],
+    "description": "Log error to the console"
+  },
   "toggle menu navbar": {
     "prefix": "menu",
     "body": [
@@ -335,7 +350,9 @@
       "import { create } from \"zustand\";",
       "import { persist } from \"zustand/middleware\";",
       "\ntype Store = {\n\tcount: number\n}",
-      "export const store = create<Store>(\n\tpersist(\n\t\t(set: void) => (\n\t\t\tcount: 0,\n\t\t}),\n\t\t{ name: 'storage' }","\t)",");"
+      "export const store = create<Store>(\n\tpersist(\n\t\t(set: void) => (\n\t\t\tcount: 0,\n\t\t}),\n\t\t{ name: 'storage' }",
+      "\t)",
+      ");"
     ]
   },
   "zustand store": {
@@ -347,62 +364,58 @@
       "const [${2:val1}, ${3:val2}] = store((state: State) => {\n\treturn [state.${2}, state.${4}];\n}, shallow);"
     ]
   },
-	"Import": {
-		"prefix": "import",
-		"body": [
-			"import $1 from \"${2}\";"
-		],
-		"description": "Import "
-	},
-	"Import external module.": {
-		"prefix": "import statement",
-		"body": [
-			"import { $1 } from \"${2}\";"
-		],
-		"description": "Import external module."
-	},
-  "interface":{
+  "Import": {
+    "prefix": "import",
+    "body": ["import $1 from \"${2}\";"],
+    "description": "Import "
+  },
+  "Import external module.": {
+    "prefix": "import statement",
+    "body": ["import { $1 } from \"${2}\";"],
+    "description": "Import external module."
+  },
+  "interface": {
     "prefix": "interface",
     "body": "interface ${1} {\n\t${2:val}: ${3:type}\n}"
   },
-  "interface extends":{
+  "interface extends": {
     "prefix": "interface extends",
     "body": "interface $1 extends $2 "
   },
-  "children":{
+  "children": {
     "prefix": "children",
     "body": "type Children = {\n\tchildren: React.ReactNode\n}\n"
   },
-  "event click":{
+  "event click": {
     "prefix": "event click",
     "body": "event: React.MouseEvent<HTMLButtonElement>"
   },
-  "event prevent":{
+  "event prevent": {
     "prefix": "event prevent",
     "body": "event.preventDefault()"
   },
-  "event form":{
+  "event form": {
     "prefix": "event get value",
     "body": "event: React.ChangeEvent<HTMLInputlement>"
   },
-  "hook useInput create":{
-    "prefix":"useInput create",
-    "body":"import React, { useState } from \"react\"\n\nexport interface UseInput {\n\tvalue: string;\n\tonChange: (event: React.ChangeEvent<HTMLInputElement>) => void;\n}\nexport const useInput = (initial: string): UseInput => {\n\tconst [value, setValue] = useState(initial);\n\tconst onChange = (event: React.ChangeEvent<HTMLInputElement>) => {\n\t\tsetValue(event.target.value);\n\t}\n\t\n\treturn {\n\t\tvalue,\n\t\tonChange,\n\t}\n}"
+  "hook useInput create": {
+    "prefix": "useInput create",
+    "body": "import React, { useState } from \"react\"\n\nexport interface UseInput {\n\tvalue: string;\n\tonChange: (event: React.ChangeEvent<HTMLInputElement>) => void;\n}\nexport const useInput = (initial: string): UseInput => {\n\tconst [value, setValue] = useState(initial);\n\tconst onChange = (event: React.ChangeEvent<HTMLInputElement>) => {\n\t\tsetValue(event.target.value);\n\t}\n\t\n\treturn {\n\t\tvalue,\n\t\tonChange,\n\t}\n}"
   },
-  "hook useInput store":{
-    "prefix":"useInput store",
-    "body":"import React from \"react\"\nimport { useInput } from \"${1}\"\n\nexport default function ${TM_FILENAME_BASE}(){\n\tconst nameInput = useInput(\"\")\n\tconst emailInput = useInput(\"\")\n\n\tconst handleSubmit = (event: React.FormEvent) => {\n\t\tevent.preventDefault();\n\n\t\tconsole.log(nameInput.value)\n\t}\n\n\treturn (\n\t\t<form onSubmit={handleSubmit}>\n\t\t\t<input type=\"text\" {...nameInput} />\n\t\t\t<button>Submit</button>\n\t\t</form>\n\t)\n}"
+  "hook useInput store": {
+    "prefix": "useInput store",
+    "body": "import React from \"react\"\nimport { useInput } from \"${1}\"\n\nexport default function ${TM_FILENAME_BASE}(){\n\tconst nameInput = useInput(\"\")\n\tconst emailInput = useInput(\"\")\n\n\tconst handleSubmit = (event: React.FormEvent) => {\n\t\tevent.preventDefault();\n\n\t\tconsole.log(nameInput.value)\n\t}\n\n\treturn (\n\t\t<form onSubmit={handleSubmit}>\n\t\t\t<input type=\"text\" {...nameInput} />\n\t\t\t<button>Submit</button>\n\t\t</form>\n\t)\n}"
   },
-  "className":{
-    "prefix":"className",
+  "className": {
+    "prefix": "className",
     "body": "className=\"${1}\""
   },
   "useFetch hook create": {
-    "prefix":"useFetch create",
-    "body":"import { useState, useEffect } from \"react\"\n\nexport const useFetch = (url: string) => {\n\tconst [data, setData] = useState<boolean | null>(null);\n\tconst [loading, setLoading] = useState(true);\n\tconst [error, setError] = useState<string | null>(null);\n\n\tuseEffect(() => {\n\t\tconst fetchData = async () => {\n\t\t\ttry {\n\t\t\t\tconst res = await fetch(url);\n\t\t\t\tif (!res.ok) {\n\t\t\t\t\tthrow new Error(\"Fetch failed\");\n\t\t\t\t}\n\n\t\t\t\tconst data = await res.json();\n\n\t\t\t\tsetData(data);\n\t\t\t\tsetLoading(false);\n\t\t\t} catch (error) {\n\t\t\t\tsetError(error);\n\t\t\t\tsetLoading(false);\n\t\t\t}\n\t\t}\n\t\tfetchData();\n\t},[url]);\n\n\treturn {\n\t\tdata,\n\t\tloading,\n\t\terror,\n\t}\n}"
+    "prefix": "useFetch create",
+    "body": "import { useState, useEffect } from \"react\"\n\ninterface Fetch {\n\t${1:val}: ${2:type}\n}\n\nexport const useFetch = (url: string) => {\n\tconst [data, setData] = useState<Fetch[]>([]);\n\tconst [loading, setLoading] = useState(true);\n\tconst [error, setError] = useState<string | null>(null);\n\n\tuseEffect(() => {\n\t\tconst fetchData = async () => {\n\t\t\ttry {\n\t\t\t\tconst res = await fetch(url);\n\t\t\t\tif (!res.ok) {\n\t\t\t\t\tthrow new Error(\"Fetch failed\");\n\t\t\t\t}\n\n\t\t\t\tconst data = await res.json();\n\n\t\t\t\tsetData(data);\n\t\t\t\tsetLoading(false);\n\t\t\t} catch (error) {\n\t\t\t\tsetError(error);\n\t\t\t\tsetLoading(false);\n\t\t\t}\n\t\t}\n\t\tfetchData();\n\t},[url]);\n\n\treturn {\n\t\tdata,\n\t\tloading,\n\t\terror,\n\t}\n}"
   },
-  "useFetch hook store":{
-    "prefix":"useFetch store",
-    "body":"export default function ${TM_FILENAME_BASE}(){\n\tconst { data, loading, error } = useFetch(\"${1}\")\n\tif (loading) {\n\t\t<p>loading</p>\n\t}\n\tif (error) {\n\t\t<p>{error}</p>\n\t}\n\n\treturn (\n\t\t<div>data</div>\n\t)\n}"
+  "useFetch hook store": {
+    "prefix": "useFetch store",
+    "body": "export default function ${TM_FILENAME_BASE}(){\n\tconst { data, loading, error } = useFetch(\"${1}\")\n\tif (loading) {\n\t\t<p>loading</p>\n\t}\n\tif (error) {\n\t\t<p>{error}</p>\n\t}\n\tconsole.log(data)\n\n\treturn (\n\t\t<div>data</div>\n\t)\n}"
   }
 }
