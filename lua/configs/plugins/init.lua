@@ -19,6 +19,12 @@ local plugins = {
 		config = function()
 			require("configs.ui.webdevicons")
 		end,
+
+
+
+
+
+
 	},
 	{ "nvim-lua/plenary.nvim", lazy = true },
 
@@ -132,7 +138,7 @@ local plugins = {
 		lazy = true,
 		event = "BufRead",
 		config = function()
-			require("configs.ui.gitsigns")
+			require("gitsigns").setup()
 		end,
 	},
 
@@ -168,13 +174,12 @@ local plugins = {
 		end,
 	},
 	{
-		"nvim-lualine/lualine.nvim",
-    event = "BufRead",
-		dependencies = "kyazdani42/nvim-web-devicons",
-    config = function()
-      require("configs.ui.lualine")
-    end
-	},
+		"rebelot/heirline.nvim",
+		event = "BufRead",
+		config = function()
+			require("configs.ui.heirline")
+		end,
+	}
 }
 
 require("lazy").setup(plugins, {

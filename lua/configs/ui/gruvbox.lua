@@ -10,7 +10,8 @@ gruvbox.setup({
 		yellow = "#D69820",
 	},
 	overrides = {
-		NvimTreeFolderIcon = { fg = "#D69820"},
+		NvimTreeFolderIcon = { fg = "#D69820" },
+		SignColumn = { bg = "#1D2021" },
 	},
 })
 gruvbox.load()
