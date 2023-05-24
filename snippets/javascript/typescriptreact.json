@@ -391,6 +391,18 @@
   },
   "hook useInput store":{
     "prefix":"useInput store",
-    "body":"import React from \"react\"\nimport { useInput } from \"${1}\"\n\nexport default function ${TM_FILENAME_BASE}(){\n\tconst nameInput = useInput(\"\")\n\tconst emailInput = useInput(\"\")\n\n\tconst handleSubmit = (event: React.FormEvent) => {\n\t\tevent.preventDefault();\n\n\t\tconsole.log(nameInput.value)\n\t}\n\nreturn (\n\t<form onSubmit={handleSubmit}>\n\t\t<input type=\"text\" {...nameInput} />\n\t\t<button>Submit</button>\n\t</form>\n\t)\n}"
+    "body":"import React from \"react\"\nimport { useInput } from \"${1}\"\n\nexport default function ${TM_FILENAME_BASE}(){\n\tconst nameInput = useInput(\"\")\n\tconst emailInput = useInput(\"\")\n\n\tconst handleSubmit = (event: React.FormEvent) => {\n\t\tevent.preventDefault();\n\n\t\tconsole.log(nameInput.value)\n\t}\n\n\treturn (\n\t\t<form onSubmit={handleSubmit}>\n\t\t\t<input type=\"text\" {...nameInput} />\n\t\t\t<button>Submit</button>\n\t\t</form>\n\t)\n}"
+  },
+  "className":{
+    "prefix":"className",
+    "body": "className=\"${1}\""
+  },
+  "useFetch hook create": {
+    "prefix":"useFetch create",
+    "body":"import { useState, useEffect } from \"react\"\n\nexport const useFetch = (url: string) => {\n\tconst [data, setData] = useState<boolean | null>(null);\n\tconst [loading, setLoading] = useState(true);\n\tconst [error, setError] = useState<string | null>(null);\n\n\tuseEffect(() => {\n\t\tconst fetchData = async () => {\n\t\t\ttry {\n\t\t\t\tconst res = await fetch(url);\n\t\t\t\tif (!res.ok) {\n\t\t\t\t\tthrow new Error(\"Fetch failed\");\n\t\t\t\t}\n\n\t\t\t\tconst data = await res.json();\n\n\t\t\t\tsetData(data);\n\t\t\t\tsetLoading(false);\n\t\t\t} catch (error) {\n\t\t\t\tsetError(error);\n\t\t\t\tsetLoading(false);\n\t\t\t}\n\t\t}\n\t\tfetchData();\n\t},[url]);\n\n\treturn {\n\t\tdata,\n\t\tloading,\n\t\terror,\n\t}\n}"
+  },
+  "useFetch hook store":{
+    "prefix":"useFetch store",
+    "body":"const { data, loading, error } = useFetch(\"${1}\")\nloading && <p>loading</p>\nerror && <p>{error.message}</p>"
   }
 }
