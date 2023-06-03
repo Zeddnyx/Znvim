@@ -398,6 +398,10 @@
     "prefix": "event get value",
     "body": "event: React.ChangeEvent<HTMLInputlement>"
   },
+  "event setState": {
+    "prefix": "event setState",
+    "body": "event: React.Dispatch<React.SetStateAction<State>>"
+  },
   "hook useInput create": {
     "prefix": "useInput create",
     "body": "import React, { useState } from \"react\"\n\nexport interface UseInput {\n\tvalue: string;\n\tonChange: (event: React.ChangeEvent<HTMLInputElement>) => void;\n}\nexport const useInput = (initial: string): UseInput => {\n\tconst [value, setValue] = useState(initial);\n\tconst onChange = (event: React.ChangeEvent<HTMLInputElement>) => {\n\t\tsetValue(event.target.value);\n\t}\n\t\n\treturn {\n\t\tvalue,\n\t\tonChange,\n\t}\n}"

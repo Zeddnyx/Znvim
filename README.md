@@ -20,16 +20,21 @@
 </p>
 
 ## Features
+<details>
 
-- Autocompletion with [cmp](https://github.com/hrsh7th/nvim-cmp)
-- Autoclosing braces with [autopairs](https://github.com/windwp/nvim-autopairs)
-- Themes with [gruvbox](https://github.com/ellisonleao/gruvbox.nvim)
-- Syntax highlighting with [treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
-- Comment syntax with [comment](https://github.com/numToStr/Comment.nvim)
-- Indentlines with [indent blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
-- Custome Snippets with [vsnip](https://github.com/hrsh7th/cmp-vsnip)
-- Color preview with [colorizer](https://github.com/NvChad/nvim-colorizer)
-- Find files with [Telescope](https://github.com/nvim-telescope/telescope.nvim)
+| Key Bindings          | Description                                                             |
+|-----------------------|-------------------------------------------------------------------------|
+| Autocompletion        |                                                                         |
+| Autoclosing Braces    | [Autopairs](https://github.com/windwp/nvim-autopairs)                   |
+| Themes                | [Gruvbox](https://github.com/ellisonleao/gruvbox.nvim)                  |
+| Syntax Highlighting   | [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)        |
+| Comment Syntax        | [Comment](https://github.com/numToStr/Comment.nvim)                     |
+| Indentlines           | [Indentlines ](https://github.com/lukas-reineke/indent-blankline.nvim)  |
+| Custome Snippet       | [Vsnip](https://github.com/hrsh7th/cmp-vsnip)                           |
+| Color Preview         | [Colorizer](https://github.com/NvChad/nvim-colorizer)                   |
+| Find Files            | [Telescope](https://github.com/nvim-telescope/telescope.nvim)           |
+| Auto Pilot            | [Codeium](https://github.com/Exafunction/codeium.vim)                   |
+</details>
 
 ## Install
 
@@ -57,70 +62,57 @@ Space (SPC) is my Leader key.
 <details>
 <summary>Searching</summary>
 
-### Searching
-
 | Key Bindings | Description          |
 |--------------|----------------------|
 | SPC ff       | Telescope find files |
 | SPC fg       | Telescope live grep  |
 | SPC fb       | Telescope buffers    |
-
-</details>
-
-<details>
-<summary>Working with Project</summary>
- 
- ### Woriking with Project
- 
-| Key Bindings | Description          |
-|--------------|----------------------|
-| SPC e        | File explorer        |
-| SPC a        | Select all           |
-| SPC s        | Find and replace all |
-| SPC d        | Find specific word   |
-| Shift f      | Prettier             |
-
 </details>
 
 <details>
 <summary>Commenting</summary>
 
-### Commenting
-
 | Key Bindings | Description                |
 |--------------|----------------------------|
 | gcc          | Create/remove comment      |
 | gc (visual)  | Create/remove comment      |
-  
 </details>
   
 <details>
 <summary>Buffers </summary>
   
-### Buffers
+| Key Bindings | Description      |
+|--------------|------------------|
+| Shift h      | Buffer previous  |
+| Shift l      | Buffer next      |
+| Shift c      | Buffer close     |
+</details>
+  
+<details>
+<summary>Lsp</summary>
 
 | Key Bindings | Description      |
 |--------------|------------------|
-| Shift h      | buffer previous  |
-| Shift l      | buffer next      |
-| Shift c      | buffer close     |
-| Shift q      | buffer close all |
-  
+| Shift k      | Hover definition |
+| Shift r      | Rename           |
 </details>
-  
-  
+
 <details>
 <summary>Other</summary>
 
-### Other VERY useful bindings
-
-| Key Bindings | Description      |
-|--------------|------------------|
-| SPC h        | Switch left      |
-| SPC j        | Switch down      |
-| SPC k        | Switch up        |
-| SPC l        | Switch right     |
-
+| Key Bindings | Description           |
+|--------------|-----------------------|
+| SPC h        | Switch left           |
+| SPC j        | Switch down           |
+| SPC k        | Switch up             |
+| SPC l        | Switch right          |
+|              |                       |
+| SPC a        | Select all            |
+| SPC d        | Find specific word    |
+| SPC e        | File explorer         |
+| SPC s        | Find and replace all  |
+| SPC y        | Copy forward word     |
+| Shift f      | Prettier              |
 </details>
 
 

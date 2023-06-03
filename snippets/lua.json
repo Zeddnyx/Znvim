@@ -24,6 +24,10 @@
     "body": ["local ${1:var} = require(\"${2:module}\")"],
     "description": "Require module as a variable"
   },
+  "config function": {
+    "prefix": "config",
+    "body": "config = function()\n\t\trequire(\"${1}\")${2}\n\tend,"
+  },
   "class": {
     "prefix": "cl",
     "body": [
