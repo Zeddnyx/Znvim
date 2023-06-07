@@ -39,15 +39,8 @@ local plugins = {
 				init = function()
 					vim.g.vsnip_snippet_dir = vim.fn.stdpath("config") .. "/snippets"
 					vim.g.vsnip_filetypes = {
-						javascriptreact = {
-							"javascript/javascriptreact",
-							"javascript/typescriptreact",
-							"javascript/javascript",
-							"javascript/typescriptreact",
-							"tailwindcss",
-							"html",
-						},
-						typescriptreact = { "javascript/typescriptreact", "tailwindcss", "html" },
+						javascriptreact = { "javascript/javascriptreact", "javascript/javascript", "tailwindcss", "html" },
+						typescriptreact = { "javascript/typescriptreact", "javascript/typescript", "tailwindcss", "html" },
 						javascript = { "javascript/javascript", "javascript/javascriptreact", "html" },
 						typescript = { "javascript/typescript", "javascript/typescriptreact", "html" },
 						css = { "tailwindcss" },
@@ -68,17 +61,17 @@ local plugins = {
 		end,
 	},
 
-  {
-    "neovim/nvim-lspconfig",
-    event = "BufRead",
-    config = function()
-        require("zedd.lsp.lspconfig")
-      end,
-  },
+	{
+		"neovim/nvim-lspconfig",
+		event = "BufRead",
+		config = function()
+			require("zedd.lsp.lspconfig")
+		end,
+	},
 
 	{
 		"kkharji/lspsaga.nvim",
-    event = "VeryLazy",
+		event = "VeryLazy",
 		config = function()
 			require("lspsaga").setup()
 		end,
@@ -140,13 +133,13 @@ local plugins = {
 		end,
 	},
 
-  {
-    "romgrk/barbar.nvim",
-    event = "BufRead",
-    config = function()
-      require("barbar").setup()
-    end
-  },
+	{
+		"romgrk/barbar.nvim",
+		event = "BufRead",
+		config = function()
+			require("barbar").setup()
+		end,
+	},
 
 	{
 		"numToStr/Comment.nvim",

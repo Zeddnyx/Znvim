@@ -344,26 +344,6 @@
       "const handleMenu = () => setMenu(!menu)"
     ]
   },
-  "zustant create": {
-    "prefix": "zustand create",
-    "body": [
-      "import { create } from \"zustand\";",
-      "import { persist } from \"zustand/middleware\";",
-      "\ntype Store = {\n\tcount: number\n}",
-      "export const store = create<Store>(\n\tpersist(\n\t\t(set: void) => (\n\t\t\tcount: 0,\n\t\t}),\n\t\t{ name: 'storage' }",
-      "\t)",
-      ");"
-    ]
-  },
-  "zustand store": {
-    "prefix": "zustand store",
-    "body": [
-      "import { store } from \"$1\"",
-      "import { shallow } from \"zustand/shallow\"\n",
-      "interface State {\n\t${2}: ${3}\n\t${4}: ${5}\n}",
-      "const [${2:val1}, ${3:val2}] = store((state: State) => {\n\treturn [state.${2}, state.${4}];\n}, shallow);"
-    ]
-  },
   "Import": {
     "prefix": "import",
     "body": ["import $1 from \"${2}\";"],
@@ -380,7 +360,7 @@
   },
   "interface extends": {
     "prefix": "interface extends",
-    "body": "interface $1 extends $2 "
+    "body": "interface $1 extends $2 {\n\t$3: $4\n}"
   },
   "children": {
     "prefix": "children",
@@ -416,7 +396,7 @@
   },
   "useFetch hook create": {
     "prefix": "useFetch create",
-    "body": "import { useState, useEffect } from \"react\"\n\ninterface Fetch {\n\t${1:val}: ${2:type}\n}\n\nexport const useFetch = (url: string) => {\n\tconst [data, setData] = useState<Fetch[]>([]);\n\tconst [loading, setLoading] = useState(true);\n\tconst [error, setError] = useState<string | null>(null);\n\n\tuseEffect(() => {\n\t\tconst fetchData = async () => {\n\t\t\ttry {\n\t\t\t\tconst res = await fetch(url);\n\t\t\t\tif (!res.ok) {\n\t\t\t\t\tthrow new Error(\"Fetch failed\");\n\t\t\t\t}\n\n\t\t\t\tconst data = await res.json();\n\n\t\t\t\tsetData(data);\n\t\t\t\tsetLoading(false);\n\t\t\t} catch (error) {\n\t\t\t\tsetError(error);\n\t\t\t\tsetLoading(false);\n\t\t\t}\n\t\t}\n\t\tfetchData();\n\t},[url]);\n\n\treturn {\n\t\tdata,\n\t\tloading,\n\t\terror,\n\t}\n}"
+    "body": "import { useState, useEffect } from \"react\"\n\ninterface Fetch {\n\tdata: any\n}\n\nexport const useFetch = (url: string) => {\n\tconst [data, setData] = useState<Fetch[]>([]);\n\tconst [loading, setLoading] = useState(true);\n\tconst [error, setError] = useState<any>(null);\n\n\tuseEffect(() => {\n\t\tconst fetchData = async () => {\n\t\t\ttry {\n\t\t\t\tconst res = await fetch(url);\n\t\t\t\tif (!res.ok) {\n\t\t\t\t\tthrow new Error(\"Fetch failed\");\n\t\t\t\t}\n\n\t\t\t\tconst data = await res.json();\n\n\t\t\t\tsetData(data);\n\t\t\t\tsetLoading(false);\n\t\t\t} catch (error) {\n\t\t\t\tsetError(error);\n\t\t\t\tsetLoading(false);\n\t\t\t}\n\t\t}\n\t\tfetchData();\n\t},[url]);\n\n\treturn {\n\t\tdata,\n\t\tloading,\n\t\terror,\n\t}\n}"
   },
   "useFetch hook store": {
     "prefix": "useFetch store",

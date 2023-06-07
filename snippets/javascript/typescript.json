@@ -258,7 +258,7 @@
     "body": [
       "import { create } from 'zustand';",
       "import { persist } from 'zustand/middleware';",
-      "export const store = create(","\tpersist(","\t\t(set) => ({","\t\t\tcount: 0,","\t\t}),","\t\t{ name: 'storage' }","\t)",");"
+      "export const store = create(","\tpersist(","\t\t(set) => ({","\t\t\tcount: 0,\n\t\t\tsetCount: () => void,","\t\t}),","\t\t{ name: 'storage' }","\t)",");"
     ]
   },
   "zustand store": {
@@ -267,11 +267,11 @@
       "import { store } from '$1'",
       "import { shallow } from 'zustand/shallow'",
       "",
-      "const [${2:val1}, ${3:val2}] = store((state) => {","\treturn [state.${2}, state.${3}];","}, shallow);//shallow: compare value from non primitive"
+      "const [${2:val1}, ${3:val2}] = store((state) => {\n\t\treturn [state.${2}, state.${3}];\n}, shallow);"
     ]
   },
   "interface":{
     "prefix": "interface",
-    "body": "interface ${1} = "
+    "body": "interface ${1} {\n\t${2}: ${3}\n}"
   }
 }
