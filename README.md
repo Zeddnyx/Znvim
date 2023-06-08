@@ -100,19 +100,21 @@ Space (SPC) is my Leader key.
 <details>
 <summary>Other</summary>
 
-| Key Bindings | Description           |
-|--------------|-----------------------|
-| SPC h        | Switch left           |
-| SPC j        | Switch down           |
-| SPC k        | Switch up             |
-| SPC l        | Switch right          |
-|              |                       |
-| SPC a        | Select all            |
-| SPC d        | Find specific word    |
-| SPC e        | File explorer         |
-| SPC s        | Find and replace all  |
-| SPC y        | Copy forward word     |
-| Shift f      | Prettier              |
+| Key Bindings | Description             |
+|--------------|-------------------------|
+| SPC h        | Switch left             |
+| SPC j        | Switch down             |
+| SPC k        | Switch up               |
+| SPC l        | Switch right            |
+|              |                         |
+| SPC a        | Select all              |
+| SPC d        | Find specific word      |
+| SPC e        | File explorer           |
+| SPC g        | Apply Codeium Reference |
+| SPC s        | Find and replace all    |
+| SPC y        | Copy forward word       |
+|              |                         |
+| Shift f      | Prettier                |
 </details>
 
 
