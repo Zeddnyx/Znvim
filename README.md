@@ -62,11 +62,14 @@ Space (SPC) is my Leader key.
 <details>
 <summary>Searching</summary>
 
-| Key Bindings | Description          |
-|--------------|----------------------|
-| SPC ff       | Telescope find files |
-| SPC fg       | Telescope live grep  |
-| SPC fb       | Telescope buffers    |
+| Key Bindings | Description                   |
+|--------------|-------------------------------|
+| SPC ff       | Telescope find files          |
+| SPC fg       | Telescope live grep           |
+| SPC fb       | Telescope buffers             |
+| SPC ll       | Telescope lsp references      |
+| SPC li       | Telescope lsp implementations |
+| SPC ld       | Telescope lsp definitions     |
 </details>
 
 <details>
