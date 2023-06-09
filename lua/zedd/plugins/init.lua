@@ -95,7 +95,7 @@ local plugins = {
 		"Exafunction/codeium.vim",
 		event = "VeryLazy",
 		config = function()
-			vim.keymap.set("i", "<leader>g", function()
+			vim.keymap.set("i", "<c-g>", function()
 				return vim.fn["codeium#Accept"]()
 			end, { expr = true })
 			vim.keymap.set("i", "<c-;>", function()
@@ -179,6 +179,11 @@ local plugins = {
 			{ "<leader>ff", "<cmd>Telescope find_files<cr>" },
 			{ "<leader>fg", "<cmd>Telescope live_grep<cr>" },
 			{ "<leader>fb", "<cmd>Telescope buffers<cr>" },
+			{ "<leader>gg", "<cmd>Telescope git_commits<cr>" },
+			{ "<leader>gs", "<cmd>Telescope git_status<cr>" },
+			{ "<leader>ll", "<cmd>Telescope lsp_references<cr>" },
+			{ "<leader>li", "<cmd>Telescope lsp_implementations<cr>" },
+			{ "<leader>ld", "<cmd>Telescope lsp_definitions<cr>" },
 		},
 		lazy = true,
 		dependencies = { "nvim-lua/plenary.nvim" },

@@ -689,5 +689,60 @@
     "body": ["<video width=\"$1\" height=\"$2\" controls>", "\t$3", "</video>"],
     "description": "HTML - Defines a video",
     "scope": "text.html"
+  },
+  "custome element": {
+    "prefix": "j",
+    "body": "<$1></$1>",
+    "description": "HTML - Defines a custom element for angular"
+  },
+  "custome element with attributes": {
+    "prefix": "jc",
+    "body": "<$1 [$2]=\"$3\">$4</$1>",
+    "description": "HTML - Defines a custom element with attributes for angular"
+  },
+  "nglf angular": {
+    "prefix": "ngif",
+    "body": "*ngIf=\"$1\"",
+    "description": "HTML - Defines a attribute ngLf for angular"
+  },
+  "ngFor angular": {
+    "prefix": "ngfor",
+    "body": "*ngFor=\"let item of $1; let id = index\"",
+    "description": "HTML - Defines a attribute ngFor for angular"
+  },
+  "ngSwitch angular": {
+    "prefix": "ngswitch",
+    "body": "<div [ngSwitch]=\"$1\"></div>",
+    "description": "HTML - Defines a attribute ngSwitch for angular"
+  },
+  "ngSwitchCase angular": {
+    "prefix": "ngSwitchCase",
+    "body": "<div ngSwitchCase=\"'$1'\">$2</div>",
+    "description": "HTML - Defines a attribute ngSwitchCase for angular"
+  },
+  "ngSwitchDefault angular": {
+    "prefix": "ngSwitchDefault",
+    "body": "<div *ngSwitchDefault>$1</div>",
+    "description": "HTML - Defines a attribute ngSwitchDefault for angular"
+  },
+  "ngClass angular": {
+    "prefix": "ngClass",  
+    "body": "[ngClass]=\"$1\"",
+    "description": "HTML - Defines a attribute ngClass for angular"
+  },
+  "ngStyle angular": {
+    "prefix": "ngStyle",  
+    "body": "[ngStyle]=\"{\"$1\":\"$2\"}\"",
+    "description": "HTML - Defines a attribute ngClass for angular"
+  },
+  "click": {
+    "prefix": "click",
+    "body": "<button (click)=\"$1()\">$2</button>",
+    "description": "HTML - Defines a click event for angular"
+  },
+  "ngOnChanges event on angular": {
+    "prefix": "ngOnChanges",
+    "body": "<div [ngOnChanges]=\"$1\">$2</div>",
+    "description": "HTML - Defines a ngOnChanges event for angular"
   }
 }

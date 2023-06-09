@@ -110,11 +110,11 @@ Space (SPC) is my Leader key.
 | SPC a        | Select all              |
 | SPC d        | Find specific word      |
 | SPC e        | File explorer           |
-| SPC g        | Apply Codeium Reference |
 | SPC s        | Find and replace all    |
 | SPC y        | Copy forward word       |
 |              |                         |
 | Shift f      | Prettier                |
+| CTRL g       | Apply Codeium Reference |
 </details>
 
 
