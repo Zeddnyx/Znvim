@@ -60,13 +60,15 @@ run `nvim`
 Space (SPC) is my Leader key.
 
 <details>
-<summary>Searching</summary>
+<summary>Tekescope</summary>
 
 | Key Bindings | Description                   |
 |--------------|-------------------------------|
 | SPC ff       | Telescope find files          |
 | SPC fg       | Telescope live grep           |
 | SPC fb       | Telescope buffers             |
+| SPC gg       | Telescope git commit          |
+| SPC gs       | Telescope git status          |
 | SPC ll       | Telescope lsp references      |
 | SPC li       | Telescope lsp implementations |
 | SPC ld       | Telescope lsp definitions     |
@@ -124,6 +126,9 @@ Space (SPC) is my Leader key.
 ## Thanks
 
 - [Vim Indonesia](https://t.me/VimID)
+
+## Todo
+- add angular support snippets
 
 ## Uninstall
 

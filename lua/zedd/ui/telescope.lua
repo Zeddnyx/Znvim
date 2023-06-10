@@ -94,12 +94,6 @@ pickers.buffers = {
   },
 }
 
-pickers.help_tags = {
-  prompt_prefix = " 龎 ",
-  theme = "dropdown",
-  previewer = false,
-}
-
 pickers.live_grep = {
   layout_config = {
     anchor = "N",
@@ -146,11 +140,6 @@ pickers.lsp_document_symbols = {
   previewer = false,
   prompt_prefix = "   ",
   theme = "dropdown",
-}
-pickers.lsp_workspace_symbols = {
-  layout_config = { height = 0.4 },
-  prompt_prefix = "   ",
-  theme = "ivy",
 }
 pickers.lsp_references = { theme = "dropdown" }
 pickers.lsp_implementations = pickers.lsp_references

@@ -39,8 +39,18 @@ local plugins = {
 				init = function()
 					vim.g.vsnip_snippet_dir = vim.fn.stdpath("config") .. "/snippets"
 					vim.g.vsnip_filetypes = {
-						javascriptreact = { "javascript/javascriptreact", "javascript/javascript", "tailwindcss", "html" },
-						typescriptreact = { "javascript/typescriptreact", "javascript/typescript", "tailwindcss", "html" },
+						javascriptreact = {
+							"javascript/javascriptreact",
+							"javascript/javascript",
+							"tailwindcss",
+							"html",
+						},
+						typescriptreact = {
+							"javascript/typescriptreact",
+							"javascript/typescript",
+							"tailwindcss",
+							"html",
+						},
 						javascript = { "javascript/javascript", "javascript/javascriptreact", "html" },
 						typescript = { "javascript/typescript", "javascript/typescriptreact", "html" },
 						css = { "tailwindcss" },
@@ -70,10 +80,15 @@ local plugins = {
 	},
 
 	{
-		"kkharji/lspsaga.nvim",
+		"nvimdev/lspsaga.nvim",
 		event = "VeryLazy",
 		config = function()
-			require("lspsaga").setup()
+			require("lspsaga").setup({
+        ui = {
+            border = "rounded",
+            code_action = ""
+        },
+			})
 		end,
 	},
 	{
