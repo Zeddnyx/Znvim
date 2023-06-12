@@ -22,18 +22,25 @@
 ## Features
 <details>
 
-| Key Bindings          | Description                                                             |
+| Name                  | Plugin                                                                  |
 |-----------------------|-------------------------------------------------------------------------|
-| Autocompletion        |                                                                         |
+| Auto Pilot            | [Codeium](https://github.com/Exafunction/codeium.vim)                   |
+| Autocompletion        | [Cmp](https://github.com/hrsh7th/nvim-cmp)                              |
 | Autoclosing Braces    | [Autopairs](https://github.com/windwp/nvim-autopairs)                   |
-| Themes                | [Gruvbox](https://github.com/ellisonleao/gruvbox.nvim)                  |
-| Syntax Highlighting   | [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)        |
+| Bars                  | [Bar](https://github.com/romgrk/barbar.nvim)                            |
 | Comment Syntax        | [Comment](https://github.com/numToStr/Comment.nvim)                     |
-| Indentlines           | [Indentlines ](https://github.com/lukas-reineke/indent-blankline.nvim)  |
 | Custome Snippet       | [Vsnip](https://github.com/hrsh7th/cmp-vsnip)                           |
 | Color Preview         | [Colorizer](https://github.com/NvChad/nvim-colorizer)                   |
 | Find Files            | [Telescope](https://github.com/nvim-telescope/telescope.nvim)           |
-| Auto Pilot            | [Codeium](https://github.com/Exafunction/codeium.vim)                   |
+| Gitsigns              | [Gitsigns](https://github.com/lewis6991/gitsigns.nvim)                  |
+| Indentlines           | [Indentlines ](https://github.com/lukas-reineke/indent-blankline.nvim)  |
+| Lsp                   | [Lsp](https://github.com/neovim/nvim-lspconfig)                         |
+| Lspsaga               | [Lspsaga](https://github.com/neovimdev/lspsaga.nvim)                    |
+| Lspkind               | [Lspkind](https://github.com/onsails/lspkind-nvim)                      |
+| Nulls                 | [Null-ls](https://github.com/jose-elias-alvarez/null-ls.nvim)           |
+| Syntax Highlighting   | [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)        |
+| Themes                | [Gruvbox](https://github.com/ellisonleao/gruvbox.nvim)                  |
+| Tree Files            | [NvimTree](https://github.com/kyazdani42/nvim-tree.lua)                 |
 </details>
 
 ## Install
@@ -119,7 +126,7 @@ Space (SPC) is my Leader key.
 | SPC y        | Copy forward word       |
 |              |                         |
 | Shift f      | Prettier                |
-| CTRL g       | Apply Codeium Reference |
+| Ctrl g       | Apply Codeium Reference |
 </details>
 
 

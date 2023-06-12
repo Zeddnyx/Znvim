@@ -183,7 +183,7 @@ local plugins = {
 		lazy = true,
 		event = "BufRead",
 		config = function()
-			require("gitsigns").setup()
+			require("zedd.ui.gitsigns")
 		end,
 	},
 

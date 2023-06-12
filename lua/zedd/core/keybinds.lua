@@ -50,8 +50,12 @@ nmap("<leader>l", "<C-w>l<CR>") -- Switch left
 
 nmap("<S-j>", "") -- disable default keybind
 nmap("<S-k>", "") -- disable default keybind
-imap("kk", "<Esc>") 
-imap("jj", "<Esc>") 
+nmap("<up>", "") -- disable arrow up
+nmap("<left>", "") -- disable arrow left
+nmap("<right>", "") -- disable arrow right
+nmap("<down>", "") -- disable arrow down
+imap("kk", "<Esc>") -- double jj to Esc
+imap("jj", "<Esc>") -- double kk ro Esc
 -- vim.g.netrw_banner = 0 -- custome file exporer (builtin)
 -- vim.g.netrw_liststyle = 3 -- custome file exporer (builtin)
 -- nmap("<leader>e", "<CMD>Lex<CR>:vertical resize 25<CR>") -- file exporer (builtin)

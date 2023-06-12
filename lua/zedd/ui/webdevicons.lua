@@ -516,7 +516,7 @@ webicon.setup({
 			name = "Fennel",
 		},
 		["fish"] = {
-			icon = "",
+			icon = "󰈺",
 			color = "#4d5a5e",
 			cterm_color = "240",
 			name = "Fish",
@@ -1098,7 +1098,7 @@ webicon.setup({
 			name = "Scss",
 		},
 		["sh"] = {
-			icon = "",
+			icon = "󰭆",
 			color = "#ff7043",
 			cterm_color = "203",
 			name = "Sh",

@@ -744,5 +744,15 @@
     "prefix": "ngOnChanges",
     "body": "<div [ngOnChanges]=\"$1\">$2</div>",
     "description": "HTML - Defines a ngOnChanges event for angular"
+  },
+  "class binding": {
+    "prefix": "class",
+    "body": "[class.$1]=\"$2\"",
+    "description": "HTML - Defines a class binding for angular"
+  },
+  "style binding": {
+    "prefix": "style",
+    "body": "[style.$1]=\"$2\"",
+    "description": "HTML - Defines a style binding for angular"
   }
 }

@@ -172,27 +172,27 @@
     "body": "async function (${1:arguments}) {\n\t${0}\n}"
   },
   "console.log": {
-    "prefix": "console",
+    "prefix": "cl",
     "body": "console.log(${0})"
   },
   "console.log with JSON.stringify": {
-    "prefix": "console json",
+    "prefix": "cl json",
     "body": "console.log(JSON.stringify(${0}))"
   },
   "console.debug": {
-    "prefix": "console debug",
+    "prefix": "cd",
     "body": "console.debug(${0})"
   },
   "console.debug with JSON.stringify": {
-    "prefix": "console debug json",
+    "prefix": "cdj",
     "body": "console.debug(JSON.stringify(${0}))"
   },
   "console.log a variable": {
-    "prefix": "console variable",
+    "prefix": "clv",
     "body": "console.log('${0}:', ${0})"
   },
   "console.error": {
-    "prefix": "console err",
+    "prefix": "cr",
     "body": "console.error(${0})"
   },
   "JSON.stringify()": {
