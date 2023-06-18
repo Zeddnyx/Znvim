@@ -12,10 +12,10 @@ local on_attach = function(client, bufnr)
 
 	-- show diagnostic color line number
 	vim.cmd([[
-	  highlight! DiagnosticLineNrError guifg=#FF0000 guibg=#FFF0000 gui=bold
-	  highlight! DiagnosticLineNrWarn guifg=#FFA500 guibg=#FFF0000 gui=bold
-	  highlight! DiagnosticLineNrInfo guifg=#00FFFF guibg=#FFF0000 gui=bold
-	  highlight! DiagnosticLineNrHint guifg=#1563FF guibg=#FFF0000 gui=bold
+	  highlight! DiagnosticLineNrError guifg=#fb4934 guibg=#FFF0000 gui=bold
+	  highlight! DiagnosticLineNrWarn guifg=#fe8019 guibg=#FFF0000 gui=bold
+	  highlight! DiagnosticLineNrInfo guifg=#70A8B4 guibg=#FFF0000 gui=bold
+	  highlight! DiagnosticLineNrHint guifg=#3AAAB6 guibg=#FFF0000 gui=bold
 	  sign define DiagnosticSignError text= texthl=DiagnosticSignError linehl= numhl=DiagnosticLineNrError
 	  sign define DiagnosticSignWarn text= texthl=DiagnosticSignWarn linehl= numhl=DiagnosticLineNrWarn
 	  sign define DiagnosticSignInfo text= texthl=DiagnosticSignInfo linehl= numhl=DiagnosticLineNrInfo

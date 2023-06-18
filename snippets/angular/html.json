@@ -11,6 +11,12 @@
     "description": "HTML - Defines a hyperlink",
     "scope": "text.html"
   },
+  "a angular": {
+    "prefix": "a routerLink",
+    "body": "<a routerLink=\"$1\">$2</a>$3",
+    "description": "HTML - Defines a routerLink angular",
+    "scope": "text.html"
+  },
   "abbr": {
     "prefix": "abbr",
     "body": "<abbr title=\"$1\">$2</abbr>$3",
@@ -97,7 +103,7 @@
   },
   "button": {
     "prefix": "button",
-    "body": "<button type=\"$1\">$2</button>$3",
+    "body": "<button >Button</button>$3",
     "description": "HTML - Defines a push button",
     "scope": "text.html"
   },
@@ -689,5 +695,171 @@
     "body": ["<video width=\"$1\" height=\"$2\" controls>", "\t$3", "</video>"],
     "description": "HTML - Defines a video",
     "scope": "text.html"
+  },
+  "custome element": {
+    "prefix": "j",
+    "body": "<$1></$1>",
+    "description": "HTML - Defines a custom element for angular"
+  },
+  "custome element with attributes": {
+    "prefix": "jc",
+    "body": "<$1 [$2]=\"$3\">$4</$1>",
+    "description": "HTML - Defines a custom element with attributes for angular"
+  },
+  "nglf angular": {
+    "prefix": "ngif",
+    "body": "*ngIf=\"$1\"",
+    "description": "HTML - Defines a attribute ngLf for angular"
+  },
+  "ngFor angular": {
+    "prefix": "ngfor",
+    "body": "*ngFor=\"let item of $1; let id = index\"",
+    "description": "HTML - Defines a attribute ngFor for angular"
+  },
+  "ngSwitch angular": {
+    "prefix": "ngswitch",
+    "body": "<div [ngSwitch]=\"$1\"></div>",
+    "description": "HTML - Defines a attribute ngSwitch for angular"
+  },
+  "ngSwitchCase angular": {
+    "prefix": "ngSwitchCase",
+    "body": "<div ngSwitchCase=\"'$1'\">$2</div>",
+    "description": "HTML - Defines a attribute ngSwitchCase for angular"
+  },
+  "ngSwitchDefault angular": {
+    "prefix": "ngSwitchDefault",
+    "body": "<div *ngSwitchDefault>$1</div>",
+    "description": "HTML - Defines a attribute ngSwitchDefault for angular"
+  },
+  "ngClass angular": {
+    "prefix": "ngClass",
+    "body": "[ngClass]=\"$1\"",
+    "description": "HTML - Defines a attribute ngClass for angular"
+  },
+  "ngStyle angular": {
+    "prefix": "ngStyle",
+    "body": "[ngStyle]=\"{\"$1\":\"$2\"}\"",
+    "description": "HTML - Defines a attribute ngClass for angular"
+  },
+  "form angular": {
+    "prefix": "form angular",
+    "body": "<form #valueForm = \"ngForm\" (ngSubmit)=\"onSubmit(valueForm)\">\n\t<input type=\"text\" name=\"username\" ngModel />\n</form>",
+    "description": "HTML - Defines a attribute ngClass for angular"
+  },
+  "form control angular": {
+    "prefix": "form control angular",
+    "body": "<form [formGroup]=\"form\" (ngSubmit)=\"onSubmit()\">\n\t<div>\n\t\t<input type=\"text\" placeholder=$1 name=\"$1\" formControlName=\"$1\" />\n\t</div>\n\t<button [disabled]=\"form.invalid\">button</button>\n\t\n</form>",
+    "description": "HTML - Defines formGroup for angular"
+  },
+  "click": {
+    "prefix": "click",
+    "body": "(click)=\"$1()\"",
+    "description": "HTML - Defines a click event for angular"
+  },
+  "ngOnChanges event on angular": {
+    "prefix": "ngOnChanges",
+    "body": "[ngOnChanges]=\"$1\">$2</div>",
+    "description": "HTML - Defines a ngOnChanges event for angular"
+  },
+  "class binding": {
+    "prefix": "class binding",
+    "body": "[class.$1]=\"$2\"",
+    "description": "HTML - Defines a class binding for angular"
+  },
+  "class ": {
+    "prefix": "class ",
+    "body": "class=\"$1\"",
+    "description": "HTML - Defines a class"
+  },
+  "style binding": {
+    "prefix": "style",
+    "body": "[style.$1]=\"$2\"",
+    "description": "HTML - Defines a style binding for angular"
+  },
+  "keyup get event": {
+    "prefix": "input keyup",
+    "body": "<input type=\"text\" (keyup.enter)=\"$1($2.value) #$2 \">",
+    "description": "HTML - Defines a keyup event for angular"
+  },
+  "keyup get event with ngModel": {
+    "prefix": "input keyup ngModel",
+    "body": "<input type=\"text\" [(ngModel)]=\"$1\" /> <!-- import FormEvent in app.module -->",
+    "description": "HTML - Defines a keyup ngModel event for angular"
+  },
+  "keyup get event with ngModel and keyup": {
+    "prefix": "input keyup ngModel keyup",
+    "body": "<input type=\"text\" [(ngModel)]=\"$1\" (keyup.enter)=\"$2()\" /> <!-- import FormEvent in app.module -->",
+    "description": "HTML - Defines a keyup ngModel event for angular"
+  },
+  "disable btn for angular": {
+    "prefix": "disable btn for angular",
+    "body": "[disabled]=\"$1\"",
+    "description": "HTML - Defines a disable btn for angular"
+  },
+  "ngRouterLink": {
+    "prefix": "routerLink",
+    "body": [
+      "[routerLink]=\"['/${1:routePath}']\" routerLinkActive=\"${2:router-link-active}\" $0"
+    ],
+    "description": "Angular routerLink"
+  },
+  "ngRouterLinkWithParameter": {
+    "prefix": "routerLink-param",
+    "body": "routerLink=\"['${1:routePath}', ${2:routeParameterValue}]\"",
+    "description": "Angular routerLink with a route parameter"
+  },
+  "import app": {
+    "prefix": "app",
+    "bodi": "<app-$1></app-$1>",
+    "description": "Angular routerLink with a route parameter"
+  },
+    "ngSelect": {
+    "prefix": "a-select",
+    "body": [
+      "<select [(ngModel)]=\"${1:model}\">",
+      "\t<option *ngFor=\"let ${2:item} of ${3:list}\" [value]=\"${2:item}\">{{${2:item}}}</option>",
+      "</select>"
+    ],
+    "description": "<select> control with ngModel"
+  },
+    "ngSwitch": {
+    "prefix": "a-ngSwitch",
+    "body": [
+      "<div [ngSwitch]=\"${1:conditionExpression}\">",
+      "\t<div *ngSwitchCase=\"${2:expression}\">${3:output}</div>",
+      "\t<div *ngSwitchDefault>${4:output2}</div>",
+      "</div>"
+    ],
+    "description": "Angular ngSwitch"
+  },
+  "pre w/ json": {
+    "prefix": "a-prej",
+    "body": ["<pre>{{${1:model} | json}}</pre>$0"],
+    "description": "Angular pre debug | json"
+  },
+  "pre w/ async json": {
+    "prefix": "a-preja",
+    "body": ["<pre>{{${1:model} | async | json}}</pre>$0"],
+    "description": "Angular pre debug | async | json"
+  },
+  "ng-container": {
+    "prefix": "a-ng-container",
+    "body": ["<ng-container $0></ng-container>"],
+    "description": "Angular ng-container"
+  },
+  "ng-template": {
+    "prefix": "a-ng-template",
+    "body": ["<ng-template [ngTemplateOutlet]=\"${1:outlet}\" [ngOutletContext]=\"${2:context}\"></ng-template>"],
+    "description": "Angular ng-template"
+  },
+  "ng-content": {
+    "prefix": "a-ng-content",
+    "body": ["<ng-content select=\"${0:selector}\"></ng-content>"],
+    "description": "Angular ng-content"
+  },
+  "ng-outlet": {
+    "prefix": "a-router-outlet",
+    "body": ["<router-outlet></router-outlet>"],
+    "description": "Angular router outlet"
   }
 }

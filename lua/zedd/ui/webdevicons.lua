@@ -41,7 +41,7 @@ webicon.setup({
 			name = "DsStore",
 		},
 		[".gitattributes"] = {
-			icon = "",
+			icon = "",
 			color = "#41535b",
 			cterm_color = "239",
 			name = "GitAttributes",
@@ -66,7 +66,7 @@ webicon.setup({
 			name = "GitlabCI",
 		},
 		[".gitmodules"] = {
-			icon = "",
+			icon = "",
 			color = "#41535b",
 			cterm_color = "239",
 			name = "GitModules",
@@ -216,7 +216,7 @@ webicon.setup({
 			name = "Bat",
 		},
 		["bmp"] = {
-			icon = "",
+			icon = "",
 			color = "#26a69a",
 			cterm_color = "36",
 			name = "Bmp",
@@ -334,12 +334,6 @@ webicon.setup({
 			color = "#000000",
 			cterm_color = "16",
 			name = "Crystal",
-		},
-		["cs"] = {
-			icon = "",
-			color = "#596706",
-			cterm_color = "58",
-			name = "Cs",
 		},
 		["csh"] = {
 			icon = "",
@@ -1776,6 +1770,24 @@ webicon.setup({
 			cterm_color = "203",
 			name = "cake",
 		},
+    ["core"] = {
+      icon = "󱁿",
+      color = "#42a5f5",
+      cterm_color = "75",
+      name = "core",
+    },
+    ["modules"] ={
+      icon = "󱋣",
+      color = "#42a5f5",
+      cterm_color = "75",
+      name = "modules",
+    },
+    ["component"] = {
+      icon = "󰴉",
+      color = "#42a5f5",
+      cterm_color = "75",
+      name = "component",
+    }
 	},
 	-- if set to false all icons will have the default icon's color
 	color_icons = true,

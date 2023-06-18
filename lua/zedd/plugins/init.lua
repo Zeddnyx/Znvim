@@ -52,8 +52,9 @@ local plugins = {
 							"html",
 						},
 						javascript = { "javascript/javascript", "javascript/javascriptreact", "html" },
-						typescript = { "javascript/typescript", "javascript/typescriptreact", "html" },
+						typescript = { "javascript/typescript", "javascript/typescriptreact", "angular/typescript" },
 						css = { "tailwindcss" },
+						html = { "angular/html" },
 					}
 				end,
 			},
@@ -84,10 +85,10 @@ local plugins = {
 		event = "VeryLazy",
 		config = function()
 			require("lspsaga").setup({
-        ui = {
-            border = "rounded",
-            code_action = ""
-        },
+				ui = {
+					border = "rounded",
+					code_action = "",
+				},
 			})
 		end,
 	},
@@ -127,11 +128,13 @@ local plugins = {
 
 	-- Themes
 	{
-		"ellisonleao/gruvbox.nvim",
+		"Zeddnyx/gruvbox.nvim",
+     -- dir = "~/gruvbox.nvim",
 		lazy = false,
-		config = function()
-			require("zedd.ui.gruvbox")
-		end,
+		priority = 100,
+    config = function()
+      vim.cmd("colorscheme gruvbox")
+    end
 	},
 
 	-- Editor
@@ -142,6 +145,7 @@ local plugins = {
 		dependencies = {
 			"p00f/nvim-ts-rainbow",
 			"JoosepAlviste/nvim-ts-context-commentstring", -- jsx comment
+      "nvim-treesitter/playground",
 		},
 		config = function()
 			require("zedd.ui.treesitter")

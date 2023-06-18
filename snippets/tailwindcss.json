@@ -40,31 +40,31 @@
     "body": "order-${1|1,2,3,4,5,6,7,8,9,10,11,12,first,last,none|}"
   },
   "grid template columns": {
-    "prefix": "grid cols",
+    "prefix": "grid-cols",
     "body": "grid-cols-${1|1,2,3,4,5,6,7,8,9,10,11,12,none|}"
   },
   "grid column start": {
-    "prefix": "grid column start",
+    "prefix": "grid-column-start",
     "body": "col-${1|span-auto,span-1,span-2,span-3,span-4,span-5,span-6,span-7,span-8,span-9,span-10,span-11,span-12,span-full,start-1,start-2,start-3,start-4,start-5,start-6,start-7,start-8,start-9,start-10,start-11,start-12,start-13,start-auto,end-1,end-2,end-3,end-4,end-5,end-6,end-7,end-8,end-9,end-10,end-11,end-12,end-13,end-auto|}"
   },
   "grid template rows": {
-    "prefix": "grid row",
+    "prefix": "grid-ow",
     "body": "grid-row-${1|1,2,3,4,5,6,none|}"
   },
   "grid rows start": {
-    "prefix": "grid row start",
+    "prefix": "grid-row-start",
     "body": "row-${1|auto,span-1,span-2,span-3,span-4,span-5,span-6,span-full,start-1,start-2,start-3,start-4,start-5,start-6,start-7,start-auto,end-1,end-2,end-3,end-4,end-5,end-6,end-7,end-auto|}"
   },
   "grid auto flows": {
-    "prefix": "grid flow",
+    "prefix": "grid-flow",
     "body": "grid-flow-${1|row,col,dense,row-dense,co-dense|}"
   },
   "grid auto columns": {
-    "prefix": "grid auto colums",
+    "prefix": "grid-auto-colums",
     "body": "grid-cols-${1|auto,min,max,fr|}"
   },
   "grid auto rows": {
-    "prefix": "grid auto row",
+    "prefix": "grid-auto-row",
     "body": "grid-row-${1|auto,min,max,fr|}"
   },
   "gap": {
@@ -72,15 +72,15 @@
     "body": "gap-${1|0,px,1,2,3,4,5,6,7,8,9,10,11,12,14,16,20,24,28,32,36,40,44,48,52,56,60,64,70,72,80,96,x-0,x-px,x-1,x-2,x-3,x-4,x-5,x-6,x-7,x-8,x-9,x-10,x-11,x-12,x-14,x-16,x-20,x-24,x-28,x-32,x-36,x-40,x-42,x-44,x-48,x-52,x-56,x-60,x-64,x-70,x-72,x-80,x-96,y-0,y-px,y-1,y-2,y-3,y-4,y-5,y-6,y-7,y-8,y-9,y-10,y-11,y-12,y-14,y-16,y-20,y-24,y-28,y-32,y-36,y-40,y-44,y-48,y-52,y-56,y-60,y-64,y-70,y-72,y-80,y-96|}"
   },
   "justify content": {
-    "prefix": "justify content",
+    "prefix": "justify-content",
     "body": "justify-${1|center,normal,start,end,between,evenly,around,stretch|}"
   },
   "justify items": {
-    "prefix": "justify items",
+    "prefix": "justify-items",
     "body": "justify-items-${1|start,end,center,stretch|}"
   },
   "justify self": {
-    "prefix": "justify self",
+    "prefix": "justify-self",
     "body": "justify-self-${1|auto,start,end,center,stretch|}"
   },
   "align content ": {
@@ -96,15 +96,15 @@
     "body": "self-${1|auto,start,end,center,stretch,baseline|}"
   },
   "Place content": {
-    "prefix": "place content",
+    "prefix": "place-content",
     "body": "place-content-${1|evenly,start,end,center,between,around,baseline,stretch|}"
   },
   "Place items": {
-    "prefix": "place items",
+    "prefix": "place-items",
     "body": "place-items-${1|start,end,center,baseline,stretch|}"
   },
   "Place self": {
-    "prefix": "places self",
+    "prefix": "place-self",
     "body": "place-self-${1|auto,start,end,center,stretch|}"
   },
   "padding": {
@@ -291,5 +291,11 @@
     "prefix": "appearance",
     "body": "appearance-none",
     "description": "remove default element appearance, like arrow on select element"
+  },
+    "custome animate": {
+    "prefix": "animate-custome",
+    "body": "transition-all duration-300 ease-in-out",
+    "description": "custome simple animate close and open"
   }
+
 }
