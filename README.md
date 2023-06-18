@@ -134,9 +134,6 @@ Space (SPC) is my Leader key.
 
 - [Vim Indonesia](https://t.me/VimID)
 
-## Todo
-- add angular support snippets
-
 ## Uninstall
 
 ```

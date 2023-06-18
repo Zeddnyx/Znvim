@@ -792,7 +792,7 @@
     "description": "HTML - Defines a keyup ngModel event for angular"
   },
   "disable btn for angular": {
-    "prefix": "disable btn for angular",
+    "prefix": "disable-angular",
     "body": "[disabled]=\"$1\"",
     "description": "HTML - Defines a disable btn for angular"
   },
