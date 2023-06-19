@@ -185,7 +185,7 @@
   },
   "form regiter angular": {
     "prefix": "form control angular",
-    "body": "// import ReactiveFormsModule from '@angular/forms' inside app.module\nform: any;\n\nconstructor(private fb: FormBuilder) {\n\tthis.form = fb.group({\n\t\tusername: ['', [Validators.required]],\n\t})\n}\n\nget username(){\n\treturn this.registerForm.get('username');\n}\n\nonSubmit(): void {\n\tconsole.log(this.form?.value)\n}",
+    "body": "// import ReactiveFormsModule from '@angular/forms' inside app.module\nform: any;\n\nconstructor(private fb: FormBuilder) {\n\tthis.form = fb.group({\n\t\tusername: ['', [Validators.required]],\n\t})\n}\n\nget username(){\n\treturn this.form.get('username');\n}\n\nonSubmit(): void {\n\tconsole.log(this.form?.value)\n}",
     "description": ""
   },
   "constructor and ngoninit": {
