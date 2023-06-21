@@ -1,6 +1,6 @@
 local options = {
 	filters = {
-		dotfiles = false,
+		dotfiles = true,
 		custom = { "node_modules", "\\.cache", ".git", ".next" },
 	},
 	disable_netrw = true,
@@ -15,15 +15,16 @@ local options = {
 				local screen_w = vim.opt.columns:get()
 				local screen_h = vim.opt.lines:get() - vim.opt.cmdheight:get()
         local w_h = 100
+        local s_h = 20
 				local center_x = (screen_w - w_h) / 2
-				local center_y = ((vim.opt.lines:get() - w_h) / 2) - vim.opt.cmdheight:get()
+				local center_y = ((vim.opt.lines:get() - s_h) / 2) - vim.opt.cmdheight:get()
 				return {
 					border = "rounded",
 					relative = "editor",
 					row = center_y,
 					col = center_x,
 					width = w_h,
-					height = w_h,
+					height = s_h,
 				}
 			end,
 		},
@@ -47,13 +48,13 @@ local options = {
 		},
 		change_dir = {
 			enable = true,
-			global = false,
+			global = true,
 			restrict_above_cwd = false,
 		},
 	},
 	renderer = {
 		root_folder_label = true,
-		highlight_git = false,
+		highlight_git = true,
 		highlight_opened_files = "none",
 		special_files = { "Cargo.toml", "Makefile", "README.md", "readme.md", "LICENSE" },
 
@@ -66,17 +67,17 @@ local options = {
 				file = true,
 				folder = true,
 				folder_arrow = false,
-				git = true,
+				git = false,
 			},
 
 			glyphs = {
 				default = "",
 				symlink = "",
 				folder = {
-					default = "",
-					empty = "",
-					empty_open = "",
-					open = "",
+					default = "/",
+					empty = "",
+					empty_open = "",
+					open = "//",
 					symlink = "",
 					symlink_open = "",
 				},
