@@ -161,24 +161,6 @@ webicon.setup({
 			cterm_color = "1",
 			name = "Gemfile",
 		},
-		["R"] = {
-			icon = "ﳒ",
-			color = "#358a5b",
-			cterm_color = "65",
-			name = "R",
-		},
-		["Rmd"] = {
-			icon = "",
-			color = "#519aba",
-			cterm_color = "67",
-			name = "Rmd",
-		},
-		["Vagrantfile$"] = {
-			icon = "",
-			color = "#1563FF",
-			cterm_color = "27",
-			name = "Vagrantfile",
-		},
 		["_gvimrc"] = {
 			icon = "",
 			color = "#019833",
@@ -346,18 +328,6 @@ webicon.setup({
 			color = "#cbcb41",
 			cterm_color = "185",
 			name = "Cson",
-		},
-		["tailwind.config.js"] = {
-			icon = "󱏿",
-			color = "#42a5f5",
-			cterm_color = "113",
-			name = "tailwind.config.js",
-		},
-		["postcss.config.js"] = {
-			icon = "󱏿",
-			color = "#42a5f5",
-			cterm_color = "75",
-			name = "postcss.config.js",
 		},
 		["css"] = {
 			icon = "󰌜",
@@ -706,12 +676,6 @@ webicon.setup({
 			color = "#26a69a",
 			cterm_color = "36",
 			name = "Jpg",
-		},
-		["js"] = {
-			icon = "",
-			color = "#efd82d",
-			cterm_color = "220",
-			name = "Js",
 		},
 		["json"] = {
 			icon = "",

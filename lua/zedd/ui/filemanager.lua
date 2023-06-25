@@ -15,7 +15,7 @@ local options = {
 				local screen_w = vim.opt.columns:get()
 				local screen_h = vim.opt.lines:get() - vim.opt.cmdheight:get()
         local w_h = 100
-        local s_h = 20
+        local s_h = 30
 				local center_x = (screen_w - w_h) / 2
 				local center_y = ((vim.opt.lines:get() - s_h) / 2) - vim.opt.cmdheight:get()
 				return {
@@ -65,8 +65,8 @@ local options = {
 		icons = {
 			show = {
 				file = true,
-				folder = true,
-				folder_arrow = false,
+				folder = false,
+				folder_arrow = true,
 				git = false,
 			},
 
@@ -74,10 +74,10 @@ local options = {
 				default = "",
 				symlink = "",
 				folder = {
-					default = "/",
+					default = ">",
 					empty = "",
 					empty_open = "",
-					open = "//",
+					open = "",
 					symlink = "",
 					symlink_open = "",
 				},

@@ -25,17 +25,17 @@ end
 
 
 -- buffer
--- nmap("<S-h>", "<CMD>bprevious<CR>", { desc = "Buffer: previous buffer" })
--- nmap("<S-l>", "<CMD>bnext<CR>", { desc = "Buffer: next buffer" })
--- nmap("<S-c>", "<CMD>bd<CR>", { desc = "Buffer: delete buffer" })
+nmap("<S-h>", "<CMD>bprevious<CR>", { desc = "Buffer: previous buffer" })
+nmap("<S-l>", "<CMD>bnext<CR>", { desc = "Buffer: next buffer" })
+nmap("<S-c>", "<CMD>bd<CR>", { desc = "Buffer: delete buffer" })
+nmap("<S-q>", "<CMD>%bd|e#<CR>", { desc = "Buffer: delete all buffer except this one" })
 -- nmap("<S-q>q", "<CMD>%bd<CR>", { desc = "Buffer: delete all buffer" })
 -- nmap("<S-q>a", "<CMD>%bd!<CR>", { desc = "Buffer: force delete all buffer" })
 
 --barbar 
-nmap("<S-h>", "<CMD>BufferPrevious<CR>", { desc = "Buffer: previous buffer" })
-nmap("<S-l>", "<CMD>BufferNext<CR>", { desc = "Buffer: next buffer" })
-nmap("<S-c>", "<CMD>BufferClose<CR>", { desc = "Buffer: close buffer" })
-nmap("<S-q>", "<CMD>%bd|e#<CR>", { desc = "Buffer: delete all buffer except this one" })
+-- nmap("<S-h>", "<CMD>BufferPrevious<CR>", { desc = "Buffer: previous buffer" })
+-- nmap("<S-l>", "<CMD>BufferNext<CR>", { desc = "Buffer: next buffer" })
+-- nmap("<S-c>", "<CMD>BufferClose<CR>", { desc = "Buffer: close buffer" })
 
 -- lsp saga
 nmap("<S-k>", "<CMD>Lspsaga hover_doc<CR>")
@@ -52,13 +52,12 @@ nmap("<leader>l", "<C-w>l<CR>") -- Switch left
 nmap("<leader>e", "<CMD>NvimTreeOpen<CR>")
 
 -- custome keybind
-imap("kk", "<Esc>") -- trilpe j to Esc
-imap("jj", "<Esc>") -- trilpe k to Esc
+imap("kk", "<Esc>") -- double j to Esc
+imap("jj", "<Esc>") -- double k to Esc
 nmap("<leader>a", "gg<S-v>G") -- select all
 nmap("<leader>y", "yiw") -- copy forward word
 nshort("<leader>s", [[:%s/]]) -- find and replace all matched word
-nshort("<leader>d", [[/\<\\><Left><Left>]]) -- find 'vim', match if 'vim' but not if 'nvim'
--- nmap("cl", [[ccconsole.log(<c-r>")<Left>]]) -- wrap var or whatever inside console.log()
+nshort("<leader>ss", [[/\<\\><Left><Left>]]) -- find specific word
 
 -- disable default keybind
 nmap("<S-j>", "") -- disable default keybind
