@@ -292,10 +292,44 @@
     "body": "appearance-none",
     "description": "remove default element appearance, like arrow on select element"
   },
-    "custome animate": {
+  "custome animate": {
     "prefix": "animate-custome",
     "body": "transition-all duration-300 ease-in-out",
     "description": "custome simple animate close and open"
+  },
+  "custome flex between center": {
+    "prefix": "flexBetweenCenter",
+    "body": "flex justify-between items-center flex-row gap-5",
+    "description": "custome flex between center"
+  },
+  "custome flex center": {
+    "prefix": "flexCenterCenter",
+    "body": "flex justify-center items-center flex-row gap-5",
+    "description": "custome flex center"
+  },
+  "custome grid between center": {
+    "prefix": "gridBetweenCenter",
+    "body": "grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5",
+    "description": "custome grid "
+  },
+  "custome button sytle": {
+    "prefix": "buttonStyle",
+    "body": "outline-none flex justify-center items-center text-center p-1",
+    "description": "custome button style"
+  },
+  "custome nav sytle": {
+    "prefix": "navStyle",
+    "body": "px-5 md:px-10 lg:px-16 fixed top-0 left-0 z-50 flex justify-between items-center h-16 w-full bg-slate-500 backdrop-filter backdrop-blur-sm bg-opacity-80;",
+    "description": "custome nav style"
+  },
+  "custome nav section style": {
+    "prefix": "navSectionStyle",
+    "body": [
+      ".menu {\n\t@apply md:hidden transition-all duration-700 ease-in-out cursor-pointer outline-none z-40 text-cyan font-semibold;\n}",
+      ".navMobile {\n\t @apply md:hidden flex flex-col justify-center gap-16 transition-all duration-500 ease-in h-screen w-[100%] text-end absolute top-0 py-28 px-10 bg-slate-500;\n}",
+      ".navMobileHidden{\n\t@apply left-[-100%] opacity-0 ease-in;\n}",
+      ".navDesktop {\n\t@apply hidden md:flex gap-10;\n}"
+    ],
+    "description": "custome nav section style"
   }
-
 }
