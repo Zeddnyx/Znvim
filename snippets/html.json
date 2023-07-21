@@ -689,5 +689,17 @@
     "body": ["<video width=\"$1\" height=\"$2\" controls>", "\t$3", "</video>"],
     "description": "HTML - Defines a video",
     "scope": "text.html"
+  },
+  "router link react": {
+    "prefix": "link-rdo",
+    "body": "<Link to={$1}>$2</Link>",
+    "description": "Link, react router dom",
+    "scope": "text.html"
+  },
+  "router link nextjs": {
+    "prefix": "link-next",
+    "body": "<Link href={$1}>$2</Link>",
+    "description": "Link, nextjs",
+    "scope": "text.html"
   }
 }

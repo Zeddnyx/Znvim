@@ -30,7 +30,17 @@
   },
   "reactFunctionComponent": {
     "prefix": "rfce",
-    "body": "\nconst ${TM_FILENAME_BASE} = () => {\n\treturn (\n\t\t<div>\n\t\t\t$0\n\t\t</div>\n\t)\n}\n\nexport default ${TM_FILENAME_BASE}",
+    "body": "\nconst ${TM_FILENAME_BASE} = () => {\n\treturn (\n\t\t<div>\n\t\t\t${TM_FILENAME_BASE}\n\t\t</div>\n\t)\n}\n\nexport default ${TM_FILENAME_BASE}",
+    "description": "Creates a React function component without PropTypes"
+  },
+  "reactFunctionComponentSection": {
+    "prefix": "rfce-section",
+    "body": "\nconst ${TM_FILENAME_BASE} = () => {\n\treturn (\n\t\t<section>\n\t\t\t${TM_FILENAME_BASE}\n\t\t</section>\n\t)\n}\n\nexport default ${TM_FILENAME_BASE}",
+    "description": "Creates a React function component without PropTypes"
+  },
+  "reactFunctionComponentNav": {
+    "prefix": "rfce-nav",
+    "body": "\nconst ${TM_FILENAME_BASE} = () => {\n\treturn (\n\t\t<nav>\n\t\t\t${TM_FILENAME_BASE}\n\t\t</nav>\n\t)\n}\n\nexport default ${TM_FILENAME_BASE}",
     "description": "Creates a React function component without PropTypes"
   },
   "arrow function": {

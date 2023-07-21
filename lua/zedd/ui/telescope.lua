@@ -64,6 +64,7 @@ config.defaults = {
     "^__pycache__/",
     "^bin/",
     "^build/",
+    "^dist/",
     "^gradle/",
     "^node_modules/",
     "^obj/",

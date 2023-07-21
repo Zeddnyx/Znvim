@@ -25,16 +25,16 @@ end
 
 
 -- buffer
-nmap("<S-h>", "<CMD>bprevious<CR>", { desc = "Buffer: previous buffer" })
-nmap("<S-l>", "<CMD>bnext<CR>", { desc = "Buffer: next buffer" })
+-- nmap("<S-h>", "<CMD>bprevious<CR>", { desc = "Buffer: previous buffer" })
+-- nmap("<S-l>", "<CMD>bnext<CR>", { desc = "Buffer: next buffer" })
 nmap("<S-c>", "<CMD>bd<CR>", { desc = "Buffer: delete buffer" })
 nmap("<S-q>", "<CMD>%bd|e#<CR>", { desc = "Buffer: delete all buffer except this one" })
 -- nmap("<S-q>q", "<CMD>%bd<CR>", { desc = "Buffer: delete all buffer" })
 -- nmap("<S-q>a", "<CMD>%bd!<CR>", { desc = "Buffer: force delete all buffer" })
 
 --barbar 
--- nmap("<S-h>", "<CMD>BufferPrevious<CR>", { desc = "Buffer: previous buffer" })
--- nmap("<S-l>", "<CMD>BufferNext<CR>", { desc = "Buffer: next buffer" })
+nmap("<S-h>", "<CMD>BufferPrevious<CR>", { desc = "Buffer: previous buffer" })
+nmap("<S-l>", "<CMD>BufferNext<CR>", { desc = "Buffer: next buffer" })
 -- nmap("<S-c>", "<CMD>BufferClose<CR>", { desc = "Buffer: close buffer" })
 
 -- lsp saga
@@ -60,8 +60,6 @@ nshort("<leader>s", [[:%s/]]) -- find and replace all matched word
 nshort("<leader>ss", [[/\<\\><Left><Left>]]) -- find specific word
 
 -- disable default keybind
-nmap("<S-j>", "") -- disable default keybind
-nmap("<S-k>", "") -- disable default keybind
 nmap("<up>", "") -- disable arrow up
 nmap("<left>", "") -- disable arrow left
 nmap("<right>", "") -- disable arrow right

@@ -7,15 +7,15 @@ local on_attach = function(client, bufnr)
 		update_in_insert = true,
 	})
 	-- Show line diagnostics automatically in hover window
-	vim.o.updatetime = 150
+	vim.o.updatetime = 250
 	vim.cmd([[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]])
 
 	-- show diagnostic color line number
 	vim.cmd([[
-	  sign define DiagnosticSignError text= texthl=DiagnosticSignError linehl= numhl=DiagnosticLineNrError
-	  sign define DiagnosticSignWarn text= texthl=DiagnosticSignWarn linehl= numhl=DiagnosticLineNrWarn
-	  sign define DiagnosticSignInfo text= texthl=DiagnosticSignInfo linehl= numhl=DiagnosticLineNrInfo
-	  sign define DiagnosticSignHint text= texthl=DiagnosticSignHint linehl= numhl=DiagnosticLineNrHint
+	  sign define DiagnosticSignError text= texthl=DiagnosticSignError linehl= numhl=DiagnosticSignError
+	  sign define DiagnosticSignWarn text= texthl=DiagnosticSignWarn linehl= numhl=DiagnosticSignWarn
+	  sign define DiagnosticSignInfo text= texthl=DiagnosticSignInfo linehl= numhl=DiagnosticSignInfo 
+	  sign define DiagnosticSignHint text= texthl=DiagnosticSignHint linehl= numhl=DiagnosticSignHint
 	]])
 end
 
@@ -29,7 +29,7 @@ nulls.setup({
 	sources = {
 		formatting.prettier,
 		formatting.stylua,
-		-- diagnostic.tsc, -- disable cause im using tsserver
+		diagnostic.tsc, -- comment this if using tsserver
 	},
 })
 

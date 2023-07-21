@@ -1,7 +1,7 @@
 local options = {
 	filters = {
 		dotfiles = true,
-		custom = { "node_modules", "\\.cache", ".git", ".next" },
+		custom = { "node_modules", "\\.cache", ".git", ".next","dist" },
 	},
 	disable_netrw = true,
 	hijack_netrw = true,
@@ -15,7 +15,7 @@ local options = {
 				local screen_w = vim.opt.columns:get()
 				local screen_h = vim.opt.lines:get() - vim.opt.cmdheight:get()
         local w_h = 100
-        local s_h = 30
+        local s_h = 50
 				local center_x = (screen_w - w_h) / 2
 				local center_y = ((vim.opt.lines:get() - s_h) / 2) - vim.opt.cmdheight:get()
 				return {
@@ -64,8 +64,8 @@ local options = {
 
 		icons = {
 			show = {
-				file = true,
-				folder = false,
+				file = false,
+        folder = false,
 				folder_arrow = true,
 				git = false,
 			},
@@ -74,18 +74,18 @@ local options = {
 				default = "",
 				symlink = "",
 				folder = {
-					default = ">",
-					empty = "",
-					empty_open = "",
-					open = "",
+					default = "",
+					empty = "",
+					empty_open = "",
+					open = "",
 					symlink = "",
 					symlink_open = "",
 				},
 				git = {
-					unstaged = "[U]",
+					unstaged = "[u]",
 					staged = "[✓]",
 					unmerged = "",
-					renamed = "[R]",
+					renamed = "[r]",
 					untracked = "[?]",
 					deleted = "",
 					ignored = "◌",

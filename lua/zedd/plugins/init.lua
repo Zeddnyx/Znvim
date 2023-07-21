@@ -72,6 +72,7 @@ local plugins = {
 		end,
 	},
 
+  -- lsp
 	{
 		"neovim/nvim-lspconfig",
 		event = "BufRead",
@@ -92,6 +93,7 @@ local plugins = {
 			})
 		end,
 	},
+
 	{
 		"jose-elias-alvarez/null-ls.nvim",
 		event = "BufRead",
@@ -107,6 +109,7 @@ local plugins = {
 		lazy = true,
 	},
 
+  -- ai (like git copilot)
 	{
 		"Exafunction/codeium.vim",
 		event = "VeryLazy",
@@ -128,8 +131,8 @@ local plugins = {
 
 	-- Themes
 	{
-		"Zeddnyx/gruvbox.nvim",
-		-- dir = "~/zedd/gruvbox.nvim",
+		-- "Zeddnyx/gruvbox.nvim",
+		dir = "~/Zedd/gruvbox.nvim",
 		lazy = false,
 		priority = 100,
 		config = function()
@@ -152,6 +155,7 @@ local plugins = {
 		end,
 	},
 
+  -- tab bar
 	{
 		"romgrk/barbar.nvim",
 		event = "BufRead",
@@ -171,6 +175,7 @@ local plugins = {
 		end,
 	},
 
+  -- filemanager
 	{
 		"nvim-tree/nvim-tree.lua",
 		version = "*",
@@ -180,6 +185,7 @@ local plugins = {
 		end,
 	},
 
+  -- git signs
 	{
 		"lewis6991/gitsigns.nvim",
 		enabled = vim.fn.executable("git") == 1,
@@ -191,6 +197,7 @@ local plugins = {
 		end,
 	},
 
+  -- find files and other
 	{
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.1",
@@ -211,6 +218,7 @@ local plugins = {
 		end,
 	},
 
+  -- blank line
 	{
 		"lukas-reineke/indent-blankline.nvim",
 		event = "BufRead",
@@ -219,6 +227,7 @@ local plugins = {
 		end,
 	},
 
+  -- color preview
 	{
 		"NvChad/nvim-colorizer.lua",
 		event = "BufRead",

@@ -23,6 +23,7 @@ local on_attach = function(client, bufnr)
   vim.keymap.set("n", "<S-k>", "<CMD>Lspsaga hover_doc<CR>", opt)
 end
 
-lsp.tsserver.setup({
-  on_attach = on_attach,
-})
+-- comment this code below if using tsc from nulls
+-- lsp.tsserver.setup({
+--   on_attach = on_attach,
+-- })
