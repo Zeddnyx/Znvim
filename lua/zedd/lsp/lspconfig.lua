@@ -18,12 +18,12 @@ local on_attach = function(client, bufnr)
 	  sign define DiagnosticSignHint text= texthl=DiagnosticSignHint linehl= numhl=DiagnosticLineNrHint
 	]])
 
-  local opt = { silent = true, noremap = true }
-  vim.keymap.set("n", "<S-r>", "<CMD>Lspsaga rename<CR>", opt)
-  vim.keymap.set("n", "<S-k>", "<CMD>Lspsaga hover_doc<CR>", opt)
+	local opt = { silent = true, noremap = true }
+	vim.keymap.set("n", "<S-r>", "<CMD>Lspsaga rename<CR>", opt)
+	vim.keymap.set("n", "<S-k>", "<CMD>Lspsaga hover_doc<CR>", opt)
 end
 
 -- comment this code below if using tsc from nulls
--- lsp.tsserver.setup({
---   on_attach = on_attach,
--- })
+lsp.tsserver.setup({
+	on_attach = on_attach,
+})

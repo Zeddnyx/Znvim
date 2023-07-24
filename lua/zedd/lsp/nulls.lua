@@ -3,7 +3,7 @@ local nulls = require("null-ls")
 local on_attach = function(client, bufnr)
 	vim.diagnostic.config({
 		virtual_text = false,
-		signs = false,
+		signs = true,
 		update_in_insert = true,
 	})
 	-- Show line diagnostics automatically in hover window
@@ -12,10 +12,10 @@ local on_attach = function(client, bufnr)
 
 	-- show diagnostic color line number
 	vim.cmd([[
-	  sign define DiagnosticSignError text= texthl=DiagnosticSignError linehl= numhl=DiagnosticSignError
-	  sign define DiagnosticSignWarn text= texthl=DiagnosticSignWarn linehl= numhl=DiagnosticSignWarn
-	  sign define DiagnosticSignInfo text= texthl=DiagnosticSignInfo linehl= numhl=DiagnosticSignInfo 
-	  sign define DiagnosticSignHint text= texthl=DiagnosticSignHint linehl= numhl=DiagnosticSignHint
+	  sign define DiagnosticSignError text= texthl=DiagnosticSignError linehl= numhl=DiagnosticLineNrError
+	  sign define DiagnosticSignWarn text= texthl=DiagnosticSignWarn linehl= numhl=DiagnosticLineNrWarn
+	  sign define DiagnosticSignInfo text= texthl=DiagnosticSignInfo linehl= numhl=DiagnosticLineNrInfo
+	  sign define DiagnosticSignHint text= texthl=DiagnosticSignHint linehl= numhl=DiagnosticLineNrHint
 	]])
 end
 
@@ -29,7 +29,7 @@ nulls.setup({
 	sources = {
 		formatting.prettier,
 		formatting.stylua,
-		diagnostic.tsc, -- comment this if using tsserver
+		-- diagnostic.tsc, -- comment this if using tsserver
 	},
 })
 

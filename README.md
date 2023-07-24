@@ -67,7 +67,7 @@ run `nvim`
 Space (SPC) is my Leader key.
 
 <details>
-<summary>Tekescope</summary>
+<summary>Telescope</summary>
 
 | Key Bindings | Description                   |
 |--------------|-------------------------------|

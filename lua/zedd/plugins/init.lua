@@ -131,8 +131,8 @@ local plugins = {
 
 	-- Themes
 	{
-		-- "Zeddnyx/gruvbox.nvim",
-		dir = "~/Zedd/gruvbox.nvim",
+		"Zeddnyx/gruvbox.nvim",
+		-- dir = "~/Zedd/gruvbox.nvim",
 		lazy = false,
 		priority = 100,
 		config = function()
@@ -146,7 +146,6 @@ local plugins = {
 		lazy = true,
 		event = "BufRead",
 		dependencies = {
-			"p00f/nvim-ts-rainbow",
 			"JoosepAlviste/nvim-ts-context-commentstring", -- jsx comment
 			"nvim-treesitter/playground",
 		},
