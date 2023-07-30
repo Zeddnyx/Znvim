@@ -1,30 +1,22 @@
 {
-  "destructuring of props": {
-    "prefix": "dp",
-    "body": ["const { ${1:name} } = this.props"]
-  },
-  "destructuring of state": {
-    "prefix": "ds",
-    "body": ["const { ${1:name} } = this.state"]
-  },
   "react function component with props": {
     "prefix": "rfcp",
-    "body": "import React from 'react'\n\ntype ${1:Type} ={\n\t${2:val}: ${3}\n}\nexport default function ${TM_FILENAME_BASE}: React.FC<${1}>({${2}}) {\n\treturn (\n\t\t<div>\n\t\t\t{$2}\n\t\t</div>\n\t\t)\n\t}\n}\n\n",
+    "body": "\ntype ${1:Type} ={\n\t${2:val}: ${3}\n}\nexport default function ${TM_FILENAME_BASE}: React.FC<${1}>({${2}}) {\n\treturn (\n\t\t<div>\n\t\t\t{$2}\n\t\t</div>\n\t\t)\n\t}\n}\n\n",
     "description": "Creates a React component with props"
   },
   "FunctionComponent": {
     "prefix": "rfce",
-    "body": "import React from 'react'\n\nexport default function ${TM_FILENAME_BASE}() {\n\treturn (\n\t\t<div>\n\t\t\t${TM_FILENAME_BASE}\n\t\t</div>\n\t)\n}",
+    "body": "\nexport default function ${TM_FILENAME_BASE}() {\n\treturn (\n\t\t<div>\n\t\t\t${TM_FILENAME_BASE}\n\t\t</div>\n\t)\n}",
     "description": "Creates a React functional component without PropTypes"
   },
   "reactFunctionComponentSection": {
     "prefix": "rfce-section",
-    "body": "import React from 'react'\n\nexport default function ${TM_FILENAME_BASE}() {\n\treturn (\n\t\t<section>\n\t\t\t${TM_FILENAME_BASE}\n\t\t</section>\n\t)\n}",
+    "body": "\nexport default function ${TM_FILENAME_BASE}() {\n\treturn (\n\t\t<section>\n\t\t\t${TM_FILENAME_BASE}\n\t\t</section>\n\t)\n}",
     "description": "Creates a React functional component without PropTypes"
   },
   "reactFunctionComponentNav": {
     "prefix": "rfce-nav",
-    "body": "import React from 'react'\n\nexport default function ${TM_FILENAME_BASE}() {\n\treturn (\n\t\t<nav>\n\t\t\t${TM_FILENAME_BASE}\n\t\t</nav>\n\t)\n}",
+    "body": "\nexport default function ${TM_FILENAME_BASE}() {\n\treturn (\n\t\t<nav>\n\t\t\t${TM_FILENAME_BASE}\n\t\t</nav>\n\t)\n}",
     "description": "Creates a React functional component without PropTypes"
   },
   "classConstructor": {
@@ -411,5 +403,10 @@
   "useFetch hook store": {
     "prefix": "useFetch store",
     "body": "export default function ${TM_FILENAME_BASE}(){\n\tconst { data, loading, error } = useFetch(\"${1}\")\n\tif (loading) {\n\t\t<p>loading</p>\n\t}\n\tif (error) {\n\t\t<p>{error}</p>\n\t}\n\tconsole.log(data)\n\n\treturn (\n\t\t<div>data</div>\n\t)\n}"
+  },
+  "handle events ": {
+    "prefix": "handle",
+    "body": ["const handle${1:func} = () => {", "\t$2", "}"],
+    "description": "handle events"
   }
 }

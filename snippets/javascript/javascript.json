@@ -172,27 +172,27 @@
     "body": "async function (${1:arguments}) {\n\t${0}\n}"
   },
   "console.log": {
-    "prefix": "cl",
+    "prefix": "clo",
     "body": "console.log(${0})"
   },
   "console.log with JSON.stringify": {
-    "prefix": "cl json",
+    "prefix": "clo-json",
     "body": "console.log(JSON.stringify(${0}))"
   },
   "console.debug": {
-    "prefix": "cd",
+    "prefix": "clo-debug",
     "body": "console.debug(${0})"
   },
   "console.debug with JSON.stringify": {
-    "prefix": "cdj",
+    "prefix": "clod-jsonStringify",
     "body": "console.debug(JSON.stringify(${0}))"
   },
   "console.log a variable": {
-    "prefix": "clv",
+    "prefix": "clo-var",
     "body": "console.log('${0}:', ${0})"
   },
   "console.error": {
-    "prefix": "cr",
+    "prefix": "clo-err",
     "body": "console.error(${0})"
   },
   "JSON.stringify()": {
