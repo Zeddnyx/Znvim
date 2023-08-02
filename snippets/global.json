@@ -1,11 +1,11 @@
 {
   "Lorem 10 Words Paragraph": {
-    "prefix": "lorem10",
+    "prefix": "lorem-10",
     "body": "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
     "description": "Lorem Ipsum Paragraph"
   },
   "Lorem 20 Words Paragraph": {
-    "prefix": "lorem20",
+    "prefix": "lorem-20",
     "body": [
       "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
       "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit"
@@ -13,7 +13,7 @@
     "description": "Lorem Ipsum Paragraph"
   },
   "Lorem 30 Words Paragraph": {
-    "prefix": "lorem30",
+    "prefix": "lorem-30",
     "body": [
       "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
       "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
@@ -22,7 +22,7 @@
     "description": "Lorem Ipsum Paragraph"
   },
   "Lorem 40 Words Paragraph": {
-    "prefix": "lorem40",
+    "prefix": "lorem-40",
     "body": [
       "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
       "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
@@ -32,7 +32,7 @@
     "description": "Lorem Ipsum Paragraph"
   },
   "Lorem 50 Words Paragraph": {
-    "prefix": "lorem50",
+    "prefix": "lorem-50",
     "body": [
       "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
       "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
@@ -43,7 +43,7 @@
     "description": "Lorem Ipsum Paragraph"
   },
   "Lorem 60 Words Paragraph": {
-    "prefix": "lorem60",
+    "prefix": "lorem-60",
     "body": [
       "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
       "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
@@ -55,7 +55,7 @@
     "description": "Lorem Ipsum Paragraph"
   },
   "Lorem 70 Words Paragraph": {
-    "prefix": "lorem70",
+    "prefix": "lorem-70",
     "body": [
       "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
       "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",

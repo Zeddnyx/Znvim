@@ -42,13 +42,11 @@ local plugins = {
 						javascriptreact = {
 							"javascript/javascriptreact",
 							"javascript/javascript",
-							"tailwindcss",
 							"html",
 						},
 						typescriptreact = {
 							"javascript/typescriptreact",
 							"javascript/typescript",
-							"tailwindcss",
 							"html",
 						},
 						javascript = { "javascript/javascript", "javascript/javascriptreact", "html" },
@@ -72,7 +70,7 @@ local plugins = {
 		end,
 	},
 
-  -- lsp
+	-- lsp
 	{
 		"neovim/nvim-lspconfig",
 		event = "BufRead",
@@ -109,7 +107,7 @@ local plugins = {
 		lazy = true,
 	},
 
-  -- ai (like git copilot)
+	-- codeium (github copilot)
 	{
 		"Exafunction/codeium.vim",
 		event = "VeryLazy",
@@ -131,8 +129,8 @@ local plugins = {
 
 	-- Themes
 	{
-		"Zeddnyx/gruvbox.nvim",
-		-- dir = "~/Zedd/gruvbox.nvim",
+		-- "Zeddnyx/gruvbox.nvim",
+		dir = "~/Zedd/gruvbox.nvim",
 		lazy = false,
 		priority = 100,
 		config = function()
@@ -146,7 +144,7 @@ local plugins = {
 		lazy = true,
 		event = "BufRead",
 		dependencies = {
-			"JoosepAlviste/nvim-ts-context-commentstring", -- jsx comment
+			-- "JoosepAlviste/nvim-ts-context-commentstring", -- jsx comment
 			"nvim-treesitter/playground",
 		},
 		config = function()
@@ -154,7 +152,7 @@ local plugins = {
 		end,
 	},
 
-  -- tab bar
+	-- tab bar
 	{
 		"romgrk/barbar.nvim",
 		event = "BufRead",
@@ -163,18 +161,18 @@ local plugins = {
 		end,
 	},
 
-	{
-		"numToStr/Comment.nvim",
-		keys = { { "gc", mode = { "n", "v" }, "gcc" }, { "gb", mode = { "n", "v" } } },
-		lazy = true,
-		config = function()
-			require("Comment").setup({
-				pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
-			})
-		end,
-	},
-
-  -- filemanager
+	-- {
+	-- 	"numToStr/Comment.nvim",
+	-- 	keys = { { "gc", mode = { "n", "v" }, "gcc" }, { "gb", mode = { "n", "v" } } },
+	-- 	lazy = true,
+	-- 	config = function()
+	-- 		require("Comment").setup({
+	-- 			pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
+	-- 		})
+	-- 	end,
+	-- },
+	--
+	-- filemanager
 	{
 		"nvim-tree/nvim-tree.lua",
 		version = "*",
@@ -184,7 +182,7 @@ local plugins = {
 		end,
 	},
 
-  -- git signs
+	-- git signs
 	{
 		"lewis6991/gitsigns.nvim",
 		enabled = vim.fn.executable("git") == 1,
@@ -196,7 +194,7 @@ local plugins = {
 		end,
 	},
 
-  -- find files and other
+	-- find files and other
 	{
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.1",
@@ -205,10 +203,10 @@ local plugins = {
 			{ "<leader>fg", "<cmd>Telescope live_grep<cr>" },
 			{ "<leader>fb", "<cmd>Telescope buffers<cr>" },
 			{ "<leader>gg", "<cmd>Telescope git_commits<cr>" },
-			{ "<leader>gs", "<cmd>Telescope git_status<cr>" },
-			{ "<leader>ll", "<cmd>Telescope lsp_references<cr>" },
-			{ "<leader>li", "<cmd>Telescope lsp_implementations<cr>" },
-			{ "<leader>ld", "<cmd>Telescope lsp_definitions<cr>" },
+			{ "<leader>lf", "<cmd>Telescope lsp_references<cr>" },
+			{ "<leader>ll", "<cmd>Telescope lsp_definitions<cr>" },
+			-- { "<leader>li", "<cmd>Telescope lsp_implementations<cr>" },
+			-- { "<leader>gs", "<cmd>Telescope git_status<cr>" },
 		},
 		lazy = true,
 		dependencies = { "nvim-lua/plenary.nvim" },
@@ -217,7 +215,7 @@ local plugins = {
 		end,
 	},
 
-  -- blank line
+	-- blank line
 	{
 		"lukas-reineke/indent-blankline.nvim",
 		event = "BufRead",
@@ -226,7 +224,7 @@ local plugins = {
 		end,
 	},
 
-  -- color preview
+	-- color preview
 	{
 		"NvChad/nvim-colorizer.lua",
 		event = "BufRead",

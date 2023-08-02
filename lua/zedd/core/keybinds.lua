@@ -53,13 +53,19 @@ nmap("<leader>ww", "<CMD>w<CR>")
 nmap("<leader>qq", "<CMD>q<CR>")
 nmap("<leader>wq", "<CMD>wq<CR>")
 nmap("r", "<C-r>")
-imap("kk", "<Esc>") -- double j to Esc
-imap("jj", "<Esc>") -- double k to Esc
 nmap("<leader>a", "gg<S-v>G") -- select all
 nmap("<leader>y", "yiw") -- copy forward word
+nmap("<leader>b", "yib") -- copy backward word
+nmap("<leader>c", "/xxxxx<CR>") -- clear search history or select all
 nshort("<leader>s", [[:%s/]]) -- find and replace all matched word
 nshort("<leader>ss", [[/\<\\><Left><Left>]]) -- find specific word
--- vmap("jsx", "<CMD>s/\(.*\)/{\/* \1 *\/}") -- comment jsx code
+
+-- comment javascript
+vmap("jsx",[[:s/\(.*\)/{\/*\1 *\/}<CR>]]) -- comment jsx, visual mode
+nmap("jsx",[[:s/\(.*\)/{\/*\1 *\/}<CR>]]) -- comment jsx, normal mode
+vmap("gc",[[:s/\(.*\)/\/\/ \1<CR>]]) -- comment js, visual mode
+nmap("gcc", [[:s/^/\/\/<CR>]]) -- comment js, normal mode
+
 
 -- disable default keybind
 nmap("<up>", "") -- disable arrow up
@@ -67,3 +73,12 @@ nmap("<left>", "") -- disable arrow left
 nmap("<right>", "") -- disable arrow right
 nmap("<down>", "") -- disable arrow down
 nmap("<C-z>", "") -- disable z
+
+-- vim regex find and replace
+-- (.*) -- find all word
+-- ^ -- start of line
+-- $ -- end of line
+
+-- s/\(.*\)/abc \1 abc -- add abc first and last word, using visual mode
+-- :4,9s/^/#/ -- add # at first line 4-9
+
