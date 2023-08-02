@@ -129,8 +129,8 @@ local plugins = {
 
 	-- Themes
 	{
-		-- "Zeddnyx/gruvbox.nvim",
-		dir = "~/Zedd/gruvbox.nvim",
+		 "Zeddnyx/gruvbox.nvim",
+		-- dir = "~/Zedd/gruvbox.nvim",
 		lazy = false,
 		priority = 100,
 		config = function()
