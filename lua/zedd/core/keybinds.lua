@@ -18,17 +18,12 @@ end
 function vmap(shortcut, command)
 	map("v", shortcut, command)
 end
--- normal ( shortkey )
-function nshort(shortcut, command)
-	short("n", shortcut, command)
-end
-
 
 -- buffer
 -- nmap("<S-h>", "<CMD>bprevious<CR>", { desc = "Buffer: previous buffer" })
 -- nmap("<S-l>", "<CMD>bnext<CR>", { desc = "Buffer: next buffer" })
 
---barbar 
+--barbar
 nmap("<S-h>", "<CMD>BufferPrevious<CR>", { desc = "Buffer: previous buffer" })
 nmap("<S-l>", "<CMD>BufferNext<CR>", { desc = "Buffer: next buffer" })
 nmap("<S-c>", "<CMD>bd<CR>", { desc = "Buffer: delete buffer" })
@@ -50,22 +45,15 @@ nmap("<leader>e", "<CMD>NvimTreeOpen<CR>")
 
 -- custome keybind
 nmap("<leader>ww", "<CMD>w<CR>")
-nmap("<leader>qq", "<CMD>q<CR>")
+nmap("<leader>qq", "<CMD>q!<CR>")
 nmap("<leader>wq", "<CMD>wq<CR>")
 nmap("r", "<C-r>")
-nmap("<leader>a", "gg<S-v>G") -- select all
-nmap("<leader>y", "yiw") -- copy forward word
-nmap("<leader>b", "yib") -- copy backward word
-nmap("<leader>c", "/xxxxx<CR>") -- clear search history or select all
-nshort("<leader>s", [[:%s/]]) -- find and replace all matched word
-nshort("<leader>ss", [[/\<\\><Left><Left>]]) -- find specific word
-
--- comment javascript
-vmap("jsx",[[:s/\(.*\)/{\/*\1 *\/}<CR>]]) -- comment jsx, visual mode
-nmap("jsx",[[:s/\(.*\)/{\/*\1 *\/}<CR>]]) -- comment jsx, normal mode
-vmap("gc",[[:s/\(.*\)/\/\/ \1<CR>]]) -- comment js, visual mode
-nmap("gcc", [[:s/^/\/\/<CR>]]) -- comment js, normal mode
-
+nmap("<leader>a", "gg<S-v>G")
+nmap("<leader>y", "yiw")
+nmap("<leader>b", "yib")
+nmap("<leader>c", "/xxxxx<CR>")
+nmap("<leader>s", [[:%s/]])
+nmap("<leader>ss", [[/\<\\><Left><Left>]])
 
 -- disable default keybind
 nmap("<up>", "") -- disable arrow up
@@ -78,7 +66,19 @@ nmap("<C-z>", "") -- disable z
 -- (.*) -- find all word
 -- ^ -- start of line
 -- $ -- end of line
-
+-- %s -- subtitute find and replace
+-- \v -- very magic
+-- (abc|cba) -- match either abc or cba
+--
+-- comment line
+-- nmap("", [[:s/<\(.*\)/{\/*\<\1 *\/}<CR>]]) 
+-- vmap("", [[:s/<\(.*\)/{\/* <\1 *\/}<CR>]]) 
+-- nmap("", [[:s/^/\/\/<CR>]]) 
+-- vmap("", [[:s/\(.*\)/\/\/ \1<CR>]]) 
+-- nmap("", [[:s/\(.*\)/\/* \1 *\/<CR>]]) 
+-- vmap("", [[:s/\(.*\)/\/* \1 *\/<CR>]]) 
+-- nmap("", [[:s/^/-- <CR>]]) 
+-- vmap("", [[:s/\(.*\)/-- \1 <CR>]]) 
+-- :%s/\v(abc|cba)//g  -- remove abc and cba
 -- s/\(.*\)/abc \1 abc -- add abc first and last word, using visual mode
 -- :4,9s/^/#/ -- add # at first line 4-9
-

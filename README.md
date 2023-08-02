@@ -19,7 +19,7 @@
     </a>
 </p>
 
-## Features
+## Plugin
 <details>
 
 | Name                  | Plugin                                                                  |
@@ -28,7 +28,6 @@
 | Autocompletion        | [Cmp](https://github.com/hrsh7th/nvim-cmp)                              |
 | Autoclosing Braces    | [Autopairs](https://github.com/windwp/nvim-autopairs)                   |
 | Bars                  | [Bar](https://github.com/romgrk/barbar.nvim)                            |
-| Comment Syntax        | [Comment](https://github.com/numToStr/Comment.nvim)                     |
 | Custome Snippet       | [Vsnip](https://github.com/hrsh7th/cmp-vsnip)                           |
 | Color Preview         | [Colorizer](https://github.com/NvChad/nvim-colorizer)                   |
 | Find Files            | [Telescope](https://github.com/nvim-telescope/telescope.nvim)           |
@@ -46,14 +45,12 @@
 ## Install
 
 clean up your config first
-
 ```
 rm -rf ~/.local/share/nvim
 rm -rf ~/.cache/nvim
 ```
 
 install
-
 ```
 git clone https://github.com/ZeddNyx/Znvim ~/.config/nvim
 
@@ -76,18 +73,17 @@ Space (SPC) is my Leader key.
 | SPC fb       | Telescope buffers             |
 | SPC gg       | Telescope git commit          |
 | SPC gs       | Telescope git status          |
-| SPC ll       | Telescope lsp references      |
-| SPC li       | Telescope lsp implementations |
-| SPC ld       | Telescope lsp definitions     |
+| SPC lf       | Telescope lsp references      |
+| SPC ll       | Telescope lsp  definitions    |
 </details>
 
 <details>
-<summary>Commenting</summary>
+<summary>Comment</summary>
 
-| Key Bindings | Description                |
-|--------------|----------------------------|
-| gcc          | Create/remove comment      |
-| gc (visual)  | Create/remove comment      |
+| Key Bindings | Description          |
+|--------------|----------------------|
+| gcc          | comment/uncomment    |
+| gc (visual)  | comment/uncomment    |
 </details>
   
 <details>

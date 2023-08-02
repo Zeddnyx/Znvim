@@ -144,7 +144,7 @@ local plugins = {
 		lazy = true,
 		event = "BufRead",
 		dependencies = {
-			-- "JoosepAlviste/nvim-ts-context-commentstring", -- jsx comment
+		 "JoosepAlviste/nvim-ts-context-commentstring", -- jsx comment
 			"nvim-treesitter/playground",
 		},
 		config = function()
@@ -161,17 +161,17 @@ local plugins = {
 		end,
 	},
 
-	-- {
-	-- 	"numToStr/Comment.nvim",
-	-- 	keys = { { "gc", mode = { "n", "v" }, "gcc" }, { "gb", mode = { "n", "v" } } },
-	-- 	lazy = true,
-	-- 	config = function()
-	-- 		require("Comment").setup({
-	-- 			pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
-	-- 		})
-	-- 	end,
-	-- },
-	--
+	{
+		"numToStr/Comment.nvim",
+		keys = { { "gc", mode = { "n", "v" }, "gcc" }, { "gb", mode = { "n", "v" } } },
+		lazy = true,
+		config = function()
+			require("Comment").setup({
+				pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
+			})
+		end,
+	},
+	
 	-- filemanager
 	{
 		"nvim-tree/nvim-tree.lua",
