@@ -4,19 +4,19 @@
     "body": "\ntype ${1:Type} ={\n\t${2:val}: ${3}\n}\nexport default function ${TM_FILENAME_BASE}: React.FC<${1}>({${2}}) {\n\treturn (\n\t\t<div>\n\t\t\t{$2}\n\t\t</div>\n\t\t)\n\t}\n}\n\n",
     "description": "Creates a React component with props"
   },
-  "FunctionComponent": {
+  "ArrowFunctionComponent": {
     "prefix": "rfce",
-    "body": "\nexport default function ${TM_FILENAME_BASE}() {\n\treturn (\n\t\t<div>\n\t\t\t${TM_FILENAME_BASE}\n\t\t</div>\n\t)\n}",
+    "body": "import { memo } from \"react\"\n\n export const ${TM_FILENAME_BASE} = memo(() => {\n\treturn (\n\t\t<div>\n\t\t\t${TM_FILENAME_BASE}\n\t\t</div>\n\t)\n})",
     "description": "Creates a React functional component without PropTypes"
   },
   "reactFunctionComponentSection": {
     "prefix": "rfce-section",
-    "body": "\nexport default function ${TM_FILENAME_BASE}() {\n\treturn (\n\t\t<section>\n\t\t\t${TM_FILENAME_BASE}\n\t\t</section>\n\t)\n}",
+    "body": "import { memo } from \"react\"\n\n export const ${TM_FILENAME_BASE} = memo(() => {\n\treturn (\n\t\t<section>\n\t\t\t${TM_FILENAME_BASE}\n\t\t</section>\n\t)\n})",
     "description": "Creates a React functional component without PropTypes"
   },
   "reactFunctionComponentNav": {
     "prefix": "rfce-nav",
-    "body": "\nexport default function ${TM_FILENAME_BASE}() {\n\treturn (\n\t\t<nav>\n\t\t\t${TM_FILENAME_BASE}\n\t\t</nav>\n\t)\n}",
+    "body": "import { memo } from \"react\"\n\n export const ${TM_FILENAME_BASE} = memo(() => {\n\treturn (\n\t\t<nav>\n\t\t\t${TM_FILENAME_BASE}\n\t\t</nav>\n\t)\n})",
     "description": "Creates a React functional component without PropTypes"
   },
   "classConstructor": {
@@ -403,6 +403,21 @@
   "useFetch hook store": {
     "prefix": "useFetch store",
     "body": "export default function ${TM_FILENAME_BASE}(){\n\tconst { data, loading, error } = useFetch(\"${1}\")\n\tif (loading) {\n\t\t<p>loading</p>\n\t}\n\tif (error) {\n\t\t<p>{error}</p>\n\t}\n\tconsole.log(data)\n\n\treturn (\n\t\t<div>data</div>\n\t)\n}"
+  },
+  "onClick": {
+    "prefix": "onclick",
+    "body": "onClick={handle${1:}}",
+    "description": "handle onClick events"
+  },
+  "onChange": {
+    "prefix": "onchange",
+    "body": "onChange={e => set${1:func}(e.target.value)}",
+    "description": "handle onChange events"
+  },
+  "onSubmit": {
+    "prefix": "onsubmit",
+    "body": "onSubmit={handle${1:}}",
+    "description": "handle onSubmit events"
   },
   "handle events ": {
     "prefix": "handle",
