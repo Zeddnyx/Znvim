@@ -45,6 +45,23 @@ local options = {
 			return math.floor(vim.opt.columns:get() * 5)
 		end,
 	},
+	diagnostics = {
+		enable = true,
+		show_on_dirs = true,
+		show_on_open_dirs = true,
+		debounce_delay = 500,
+
+		severity = {
+			min = vim.diagnostic.severity.HINT,
+			max = vim.diagnostic.severity.ERROR,
+		},
+		icons = {
+			hint = "H",
+			info = "I",
+			warning = "W",
+			error = "E",
+		},
+	},
 	git = {
 		enable = true,
 		ignore = true,
@@ -67,40 +84,52 @@ local options = {
 	},
 	renderer = {
 		root_folder_label = true,
-		highlight_git = true,
+		highlight_git = false,
 		highlight_opened_files = "none",
 		special_files = { "Cargo.toml", "Makefile", "README.md", "readme.md", "LICENSE" },
 
 		indent_markers = {
-			enable = false,
+			enable = true,
+			icons = {
+				corner = "└",
+				edge = "│",
+				none = "",
+			},
 		},
 
 		icons = {
+			git_placement = "after",
+			modified_placement = "after",
 			show = {
-				file = false,
+				file = true,
 				folder = false,
-				folder_arrow = true,
-				git = false,
+				folder_arrow = false,
+				git = true,
 			},
 
 			glyphs = {
 				default = "",
 				symlink = "",
 				folder = {
-					default = "",
-					empty = "",
-					empty_open = "",
-					open = "",
-					symlink = "",
-					symlink_open = "",
+					default = "/",
+					empty = "/",
+					empty_open = "/",
+					open = "/",
+					symlink = "/",
+					symlink_open = "/",
+				},
+				file = {
+					default = "",
+					modified = "",
+					readonly = "",
 				},
 				git = {
 					unstaged = "[u]",
-					staged = "[✓]",
+					staged = "[✓ ]",
 					unmerged = "",
 					renamed = "[r]",
 					untracked = "[?]",
-					deleted = "",
+					deleted = "[D]",
 					ignored = "◌",
 				},
 			},

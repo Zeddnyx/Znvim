@@ -129,8 +129,8 @@ local plugins = {
 
 	-- Themes
 	{
-		 "Zeddnyx/gruvbox.nvim",
-		-- dir = "~/Zedd/gruvbox.nvim",
+		 -- "Zeddnyx/gruvbox.nvim", -- uncomment this 
+		dir = "~/Zedd/gruvbox.nvim", -- comment this
 		lazy = false,
 		priority = 100,
 		config = function()
@@ -176,7 +176,7 @@ local plugins = {
 	{
 		"nvim-tree/nvim-tree.lua",
 		version = "*",
-		keys = { { "<leader>e", "<cmd>NvimTreeOpen<cr>" } },
+		keys = { { "<leader>e", "<cmd>NvimTreeFocus<cr>" } },
 		config = function()
 			require("zedd.ui.filemanager")
 		end,

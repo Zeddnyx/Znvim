@@ -62,6 +62,24 @@ nmap("<right>", "") -- disable arrow right
 nmap("<down>", "") -- disable arrow down
 nmap("<C-z>", "") -- disable z
 
+-- comment line
+nmap("cjj", [[:s/<\(.*\)/{\/*\<\1 *\/}<CR>]]) -- add {*/ *\}
+vmap("cj", [[:s/\(.*\)/{\/* <\1 *\/}<CR>]]) -- add {*/ *\}
+vmap("ujj", [[:s/{\/\*\(.\{-}\)\*\/}/\1/g <CR>]]) -- remove {/* *\}
+
+nmap("cjs", [[:s/^/\/\/<CR>]]) -- add // 1 line 
+vmap("cjs", [[:s/\(.*\)/\/\/ \1<CR>]]) -- add //
+vmap("ujs", [[:s/\/\/\(.*\)/\1 <CR>]]) -- remove //
+
+nmap("cs", [[:s/\(.*\)/\/* \1 *\/<CR>]])  -- add /* *\
+vmap("cs", [[:s/\(.*\)/\/* \1 *\/<CR>]])  -- add /* *\
+vmap("ucs", [[:s/\/\*\(.\{-}\)\*\//\1/g]]) -- remove /* *\
+
+nmap("cll", [[:s/^/-- <CR>]]) -- add --
+vmap("cl", [[:s/\(.*\)/-- \1 <CR>]]) -- add -- 
+vmap("ull", [[:s/--\(.*\)/\1 <CR>]]) -- remove --
+
+
 -- vim regex find and replace
 -- (.*) -- find all word
 -- ^ -- start of line
@@ -69,16 +87,7 @@ nmap("<C-z>", "") -- disable z
 -- %s -- subtitute find and replace
 -- \v -- very magic
 -- (abc|cba) -- match either abc or cba
---
--- comment line
--- nmap("", [[:s/<\(.*\)/{\/*\<\1 *\/}<CR>]]) 
--- vmap("", [[:s/<\(.*\)/{\/* <\1 *\/}<CR>]]) 
--- nmap("", [[:s/^/\/\/<CR>]]) 
--- vmap("", [[:s/\(.*\)/\/\/ \1<CR>]]) 
--- nmap("", [[:s/\(.*\)/\/* \1 *\/<CR>]]) 
--- vmap("", [[:s/\(.*\)/\/* \1 *\/<CR>]]) 
--- nmap("", [[:s/^/-- <CR>]]) 
--- vmap("", [[:s/\(.*\)/-- \1 <CR>]]) 
--- :%s/\v(abc|cba)//g  -- remove abc and cba
--- s/\(.*\)/abc \1 abc -- add abc first and last word, using visual mode
+-- :%s/\v(abc|cba)//g  -- find and remove abc and cba
+-- :s/\(.*\)/abc \1 abc -- add abc first and last word, using visual mode
+-- :s/<\(.*\)/{\/*\<\1 *\/} -- find < and add {*/ *\} before and after
 -- :4,9s/^/#/ -- add # at first line 4-9
