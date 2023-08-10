@@ -40,12 +40,12 @@ local plugins = {
 					vim.g.vsnip_snippet_dir = vim.fn.stdpath("config") .. "/snippets"
 					vim.g.vsnip_filetypes = {
 						javascriptreact = {
-							"javascript/javascriptreact",
+							"javascript/react",
 							"javascript/javascript",
 							"html",
 						},
 						typescriptreact = {
-							"javascript/typescriptreact",
+							"javascript/react",
 							"javascript/typescript",
 							"html",
 						},
@@ -108,29 +108,29 @@ local plugins = {
 	},
 
 	-- codeium (github copilot)
-	{
-		"Exafunction/codeium.vim",
-		event = "VeryLazy",
-		config = function()
-			vim.keymap.set("i", "<c-g>", function()
-				return vim.fn["codeium#Accept"]()
-			end, { expr = true })
-			vim.keymap.set("i", "<c-;>", function()
-				return vim.fn["codeium#CycleCompletions"](1)
-			end, { expr = true })
-			vim.keymap.set("i", "<c-,>", function()
-				return vim.fn["codeium#CycleCompletions"](-1)
-			end, { expr = true })
-			vim.keymap.set("i", "<c-x>", function()
-				return vim.fn["codeium#Clear"]()
-			end, { expr = true })
-		end,
-	},
+-- 	{
+-- 		"Exafunction/codeium.vim", 
+-- 		event = "VeryLazy", 
+-- 		config = function() 
+-- 			vim.keymap.set("i", "<c-g>", function() 
+-- 				return vim.fn["codeium#Accept"]() 
+-- 			end, { expr = true }) 
+-- 			vim.keymap.set("i", "<c-;>", function() 
+-- 				return vim.fn["codeium#CycleCompletions"](1) 
+-- 			end, { expr = true }) 
+-- 			vim.keymap.set("i", "<c-,>", function() 
+-- 				return vim.fn["codeium#CycleCompletions"](-1) 
+-- 			end, { expr = true }) 
+-- 			vim.keymap.set("i", "<c-x>", function() 
+-- 				return vim.fn["codeium#Clear"]() 
+-- 			end, { expr = true }) 
+-- 		end, 
+-- 	},
 
 	-- Themes
 	{
-		 -- "Zeddnyx/gruvbox.nvim", -- uncomment this 
-		dir = "~/Zedd/gruvbox.nvim", -- comment this
+		 "Zeddnyx/gruvbox.nvim", 
+-- dir = "~/Zedd/gruvbox.nvim", 
 		lazy = false,
 		priority = 100,
 		config = function()
@@ -144,7 +144,7 @@ local plugins = {
 		lazy = true,
 		event = "BufRead",
 		dependencies = {
-		 -- "JoosepAlviste/nvim-ts-context-commentstring", -- jsx comment
+		"JoosepAlviste/nvim-ts-context-commentstring", -- jsx comment
 			"nvim-treesitter/playground",
 		},
 		config = function()
@@ -161,16 +161,16 @@ local plugins = {
 		end,
 	},
 
-	-- {
-	-- 	"numToStr/Comment.nvim",
-	-- 	keys = { { "gc", mode = { "n", "v" }, "gcc" }, { "gb", mode = { "n", "v" } } },
-	-- 	lazy = true,
-	-- 	config = function()
-	-- 		require("Comment").setup({
-	-- 			pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
-	-- 		})
-	-- 	end,
-	-- },
+	{
+		"numtostr/comment.nvim",
+		keys = { { "gc", mode = { "n", "v" }, "gcc" }, { "gb", mode = { "n", "v" } } },
+		lazy = true,
+		config = function()
+			require("comment").setup({
+				pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
+			})
+		end,
+	},
 	
 	-- filemanager
 	{

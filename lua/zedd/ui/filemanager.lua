@@ -118,11 +118,6 @@ local options = {
 					symlink = "/",
 					symlink_open = "/",
 				},
-				file = {
-					default = "",
-					modified = "",
-					readonly = "",
-				},
 				git = {
 					unstaged = "[u]",
 					staged = "[✓ ]",

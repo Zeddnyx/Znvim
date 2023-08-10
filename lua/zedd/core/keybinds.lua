@@ -51,7 +51,7 @@ nmap("r", "<C-r>")
 nmap("<leader>a", "gg<S-v>G")
 nmap("<leader>y", "yiw")
 nmap("<leader>b", "yib")
-nmap("<leader>c", "/xxxxx<CR>")
+nmap("<leader>c", ":noh<CR>") -- clean higlight
 nmap("<leader>s", [[:%s/]])
 nmap("<leader>ss", [[/\<\\><Left><Left>]])
 
@@ -63,21 +63,21 @@ nmap("<down>", "") -- disable arrow down
 nmap("<C-z>", "") -- disable z
 
 -- comment line
-nmap("cjj", [[:s/<\(.*\)/{\/*\<\1 *\/}<CR>]]) -- add {*/ *\}
-vmap("cj", [[:s/\(.*\)/{\/* <\1 *\/}<CR>]]) -- add {*/ *\}
-vmap("ujj", [[:s/{\/\*\(.\{-}\)\*\/}/\1/g <CR>]]) -- remove {/* *\}
-
-nmap("cjs", [[:s/^/\/\/<CR>]]) -- add // 1 line 
-vmap("cjs", [[:s/\(.*\)/\/\/ \1<CR>]]) -- add //
-vmap("ujs", [[:s/\/\/\(.*\)/\1 <CR>]]) -- remove //
-
-nmap("cs", [[:s/\(.*\)/\/* \1 *\/<CR>]])  -- add /* *\
-vmap("cs", [[:s/\(.*\)/\/* \1 *\/<CR>]])  -- add /* *\
-vmap("ucs", [[:s/\/\*\(.\{-}\)\*\//\1/g]]) -- remove /* *\
-
-nmap("cll", [[:s/^/-- <CR>]]) -- add --
-vmap("cl", [[:s/\(.*\)/-- \1 <CR>]]) -- add -- 
-vmap("ull", [[:s/--\(.*\)/\1 <CR>]]) -- remove --
+-- nmap("cjj", [[:s/<\(.*\)/{\/*\<\1 *\/}<CR>]]) -- add {*/ *\} 
+-- vmap("cj", [[:s/\(.*\)/{\/* <\1 *\/}<CR>]]) -- add {*/ *\} 
+-- vmap("ujj", [[:s/{\/\*\(.\{-}\)\*\/}/\1/g <CR>]]) -- remove {/* *\} 
+--  
+-- nmap("cjs", [[:s/^/\/\/<CR>]]) -- add // 1 line  
+-- vmap("cjs", [[:s/\(.*\)/\/\/ \1<CR>]]) -- add // 
+-- vmap("ujs", [[:s/\/\/\(.*\)/\1 <CR>]]) -- remove // 
+--  
+-- nmap("cs", [[:s/\(.*\)/\/* \1 *\/<CR>]])  -- add /* *\ 
+-- vmap("cs", [[:s/\(.*\)/\/* \1 *\/<CR>]])  -- add /* *\ 
+-- vmap("ucs", [[:s/\/\*\(.\{-}\)\*\//\1/g]]) -- remove /* *\ 
+--  
+-- nmap("cll", [[:s/^/-- <CR>]]) -- add -- 
+-- vmap("cl", [[:s/\(.*\)/-- \1 <CR>]]) -- add --  
+-- vmap("ull", [[:s/--\(.*\)/\1 <CR>]]) -- remove -- 
 
 
 -- vim regex find and replace

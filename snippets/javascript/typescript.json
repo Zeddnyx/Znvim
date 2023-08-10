@@ -31,12 +31,12 @@
     "description": "Log to the console"
   },
   "Log warning to console": {
-    "prefix": "cw",
+    "prefix": "clw",
     "body": ["console.warn($1);", "$0"],
     "description": "Log warning to the console"
   },
   "Log error to console": {
-    "prefix": "cr",
+    "prefix": "clr",
     "body": ["console.error($1);", "$0"],
     "description": "Log error to the console"
   },
@@ -172,13 +172,6 @@
     "body": ["//#endregion"],
     "description": "Folding Region End"
   },
-  "toggle menu navbar": {
-    "prefix": "menu",
-    "body": [
-      "const [ menu, setMenu ] = useState(false)",
-      "const handleMenu = () => setMenu(!menu)"
-    ]
-  },
   "zustant create": {
     "prefix": "zustand create",
     "body": [
@@ -203,9 +196,49 @@
       "const [${2:val1}, ${3:val2}] = store((state) => {\n\t\treturn [state.${2}, state.${3}];\n}, shallow);"
     ]
   },
+  "classList.add": {
+    "prefix": "class-add",
+    "body": "${1:el}.classList.add('${2:class}')"
+  },
+  "classList.remove": {
+    "prefix": "class-remove",
+    "body": "${1:el}.classList.remove('${2:class}')"
+  },
+  "classList.toggle": {
+    "prefix": "class-toggle",
+    "body": "${1:el}.classList.toggle('${2:class}')"
+  },
+  "getAttribute": {
+    "prefix": "attribute-get",
+    "body": "${1:el}.getAttribute('${2:attr}')"
+  },
+  "removeAttribute": {
+    "prefix": "attribute-tremove",
+    "body": "${1:el}.removeAttribute('${2:attr}')"
+  },
+  "setAttribute": {
+    "prefix": "attribute-set",
+    "body": "${1:el}.setAttribute('${2:attr}', ${3:value})"
+  },
+  "appendChild": {
+    "prefix": "child-append",
+    "body": "${1:el}.appendChild(${2:elem})"
+  },
+  "removeChild": {
+    "prefix": "child-remove",
+    "body": "${1:el}.removeChild(${2:elem})"
+  },
   "interface": {
     "prefix": "interface",
-    "body": "interface ${1} {\n\t${2}: ${3}\n}"
+    "body": "interface ${1} {\n\t${2:val}: ${3:type}\n}"
+  },
+  "interface extends": {
+    "prefix": "interface extends",
+    "body": "interface $1 extends $2 {\n\t$3: $4\n}"
+  },
+  "children": {
+    "prefix": "children",
+    "body": "type Children = {\n\tchildren: React.ReactNode\n}\n"
   },
   "export const": {
     "prefix": "export-const",

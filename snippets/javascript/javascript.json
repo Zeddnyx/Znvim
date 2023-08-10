@@ -12,19 +12,19 @@
     "body": "e.preventDefault()"
   },
   "addEventListener": {
-    "prefix": "add event listener",
+    "prefix": "document-addListener",
     "body": "document.addEventListener('${1:event}', ${2:ev} => {\n\t${0}\n})"
   },
   "removeEventListener": {
-    "prefix": "remove event listener",
+    "prefix": "document-removeListener",
     "body": "document.removeEventListener('${1:event}', ${22:listener})"
   },
   "getElementById": {
-    "prefix": "get element by class",
+    "prefix": "document-getClass",
     "body": "document.getElementById('${1:id}')"
   },
   "querySelector": {
-    "prefix": "query selector",
+    "prefix": "document-querySelector",
     "body": "document.querySelector('${1:selector}')"
   },
   "querySelectorAll": {
@@ -36,35 +36,35 @@
     "body": "${1:document}.createElement(${2:elem})"
   },
   "classList.add": {
-    "prefix": "class add",
+    "prefix": "class-add",
     "body": "${1:el}.classList.add('${2:class}')"
   },
   "classList.remove": {
-    "prefix": "class remove",
+    "prefix": "class-remove",
     "body": "${1:el}.classList.remove('${2:class}')"
   },
   "classList.toggle": {
-    "prefix": "class toggle",
+    "prefix": "class-toggle",
     "body": "${1:el}.classList.toggle('${2:class}')"
   },
   "getAttribute": {
-    "prefix": "attribute get",
+    "prefix": "attribute-get",
     "body": "${1:el}.getAttribute('${2:attr}')"
   },
   "removeAttribute": {
-    "prefix": "attribute remove",
+    "prefix": "attribute-tremove",
     "body": "${1:el}.removeAttribute('${2:attr}')"
   },
   "setAttribute": {
-    "prefix": "attribute set",
+    "prefix": "attribute-set",
     "body": "${1:el}.setAttribute('${2:attr}', ${3:value})"
   },
   "appendChild": {
-    "prefix": "child append",
+    "prefix": "child-append",
     "body": "${1:el}.appendChild(${2:elem})"
   },
   "removeChild": {
-    "prefix": "child remove",
+    "prefix": "child-remove",
     "body": "${1:el}.removeChild(${2:elem})"
   },
   "forEach loop": {
