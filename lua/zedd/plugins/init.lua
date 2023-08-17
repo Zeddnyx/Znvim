@@ -2,7 +2,7 @@ local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
 	vim.fn.system({
 		"git",
-		"clwne",
+		"clone",
 		"--filter=blob:none",
 		"https://github.com/folke/lazy.nvim.git",
 		"--branch=stable", -- latest stable release
@@ -49,8 +49,8 @@ local plugins = {
 							"javascript/typescript",
 							"html",
 						},
-						javascript = { "javascript/javascript", "javascript/javascriptreact", "html" },
-						typescript = { "javascript/typescript", "angular/typescript" },
+						javascript = { "javascript/javascript"},
+						typescript = { "javascript/typescript"},
 						css = { "tailwindcss" },
 						html = { "angular/html" },
 					}
@@ -108,29 +108,29 @@ local plugins = {
 	},
 
 	-- codeium (github copilot)
--- 	{
--- 		"Exafunction/codeium.vim", 
--- 		event = "VeryLazy", 
--- 		config = function() 
--- 			vim.keymap.set("i", "<c-g>", function() 
--- 				return vim.fn["codeium#Accept"]() 
--- 			end, { expr = true }) 
--- 			vim.keymap.set("i", "<c-;>", function() 
--- 				return vim.fn["codeium#CycleCompletions"](1) 
--- 			end, { expr = true }) 
--- 			vim.keymap.set("i", "<c-,>", function() 
--- 				return vim.fn["codeium#CycleCompletions"](-1) 
--- 			end, { expr = true }) 
--- 			vim.keymap.set("i", "<c-x>", function() 
--- 				return vim.fn["codeium#Clear"]() 
--- 			end, { expr = true }) 
--- 		end, 
--- 	},
+	{
+		"Exafunction/codeium.vim",
+		event = "VeryLazy",
+		config = function()
+			vim.keymap.set("i", "<c-g>", function()
+				return vim.fn["codeium#Accept"]()
+			end, { expr = true })
+			vim.keymap.set("i", "<c-;>", function()
+				return vim.fn["codeium#CycleCompletions"](1)
+			end, { expr = true })
+			vim.keymap.set("i", "<c-,>", function()
+				return vim.fn["codeium#CycleCompletions"](-1)
+			end, { expr = true })
+			vim.keymap.set("i", "<c-x>", function()
+				return vim.fn["codeium#Clear"]()
+			end, { expr = true })
+		end,
+	},
 
 	-- Themes
 	{
-		 "Zeddnyx/gruvbox.nvim", 
--- dir = "~/Zedd/gruvbox.nvim", 
+		"Zeddnyx/gruvbox.nvim",
+		-- dir = "~/Zedd/gruvbox.nvim",
 		lazy = false,
 		priority = 100,
 		config = function()
@@ -144,7 +144,6 @@ local plugins = {
 		lazy = true,
 		event = "BufRead",
 		dependencies = {
-		"JoosepAlviste/nvim-ts-context-commentstring", -- jsx comment
 			"nvim-treesitter/playground",
 		},
 		config = function()
@@ -161,17 +160,15 @@ local plugins = {
 		end,
 	},
 
+  -- rest api 
 	{
-		"numtostr/comment.nvim",
-		keys = { { "gc", mode = { "n", "v" }, "gcc" }, { "gb", mode = { "n", "v" } } },
-		lazy = true,
+		"rest-nvim/rest.nvim",
+		dependencies = { "nvim-lua/plenary.nvim" },
 		config = function()
-			require("comment").setup({
-				pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
-			})
-		end,
+			require("zedd.ui.rest")
+    end,
 	},
-	
+
 	-- filemanager
 	{
 		"nvim-tree/nvim-tree.lua",

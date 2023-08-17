@@ -342,6 +342,12 @@
     "description": "HTML - Defines an image",
     "scope": "text.html"
   },
+  "imgNextKJS": {
+    "prefix": "img-next",
+    "body": "<Image src=\"$1\" width={$2} height={$3} alt=\"$4\"/>",
+    "description": "HTML - Defines an image on nextjs13",
+    "scope": "text.html"
+  },
   "input": {
     "prefix": "input",
     "body": "<input type=\"$1\" name=\"$2\" value=\"$3\"/>",

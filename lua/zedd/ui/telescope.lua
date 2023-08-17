@@ -67,6 +67,7 @@ config.defaults = {
     "^dist/",
     "^gradle/",
     "^node_modules/",
+    "node_modules/",
     "^obj/",
     "^target/",
     "^vendor/",
