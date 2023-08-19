@@ -45,15 +45,15 @@ nmap("<leader>e", "<CMD>NvimTreeOpen<CR>")
 
 -- custome keybind
 nmap("<leader>ww", "<CMD>w<CR>")
-nmap("<leader>qq", "<CMD>q!<CR>")
+nmap("<leader>wa", "<CMD>wa<CR>")
 nmap("<leader>wq", "<CMD>wq<CR>")
+nmap("<leader>qq", "<CMD>q!<CR>")
 nmap("r", "<C-r>")
 nmap("<leader>a", "gg<S-v>G")
 nmap("<leader>y", "yiw")
-nmap("<leader>b", "yib")
 nmap("<leader>c", ":noh<CR>") -- clean higlight
-nmap("<leader>s", [[:%s/]])
-nmap("<leader>ss", [[/\<\\><Left><Left>]])
+nmap("<leader>s", [[/\<\\><Left><Left>]])
+nmap("<leader>ss", [[:%s/]])
 
 -- disable default keybind
 nmap("<up>", "") -- disable arrow up
@@ -63,22 +63,21 @@ nmap("<down>", "") -- disable arrow down
 nmap("<C-z>", "") -- disable z
 
 -- comment line
--- nmap("cjj", [[:s/<\(.*\)/{\/*\<\1 *\/}<CR>]]) -- add {*/ *\} 
--- vmap("cj", [[:s/\(.*\)/{\/* <\1 *\/}<CR>]]) -- add {*/ *\} 
--- vmap("ujj", [[:s/{\/\*\(.\{-}\)\*\/}/\1/g <CR>]]) -- remove {/* *\} 
---  
--- nmap("cjs", [[:s/^/\/\/<CR>]]) -- add // 1 line  
--- vmap("cjs", [[:s/\(.*\)/\/\/ \1<CR>]]) -- add // 
--- vmap("ujs", [[:s/\/\/\(.*\)/\1 <CR>]]) -- remove // 
---  
--- nmap("cs", [[:s/\(.*\)/\/* \1 *\/<CR>]])  -- add /* *\ 
--- vmap("cs", [[:s/\(.*\)/\/* \1 *\/<CR>]])  -- add /* *\ 
--- vmap("ucs", [[:s/\/\*\(.\{-}\)\*\//\1/g]]) -- remove /* *\ 
---  
--- nmap("cll", [[:s/^/-- <CR>]]) -- add -- 
--- vmap("cl", [[:s/\(.*\)/-- \1 <CR>]]) -- add --  
--- vmap("ull", [[:s/--\(.*\)/\1 <CR>]]) -- remove -- 
+nmap("crr", [[:s/<\(.*\)/{\/*\<\1 *\/}<CR>:noh<CR>]]) -- add {*/ *\}
+vmap("cr", [[:s/\(.*\)/{\/* \1 *\/}<CR>:noh<CR>]]) -- add {*/ *\}
+vmap("ur", [[:s/{\/\*\(.\{-}\)\*\/}/\1/g <CR>]]) -- remove {/* *\}
 
+nmap("cjj", [[:s/^/\/\/<CR>:noh<CR>:noh<CR>]]) -- add //
+vmap("cj", [[:s/\(.*\)/\/\/ \1<CR>:noh<CR>]]) -- add //
+vmap("uj", [[:s/\/\/\(.*\)/\1 <CR>:noh<CR>]]) -- remove //
+
+nmap("css", [[:s/\(.*\)/\/* \1 *\/<CR>:noh<CR>]]) -- add /* *\
+vmap("cs", [[:s/\(.*\)/\/* \1 *\/<CR>:noh<CR>]]) -- add /* *\
+vmap("us", [[:s/\/\*\(.\{-}\)\*\//\1/g<CR>:noh<CR>]]) -- remove /* *\
+
+nmap("cll", [[:s/^/-- <CR>:noh<CR>]]) -- add --
+vmap("cl", [[:s/\(.*\)/-- \1 <CR>:noh<CR>]]) -- add --
+vmap("ul", [[:s/--\(.*\)/\1 <CR>:noh<CR>]]) -- remove --
 
 -- vim regex find and replace
 -- (.*) -- find all word

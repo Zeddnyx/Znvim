@@ -7,7 +7,7 @@ local on_attach = function(client, bufnr)
 		update_in_insert = true,
 	})
 	-- Show line diagnostics automatically in hover window
-	vim.o.updatetime = 250
+	vim.o.updatetime = 500
 	vim.cmd([[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]])
 
 	-- show diagnostic color line number
@@ -17,10 +17,6 @@ local on_attach = function(client, bufnr)
 	  sign define DiagnosticSignInfo text= texthl=DiagnosticSignInfo linehl= numhl=DiagnosticLineNrInfo
 	  sign define DiagnosticSignHint text= texthl=DiagnosticSignHint linehl= numhl=DiagnosticLineNrHint
 	]])
-
-	local opt = { silent = true, noremap = true }
-	vim.keymap.set("n", "<S-r>", "<CMD>Lspsaga rename<CR>", opt)
-	vim.keymap.set("n", "<S-k>", "<CMD>Lspsaga hover_doc<CR>", opt)
 end
 
 -- comment this code below if using tsc from nulls

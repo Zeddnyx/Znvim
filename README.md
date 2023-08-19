@@ -34,12 +34,10 @@
 | Gitsigns              | [Gitsigns](https://github.com/lewis6991/gitsigns.nvim)                  |
 | Indentlines           | [Indentlines ](https://github.com/lukas-reineke/indent-blankline.nvim)  |
 | Lsp                   | [Lsp](https://github.com/neovim/nvim-lspconfig)                         |
-| Lspsaga               | [Lspsaga](https://github.com/neovimdev/lspsaga.nvim)                    |
-| Lspkind               | [Lspkind](https://github.com/onsails/lspkind-nvim)                      |
 | Nulls                 | [Null-ls](https://github.com/jose-elias-alvarez/null-ls.nvim)           |
 | Syntax Highlighting   | [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)        |
-| Themes                | [Gruvbox](https://github.com/ellisonleao/gruvbox.nvim)                  |
-| Tree Files            | [NvimTree](https://github.com/kyazdani42/nvim-tree.lua)                 |
+| Themes                | [Gruvbox](https://github.com/Zeddnyx/gruvbox.nvim)                      |
+| File Navigation       | [NvimTree](https://github.com/kyazdani42/nvim-tree.lua)                 |
 </details>
 
 ## Install
@@ -48,6 +46,12 @@ clean up your config first
 ```
 rm -rf ~/.local/share/nvim
 rm -rf ~/.cache/nvim
+```
+
+install prettier, stylua (optional)
+```
+npm i -g prettier @johnnymorganz/stylua-bin
+
 ```
 
 install
@@ -74,7 +78,7 @@ Space (SPC) is my Leader key.
 | SPC gg       | Telescope git commit          |
 | SPC gs       | Telescope git status          |
 | SPC lf       | Telescope lsp references      |
-| SPC ll       | Telescope lsp  definitions    |
+| SPC ll       | Telescope lsp definitions     |
 </details>
 
 <details>
@@ -82,8 +86,21 @@ Space (SPC) is my Leader key.
 
 | Key Bindings | Description          |
 |--------------|----------------------|
-| gcc          | comment/uncomment    |
-| gc (visual)  | comment/uncomment    |
+| crr          | Comment jsx          |
+| cr (visual)  | Comment jsx          |
+| ur (visual)  | Uncomment jsx        |
+|              |                      |
+| cjj          | Comment js           |
+| cj (visual)  | Comment js           |
+| uj (visual)  | Uncomment js         |
+|              |                      |
+| css          | Comment css          |
+| cs (visual)  | Comment css          |
+| uc (visual)  | Uncomment css        |
+|              |                      |
+| cll          | Comment lua          |
+| cl (visual)  | Comment lua          |
+| ul (visual)  | Uncomment lua        |
 </details>
   
 <details>
@@ -94,6 +111,7 @@ Space (SPC) is my Leader key.
 | Shift h      | Buffer previous  |
 | Shift l      | Buffer next      |
 | Shift c      | Buffer close     |
+| Shift q      | Buffer close all |
 </details>
   
 <details>
@@ -101,12 +119,13 @@ Space (SPC) is my Leader key.
 
 | Key Bindings | Description      |
 |--------------|------------------|
-| Shift k      | Hover definition |
+| Shift k      | Hover doc        |
+| Shift j      | Previewd efinition |
 | Shift r      | Rename           |
 </details>
 
 <details>
-<summary>Other</summary>
+<summary>Custome & Other</summary>
 
 | Key Bindings | Description             |
 |--------------|-------------------------|
@@ -116,10 +135,16 @@ Space (SPC) is my Leader key.
 | SPC l        | Switch right            |
 |              |                         |
 | SPC a        | Select all              |
-| SPC d        | Find specific word      |
+| SPC c        | Clean higlight          |
 | SPC e        | File explorer           |
-| SPC s        | Find and replace all    |
+| SPC s        | Find specific word      |
+| SPC ss       | Find and replace all    |
 | SPC y        | Copy forward word       |
+|              |                         |
+| SPC ww       | Save file               |
+| SPC wa       | Save all file           |
+| SPC wq       | Save and quit           |
+| SPC qq       | quit nvim               |
 |              |                         |
 | Shift f      | Prettier                |
 | Ctrl g       | Apply Codeium Reference |
