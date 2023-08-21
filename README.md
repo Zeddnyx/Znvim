@@ -1,4 +1,5 @@
 ## Znvim
+
 ### Neovim config designed for Frontend Development
 
 <p align="start">
@@ -20,48 +21,52 @@
 </p>
 
 ## Plugin
+
 <details>
 
-| Name                  | Plugin                                                                  |
-|-----------------------|-------------------------------------------------------------------------|
-| Auto Pilot            | [Codeium](https://github.com/Exafunction/codeium.vim)                   |
-| Autocompletion        | [Cmp](https://github.com/hrsh7th/nvim-cmp)                              |
-| Autoclosing Braces    | [Autopairs](https://github.com/windwp/nvim-autopairs)                   |
-| Bars                  | [Bar](https://github.com/romgrk/barbar.nvim)                            |
-| Custome Snippet       | [Vsnip](https://github.com/hrsh7th/cmp-vsnip)                           |
-| Color Preview         | [Colorizer](https://github.com/NvChad/nvim-colorizer)                   |
-| Find Files            | [Telescope](https://github.com/nvim-telescope/telescope.nvim)           |
-| Gitsigns              | [Gitsigns](https://github.com/lewis6991/gitsigns.nvim)                  |
-| Indentlines           | [Indentlines ](https://github.com/lukas-reineke/indent-blankline.nvim)  |
-| Lsp                   | [Lsp](https://github.com/neovim/nvim-lspconfig)                         |
-| Nulls                 | [Null-ls](https://github.com/jose-elias-alvarez/null-ls.nvim)           |
-| Syntax Highlighting   | [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)        |
-| Themes                | [Gruvbox](https://github.com/Zeddnyx/gruvbox.nvim)                      |
-| File Navigation       | [NvimTree](https://github.com/kyazdani42/nvim-tree.lua)                 |
+| Name                | Plugin                                                                 |
+| ------------------- | ---------------------------------------------------------------------- |
+| Auto Pilot          | [Codeium](https://github.com/Exafunction/codeium.vim)                  |
+| Autocompletion      | [Cmp](https://github.com/hrsh7th/nvim-cmp)                             |
+| Autoclosing Braces  | [Autopairs](https://github.com/windwp/nvim-autopairs)                  |
+| Bars                | [Bar](https://github.com/romgrk/barbar.nvim)                           |
+| Custome Snippet     | [Vsnip](https://github.com/hrsh7th/cmp-vsnip)                          |
+| Color Preview       | [Colorizer](https://github.com/NvChad/nvim-colorizer)                  |
+| Find Files          | [Telescope](https://github.com/nvim-telescope/telescope.nvim)          |
+| Gitsigns            | [Gitsigns](https://github.com/lewis6991/gitsigns.nvim)                 |
+| Indentlines         | [Indentlines ](https://github.com/lukas-reineke/indent-blankline.nvim) |
+| Lsp                 | [Lsp](https://github.com/neovim/nvim-lspconfig)                        |
+| Nulls               | [Null-ls](https://github.com/jose-elias-alvarez/null-ls.nvim)          |
+| Syntax Highlighting | [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)       |
+| Themes              | [Gruvbox](https://github.com/Zeddnyx/gruvbox.nvim)                     |
+| File Navigation     | [NvimTree](https://github.com/kyazdani42/nvim-tree.lua)                |
+
 </details>
 
 ## Install
 
 clean up your config first
+
 ```
 rm -rf ~/.local/share/nvim
 rm -rf ~/.cache/nvim
 ```
 
-install prettier, stylua (optional)
+install prettier, stylua
+
 ```
 npm i -g prettier @johnnymorganz/stylua-bin
 
 ```
 
 install
+
 ```
 git clone https://github.com/ZeddNyx/Znvim ~/.config/nvim
 
 ```
 
 run `nvim`
-
 
 ## Keybindings
 
@@ -70,37 +75,47 @@ Space (SPC) is my Leader key.
 <details>
 <summary>Telescope</summary>
 
-| Key Bindings | Description                   |
-|--------------|-------------------------------|
-| SPC ff       | Telescope find files          |
-| SPC fg       | Telescope live grep           |
-| SPC fb       | Telescope buffers             |
-| SPC gg       | Telescope git commit          |
-| SPC gs       | Telescope git status          |
-| SPC lf       | Telescope lsp references      |
-| SPC ll       | Telescope lsp definitions     |
+| Key Bindings | Description               |
+| ------------ | ------------------------- |
+| SPC ff       | Telescope find files      |
+| SPC fg       | Telescope live grep       |
+| SPC fb       | Telescope buffers         |
+| SPC gg       | Telescope git commit      |
+| SPC gs       | Telescope git status      |
+| SPC lf       | Telescope lsp references  |
+| SPC ll       | Telescope lsp definitions |
+
 </details>
 
 <details>
 <summary>Comment</summary>
 
-| Key Bindings | Description          |
-|--------------|----------------------|
-| crr          | Comment jsx          |
-| cr (visual)  | Comment jsx          |
-| ur (visual)  | Uncomment jsx        |
-|              |                      |
-| cjj          | Comment js           |
-| cj (visual)  | Comment js           |
-| uj (visual)  | Uncomment js         |
-|              |                      |
-| css          | Comment css          |
-| cs (visual)  | Comment css          |
-| uc (visual)  | Uncomment css        |
-|              |                      |
-| cll          | Comment lua          |
-| cl (visual)  | Comment lua          |
-| ul (visual)  | Uncomment lua        |
+| Key Bindings | Description |
+| ------------ | ----------- |
+| crr          | jsx         |
+| cr (visual)  | jsx         |
+| ur (visual)  | jsx         |
+|              |             |
+| cjj          | js          |
+| cj (visual)  | js          |
+| uj (visual)  | js          |
+|              |             |
+| css          | css         |
+| cs (visual)  | css         |
+| uc (visual)  | css         |
+|              |             |
+| cll          | lua         |
+| cl (visual)  | lua         |
+| ul (visual)  | lua         |
+|              |             |
+| chh          | html        |
+| ch (visual)  | html        |
+| uh (visual)  | html        |
+|              |             |
+| cgg          | #           |
+| cg (visual)  | #           |
+| ug (visual)  | #           |
+
 </details>
   
 <details>
@@ -117,18 +132,19 @@ Space (SPC) is my Leader key.
 <details>
 <summary>Lsp</summary>
 
-| Key Bindings | Description      |
-|--------------|------------------|
-| Shift k      | Hover doc        |
+| Key Bindings | Description        |
+| ------------ | ------------------ |
+| Shift k      | Hover doc          |
 | Shift j      | Previewd efinition |
-| Shift r      | Rename           |
+| Shift r      | Rename             |
+
 </details>
 
 <details>
 <summary>Custome & Other</summary>
 
 | Key Bindings | Description             |
-|--------------|-------------------------|
+| ------------ | ----------------------- |
 | SPC h        | Switch left             |
 | SPC j        | Switch down             |
 | SPC k        | Switch up               |
@@ -148,8 +164,8 @@ Space (SPC) is my Leader key.
 |              |                         |
 | Shift f      | Prettier                |
 | Ctrl g       | Apply Codeium Reference |
-</details>
 
+</details>
 
 ## Thanks
 

@@ -62,24 +62,32 @@ nmap("<right>", "") -- disable arrow right
 nmap("<down>", "") -- disable arrow down
 nmap("<C-z>", "") -- disable z
 
--- comment line
-nmap("crr", [[:s/<\(.*\)/{\/*\<\1 *\/}<CR>:noh<CR>]]) -- add {*/ *\}
-vmap("cr", [[:s/\(.*\)/{\/* \1 *\/}<CR>:noh<CR>]]) -- add {*/ *\}
-vmap("ur", [[:s/{\/\*\(.\{-}\)\*\/}/\1/g <CR>]]) -- remove {/* *\}
+-- comment
+nmap("crr", [[:s/<\(.*\)/{\/*\<\1 *\/}<CR>:noh<CR>]]) 
+vmap("cr", [[:s/\(.*\)/{\/* \1 *\/}<CR>:noh<CR>]])
+vmap("ur", [[:s/{\/\*\(.\{-}\)\*\/}/\1/g <CR>]])
 
-nmap("cjj", [[:s/^/\/\/<CR>:noh<CR>:noh<CR>]]) -- add //
-vmap("cj", [[:s/\(.*\)/\/\/ \1<CR>:noh<CR>]]) -- add //
-vmap("uj", [[:s/\/\/\(.*\)/\1 <CR>:noh<CR>]]) -- remove //
+nmap("cjj", [[:s/^/\/\/ <CR>:noh<CR>]])
+vmap("cj", [[:s/\(.*\)/\/\/ \1<CR>:noh<CR>]])
+vmap("uj", [[:s/\/\/\(.*\)/\1 <CR>:noh<CR>]]) 
 
-nmap("css", [[:s/\(.*\)/\/* \1 *\/<CR>:noh<CR>]]) -- add /* *\
-vmap("cs", [[:s/\(.*\)/\/* \1 *\/<CR>:noh<CR>]]) -- add /* *\
-vmap("us", [[:s/\/\*\(.\{-}\)\*\//\1/g<CR>:noh<CR>]]) -- remove /* *\
+nmap("css", [[:s/\(.*\)/\/* \1 *\/<CR>:noh<CR>]]) 
+vmap("cs", [[:s/\(.*\)/\/* \1 *\/<CR>:noh<CR>]])
+vmap("us", [[:s/\/\*\(.\{-}\)\*\//\1/g<CR>:noh<CR>]]) 
 
-nmap("cll", [[:s/^/-- <CR>:noh<CR>]]) -- add --
-vmap("cl", [[:s/\(.*\)/-- \1 <CR>:noh<CR>]]) -- add --
-vmap("ul", [[:s/--\(.*\)/\1 <CR>:noh<CR>]]) -- remove --
+nmap("cll", [[:s/^/-- <CR>:noh<CR>]])
+vmap("cl", [[:s/\(.*\)/-- \1 <CR>:noh<CR>]])
+vmap("ul", [[:s/--\(.*\)/\1 <CR>:noh<CR>]])
 
--- vim regex find and replace
+nmap("chh", [[:s/<\(.*\)/<!-- <\1 --><CR>:noh<CR>]]) 
+vmap("ch", [[:s/\(.*\)/<!-- \1 --><CR>:noh<CR>]])
+vmap("uh", [[:s/<!--\(.\{-}\)\-->/\1/g <CR>:noh<CR>]])
+
+nmap("cgg", [[:s/^/# <CR>:noh<CR>]])
+vmap("cg", [[:s/\(.*\)/# \1 <CR>:noh<CR>]])
+vmap("ug", [[:s/#\(.\{-}\)\1 <CR>]])
+
+-- vim regex
 -- (.*) -- find all word
 -- ^ -- start of line
 -- $ -- end of line
