@@ -53,6 +53,7 @@ local plugins = {
 						typescript = { "javascript/typescript"},
 						css = { "tailwindcss" },
 						html = { "angular/html" },
+            http = { "http" },
 					}
 				end,
 			},
