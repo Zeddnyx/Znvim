@@ -1,63 +1,63 @@
 {
   "require": {
     "prefix": "req",
-    "body": "require('${1:module}')"
+    "body": "require(\"${1:module}\")"
   },
-  "const module = require('module')": {
+  "const module = require(\"module\")": {
     "prefix": "req module",
-    "body": "const ${1:module} = require('${1:module}')"
+    "body": "const ${1:module} = require(\"${1:module}\")"
   },
   "dom event default": {
     "prefix": "event",
     "body": "e.preventDefault()"
   },
   "addEventListener": {
-    "prefix": "document-addListener",
-    "body": "document.addEventListener('${1:event}', ${2:ev} => {\n\t${0}\n})"
+    "prefix": "doc-addListener",
+    "body": "document.addEventListener(\"${1:event}\", ${2:ev} => {\n\t${0}\n})"
   },
   "removeEventListener": {
-    "prefix": "document-removeListener",
-    "body": "document.removeEventListener('${1:event}', ${22:listener})"
+    "prefix": "doc-removeListener",
+    "body": "document.removeEventListener(\"${1:event}\", ${22:listener})"
   },
   "getElementById": {
-    "prefix": "document-getClass",
-    "body": "document.getElementById('${1:id}')"
+    "prefix": "doc-getClass",
+    "body": "document.getElementById(\"${1:id}\")"
   },
   "querySelector": {
-    "prefix": "document-querySelector",
-    "body": "document.querySelector('${1:selector}')"
+    "prefix": "doc-querySelector",
+    "body": "document.querySelector(\"${1:selector}\")"
   },
   "querySelectorAll": {
-    "prefix": "array from",
-    "body": "Array.from(${1:document}.querySelectorAll('${2:selector}'))"
+    "prefix": "array-from",
+    "body": "Array.from(${1:document}.querySelectorAll(\"${2:selector}\"))"
   },
   "createElement": {
-    "prefix": "create element",
+    "prefix": "create-element",
     "body": "${1:document}.createElement(${2:elem})"
   },
   "classList.add": {
     "prefix": "class-add",
-    "body": "${1:el}.classList.add('${2:class}')"
+    "body": "${1:el}.classList.add(\"${2:class}\")"
   },
   "classList.remove": {
     "prefix": "class-remove",
-    "body": "${1:el}.classList.remove('${2:class}')"
+    "body": "${1:el}.classList.remove(\"${2:class}\")"
   },
   "classList.toggle": {
     "prefix": "class-toggle",
-    "body": "${1:el}.classList.toggle('${2:class}')"
+    "body": "${1:el}.classList.toggle(\"${2:class}\")"
   },
   "getAttribute": {
     "prefix": "attribute-get",
-    "body": "${1:el}.getAttribute('${2:attr}')"
+    "body": "${1:el}.getAttribute(\"${2:attr}\")"
   },
   "removeAttribute": {
     "prefix": "attribute-tremove",
-    "body": "${1:el}.removeAttribute('${2:attr}')"
+    "body": "${1:el}.removeAttribute(\"${2:attr}\")"
   },
   "setAttribute": {
     "prefix": "attribute-set",
-    "body": "${1:el}.setAttribute('${2:attr}', ${3:value})"
+    "body": "${1:el}.setAttribute(\"${2:attr}\", ${3:value})"
   },
   "appendChild": {
     "prefix": "child-append",
@@ -95,10 +95,6 @@
     "prefix": "some",
     "body": "${1:iterable}.some((${2:item}) => {\n\t${0}\n})"
   },
-  "var assignment": {
-    "prefix": "va",
-    "body": "var ${1:name} = ${2:value}"
-  },
   "let statement": {
     "prefix": "let",
     "body": "let ${1:name} = ${2:value}"
@@ -108,7 +104,7 @@
     "body": "const ${1:name} = ${2:value}"
   },
   "const statement from array destructuring": {
-    "prefix": "destructuring array",
+    "prefix": "const-destructuring-array",
     "body": "const [ ${2:prop} ] = ${1:value}"
   },
   "const assignment awaited": {
@@ -116,28 +112,38 @@
     "body": "const ${1:name} = await ${2:value}"
   },
   "const arrow function assignment": {
-    "prefix": "arrow func",
+    "prefix": "const-arrow-func",
     "body": "const ${1:name} = (${2:arguments}) => {\n\treturn ${0}\n}"
   },
   "const object": {
-    "prefix": "const object",
+    "prefix": "const-object",
     "body": "const ${1:name} = {\n\t${0}\n}"
   },
   "const array": {
-    "prefix": "const array",
+    "prefix": "const-array",
     "body": "const ${1:name} = [\n\t${0}\n]"
   },
   "module export": {
-    "prefix": "export",
-    "body": "export ${1:member}"
+    "prefix": "export-const",
+    "body": "export const ${1:var}"
   },
   "module default export": {
-    "prefix": "export default",
+    "prefix": "export-default",
     "body": "export default ${1:member}"
   },
+  "Import": {
+    "prefix": "import",
+    "body": ["import $1 from \"${2}\";"],
+    "description": "Import module"
+  },
+  "Import statment.": {
+    "prefix": "import-statement",
+    "body": ["import { $1 } from \"${2}\";"],
+    "description": "Import statment."
+  },
   "import module destructured": {
-    "prefix": "import destructured",
-    "body": "import {$2} from '${1:module}'"
+    "prefix": "import-destructured",
+    "body": "import {$2} from \"${1:module}\""
   },
   "this": {
     "prefix": "t",
@@ -189,18 +195,18 @@
   },
   "console.log a variable": {
     "prefix": "clo-var",
-    "body": "console.log('${0}:', ${0})"
+    "body": "console.log(\"${0}:\", ${0})"
   },
   "console.error": {
     "prefix": "clo-err",
     "body": "console.error(${0})"
   },
   "JSON.stringify()": {
-    "prefix": "json stringify",
+    "prefix": "json-stringify",
     "body": "JSON.stringify($0)"
   },
   "JSON.parse()": {
-    "prefix": "json parse",
+    "prefix": "json-parse",
     "body": "JSON.parse($0)"
   },
   "ternary": {
@@ -212,19 +218,19 @@
     "body": "return ${0}"
   },
   "return null": {
-    "prefix": "return null",
+    "prefix": "return-null",
     "body": "return null"
   },
   "return new object": {
-    "prefix": "return new obj",
+    "prefix": "return-new-obj",
     "body": "return {\n\t${0}\n}"
   },
   "return new array": {
-    "prefix": "return new array",
+    "prefix": "return-new-array",
     "body": "return [\n\t${0}\n]"
   },
   "return promise": {
-    "prefix": "return promise",
+    "prefix": "return-promise",
     "body": "return new Promise((resolve, reject) => {\n\t${0}\n})"
   },
   "For Loop": {
@@ -245,7 +251,7 @@
   "For-In Loop": {
     "prefix": "forin",
     "body": [
-      "for (const ${1:key} in ${2:object}) {",
+      "for (let ${1:key} in ${2:object}) {",
       "\tif (${2:object}.hasOwnProperty(${1:key})) {",
       "\t\tconst ${3:element} = ${2:object}[${1:key}];",
       "\t\t$0",
@@ -253,6 +259,32 @@
       "}"
     ],
     "description": "For-In Loop"
+  },
+  "For Loop reverse number pattern": {
+    "prefix": "for-reverse-number-pattern",
+    "body": [
+      "for (let i = 5; i >= 0; i--) {",
+      "\tlet row = \"\"",
+      "\tfor (let j = 0; j < i; j++) {",
+      "\t\trow += i + \" \"",
+      "\t}",
+      "\tconsole.log(row)",
+      "}"
+    ],
+    "description": "For Loop reverse number parttern"
+  },
+  "For Loop number pattern": {
+    "prefix": "for-number-pattern",
+    "body": [
+      "for (let i = 0; i <= 5; i++) {",
+      "\tlet row = \"\"",
+      "\tfor (let j = 0; j < i; j++) {",
+      "\t\trow += i + \" \"",
+      "\t}",
+      "\tconsole.log(row)",
+      "}"
+    ],
+    "description": "For Loop number pattern"
   },
   "For-Of Loop": {
     "prefix": "forof",

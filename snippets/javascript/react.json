@@ -131,16 +131,6 @@
       "const handleMenu = (prev) => setMenu(!prev)"
     ]
   },
-  "Import": {
-    "prefix": "import",
-    "body": ["import $1 from \"${2}\";"],
-    "description": "Import "
-  },
-  "Import external module.": {
-    "prefix": "import statement",
-    "body": ["import { $1 } from \"${2}\";"],
-    "description": "Import external module."
-  },
   "import env": {
     "prefix": "env vite",
     "body": "import.meta.env.$1"

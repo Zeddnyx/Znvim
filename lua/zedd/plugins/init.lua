@@ -36,25 +36,8 @@ local plugins = {
 			{
 				"hrsh7th/cmp-vsnip",
 				dependencies = "hrsh7th/vim-vsnip",
-				init = function()
-					vim.g.vsnip_snippet_dir = vim.fn.stdpath("config") .. "/snippets"
-					vim.g.vsnip_filetypes = {
-						javascriptreact = {
-							"javascript/react",
-							"javascript/javascript",
-							"html",
-						},
-						typescriptreact = {
-							"javascript/react",
-							"javascript/typescript",
-							"html",
-						},
-						javascript = { "javascript/javascript"},
-						typescript = { "javascript/typescript"},
-						css = { "tailwindcss" },
-						html = { "angular/html" },
-            http = { "http" },
-					}
+				config = function()
+					require("zedd.ui.snippet")
 				end,
 			},
 			{
@@ -116,12 +99,6 @@ local plugins = {
 			vim.keymap.set("i", "<c-g>", function()
 				return vim.fn["codeium#Accept"]()
 			end, { expr = true })
-			vim.keymap.set("i", "<c-;>", function()
-				return vim.fn["codeium#CycleCompletions"](1)
-			end, { expr = true })
-			vim.keymap.set("i", "<c-,>", function()
-				return vim.fn["codeium#CycleCompletions"](-1)
-			end, { expr = true })
 			vim.keymap.set("i", "<c-x>", function()
 				return vim.fn["codeium#Clear"]()
 			end, { expr = true })
@@ -130,8 +107,8 @@ local plugins = {
 
 	-- Themes
 	{
-		--"Zeddnyx/gruvbox.nvim",
-		dir = "~/zedd/gruvbox.nvim",
+		"Zeddnyx/gruvbox.nvim", 
+-- 		dir = "~/zedd/gruvbox.nvim",
 		lazy = false,
 		priority = 100,
 		config = function()
@@ -161,13 +138,13 @@ local plugins = {
 		end,
 	},
 
-  -- rest api 
+	-- rest api
 	{
 		"rest-nvim/rest.nvim",
 		dependencies = { "nvim-lua/plenary.nvim" },
 		config = function()
 			require("zedd.ui.rest")
-    end,
+		end,
 	},
 
 	-- filemanager
