@@ -107,8 +107,8 @@ local plugins = {
 
 	-- Themes
 	{
-		"Zeddnyx/gruvbox.nvim", 
--- 		dir = "~/zedd/gruvbox.nvim",
+		--"Zeddnyx/gruvbox.nvim",
+		dir = "~/zedd/gruvbox.nvim",
 		lazy = false,
 		priority = 100,
 		config = function()
@@ -177,11 +177,9 @@ local plugins = {
 			{ "<leader>ff", "<cmd>Telescope find_files<cr>" },
 			{ "<leader>fg", "<cmd>Telescope live_grep<cr>" },
 			{ "<leader>fb", "<cmd>Telescope buffers<cr>" },
-			{ "<leader>gg", "<cmd>Telescope git_commits<cr>" },
+			{ "<leader>gg", "<cmd>Telescope git_status<cr>" },
 			{ "<leader>lf", "<cmd>Telescope lsp_references<cr>" },
 			{ "<leader>ll", "<cmd>Telescope lsp_definitions<cr>" },
-			-- { "<leader>li", "<cmd>Telescope lsp_implementations<cr>" },
-			-- { "<leader>gs", "<cmd>Telescope git_status<cr>" },
 		},
 		lazy = true,
 		dependencies = { "nvim-lua/plenary.nvim" },

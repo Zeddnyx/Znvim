@@ -94,7 +94,7 @@
       "export const store = create(",
       "\tpersist<TStore>(",
       "\t\t(set) => ({",
-      "\t\t\tcount: 0,\n\t\t\tsetCount: () => void,",
+      "\t\t\tcount: 0,\n\t\t\tsetCount: () => set((state) => ({ count: state.count + 1 })),",
       "\t\t}),",
       "\t\t{ name: 'storage' }",
       "\t)",
