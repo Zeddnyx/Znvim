@@ -106,15 +106,15 @@ local plugins = {
 	},
 
 	-- Themes
-	{
-		--"Zeddnyx/gruvbox.nvim",
-		dir = "~/zedd/gruvbox.nvim",
-		lazy = false,
-		priority = 100,
-		config = function()
-			vim.cmd("colorscheme gruvbox")
-		end,
-	},
+ 	{ 
+		"Zeddnyx/gruvbox.nvim", 
+--  dir = "~/zedd/gruvbox.nvim",  
+ 		lazy = false,  
+ 		priority = 100,  
+ 		config = function()  
+ 			vim.cmd("colorscheme gruvbox")  
+ 		end,  
+ 	},
 
 	-- Editor
 	{
@@ -148,14 +148,14 @@ local plugins = {
 	},
 
 	-- filemanager
-	{
-		"nvim-tree/nvim-tree.lua",
-		version = "*",
-		keys = { { "<leader>e", "<cmd>NvimTreeFocus<cr>" } },
-		config = function()
-			require("zedd.ui.filemanager")
-		end,
-	},
+ 	{  
+ 		"nvim-tree/nvim-tree.lua",  
+ 		version = "*",  
+  		keys = { { "<leader>e", "<cmd>NvimTreeFocus<cr>" } },   
+ 		config = function()  
+ 			require("zedd.ui.filemanager")  
+ 		end,  
+ 	},  
 
 	-- git signs
 	{

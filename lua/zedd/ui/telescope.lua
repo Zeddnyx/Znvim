@@ -54,6 +54,7 @@ config.defaults = {
     "%.webm$",
     "%.webp$",
     "%.zip$",
+    "%package-lock.json$",
     "^.dart_tool/",
     "^.git/",
     "^.github/",

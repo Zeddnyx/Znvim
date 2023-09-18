@@ -19,9 +19,6 @@ function vmap(shortcut, command)
 	map("v", shortcut, command)
 end
 
--- buffer
--- nmap("<S-h>", "<CMD>bprevious<CR>", { desc = "Buffer: previous buffer" })
--- nmap("<S-l>", "<CMD>bnext<CR>", { desc = "Buffer: next buffer" })
 
 --barbar
 nmap("<S-h>", "<CMD>BufferPrevious<CR>", { desc = "Buffer: previous buffer" })
@@ -40,8 +37,8 @@ nmap("<leader>j", "<C-w>j<CR>")
 nmap("<leader>k", "<C-w>k<CR>")
 nmap("<leader>l", "<C-w>l<CR>")
 
--- nvimtree
-nmap("<leader>e", "<CMD>NvimTreeOpen<CR>")
+-- file manager built in
+-- nmap("<leader>e", "<CMD>Lex<CR><CR><CMD>vertical resize 30<CR>")
 
 -- custome keybind
 nmap("<leader>ww", "<CMD>w<CR>")

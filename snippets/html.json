@@ -630,6 +630,12 @@
     "description": "HTML - Defines a text area",
     "scope": "text.html"
   },
+  "textarea JSX": {
+    "prefix": "textarea",
+    "body": "<textarea rows={$1} cols={$2}>$3</textarea>",
+    "description": "HTML - Defines a text area",
+    "scope": "text.html"
+  },
   "tfoot": {
     "prefix": "tfoot",
     "body": ["<tfoot>", "\t$1", "</tfoot>"],
