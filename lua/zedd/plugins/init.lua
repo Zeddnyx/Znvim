@@ -60,6 +60,7 @@ local plugins = {
 		event = "BufRead",
 		config = function()
 			require("zedd.lsp.lspconfig")
+      vim.api.nvim_exec_autocmds("BufRead", {})
 		end,
 	},
 
@@ -91,7 +92,7 @@ local plugins = {
 		lazy = true,
 	},
 
-	-- codeium (github copilot)
+	-- codeium 
 	{
 		"Exafunction/codeium.vim",
 		event = "VeryLazy",
@@ -107,8 +108,7 @@ local plugins = {
 
 	-- Themes
  	{ 
-		"Zeddnyx/gruvbox.nvim", 
---  dir = "~/zedd/gruvbox.nvim",  
+ 		"Zeddnyx/gruvbox.nvim",  
  		lazy = false,  
  		priority = 100,  
  		config = function()  
@@ -121,31 +121,11 @@ local plugins = {
 		"nvim-treesitter/nvim-treesitter",
 		lazy = true,
 		event = "BufRead",
-		dependencies = {
-			"nvim-treesitter/playground",
-		},
 		config = function()
 			require("zedd.ui.treesitter")
 		end,
 	},
 
-	-- bar
-	{
-		"romgrk/barbar.nvim",
-		event = "BufRead",
-		config = function()
-			require("barbar").setup()
-		end,
-	},
-
-	-- rest api
-	{
-		"rest-nvim/rest.nvim",
-		dependencies = { "nvim-lua/plenary.nvim" },
-		config = function()
-			require("zedd.ui.rest")
-		end,
-	},
 
 	-- filemanager
  	{  
@@ -175,11 +155,11 @@ local plugins = {
 		tag = "0.1.1",
 		keys = {
 			{ "<leader>ff", "<cmd>Telescope find_files<cr>" },
-			{ "<leader>fg", "<cmd>Telescope live_grep<cr>" },
-			{ "<leader>fb", "<cmd>Telescope buffers<cr>" },
-			{ "<leader>gg", "<cmd>Telescope git_status<cr>" },
-			{ "<leader>lf", "<cmd>Telescope lsp_references<cr>" },
-			{ "<leader>ll", "<cmd>Telescope lsp_definitions<cr>" },
+			{ "<leader>lg", "<cmd>Telescope live_grep<cr>" },
+			{ "<leader>bb", "<cmd>Telescope buffers<cr>" },
+			{ "<leader>gs", "<cmd>Telescope git_status<cr>" },
+			{ "<leader>lr", "<cmd>Telescope lsp_references<cr>" },
+			{ "<leader>ld", "<cmd>Telescope lsp_definitions<cr>" },
 		},
 		lazy = true,
 		dependencies = { "nvim-lua/plenary.nvim" },
@@ -189,13 +169,14 @@ local plugins = {
 	},
 
 	-- blank line
-	{
-		"lukas-reineke/indent-blankline.nvim",
-		event = "BufRead",
-		config = function()
-			require("zedd.ui.indentline")
-		end,
-	},
+ 	{  
+ 		"lukas-reineke/indent-blankline.nvim",  
+ 		event = "BufRead",  
+    main = "ibl", opts = {},  
+ 		config = function()  
+ 			require("zedd.ui.indentline")
+ 		end,  
+ 	},  
 
 	-- color preview
 	{

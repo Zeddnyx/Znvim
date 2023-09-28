@@ -136,11 +136,6 @@
     "body": ["import $1 from \"${2}\";"],
     "description": "Import module"
   },
-  "Import statment.": {
-    "prefix": "import-statement",
-    "body": ["import { $1 } from \"${2}\";"],
-    "description": "Import statment."
-  },
   "import module destructured": {
     "prefix": "import-destructured",
     "body": "import {$2} from \"${1:module}\""

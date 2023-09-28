@@ -7,7 +7,6 @@ local options = {
 	hijack_netrw = true,
 	hijack_cursor = true,
 	hijack_unnamed_buffer_when_opening = false,
-	rync_root_with_cwd = true,
 	log = {
 		enable = true,
 		truncate = true,

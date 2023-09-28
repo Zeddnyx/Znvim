@@ -29,7 +29,6 @@
 | Auto Pilot          | [Codeium](https://github.com/Exafunction/codeium.vim)                  |
 | Autocompletion      | [Cmp](https://github.com/hrsh7th/nvim-cmp)                             |
 | Autoclosing Braces  | [Autopairs](https://github.com/windwp/nvim-autopairs)                  |
-| Bars                | [Bar](https://github.com/romgrk/barbar.nvim)                           |
 | Custome Snippet     | [Vsnip](https://github.com/hrsh7th/cmp-vsnip)                          |
 | Color Preview       | [Colorizer](https://github.com/NvChad/nvim-colorizer)                  |
 | Find Files          | [Telescope](https://github.com/nvim-telescope/telescope.nvim)          |
@@ -78,12 +77,11 @@ Space (SPC) is my Leader key.
 | Key Bindings | Description               |
 | ------------ | ------------------------- |
 | SPC ff       | Telescope find files      |
-| SPC fg       | Telescope live grep       |
-| SPC fb       | Telescope buffers         |
-| SPC gg       | Telescope git commit      |
+| SPC lg       | Telescope live grep       |
+| SPC bb       | Telescope buffers         |
 | SPC gs       | Telescope git status      |
-| SPC lf       | Telescope lsp references  |
-| SPC ll       | Telescope lsp definitions |
+| SPC lr       | Telescope lsp references  |
+| SPC ld       | Telescope lsp definitions |
 
 </details>
 

@@ -282,6 +282,10 @@
     "prefix": "fz",
     "body": "font-size: ${0:12px};"
   },
+  "font-size clamp": {
+    "prefix": "fzc",
+    "body": "font-size: clamp(${0:1rem},${0:2rem},${0:2.5rem});"
+  },
   "font-style": {
     "prefix": "fst",
     "body": "font-style: ${1|italic,oblique,normal|};"
@@ -347,6 +351,11 @@
   "justify-content: space-between": {
     "prefix": "jcsb",
     "body": "justify-content: space-between;"
+  },
+  "clamp": {
+    "prefix": "clamp",
+    "body": "clamp(${0:1rem},${0:3vw},${0:2.5rem});",
+    "description": "clamp value"
   },
   "list-style": {
     "prefix": "lis",

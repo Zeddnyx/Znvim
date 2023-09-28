@@ -20,11 +20,11 @@ function vmap(shortcut, command)
 end
 
 
---barbar
-nmap("<S-h>", "<CMD>BufferPrevious<CR>", { desc = "Buffer: previous buffer" })
-nmap("<S-l>", "<CMD>BufferNext<CR>", { desc = "Buffer: next buffer" })
+--buffer
+nmap("<S-h>", "<CMD>bprevious<CR>", { desc = "Buffer: focus to previous buffer" })
+nmap("<S-l>", "<CMD>bnext<CR>", { desc = "Buffer: focus to next buffer" })
 nmap("<S-c>", "<CMD>bd<CR>", { desc = "Buffer: delete buffer" })
-nmap("<S-q>", "<CMD>%bd|e#<CR>", { desc = "Buffer: delete all buffer except this one" })
+nmap("<S-q>", "<CMD>%bd|e#<CR>", { desc = "Buffer: delete all buffer except current buffer" })
 
 -- lsp saga
 nmap("<S-k>", "<CMD>Lspsaga hover_doc<CR>")
@@ -36,6 +36,13 @@ nmap("<leader>h", "<C-w>h<CR>")
 nmap("<leader>j", "<C-w>j<CR>")
 nmap("<leader>k", "<C-w>k<CR>")
 nmap("<leader>l", "<C-w>l<CR>")
+
+-- resize window
+nmap("<C-Left>", "<CMD>vertical resize +5<CR>")
+nmap("<C-Up>", "<CMD>resize -5<CR>")
+nmap("<C-Right>", "<CMD>vertical resize -5<CR>")
+nmap("<C-Down>", "<CMD>resize +5<CR>")
+
 
 -- file manager built in
 -- nmap("<leader>e", "<CMD>Lex<CR><CR><CMD>vertical resize 30<CR>")
@@ -88,7 +95,7 @@ vmap("ug", [[:s/#\(.\{-}\)\1 <CR>]])
 -- (.*) -- find all word
 -- ^ -- start of line
 -- $ -- end of line
--- %s -- subtitute find and replace
+-- %s -- subtitute (find and replace)
 -- \v -- very magic
 -- (abc|cba) -- match either abc or cba
 -- :%s/\v(abc|cba)//g  -- find and remove abc and cba
