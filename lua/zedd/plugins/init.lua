@@ -60,7 +60,7 @@ local plugins = {
 		event = "BufRead",
 		config = function()
 			require("zedd.lsp.lspconfig")
-      vim.api.nvim_exec_autocmds("BufRead", {})
+			vim.api.nvim_exec_autocmds("BufRead", {})
 		end,
 	},
 
@@ -92,7 +92,7 @@ local plugins = {
 		lazy = true,
 	},
 
-	-- codeium 
+	-- codeium
 	{
 		"Exafunction/codeium.vim",
 		event = "VeryLazy",
@@ -107,14 +107,14 @@ local plugins = {
 	},
 
 	-- Themes
- 	{ 
- 		"Zeddnyx/gruvbox.nvim",  
- 		lazy = false,  
- 		priority = 100,  
- 		config = function()  
- 			vim.cmd("colorscheme gruvbox")  
- 		end,  
- 	},
+	{
+		--  		"Zeddnyx/gruvbox.nvim",
+		dir = "~/zedd/gruvbox.nvim",
+		priority = 100,
+		config = function()
+			vim.cmd("colorscheme gruvbox")
+		end,
+	},
 
 	-- Editor
 	{
@@ -126,16 +126,15 @@ local plugins = {
 		end,
 	},
 
-
 	-- filemanager
- 	{  
- 		"nvim-tree/nvim-tree.lua",  
- 		version = "*",  
-  		keys = { { "<leader>e", "<cmd>NvimTreeFocus<cr>" } },   
- 		config = function()  
- 			require("zedd.ui.filemanager")  
- 		end,  
- 	},  
+	{
+		"nvim-tree/nvim-tree.lua",
+		version = "*",
+		keys = { { "<leader>e", "<cmd>NvimTreeFocus<cr>" } },
+		config = function()
+			require("zedd.ui.filemanager")
+		end,
+	},
 
 	-- git signs
 	{
@@ -169,14 +168,15 @@ local plugins = {
 	},
 
 	-- blank line
- 	{  
- 		"lukas-reineke/indent-blankline.nvim",  
- 		event = "BufRead",  
-    main = "ibl", opts = {},  
- 		config = function()  
- 			require("zedd.ui.indentline")
- 		end,  
- 	},  
+	{
+		"lukas-reineke/indent-blankline.nvim",
+		event = "BufRead",
+		main = "ibl",
+		opts = {},
+		config = function()
+			require("zedd.ui.indentline")
+		end,
+	},
 
 	-- color preview
 	{

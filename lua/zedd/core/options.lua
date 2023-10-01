@@ -1,21 +1,38 @@
 vim.scriptencoding = "utf-8"
 vim.opt.encoding = "utf-8"
 vim.opt.fileencoding = "utf-8"
+vim.opt.backup = true
+vim.opt.backupdir = vim.fn.stdpath("data") .. "/backup"
 
-vim.opt.wrap = false -- wrap line code
-vim.opt.number = true -- show a list number
+vim.opt.wrap = false
+vim.opt.number = true
 vim.opt.showmode = false -- show insert, visual or normal mode
 vim.opt.hlsearch = true -- highlight when match search words
 vim.opt.showcmd = true
 vim.opt.cmdheight = 0 -- height of laststatus at the bottom
 vim.opt.laststatus = 0 -- show where are you in at the bottom
-vim.opt.clipboard = "unnamedplus" -- allow u to copy from nvim to ur clipboard
+vim.opt.clipboard = "unnamedplus" -- copy from nvim to  clipboard
 vim.opt.scrolloff = 3
-vim.opt.mouse = ""
+vim.opt.mouse = "a"
 vim.opt.shell = "fish"
 vim.opt.swapfile = false
 vim.opt.list = true
-vim.opt.fillchars:append({ eob = " " }) -- hide ~ character
+vim.opt.fillchars:append({
+	horiz = "━",
+	horizup = "┻",
+	horizdown = "┳",
+	vert = "┃",
+	vertleft = "┫",
+	vertright = "┣",
+	verthoriz = "╋",
+	eob = " ",
+})
+vim.opt.listchars = {
+	tab = "  ",
+	space = " ",
+}
+vim.opt.undofile = true
+vim.opt.undodir = vim.fn.stdpath("data") .. "/undo"
 
 vim.opt.expandtab = true
 vim.opt.smarttab = true

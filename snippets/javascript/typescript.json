@@ -84,7 +84,7 @@
     "description": "Folding Region End"
   },
   "zustant create": {
-    "prefix": "zustand create types",
+    "prefix": "zustand-create-types",
     "body": [
       "import { create } from 'zustand';",
       "import { persist } from 'zustand/middleware';",
@@ -102,7 +102,7 @@
     ]
   },
   "zustand store": {
-    "prefix": "zustand store",
+    "prefix": "zustand-store",
     "body": [
       "import { store } from '$1'",
       "import { shallow } from 'zustand/shallow'",
@@ -110,16 +110,16 @@
       "const [${2:val1}, ${3:val2}] = store((state) => {\n\t\treturn [state.${2}, state.${3}];\n}, shallow);"
     ]
   },
+  "type": {
+    "prefix": "types-type",
+    "body": "type T${1} = {\n\t${2:val}: ${3:type}\n}"
+  },
   "interface": {
-    "prefix": "interface",
-    "body": "interface ${1} {\n\t${2:val}: ${3:type}\n}"
+    "prefix": "types-interface",
+    "body": "interface I${1} {\n\t${2:val}: ${3:type}\n}"
   },
   "interface extends": {
-    "prefix": "interface extends",
-    "body": "interface $1 extends $2 {\n\t$3: $4\n}"
-  },
-  "children": {
-    "prefix": "children",
-    "body": "type Children = {\n\tchildren: React.ReactNode\n}\n"
+    "prefix": "types-interface-extends",
+    "body": "interface I$1 extends I$2 {\n\t$3: $4\n}"
   }
 }

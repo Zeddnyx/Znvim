@@ -49,9 +49,8 @@ nmap("<C-Down>", "<CMD>resize +5<CR>")
 
 -- custome keybind
 nmap("<leader>ww", "<CMD>w<CR>")
-nmap("<leader>wa", "<CMD>wa<CR>")
+nmap("<leader>waD", "<CMD>wa<CR>")
 nmap("<leader>wq", "<CMD>wq<CR>")
-nmap("<leader>qq", "<CMD>q!<CR>")
 nmap("r", "<C-r>")
 nmap("<leader>a", "gg<S-v>G")
 nmap("<leader>y", "yiw")
@@ -60,11 +59,11 @@ nmap("<leader>s", [[/\<\\><Left><Left>]])
 nmap("<leader>ss", [[:%s/]])
 
 -- disable default keybind
-nmap("<up>", "") -- disable arrow up
-nmap("<left>", "") -- disable arrow left
-nmap("<right>", "") -- disable arrow right
-nmap("<down>", "") -- disable arrow down
-nmap("<C-z>", "") -- disable z
+nmap("<up>", "<Nop>") -- disable arrow up
+nmap("<left>", "<Nop>") -- disable arrow left
+nmap("<right>", "<Nop>") -- disable arrow right
+nmap("<down>", "<Nop>") -- disable arrow down
+nmap("<C-z>", "<Nop>") -- disable z
 
 -- comment
 nmap("crr", [[:s/<\(.*\)/{\/*\<\1 *\/}<CR>:noh<CR>]]) 

@@ -103,7 +103,7 @@
   },
   "button": {
     "prefix": "button",
-    "body": "<button >Button</button>$3",
+    "body": "<button>Button</button>$3",
     "description": "HTML - Defines a push button",
     "scope": "text.html"
   },

@@ -4,7 +4,7 @@
     "body": "require(\"${1:module}\")"
   },
   "const module = require(\"module\")": {
-    "prefix": "req module",
+    "prefix": "req-module",
     "body": "const ${1:module} = require(\"${1:module}\")"
   },
   "dom event default": {
@@ -68,7 +68,7 @@
     "body": "${1:el}.removeChild(${2:elem})"
   },
   "forEach loop": {
-    "prefix": "foreEach",
+    "prefix": "forEach-iterable",
     "body": "${1:iterable}.forEach((${2:item}) => {\n\t${0}\n})"
   },
   "map": {
@@ -239,7 +239,7 @@
     "description": "For Loop"
   },
   "For-Each Loop": {
-    "prefix": "foreach",
+    "prefix": "foreach-array",
     "body": ["${1:array}.forEach(${2:element} => {", "\t$0", "});"],
     "description": "For-Each Loop"
   },

@@ -26,24 +26,24 @@ local icons = {
 	Function = "󰊕",
 	Constructor = "",
 	Field = "󰜢",
-	Variable = "󰀫",
+	Variable = "󰡱",
 	Class = "󰠱",
 	Interface = "",
 	Module = "",
 	Property = "󰜢",
 	Unit = "󰑭",
-	Value = "󰎠",
+	Value = "󱁨",
 	Enum = "",
-	Keyword = "󰌋",
+	Keyword = "",
 	Color = "󰏘",
 	File = "󰈙",
-	Reference = "󰈇",
+	Reference = "",
 	Folder = "󰉋",
-	EnumMember = "",
-	Constant = "󰏿",
-	Struct = "󰙅",
+	EnumMember = "",
+	Constant = "",
+	Struct = "",
 	Event = "",
-	Operator = "󰆕",
+	Operator = "",
 	TypeParameter = "",
 }
 
@@ -65,7 +65,7 @@ cmp.setup({
 	-- icons snippet
 	formatting = {
 		format = function(_, vim_item)
-			vim_item.kind = icons[vim_item.kind] or ""
+			vim_item.kind = icons[vim_item.kind] or " "
 			return vim_item
 		end,
 	},
