@@ -49,7 +49,7 @@ nmap("<C-Down>", "<CMD>resize +5<CR>")
 
 -- custome keybind
 nmap("<leader>ww", "<CMD>w<CR>")
-nmap("<leader>waD", "<CMD>wa<CR>")
+nmap("<leader>wa", "<CMD>wa<CR>")
 nmap("<leader>wq", "<CMD>wq<CR>")
 nmap("r", "<C-r>")
 nmap("<leader>a", "gg<S-v>G")
