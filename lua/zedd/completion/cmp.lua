@@ -20,7 +20,7 @@ local window = cmp.config.window.bordered({
 
 -- icons in snippet
 local icons = {
-	Snippet = "",
+	Snippet = "",
 	Text = "󰉿",
 	Method = "󰆧",
 	Function = "󰊕",

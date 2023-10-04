@@ -1,6 +1,7 @@
 ## Znvim
 
 ### Neovim config designed for Frontend Development
+Fast as f***
 
 <p align="start">
   <img src="https://img.shields.io/badge/-Tailwind-08BCDC?style=for-the-badge&logo=tailwindcss&logoColor=FFF&labelColor=08BCDC" /> 
@@ -35,7 +36,7 @@
 | Gitsigns            | [Gitsigns](https://github.com/lewis6991/gitsigns.nvim)                 |
 | Indentlines         | [Indentlines ](https://github.com/lukas-reineke/indent-blankline.nvim) |
 | Lsp                 | [Lsp](https://github.com/neovim/nvim-lspconfig)                        |
-| Nulls               | [Null-ls](https://github.com/jose-elias-alvarez/null-ls.nvim)          |
+| Formmating          | [None-ls](https://github.com/nvimtools/none-ls.nvim)          |
 | Syntax Highlighting | [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)       |
 | Themes              | [Gruvbox](https://github.com/Zeddnyx/gruvbox.nvim)                     |
 | File Navigation     | [NvimTree](https://github.com/kyazdani42/nvim-tree.lua)                |

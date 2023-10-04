@@ -112,11 +112,11 @@
   },
   "type": {
     "prefix": "types-type",
-    "body": "type T${1} = {\n\t${2:val}: ${3:type}\n}"
+    "body": "type T${1} = {\n\t${2}: ${3}\n}"
   },
   "interface": {
     "prefix": "types-interface",
-    "body": "interface I${1} {\n\t${2:val}: ${3:type}\n}"
+    "body": "interface I${1} {\n\t${2}: ${3}\n}"
   },
   "interface extends": {
     "prefix": "types-interface-extends",

@@ -78,7 +78,7 @@ local plugins = {
 	},
 
 	{
-		"jose-elias-alvarez/null-ls.nvim",
+		"nvimtools/none-ls.nvim",
 		event = "BufRead",
 		lazy = true,
 		config = function()
@@ -108,8 +108,8 @@ local plugins = {
 
 	-- Themes
 	{
- 		"Zeddnyx/gruvbox.nvim", 
--- 		dir = "~/zedd/gruvbox.nvim",
+--  		"Zeddnyx/gruvbox.nvim", 
+ 		dir = "~/zedd/gruvbox.nvim", 
 		priority = 100,
 		config = function()
 			vim.cmd("colorscheme gruvbox")

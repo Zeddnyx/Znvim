@@ -8,7 +8,6 @@ nulls.setup({
 	sources = {
 		formatting.prettier,
 		formatting.stylua,
-		-- diagnostic.tsc, -- comment this if using tsserver
 	},
 })
 
