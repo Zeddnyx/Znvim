@@ -108,8 +108,8 @@ local plugins = {
 
 	-- Themes
 	{
---  		"Zeddnyx/gruvbox.nvim", 
- 		dir = "~/zedd/gruvbox.nvim", 
+ 		"Zeddnyx/gruvbox.nvim", 
+--  		dir = "~/zedd/gruvbox.nvim", 
 		priority = 100,
 		config = function()
 			vim.cmd("colorscheme gruvbox")
@@ -190,7 +190,7 @@ local plugins = {
 }
 
 require("lazy").setup(plugins, {
-	ui = {
-		border = "none",
-	},
+-- 	ui = { 
+-- 		border = "none", 
+-- 	}, 
 })

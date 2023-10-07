@@ -18,13 +18,6 @@ vim.opt.shell = "fish"
 vim.opt.swapfile = false
 vim.opt.list = true
 vim.opt.fillchars:append({
-	horiz = "━",
-	horizup = "┻",
-	horizdown = "┳",
-	vert = "┃",
-	vertleft = "┫",
-	vertright = "┣",
-	verthoriz = "╋",
 	eob = " ",
 })
 vim.opt.listchars = {
