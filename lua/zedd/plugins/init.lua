@@ -108,8 +108,8 @@ local plugins = {
 
 	-- Themes
 	{
- 		"Zeddnyx/gruvbox.nvim", 
---  		dir = "~/zedd/gruvbox.nvim", 
+--  		"Zeddnyx/gruvbox.nvim", 
+  		dir = "~/zedd/gruvbox.nvim",  
 		priority = 100,
 		config = function()
 			vim.cmd("colorscheme gruvbox")

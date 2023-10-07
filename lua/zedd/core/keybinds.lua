@@ -43,7 +43,6 @@ nmap("<C-Up>", "<CMD>resize -5<CR>")
 nmap("<C-Right>", "<CMD>vertical resize -5<CR>")
 nmap("<C-Down>", "<CMD>resize +5<CR>")
 
-
 -- file manager built in
 -- nmap("<leader>e", "<CMD>Lex<CR><CR><CMD>vertical resize 30<CR>")
 
@@ -51,12 +50,28 @@ nmap("<C-Down>", "<CMD>resize +5<CR>")
 nmap("<leader>ww", "<CMD>w<CR>")
 nmap("<leader>wa", "<CMD>wa<CR>")
 nmap("<leader>wq", "<CMD>wq<CR>")
+
 nmap("r", "<C-r>")
+
 nmap("<leader>a", "gg<S-v>G")
 nmap("<leader>y", "yiw")
+nmap("<leader>v", "viw")
+
 nmap("<leader>c", ":noh<CR>") -- clean higlight
 nmap("<leader>s", [[/\<\\><Left><Left>]])
 nmap("<leader>ss", [[:%s/]])
+
+vmap("<S-j>", ":m '>+1<CR>gv=gv")
+vmap("<S-k>", ":m '<-2<CR>gv=gv")
+
+
+-- autoclose
+imap("(", "()<left>") 
+imap("[", "[]<left>") 
+imap("{", "{}<left>") 
+imap("<", "<><left>") 
+imap("'", "''<left>") 
+imap('"', '""<left>')
 
 -- disable default keybind
 nmap("<up>", "<Nop>") -- disable arrow up
