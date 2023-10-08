@@ -11,6 +11,7 @@ vim.opt.hlsearch = true -- highlight when match search words
 vim.opt.showcmd = true
 vim.opt.cmdheight = 0 -- height of laststatus at the bottom
 vim.opt.laststatus = 2 -- show where are you in at the bottom
+vim.opt.statusline="%{expand('%:~:.')}"
 vim.opt.clipboard = "unnamedplus" -- copy from nvim to  clipboard
 vim.opt.scrolloff = 4
 vim.opt.mouse = "a"
