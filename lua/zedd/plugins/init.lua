@@ -151,7 +151,7 @@ local plugins = {
 	-- find files and other
 	{
 		"nvim-telescope/telescope.nvim",
-		tag = "0.1.1",
+		tag = "0.1.4",
 		keys = {
 			{ "<leader>ff", "<cmd>Telescope find_files<cr>" },
 			{ "<leader>lg", "<cmd>Telescope live_grep<cr>" },
