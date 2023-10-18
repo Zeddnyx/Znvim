@@ -19,7 +19,6 @@ function vmap(shortcut, command)
 	map("v", shortcut, command)
 end
 
-
 --buffer
 nmap("<S-h>", "<CMD>bprevious<CR>", { desc = "Buffer: focus to previous buffer" })
 nmap("<S-l>", "<CMD>bnext<CR>", { desc = "Buffer: focus to next buffer" })
@@ -64,13 +63,12 @@ nmap("<leader>ss", [[:%s/]])
 vmap("<S-j>", ":m '>+1<CR>gv=gv")
 vmap("<S-k>", ":m '<-2<CR>gv=gv")
 
-
 -- autoclose
-imap("(", "()<left>") 
-imap("[", "[]<left>") 
-imap("{", "{}<left>") 
-imap("<", "<><left>") 
-imap("'", "''<left>") 
+imap("(", "()<left>")
+imap("[", "[]<left>")
+imap("{", "{}<left>")
+imap("<", "<><left>")
+imap("'", "''<left>")
 imap('"', '""<left>')
 
 -- disable default keybind
@@ -81,23 +79,23 @@ nmap("<down>", "<Nop>") -- disable arrow down
 nmap("<C-z>", "<Nop>") -- disable z
 
 -- comment
-nmap("crr", [[:s/<\(.*\)/{\/*\<\1 *\/}<CR>:noh<CR>]]) 
-vmap("cr", [[:s/\(.*\)/{\/* \1 *\/}<CR>:noh<CR>]])
+nmap("crr", [[:s/<\(.*\)/{\/*\<\1 *\/}<CR>:noh<CR>]])
+vmap("cr", [[:s/<\(.*\)>/{\/\*<\1>\*\/}/g<CR>:noh<CR>]])
 vmap("ur", [[:s/{\/\*\(.\{-}\)\*\/}/\1/g <CR>]])
 
 nmap("cjj", [[:s/^/\/\/ <CR>:noh<CR>]])
 vmap("cj", [[:s/\(.*\)/\/\/ \1<CR>:noh<CR>]])
-vmap("uj", [[:s/\/\/\(.*\)/\1 <CR>:noh<CR>]]) 
+vmap("uj", [[:s/\/\/\(.*\)/\1 <CR>:noh<CR>]])
 
-nmap("css", [[:s/\(.*\)/\/* \1 *\/<CR>:noh<CR>]]) 
+nmap("css", [[:s/\(.*\)/\/* \1 *\/<CR>:noh<CR>]])
 vmap("cs", [[:s/\(.*\)/\/* \1 *\/<CR>:noh<CR>]])
-vmap("us", [[:s/\/\*\(.\{-}\)\*\//\1/g<CR>:noh<CR>]]) 
+vmap("us", [[:s/\/\*\(.\{-}\)\*\//\1/g<CR>:noh<CR>]])
 
 nmap("cll", [[:s/^/-- <CR>:noh<CR>]])
 vmap("cl", [[:s/\(.*\)/-- \1 <CR>:noh<CR>]])
 vmap("ul", [[:s/--\(.*\)/\1 <CR>:noh<CR>]])
 
-nmap("chh", [[:s/<\(.*\)/<!-- <\1 --><CR>:noh<CR>]]) 
+nmap("chh", [[:s/<\(.*\)/<!-- <\1 --><CR>:noh<CR>]])
 vmap("ch", [[:s/\(.*\)/<!-- \1 --><CR>:noh<CR>]])
 vmap("uh", [[:s/<!--\(.\{-}\)\-->/\1/g <CR>:noh<CR>]])
 

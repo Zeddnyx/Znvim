@@ -108,8 +108,7 @@ local plugins = {
 
 	-- Themes
 	{
---  		"Zeddnyx/gruvbox.nvim", 
-  		dir = "~/zedd/gruvbox.nvim",  
+  	dir = "~/.config/nvim/lua/zedd/gruvbox",  
 		priority = 100,
 		config = function()
 			vim.cmd("colorscheme gruvbox")
@@ -151,7 +150,6 @@ local plugins = {
 	-- find files and other
 	{
 		"nvim-telescope/telescope.nvim",
-		tag = "0.1.4",
 		keys = {
 			{ "<leader>ff", "<cmd>Telescope find_files<cr>" },
 			{ "<leader>lg", "<cmd>Telescope live_grep<cr>" },
