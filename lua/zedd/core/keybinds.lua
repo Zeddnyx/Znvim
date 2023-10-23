@@ -81,6 +81,7 @@ nmap("<C-z>", "<Nop>") -- disable z
 -- comment
 nmap("crr", [[:s/<\(.*\)/{\/*\<\1 *\/}<CR>:noh<CR>]])
 vmap("cr", [[:s/<\(.*\)>/{\/\*<\1>\*\/}/g<CR>:noh<CR>]])
+vmap("jsx", [[:s/\(.*\)/{\/* \1 *\/}<CR>:noh<CR>]])
 vmap("ur", [[:s/{\/\*\(.\{-}\)\*\/}/\1/g <CR>]])
 
 nmap("cjj", [[:s/^/\/\/ <CR>:noh<CR>]])

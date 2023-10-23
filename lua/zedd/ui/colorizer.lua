@@ -10,7 +10,7 @@ local options = {
 		hsl_fn = true,
 		css = true,
     tailwind = true,
-		mode = "background", -- background | foreground | virtualtext
+		mode = "background", -- background | foreground 
 	},
 }
 require("colorizer").setup(options)
