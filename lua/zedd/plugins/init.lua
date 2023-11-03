@@ -120,7 +120,7 @@ local plugins = {
 
 	-- Themes
 	{
-		dir = "~/.config/nvim/lua/zedd/gruvbox",
+		dir = "~/.config/nvim/lua/zedd/ui/gruvbox",
 		priority = 100,
 		config = function()
 			vim.cmd("colorscheme gruvbox")
