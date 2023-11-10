@@ -304,7 +304,7 @@
     "body": [
       ".menu {\n\t@apply md:hidden transition-all duration-700 ease-in-out cursor-pointer outline-none z-40 text-cyan font-semibold;\n}",
       ".navMobile {\n\t @apply md:hidden flex flex-col justify-center gap-16 transition-all duration-500 ease-in h-screen w-[100%] text-end absolute top-0 py-28 px-10 bg-slate-500;\n}",
-      ".navMobileHidden{\n\t@apply left-[-100%] opacity-0 ease-in;\n}",
+      ".navMobileHidden{\n\t@apply fixed left-[-100%] ease-in;\n}",
       ".navDesktop {\n\t@apply hidden md:flex gap-10;\n}"
     ],
     "description": "custome nav section style"

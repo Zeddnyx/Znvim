@@ -77,6 +77,7 @@ nmap("<left>", "<Nop>") -- disable arrow left
 nmap("<right>", "<Nop>") -- disable arrow right
 nmap("<down>", "<Nop>") -- disable arrow down
 nmap("<C-z>", "<Nop>") -- disable z
+nmap("q","<Nop>") -- disable q
 
 -- comment
 nmap("crr", [[:s/<\(.*\)/{\/*\<\1 *\/}<CR>:noh<CR>]])
