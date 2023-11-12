@@ -5,7 +5,6 @@ local function has_words_before()
 	return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
 end
 
-
 -- costume color pop up snippet
 vim.api.nvim_set_hl(0, "MENU", { bg = "#1D2021", fg = "#DBCCA7" })
 vim.api.nvim_set_hl(0, "SELECT", { bg = "#8ec07c", fg = "#1D2021" })
@@ -17,15 +16,15 @@ local window = cmp.config.window.bordered({
 	winhighlight = "Normal:MENU,FloatBorder:BORDER,CursorLine:SELECT,Search:MENU",
 })
 
-
 -- icons in snippet
 local icons = {
 	Snippet = "",
-	Text = "󰉿",
+	Text = "󰊄",
 	Method = "󰆧",
 	Function = "󰊕",
-	Constructor = "",
+	Constructor = "",
 	Field = "󰜢",
+	Array = "󰅪",
 	Variable = "󰡱",
 	Class = "󰠱",
 	Interface = "",

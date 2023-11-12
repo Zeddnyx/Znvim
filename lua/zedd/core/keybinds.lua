@@ -26,9 +26,14 @@ nmap("<S-c>", "<CMD>bd<CR>", { desc = "Buffer: delete buffer" })
 nmap("<S-q>", "<CMD>%bd|e#<CR>", { desc = "Buffer: delete all buffer except current buffer" })
 
 -- lsp saga
-nmap("<S-k>", "<CMD>Lspsaga hover_doc<CR>")
-nmap("<S-j>", "<CMD>Lspsaga preview-definition<CR>")
-nmap("<S-r>", "<CMD>Lspsaga rename<CR>")
+nmap("<S-s>t", "<CMD>Lspsaga peek_definition<CR>")
+nmap("<S-s>r", "<CMD>Lspsaga rename<CR>")
+nmap("<S-s>dp", "<CMD>Lspsaga diagnostic_jump_prev<CR>")
+nmap("<S-s>dn", "<CMD>Lspsaga diagnostic_jump_next<CR>")
+
+-- search and replace
+nmap("<S-s>s", [[/\<\\><Left><Left>]])
+nmap("<S-s>ss", [[:%s/]])
 
 -- switch split screen
 nmap("<leader>h", "<C-w>h<CR>")
@@ -53,12 +58,9 @@ nmap("<leader>wq", "<CMD>wq<CR>")
 nmap("r", "<C-r>")
 
 nmap("<leader>a", "gg<S-v>G")
+nmap("<leader>c", ":noh<CR>") -- clean higlight
 nmap("<leader>y", "yiw")
 nmap("<leader>v", "viw")
-
-nmap("<leader>c", ":noh<CR>") -- clean higlight
-nmap("<leader>s", [[/\<\\><Left><Left>]])
-nmap("<leader>ss", [[:%s/]])
 
 vmap("<S-j>", ":m '>+1<CR>gv=gv")
 vmap("<S-k>", ":m '<-2<CR>gv=gv")
@@ -81,8 +83,7 @@ nmap("q","<Nop>") -- disable q
 
 -- comment
 nmap("crr", [[:s/<\(.*\)/{\/*\<\1 *\/}<CR>:noh<CR>]])
-vmap("cr", [[:s/<\(.*\)>/{\/\*<\1>\*\/}/g<CR>:noh<CR>]])
-vmap("ccr", [[:s/\(.*\)/{\/* \1 *\/}<CR>:noh<CR>]])
+vmap("cr", [[:s/\(.*\)/{\/* \1 *\/}<CR>:noh<CR>]])
 vmap("ur", [[:s/{\/\*\(.\{-}\)\*\/}/\1/g <CR>]])
 
 nmap("cjj", [[:s/^/\/\/ <CR>:noh<CR>]])

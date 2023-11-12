@@ -133,9 +133,10 @@ Space (SPC) is my Leader key.
 
 | Key Bindings | Description        |
 | ------------ | ------------------ |
-| Shift k      | Hover doc          |
-| Shift j      | Previewd efinition |
-| Shift r      | Rename             |
+| Shift s t      | Previewd efinition |
+| Shift s r      | Rename             |
+| Shift s dp     | Diagnostics prev   |
+| Shift s dn     | Diagnostics next   |
 
 </details>
 
@@ -152,8 +153,8 @@ Space (SPC) is my Leader key.
 | SPC a        | Select all              |
 | SPC c        | Clean higlight          |
 | SPC e        | File explorer           |
-| SPC s        | Find specific word      |
-| SPC ss       | Find and replace all    |
+| SHIFT s s    | Find specific word      |
+| SHIFT a ss   | Find and replace all    |
 | SPC y        | Copy forward word       |
 |              |                         |
 | SPC ww       | Save file               |

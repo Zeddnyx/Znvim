@@ -197,6 +197,21 @@ local plugins = {
 			require("zedd.ui.colorizer")
 		end,
 	},
+
+-- 	-- which-key 
+-- 	{ 
+-- 		"folke/which-key.nvim", 
+-- 		event = "VeryLazy", 
+-- 		lazy = true, 
+-- 		init = function() 
+-- 			vim.o.timeout = true 
+-- 			vim.o.timeoutlen = 300 
+-- 		end, 
+--     cmd = "WhichKey", 
+-- 		config = function() 
+-- 			require("zedd.ui.which-key") 
+-- 		end, 
+-- 	}, 
 }
 
 require("lazy").setup(plugins, {
