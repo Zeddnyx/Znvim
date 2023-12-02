@@ -57,6 +57,10 @@ cmp.setup({
 		end,
 	},
 
+  experimental = {
+    ghost_text = true,
+  },
+
 	completion = {
 		autocomplete = { cmp.TriggerEvent.TextChanged },
 	},
