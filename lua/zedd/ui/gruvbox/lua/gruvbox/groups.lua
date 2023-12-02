@@ -226,8 +226,8 @@ local M = {
 	GitSignUnstaged = { link = "DiffUnstaged" },
 	--
 	--See telescope.nvim/plugin/telescope.lua
-	TelescopeSelection = { bg = c.bright_aqua, fg = c.dark0 },
-	TelescopeSelectionCaret = { bg = c.bright_aqua, fg = c.dark0 },
+	TelescopeSelection = { bg = c.light2, fg = c.dark0 },
+	TelescopeSelectionCaret = { fg = c.dark0 },
 	TelescopeMultiSelection = { fg = c.bright_aqua},
 	TelescopeMatching = { bg = c.bright_aqua, fg = c.dark0 },
 	TelescopePromptPrefix = { fg = c.light0 },
@@ -241,19 +241,22 @@ local M = {
 	TranslatorBorder = { link = "FloatBorder" },
 
 	--See h nvm-tree.nvim/lua/nvim-tree/colors.lua
+  NvimTreeIndentMarker = { fg = c.yellow },
 	NvimTreeImageFile = { fg = c.purple },
-	NvimTreeSpecialFile = { fg = c.orange, bold = true, underline = true },
+	NvimTreeSpecialFile = { fg = c.bright_aqua, bold = true, underline = true },
 	NvimTreeExecFile = { fg = c.bright_green, bold = true },
-	NvimTreeOpenedFile = { fg = c.orange, bold = true },
-	NvimTreeModifiedFile = { fg = c.orange, bold = true },
+	NvimTreeOpenedFile = { fg = c.red, bold = true },
+	NvimTreeModifiedFile = { fg = c.red, bold = true },
+  NvimTreeSymlinkFile = { fg = c.bright_aqua, bold = true },
+
+  NvimTreeFileNew = { fg = c.bright_aqua, bold = true },
+  NvimTreeFolderNew = { fg = c.bright_aqua, bold = true },
 	NvimTreeFolderIcon = { fg = c.bright_yellow, bold = true },
 	NvimTreeFolderName = { fg = c.bright_yellow, bold = true },
 	NvimTreeOpenedFolderName = { fg = c.bright_yellow, bold = true },
 	NvimTreeOpenedFolderIcon = { fg = c.bright_yellow, bold = true },
 	NvimTreeClosedFolderIcon = { fg = c.bright_yellow, bold = true },
-	NvimTreeSymlinkFolderName = { fg = c.bright_yellow, bold = true },
 	NvimTreeEmptyFolderName = { fg = c.gray },
-	NvimTreeOpenedEmptyFolderName = { fg = c.gray },
 
   NvimTreeGitUntracked = { fg = c.bright_aqua },
   NvimTreeGitDirty = { fg = c.bright_aqua },

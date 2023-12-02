@@ -45,7 +45,7 @@ local options = {
 		end,
 	},
 	diagnostics = {
-		enable = true,
+		enable = false,
 		show_on_dirs = true,
 		show_on_open_dirs = true,
 		debounce_delay = 500,
@@ -85,7 +85,7 @@ local options = {
 		root_folder_label = true,
 		highlight_git = false,
 		highlight_opened_files = "none",
-		special_files = { "Cargo.toml", "Makefile", "README.md", "readme.md", "LICENSE" },
+		special_files = { "Cargo.toml", "Makefile", "README.md", "readme.md", "LICENSE","Dockerfile" },
 
 		indent_markers = {
 			enable = true,

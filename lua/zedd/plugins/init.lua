@@ -20,6 +20,18 @@ local plugins = {
 			require("zedd.ui.webdevicons")
 		end,
 	},
+	{
+		"romgrk/barbar.nvim",
+		init = function()
+			vim.g.barbar_auto_setup = false
+		end,
+		opts = {
+			-- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
+			-- animation = true,
+			-- insert_at_start = true,
+			-- …etc.
+		},
+	},
 
 	{ "nvim-lua/plenary.nvim", lazy = true },
 
@@ -198,20 +210,20 @@ local plugins = {
 		end,
 	},
 
--- 	-- which-key 
--- 	{ 
--- 		"folke/which-key.nvim", 
--- 		event = "VeryLazy", 
--- 		lazy = true, 
--- 		init = function() 
--- 			vim.o.timeout = true 
--- 			vim.o.timeoutlen = 300 
--- 		end, 
---     cmd = "WhichKey", 
--- 		config = function() 
--- 			require("zedd.ui.which-key") 
--- 		end, 
--- 	}, 
+	-- 	-- which-key
+	--  	{
+	--  		"folke/which-key.nvim",
+	--  		event = "VeryLazy",
+	--  		lazy = true,
+	--  		init = function()
+	--  			vim.o.timeout = true
+	--  			vim.o.timeoutlen = 300
+	--  		end,
+	--      cmd = "WhichKey",
+	--  		config = function()
+	--  			require("zedd.ui.which-key")
+	--  		end,
+	--  	},
 }
 
 require("lazy").setup(plugins, {

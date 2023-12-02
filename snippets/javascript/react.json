@@ -5,12 +5,12 @@
     "description": "Creates a React component with props"
   },
   "reactFunctionComponent": {
-    "prefix": "rfcc",
+    "prefix": "rfce",
     "body": "\n export default function ${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}() {\n\treturn (\n\t\t<div>\n\t\t\t${TM_FILENAME_BASE}\n\t\t</div>\n\t)\n}",
     "description": "Creates a React functional component without PropTypes"
   },
   "arrowFunctionComponent": {
-    "prefix": "rfce",
+    "prefix": "rfcwp",
     "body": "\n export const ${TM_FILENAME_BASE} = () => {\n\treturn (\n\t\t<div>\n\t\t\t${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}\n\t\t</div>\n\t)\n}",
     "description": "Creates a React functional component without PropTypes"
   },
@@ -178,6 +178,10 @@
   "className": {
     "prefix": "className",
     "body": "className=\"${1}\""
+  },
+  "style": {
+    "prefix": "style",
+    "body": "style={${1}}"
   },
   "useFetch hook create": {
     "prefix": "useFetch-create",

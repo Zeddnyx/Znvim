@@ -185,6 +185,20 @@
     "description": "HTML - Defines a section in a document",
     "scope": "text.html"
   },
+  "div 3 times": {
+    "prefix": "div",
+    "body": [
+      "<div>",
+      "\t$1",
+      "</div>\n<div>",
+      "\t$1",
+      "</div>\n<div>",
+      "\t$1",
+      "</div>"
+    ],
+    "description": "HTML - Defines a section in a document",
+    "scope": "text.html"
+  },
   "dl": {
     "prefix": "dl",
     "body": ["<dl>", "\t$1", "</dl>"],
@@ -580,12 +594,6 @@
     "prefix": "strong",
     "body": "<strong>$1</strong>$2",
     "description": "HTML - Defines strong text",
-    "scope": "text.html"
-  },
-  "style": {
-    "prefix": "style",
-    "body": ["<style>", "$1", "</style>"],
-    "description": "HTML - Defines a style definition",
     "scope": "text.html"
   },
   "sub": {

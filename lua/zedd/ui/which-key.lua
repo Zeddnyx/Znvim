@@ -2,8 +2,7 @@ local wk = require("which-key")
 
 local mappings = {
 	a = { "gg<S-v>G", "Select all" },
-	b = { "<cmd>noh<cr>", "Clean highlight" },
-	B = {
+	b = {
 		name = "Buffer",
 		h = { "<cmd>bprevious<cr>", "Previous buffer" },
 		l = { "<cmd>bnext<cr>", "Next buffer" },
@@ -12,16 +11,17 @@ local mappings = {
 	},
 	c = {
 		name = "Comment",
-		r = { [[:s/\(.*\)/{\/* \1 *\/}<CR>:noh<CR>]], "jsx" },
-		cr = { [[:s/<\(.*\)>/{\/\*<\1>\*\/}/g<CR>:noh<CR>]], "jsx (block)" },
-		ur = { [[:s/{\/\*\(.\{-}\)\*\/}/\1/g <CR>]], "Uncomennt jsx (block)" },
-		j = { [[:s/^/\/\/ <CR>:noh<CR>]], "js" },
-		cj = { [[:s/\(.*\)/\/\/ \1<CR>:noh<CR>]], "js (block)" },
-		uj = { [[:s/\/\/\(.*\)/\1 <CR>:noh<CR>]], "Uncomment js (block)" },
-		c = { [[:s/\(.*\)/\/* \1 *\/<CR>:noh<CR>]], "css" },
-		cs = { [[:s/\(.*\)/\/* \1 *\/<CR>:noh<CR>]], "css (block)" },
-		us = { [[:s/\/\*\(.\{-}\)\*\//\1/g<CR>:noh<CR>]], "Uncomment css (block)" },
+		["crr"] = { [[:s/\(.*\)/{\/* \1 *\/}<CR>:noh<CR>]], "jsx" },
+		["cr"] = { [[:s/<\(.*\)>/{\/\*<\1>\*\/}/g<CR>:noh<CR>]], "jsx (block)" },
+		["ur"] = { [[:s/{\/\*\(.\{-}\)\*\/}/\1/g <CR>]], "Uncomennt jsx (block)" },
+		["cjj"] = { [[:s/^/\/\/ <CR>:noh<CR>]], "js" },
+		["cj"] = { [[:s/\(.*\)/\/\/ \1<CR>:noh<CR>]], "js (block)" },
+		["uj"] = { [[:s/\/\/\(.*\)/\1 <CR>:noh<CR>]], "Uncomment js (block)" },
+		["css"] = { [[:s/\(.*\)/\/* \1 *\/<CR>:noh<CR>]], "css" },
+		["cs"] = { [[:s/\(.*\)/\/* \1 *\/<CR>:noh<CR>]], "css (block)" },
+		["us"] = { [[:s/\/\*\(.\{-}\)\*\//\1/g<CR>:noh<CR>]], "Uncomment css (block)" },
 	},
+	d = { "<cmd>noh<cr>", "Clean highlight" },
 	e = {
 		name = "Explorer",
 		e = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
@@ -48,9 +48,9 @@ local mappings = {
 	s = {
 		name = "Search & Replace",
 		s = { [[/\<\\><Left><Left>]], "Search specific word" },
-		sr = { [[:%s/]], "Replace all" },
+		["sr"] = { [[:%s/]], "Replace all" },
 	},
-	ss = {
+	["ss"] = {
 		name = "Split Screen",
 		h = { "<C-w>h<CR>", "Vertical split" },
 		j = { "<C-w>j<CR>", "Horizontal split" },
@@ -64,13 +64,13 @@ local mappings = {
 	w = {
 		name = "Save",
 		w = { "<cmd>w<cr>", "Save" },
-		wa = { "<cmd>wa<cr>", "Save all" },
-		wq = { "<cmd>wq<cr>", "Save and quit" },
+		["wa"] = { "<cmd>wa<cr>", "Save all" },
+		["wq"] = { "<cmd>wq<cr>", "Save and quit" },
 	},
 	y = {
 		name = "Copy",
-		yw = { "yiw", "Copy forward" },
-		yb = { "yib", "Copy backward" },
+		["yw"] = { "yiw", "Copy forward" },
+		["yb"] = { "yib", "Copy backward" },
 	},
 	z = {
 		name = "Window",
