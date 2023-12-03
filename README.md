@@ -169,7 +169,7 @@ Space (SPC) is my Leader key.
 
 ## Thanks
 
-- [Vim Indonesia](https://t.me/VimID)
+- Admin and all member of [Vim Indonesia](https://t.me/VimID)
 
 ## Uninstall
 
