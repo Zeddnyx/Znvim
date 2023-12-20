@@ -105,8 +105,9 @@ local M = {
 	SpecialComment = { fg = c.red },
 	Debug = { fg = c.red },
 	Underline = { underline = true },
-	Error = { fg = c.red, undercurl = true },
+	Error = { fg = c.red,bg = c.dark0, undercurl = true },
 	Todo = { fg = c.dark0, bg = c.light0, bold = true },
+  OnProgress = { fg = c.dark0, bg = c.light0, bold = true },
 	Underlined = { fg = c.bright_aqua, underline = true }, -- text link html
 	Attribute = { fg = c.bright_yellow }, -- attribute html
 	Tag = { fg = c.red }, -- tag html
@@ -149,7 +150,9 @@ local M = {
 	["@text.title"] = { link = "Title" },
 	["@text.uri"] = { link = "Underlined", fg = c.bright_aqua },
 	["@text.underline"] = { link = "Underlined", fg = c.bright_aqua },
+	["@text.error"] = { link = "Error" },
 	["@text.todo"] = { link = "Todo" },
+	["@text.onprogress"] = { link = "OnProgress" },
 	["@comment"] = { link = "Comment" },
 	["@punctuation"] = { link = "Delimiter" },
 	["@punctuation.bracket"] = { link = "Delimiter" },
