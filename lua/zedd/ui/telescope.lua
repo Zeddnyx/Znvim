@@ -141,7 +141,7 @@ pickers.lsp_document_symbols = {
     width = 0.50,
   },
   previewer = false,
-  prompt_prefix = "   ",
+  prompt_prefix = "   ",
   theme = "dropdown",
 }
 pickers.lsp_references = { theme = "dropdown" }

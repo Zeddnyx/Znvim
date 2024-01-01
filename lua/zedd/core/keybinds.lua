@@ -34,8 +34,8 @@ nmap("<S-s>dp", "<CMD>Lspsaga diagnostic_jump_prev<CR>")
 nmap("<S-s>dn", "<CMD>Lspsaga diagnostic_jump_next<CR>")
 
 -- search and replace
-nmap("<S-s>s", [[/\<\\><Left><Left>]])
-nmap("<S-s>ss", [[:%s/]])
+-- nmap("<S-s>s", [[/\<\\><Left><Left>]])
+nmap("<S-s>s", [[:%s/]])
 
 -- switch split screen
 nmap("<leader>h", "<C-w>h<CR>")
@@ -59,10 +59,10 @@ nmap("<leader>wq", "<CMD>wq<CR>")
 
 nmap("r", "<C-r>")
 
-nmap("<leader>a", "gg<S-v>G")
+nmap("<leader>a", "gg<S-v>G") -- select all
 nmap("<leader>c", ":noh<CR>") -- clean higlight
-nmap("<leader>y", "yiw")
-nmap("<leader>v", "viw")
+nmap("<leader>y", "yiw") -- yank forward
+nmap("<leader>v", "viw") -- yank backward
 
 vmap("<S-j>", ":m '>+1<CR>gv=gv")
 vmap("<S-k>", ":m '<-2<CR>gv=gv")

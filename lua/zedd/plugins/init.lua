@@ -22,12 +22,11 @@ local plugins = {
 	},
 	{
 		"romgrk/barbar.nvim",
-    event = "BufRead",
+		event = "BufRead",
 		init = function()
 			vim.g.barbar_auto_setup = false
 		end,
-		opts = {
-		},
+		opts = {},
 	},
 
 	{ "nvim-lua/plenary.nvim", lazy = true },
@@ -67,6 +66,14 @@ local plugins = {
 	{
 		"neovim/nvim-lspconfig",
 		event = "BufRead",
+		dependencies = {
+			{
+				"folke/trouble.nvim",
+				config = function()
+					require("zedd.lsp.trouble")
+				end,
+			},
+		},
 		config = function()
 			require("zedd.lsp.lspconfig")
 			vim.api.nvim_exec_autocmds("BufRead", {})
