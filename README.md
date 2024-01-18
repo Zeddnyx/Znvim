@@ -46,7 +46,7 @@ Fast as f\*\*\*
 
 ## Warning
 
-I prefer create an account codeium before install cause i use codeium if u didin't wanna using codeium just remove from list plugin in lua/zedd/plugins/init.lua
+before install i suggest you to create an account codeium before install cause i use codeium if u didin't wanna using codeium just remove from list plugin in lua/zedd/plugins/init.lua
 
 ## Install
 
