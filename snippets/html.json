@@ -5,6 +5,18 @@
     "description": "HTML - Defines the document type",
     "scope": "text.html"
   },
+  "styles": {
+    "prefix": "styles-html",
+    "body": "<style>$1</style>$2",
+    "description": "HTML - Defines a style",
+    "scope": "text.html"
+  },
+  "styles inline": {
+    "prefix": "styles-html-inline",
+    "body": "styles=\"$1\"",
+    "description": "HTML - Defines a style",
+    "scope": "text.html"
+  },
   "a": {
     "prefix": "a",
     "body": "<a href=\"$1\">$2</a>$3",

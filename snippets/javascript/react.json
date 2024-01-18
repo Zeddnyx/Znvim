@@ -218,10 +218,5 @@
   "onKeyUp": {
     "prefix": "onkeyup",
     "body": "onKeyUp={handle${1:}}"
-  },
-  "handle events ": {
-    "prefix": "handle-func",
-    "body": ["const handle${1:func} = () => {", "\t$2", "}"],
-    "description": "handle events"
   }
 }

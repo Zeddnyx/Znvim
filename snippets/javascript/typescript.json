@@ -111,15 +111,52 @@
     ]
   },
   "type": {
-    "prefix": "types-type",
+    "prefix": "type-types",
     "body": "type T${1} = {\n\t${2}: ${3}\n}"
   },
   "interface": {
-    "prefix": "types-interface",
+    "prefix": "interface-types",
     "body": "interface I${1} {\n\t${2}: ${3}\n}"
   },
   "interface extends": {
-    "prefix": "types-interface-extends",
+    "prefix": "interface-extends-types",
     "body": "interface I$1 extends I$2 {\n\t$3: $4\n}"
+  },
+  "event Change": {
+    "prefix": "event",
+    "body": "React.ChangeEvent<HTMLInputElement>"
+  },
+  "event Change props": {
+    "prefix": "event-props",
+    "body": "(event: React.ChangeEvent<HTMLInputElement>) => void"
+  },
+  "event Form": {
+    "prefix": "event",
+    "body": "React.FormEvent<HTMLFormElement>"
+  },
+  "handle events ": {
+    "prefix": "handle-func",
+    "body": ["const handle${1:func} = () => {", "\t$2", "}"],
+    "description": "handle events"
+  },
+  "handle change": {
+    "prefix": "handle-change",
+    "body": "const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {\n\tconst {name, value} = event.target\n\tsetValues({ ...values, [name]: value })\n}"
+  },
+  "handle submit": {
+    "prefix": "handle-submit",
+    "body": "const handlesubmit= (event: react.formevent<htmlformelement>) => {\n\t event.preventdefault()\n\t $0\n}"
+  },
+  "set state ": {
+    "prefix": "set-state",
+    "body": "React.Dispatch<React.SetStateAction<$1>>;"
+  },
+  "set state boolean": {
+    "prefix": "set-state-boolean",
+    "body": "React.Dispatch<React.SetStateAction<boolean>>"
+  },
+  "set state array": {
+    "prefix": "set-state-array",
+    "body": "React.Dispatch<React.SetStateAction<string[]>>;"
   }
 }

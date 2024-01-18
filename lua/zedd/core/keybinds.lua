@@ -35,7 +35,7 @@ nmap("<S-s>dn", "<CMD>Lspsaga diagnostic_jump_next<CR>")
 
 -- search and replace
 -- nmap("<S-s>s", [[/\<\\><Left><Left>]])
-nmap("<S-s>s", [[:%s/]])
+nmap("<S-s>/", [[:%s/]])
 
 -- switch split screen
 nmap("<leader>h", "<C-w>h<CR>")
@@ -48,9 +48,14 @@ nmap("<C-Left>", "<CMD>vertical resize +5<CR>")
 nmap("<C-Up>", "<CMD>resize -5<CR>")
 nmap("<C-Right>", "<CMD>vertical resize -5<CR>")
 nmap("<C-Down>", "<CMD>resize +5<CR>")
+nmap("<C-c>", "<CMD>close<CR>") -- close window
 
 -- file manager built in
 -- nmap("<leader>e", "<CMD>Lex<CR><CR><CMD>vertical resize 30<CR>")
+
+-- trouble
+nmap("<leader>tr", "<CMD>Trouble<CR>")
+nmap("<leader>tc", "<CMD>TroubleClose<CR>")
 
 -- custome keybind
 nmap("<leader>ww", "<CMD>w<CR>")
@@ -84,26 +89,32 @@ nmap("<C-z>", "<Nop>") -- disable z
 nmap("q","<Nop>") -- disable q
 
 -- comment
+-- react tag
 nmap("crr", [[:s/<\(.*\)/{\/*\<\1 *\/}<CR>:noh<CR>]])
 vmap("cr", [[:s/\(.*\)/{\/* \1 *\/}<CR>:noh<CR>]])
 vmap("ur", [[:s/{\/\*\(.\{-}\)\*\/}/\1/g <CR>]])
 
+-- js
 nmap("cjj", [[:s/^/\/\/ <CR>:noh<CR>]])
 vmap("cj", [[:s/\(.*\)/\/\/ \1<CR>:noh<CR>]])
 vmap("uj", [[:s/\/\/\(.*\)/\1 <CR>:noh<CR>]])
 
+-- css
 nmap("css", [[:s/\(.*\)/\/* \1 *\/<CR>:noh<CR>]])
 vmap("cs", [[:s/\(.*\)/\/* \1 *\/<CR>:noh<CR>]])
 vmap("us", [[:s/\/\*\(.\{-}\)\*\//\1/g<CR>:noh<CR>]])
 
+-- lua
 nmap("cll", [[:s/^/-- <CR>:noh<CR>]])
 vmap("cl", [[:s/\(.*\)/-- \1 <CR>:noh<CR>]])
 vmap("ul", [[:s/--\(.*\)/\1 <CR>:noh<CR>]])
 
+-- html
 nmap("chh", [[:s/<\(.*\)/<!-- <\1 --><CR>:noh<CR>]])
 vmap("ch", [[:s/\(.*\)/<!-- \1 --><CR>:noh<CR>]])
 vmap("uh", [[:s/<!--\(.\{-}\)\-->/\1/g <CR>:noh<CR>]])
 
+-- global (#)
 nmap("cgg", [[:s/^/# <CR>:noh<CR>]])
 vmap("cg", [[:s/\(.*\)/# \1 <CR>:noh<CR>]])
 vmap("ug", [[:s/#\(.\{-}\)\1 <CR>]])
