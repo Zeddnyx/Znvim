@@ -1,7 +1,8 @@
 ## Znvim
 
 ### Neovim config designed for Frontend Development
-Fast as f***
+
+Fast as f\*\*\*
 
 <p align="start">
   <img src="https://img.shields.io/badge/-Tailwind-08BCDC?style=for-the-badge&logo=tailwindcss&logoColor=FFF&labelColor=08BCDC" /> 
@@ -36,12 +37,16 @@ Fast as f***
 | Gitsigns            | [Gitsigns](https://github.com/lewis6991/gitsigns.nvim)                 |
 | Indentlines         | [Indentlines ](https://github.com/lukas-reineke/indent-blankline.nvim) |
 | Lsp                 | [Lsp](https://github.com/neovim/nvim-lspconfig)                        |
-| Formmating          | [None-ls](https://github.com/nvimtools/none-ls.nvim)          |
+| Formmating          | [None-ls](https://github.com/nvimtools/none-ls.nvim)                   |
 | Syntax Highlighting | [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)       |
 | Themes              | [Gruvbox](https://github.com/Zeddnyx/gruvbox.nvim)                     |
 | File Navigation     | [NvimTree](https://github.com/kyazdani42/nvim-tree.lua)                |
 
 </details>
+
+## Warning
+
+I prefer create an account codeium before install cause i use codeium if u didin't wanna using codeium just remove from list plugin in lua/zedd/plugins/init.lua
 
 ## Install
 
@@ -131,12 +136,20 @@ Space (SPC) is my Leader key.
 <details>
 <summary>Lsp</summary>
 
-| Key Bindings | Description        |
-| ------------ | ------------------ |
-| Shift s t      | Previewd efinition |
-| Shift s r      | Rename             |
-| Shift s dp     | Diagnostics prev   |
-| Shift s dn     | Diagnostics next   |
+| Key Bindings | Description         |
+| ------------ | ------------------- |
+| Shift s t    | Previewd definition |
+| Shift s r    | Rename              |
+
+</details>
+  
+<details>
+<summary>Trouble</summary>
+
+| Key Bindings | Description   |
+| ------------ | ------------- |
+| leader tr    | open trouble  |
+| leader rc    | close trouble |
 
 </details>
 
@@ -153,16 +166,14 @@ Space (SPC) is my Leader key.
 | SPC a        | Select all              |
 | SPC c        | Clean higlight          |
 | SPC e        | File explorer           |
-| SHIFT s s    | Find specific word      |
-| SHIFT a ss   | Find and replace all    |
 | SPC y        | Copy forward word       |
 |              |                         |
 | SPC ww       | Save file               |
 | SPC wa       | Save all file           |
 | SPC wq       | Save and quit           |
-| SPC qq       | quit nvim               |
 |              |                         |
 | Shift f      | Prettier                |
+| SHIFT s /    | Find and replace        |
 | Ctrl g       | Apply Codeium Reference |
 
 </details>
