@@ -13,7 +13,7 @@ vim.g.vsnip_filetypes = {
 	},
 	javascript = { "javascript/javascript" },
 	typescript = { "javascript/typescript", "javascript/javascript" },
-	css = { "tailwindcss" },
+	css = { "css" },
 	html = { "angular/html" },
 	http = { "http" },
 }

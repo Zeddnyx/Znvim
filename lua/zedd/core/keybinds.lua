@@ -34,8 +34,12 @@ nmap("<S-s>dp", "<CMD>Lspsaga diagnostic_jump_prev<CR>")
 nmap("<S-s>dn", "<CMD>Lspsaga diagnostic_jump_next<CR>")
 
 -- search and replace
--- nmap("<S-s>s", [[/\<\\><Left><Left>]])
+-- nmap("<S-s>s", [[/\<\\><Left><Left>]]) -- /\<word1\>
 nmap("<S-s>/", [[:%s/]])
+
+-- folding line
+nmap("zft", "vatzf<CR>") -- tag html
+nmap("zff", "vaBzf") -- function that match {}
 
 -- switch split screen
 nmap("<leader>h", "<C-w>h<CR>")

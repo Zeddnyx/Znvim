@@ -158,6 +158,9 @@ Space (SPC) is my Leader key.
 
 | Key Bindings | Description             |
 | ------------ | ----------------------- |
+| zft          | auto folding html tag   |
+| zff          | auto folding function   |
+|              |                         |
 | SPC h        | Switch left             |
 | SPC j        | Switch down             |
 | SPC k        | Switch up               |
