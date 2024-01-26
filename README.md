@@ -197,3 +197,6 @@ rm -rf ~/.cache/nvim
 rd -r ~\AppData\Local\nvim
 rd -r ~\AppData\Local\nvim-data
 ```
+
+## TODO 
+- add ignore [] if a file name like this
