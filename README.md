@@ -140,19 +140,12 @@ Space (SPC) is my Leader key.
 | ------------ | ------------------- |
 | Shift s t    | Previewd definition |
 | Shift s r    | Rename              |
+| SPC d n      | diagnostic next     |
+| SPC d p      | diagnostic prev     |
+| SPC d a      | diagnostic all workspace |
 
 </details>
   
-<details>
-<summary>Trouble</summary>
-
-| Key Bindings | Description   |
-| ------------ | ------------- |
-| leader tr    | open trouble  |
-| leader rc    | close trouble |
-
-</details>
-
 <details>
 <summary>Custome & Other</summary>
 
@@ -197,6 +190,3 @@ rm -rf ~/.cache/nvim
 rd -r ~\AppData\Local\nvim
 rd -r ~\AppData\Local\nvim-data
 ```
-
-## TODO 
-- add ignore [] if a file name like this

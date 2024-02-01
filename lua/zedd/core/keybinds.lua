@@ -30,8 +30,9 @@ nmap("<S-h>", "<CMD>BufferPrevious<CR>")
 -- lsp saga
 nmap("<S-s>t", "<CMD>Lspsaga peek_definition<CR>")
 nmap("<S-s>r", "<CMD>Lspsaga rename<CR>")
-nmap("<S-s>dp", "<CMD>Lspsaga diagnostic_jump_prev<CR>")
-nmap("<S-s>dn", "<CMD>Lspsaga diagnostic_jump_next<CR>")
+nmap("<leader>dn", "<CMD>Lspsaga diagnostic_jump_next<CR>")
+nmap("<leader>dp", "<CMD>Lspsaga diagnostic_jump_prev<CR>")
+nmap("<leader>da", "<CMD>Lspsaga show_workspace_diagnostics<CR>")
 
 -- search and replace
 -- nmap("<S-s>s", [[/\<\\><Left><Left>]]) -- /\<word1\>
@@ -56,10 +57,6 @@ nmap("<C-c>", "<CMD>close<CR>") -- close window
 
 -- file manager built in
 -- nmap("<leader>e", "<CMD>Lex<CR><CR><CMD>vertical resize 30<CR>")
-
--- trouble
-nmap("<leader>tr", "<CMD>Trouble<CR>")
-nmap("<leader>tc", "<CMD>TroubleClose<CR>")
 
 -- custome keybind
 nmap("<leader>ww", "<CMD>w<CR>")
