@@ -1,6 +1,6 @@
 local nulls = require("null-ls")
 local formatting = nulls.builtins.formatting
-local diagnostic = nulls.builtins.diagnostics
+-- local diagnostic = nulls.builtins.diagnostics
 
 -- npm i -g prettier @johnnymorganz/stylua-bin tsc-node
 nulls.setup({

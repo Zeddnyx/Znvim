@@ -66,14 +66,6 @@ local plugins = {
 	{
 		"neovim/nvim-lspconfig",
 		event = "BufRead",
-		dependencies = {
-			{
-				"folke/trouble.nvim",
-				config = function()
-					require("zedd.lsp.trouble")
-				end,
-			},
-		},
 		config = function()
 			require("zedd.lsp.lspconfig")
 			vim.api.nvim_exec_autocmds("BufRead", {})

@@ -7,7 +7,7 @@ local on_attach = function(client, bufnr)
 		update_in_insert = true,
 	})
 	-- Show line diagnostics automatically in hover window
-	vim.o.updatetime = 500
+	vim.o.updatetime = 999999 -- change to 500 if u want to see msg on hover
 	vim.cmd([[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]])
 
 	-- show diagnostic color line number
