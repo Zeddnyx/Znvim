@@ -30,9 +30,9 @@ nmap("<S-h>", "<CMD>BufferPrevious<CR>")
 -- lsp saga
 nmap("<S-s>t", "<CMD>Lspsaga peek_definition<CR>")
 nmap("<S-s>r", "<CMD>Lspsaga rename<CR>")
-nmap("<leader>dn", "<CMD>Lspsaga diagnostic_jump_next<CR>")
-nmap("<leader>dp", "<CMD>Lspsaga diagnostic_jump_prev<CR>")
-nmap("<leader>da", "<CMD>Lspsaga show_workspace_diagnostics<CR>")
+nmap("<S-d>n", "<CMD>Lspsaga diagnostic_jump_next<CR>")
+nmap("<S-d>p", "<CMD>Lspsaga diagnostic_jump_prev<CR>")
+nmap("<S-d>a", "<CMD>Lspsaga show_workspace_diagnostics<CR>")
 
 -- search and replace
 -- nmap("<S-s>s", [[/\<\\><Left><Left>]]) -- /\<word1\>
