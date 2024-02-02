@@ -19,7 +19,26 @@ local on_attach = function(client, bufnr)
 	]])
 end
 
--- comment this code below if using tsc from nulls
+--Enable (broadcasting) snippet capability for completion
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+-- comment this tsserver below if using tsc from nulls
 lsp.tsserver.setup({
 	on_attach = on_attach,
+})
+lsp.cssls.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+	settings = {
+		css = { validate = true, lint = {
+			unknownAtRules = "ignore", -- hide unknownAtRules warning in tailwind css
+		} },
+		scss = { validate = true, lint = {
+			unknownAtRules = "ignore",
+		} },
+		less = { validate = true, lint = {
+			unknownAtRules = "ignore",
+		} },
+	},
 })

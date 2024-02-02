@@ -57,10 +57,10 @@ rm -rf ~/.local/share/nvim
 rm -rf ~/.cache/nvim
 ```
 
-install prettier, stylua
+install prettier, stylua, cssls
 
 ```
-npm i -g prettier @johnnymorganz/stylua-bin
+npm i -g prettier @johnnymorganz/stylua-bin vscode-langservers-extracted
 
 ```
 
