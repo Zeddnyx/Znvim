@@ -31,9 +31,8 @@ nmap("<S-h>", "<CMD>BufferPrevious<CR>")
 nmap("<S-s>t", "<CMD>Lspsaga peek_definition<CR>")
 nmap("<S-s>r", "<CMD>Lspsaga rename<CR>")
 nmap("<S-s>h", "<CMD>Lspsaga hover_doc<CR>")
-nmap("<S-d>n", "<CMD>Lspsaga diagnostic_jump_next<CR>")
-nmap("<S-d>p", "<CMD>Lspsaga diagnostic_jump_prev<CR>")
-nmap("<S-d>a", "<CMD>Lspsaga show_workspace_diagnostics<CR>")
+nmap("<S-s>d", "<CMD>Lspsaga diagnostic_jump_next<CR>")
+nmap("<S-s>a", "<CMD>Lspsaga show_workspace_diagnostics<CR>")
 
 -- search and replace
 -- nmap("<S-s>s", [[/\<\\><Left><Left>]]) -- /\<word1\>

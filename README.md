@@ -140,9 +140,8 @@ Space (SPC) is my Leader key.
 | ------------ | ------------------- |
 | Shift s t    | Previewd definition |
 | Shift s r    | Rename              |
-| Shift d n    | diagnostic next     |
-| Shift d p    | diagnostic prev     |
-| Shift d a    | diagnostic all workspace |
+| Shift s d    | diagnostic next     |
+| Shift s a    | diagnostic all workspace |
 
 </details>
   
