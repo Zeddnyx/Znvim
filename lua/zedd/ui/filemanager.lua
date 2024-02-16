@@ -1,7 +1,7 @@
 local options = {
 	filters = {
 		dotfiles = true,
-		custom = { "node_modules", "\\.cache", ".git", ".next", "dist" },
+		custom = { "node_modules", "\\.cache", ".git", "dist" },
 	},
 	disable_netrw = true,
 	hijack_netrw = true,

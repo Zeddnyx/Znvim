@@ -404,6 +404,10 @@
     "prefix": "lh",
     "body": "line-height: ${0:1.5};"
   },
+  "line-clamp": {
+    "prefix": "lc",
+    "body": "overflow: hidden; display: -webkit-box; -webkit-line-clamp: ${1:1}; -webkit-box-orient: vertical;"
+  },
   "letter-spacing": {
     "prefix": "ls",
     "body": "letter-spacing: ${0:2px};"
@@ -645,9 +649,29 @@
     "prefix": "key",
     "body": "@keyframes ${1:name} {\n  $0\n}"
   },
-  "@media": {
-    "prefix": "med",
-    "body": "@media screen and (${1:max-width: 300px}) {\n  $0\n}"
+  "@media xs": {
+    "prefix": "media xs",
+    "body": "@media screen and (min-width: 390px) {\n  $0\n}"
+  },
+  "@media sm": {
+    "prefix": "media sm",
+    "body": "@media screen and (min-width: 640px) {\n  $0\n}"
+  },
+  "@media md": {
+    "prefix": "media md",
+    "body": "@media screen and (min-width: 768px) {\n  $0\n}"
+  },
+  "@media lg": {
+    "prefix": "media lg",
+    "body": "@media screen and (min-width: 1024px) {\n  $0\n}"
+  },
+  "@media xl": {
+    "prefix": "media xl",
+    "body": "@media screen and (min-width: 1280px) {\n  $0\n}"
+  },
+  "@media 2xl": {
+    "prefix": "media 2xl",
+    "body": "@media screen and (min-width: 1536px) {\n  $0\n}"
   },
   "!important": {
     "prefix": "!",

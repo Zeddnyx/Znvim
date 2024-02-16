@@ -88,7 +88,7 @@ local M = {
 	Repeat = { fg = c.red },
 	Label = { fg = c.red },
 	Operator = { fg = c.bright_red },
-	Keyword = { fg = c.blue },
+	Keyword = { fg = c.bright_aqua},
 	KeywordFunction = { fg = c.bright_aqua },
 	Exception = { fg = c.purple },
 	PreProc = { fg = c.bright_green },
