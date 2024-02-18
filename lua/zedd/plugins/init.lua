@@ -149,6 +149,9 @@ local plugins = {
 	{
 		"nvim-tree/nvim-tree.lua",
 		version = "*",
+    cmd = {
+      "NvimTreeFocus",
+    },
 		keys = { { "<leader>e", "<cmd>NvimTreeFocus<cr>" } },
 		config = function()
 			require("zedd.ui.filemanager")
@@ -170,7 +173,11 @@ local plugins = {
 	-- find files and other
 	{
 		"nvim-telescope/telescope.nvim",
+    cmd = {
+      "Telescope",
+    },
 		keys = {
+      "Telescope buffers",
 			{ "<leader>ff", "<cmd>Telescope find_files<cr>" },
 			{ "<leader>lg", "<cmd>Telescope live_grep<cr>" },
 			{ "<leader>bb", "<cmd>Telescope buffers<cr>" },
@@ -206,20 +213,17 @@ local plugins = {
 		end,
 	},
 
-	-- 	-- which-key
-	--  	{
-	--  		"folke/which-key.nvim",
-	--  		event = "VeryLazy",
-	--  		lazy = true,
-	--  		init = function()
-	--  			vim.o.timeout = true
-	--  			vim.o.timeoutlen = 300
-	--  		end,
-	--      cmd = "WhichKey",
-	--  		config = function()
-	--  			require("zedd.ui.which-key")
-	--  		end,
-	--  	},
+	-- which-key
+	{
+		"folke/which-key.nvim",
+		init = function()
+			vim.o.timeout = true
+			vim.o.timeoutlen = 300
+		end,
+		config = function()
+			require("zedd.ui.which-key")
+		end,
+	},
 }
 
 require("lazy").setup(plugins, {
