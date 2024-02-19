@@ -41,9 +41,10 @@ nmap("<S-s>/", [[:%s/]])
 -- folding line
 nmap("zft", "vatzf<CR>") -- tag html
 nmap("zff", "vaBzf") -- function that match {}
+nmap("zfa","mz?\\[<CR>%mz`z")
 
 -- switch split screen
-nmap("<leader>h", "<C-w>h<CR>")
+nmap("<leader>h", "<C-w>h<CR>::j:")
 nmap("<leader>j", "<C-w>j<CR>")
 nmap("<leader>k", "<C-w>k<CR>")
 nmap("<leader>l", "<C-w>l<CR>")

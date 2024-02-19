@@ -98,6 +98,12 @@ local mappings = {
 		s = { [[/\<\\><Left><Left>]], "Search specific word" },
 		r = { [[:%s/]], "Replace all" },
 	},
+	F = {
+		name = " Folding",
+		t = { "vatzf<CR>", "Folding tag html" },
+		f = { "vaBzf", "Folding html" },
+		o = { "zo", "UnFolding" },
+	},
 	g = {
 		name = " Git",
 		g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
@@ -150,7 +156,7 @@ local mappings = {
 		name = " Split Screen",
 		v = { "<C-w>v<CR>", "Vertical split" },
 		h = { "<C-w>s<CR>", "Horizontal split" },
-    c = { "<cmd>close<cr>", "Close window" },
+		c = { "<cmd>close<cr>", "Close window" },
 		s = { "<cmd>split<cr>", "Split window" },
 	},
 	t = {
