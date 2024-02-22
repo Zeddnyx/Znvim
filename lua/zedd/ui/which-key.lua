@@ -89,10 +89,6 @@ local mappings = {
 	-- 		["cs"] = { [[:s/\(.*\)/\/* \1 *\/<CR>:noh<CR>]], "css (block)" },
 	-- 		["us"] = { [[:s/\/\*\(.\{-}\)\*\//\1/g<CR>:noh<CR>]], "Uncomment css (block)" },
 	-- 	},
-	e = {
-		name = "󰉋 Explorer",
-		e = { "<cmd>NvimTreeFocus<cr>", "Explorer" },
-	},
 	f = {
 		name = "󰺮 Find & Replace",
 		s = { [[/\<\\><Left><Left>]], "Search specific word" },
