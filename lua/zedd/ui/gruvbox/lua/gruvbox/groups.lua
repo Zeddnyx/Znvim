@@ -84,12 +84,14 @@ local M = {
 	Identifier = { fg = c.blue },
 	Function = { fg = c.bright_green, bold = true },
 	Statement = { fg = c.red },
-	Conditional = { fg = c.blue},
+	Conditional = { fg = c.blue },
 	Repeat = { fg = c.red },
 	Label = { fg = c.red },
 	Operator = { fg = c.bright_red },
-	Keyword = { fg = c.bright_aqua},
-	KeywordFunction = { fg = c.bright_aqua },
+	Keyword = { fg = c.red },
+	KeywordImport = { fg = c.bright_aqua },
+	KeywordFunction = { fg = c.red },
+	KeywordConditionalTernary = { fg = c.red },
 	Exception = { fg = c.purple },
 	PreProc = { fg = c.bright_green },
 	Include = { fg = c.bright_aqua }, -- import text color
@@ -105,12 +107,13 @@ local M = {
 	SpecialComment = { fg = c.red },
 	Debug = { fg = c.red },
 	Underline = { underline = true },
-	Error = { fg = c.red,bg = c.dark0, undercurl = true },
+	Error = { fg = c.red, bg = c.dark0, undercurl = true },
 	Todo = { fg = c.dark0, bg = c.light0, bold = true },
-  OnProgress = { fg = c.dark0, bg = c.light0, bold = true },
+	OnProgress = { fg = c.dark0, bg = c.light0, bold = true },
 	Underlined = { fg = c.bright_aqua, underline = true }, -- text link html
-	Attribute = { fg = c.bright_yellow }, -- attribute html
-	Tag = { fg = c.red }, -- tag html
+	Attribute = { fg = c.bright_blue }, -- attribute html
+	Tag = { fg = c.orange}, -- tag html
+	TagBuiltin = { fg = c.orange}, -- tag html
 
 	--See :h html
 	htmlTag = { fg = c.bright_red },
@@ -119,6 +122,12 @@ local M = {
 	htmlLink = { fg = c.bright_aqua },
 	tsxTag = { fg = c.bright_yellow },
 	tsxTagName = { fg = c.bright_yellow },
+
+	-- typescript
+	typescriptImportType = { fg = c.red },
+	typescriptFuncCallArg = { fg = c.blue },
+	typescriptArrayDestructure = { fg = c.blue },
+	typescriptDescriptureVariable = { fg = c.blue },
 
 	--
 	--See :h lsp-highlight
@@ -181,8 +190,10 @@ local M = {
 	["@repeat"] = { link = "Repeat" },
 	["@label"] = { link = "Label" },
 	["@operator"] = { link = "Operator" },
-	["@keyword"] = { link = "Keyword" }, -- variable, export default
+	["@keyword"] = { link = "Keyword" }, -- variable,
+	["@keyword.import"] = { link = "KeywordImport" }, -- import/export
 	["@keyword.function"] = { link = "KeywordFunction" }, -- function
+	["@keyword.conditional.ternary"] = { link = "KeywordFunction" }, -- function
 	["@exception"] = { link = "Exception" },
 	["@variable"] = { fg = c.light0 },
 	["@type"] = { link = "Type" },
@@ -194,6 +205,7 @@ local M = {
 	["@preproc"] = { link = "PreProc" },
 	["@debug"] = { link = "Debug" },
 	["@tag"] = { link = "Tag" },
+	["@tag.builtin"] = { link = "TagBuiltin" },
 	["@tag.attribute"] = { link = "Attribute" },
 	["@tag.delimiter"] = { link = "Tag" },
 
@@ -219,7 +231,7 @@ local M = {
 	CmpItemAbbrDeprecated = { bg = c.dark0, fg = c.light3 },
 	CmpDocumentation = { link = "NormalFloat" },
 	CmpDocumentationBorder = { link = "FloatBorder" },
-  CmpItemKind = { fg = c.bright_aqua },
+	CmpItemKind = { fg = c.bright_aqua },
 	--
 	--See :h gitsigns-highlight-groups
 	GitSignAdd = { link = "DiffAdd" },
@@ -231,7 +243,7 @@ local M = {
 	--See telescope.nvim/plugin/telescope.lua
 	TelescopeSelection = { bg = c.light2, fg = c.dark0 },
 	TelescopeSelectionCaret = { fg = c.dark0 },
-	TelescopeMultiSelection = { fg = c.bright_aqua},
+	TelescopeMultiSelection = { fg = c.bright_aqua },
 	TelescopeMatching = { bg = c.bright_aqua, fg = c.dark0 },
 	TelescopePromptPrefix = { fg = c.light0 },
 	TelescopeNormal = { link = "NormalFloat" },
@@ -244,16 +256,16 @@ local M = {
 	TranslatorBorder = { link = "FloatBorder" },
 
 	--See h nvm-tree.nvim/lua/nvim-tree/colors.lua
-  NvimTreeIndentMarker = { fg = c.yellow },
+	NvimTreeIndentMarker = { fg = c.yellow },
 	NvimTreeImageFile = { fg = c.purple },
 	NvimTreeSpecialFile = { fg = c.bright_aqua, bold = true, underline = true },
 	NvimTreeExecFile = { fg = c.bright_green, bold = true },
 	NvimTreeOpenedFile = { fg = c.red, bold = true },
 	NvimTreeModifiedFile = { fg = c.red, bold = true },
-  NvimTreeSymlinkFile = { fg = c.bright_aqua, bold = true },
+	NvimTreeSymlinkFile = { fg = c.bright_aqua, bold = true },
 
-  NvimTreeFileNew = { fg = c.bright_aqua, bold = true },
-  NvimTreeFolderNew = { fg = c.bright_aqua, bold = true },
+	NvimTreeFileNew = { fg = c.bright_aqua, bold = true },
+	NvimTreeFolderNew = { fg = c.bright_aqua, bold = true },
 	NvimTreeFolderIcon = { fg = c.bright_yellow, bold = true },
 	NvimTreeFolderName = { fg = c.bright_yellow, bold = true },
 	NvimTreeOpenedFolderName = { fg = c.bright_yellow, bold = true },
@@ -261,13 +273,13 @@ local M = {
 	NvimTreeClosedFolderIcon = { fg = c.bright_yellow, bold = true },
 	NvimTreeEmptyFolderName = { fg = c.gray },
 
-  NvimTreeGitUntracked = { fg = c.bright_aqua },
-  NvimTreeGitDirty = { fg = c.bright_aqua },
-  NvimTreeGitIgnored = { fg = c.gray },
-  NvimTreeGitStaged = { fg = c.bright_aqua },
-  NvimTreeGitMerge = { fg = c.bright_aqua },
-  NvimTreeGitRenamed = { fg = c.bright_aqua },
-  NvimTreeGitNew = { fg = c.bright_aqua },
+	NvimTreeGitUntracked = { fg = c.bright_aqua },
+	NvimTreeGitDirty = { fg = c.bright_aqua },
+	NvimTreeGitIgnored = { fg = c.gray },
+	NvimTreeGitStaged = { fg = c.bright_aqua },
+	NvimTreeGitMerge = { fg = c.bright_aqua },
+	NvimTreeGitRenamed = { fg = c.bright_aqua },
+	NvimTreeGitNew = { fg = c.bright_aqua },
 
 	--See barbar.nvim
 	BufferCurrent = { bg = c.dark0, fg = c.light0 },

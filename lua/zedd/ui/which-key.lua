@@ -67,7 +67,11 @@ local setup = {
 }
 
 local mappings = {
-	a = { "gg<S-v>G", "Select all" },
+	A = {
+		name = "  Select",
+		a = { "gg<S-v>G", "Select all" },
+		f = { "v%", "Select match word first to end" },
+	},
 	b = { "<cmd>Telescope buffers<cr>", "Buffers" },
 	c = { "<cmd>noh<cr>", "Clean highlight" },
 	B = {
@@ -97,7 +101,8 @@ local mappings = {
 	F = {
 		name = " Folding",
 		t = { "vatzf<CR>", "Folding tag html" },
-		f = { "vaBzf", "Folding html" },
+		f = { "vaBzf", "Folding function {}" },
+		a = { "v%zf", "Folding match word first to end" },
 		o = { "zo", "UnFolding" },
 	},
 	g = {

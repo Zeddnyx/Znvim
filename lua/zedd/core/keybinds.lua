@@ -94,7 +94,9 @@ nmap("q","<Nop>") -- disable q
 -- react tag
 nmap("crr", [[:s/<\(.*\)/{\/*\<\1 *\/}<CR>:noh<CR>]])
 vmap("cr", [[:s/\(.*\)/{\/* \1 *\/}<CR>:noh<CR>]])
+-- vmap("cr", [[:s@^\(\s*\)<\(.*\)>@\1{/* \2 */}@g<CR>:noh<CR>]]) not ready yet
 vmap("ur", [[:s/{\/\*\(.\{-}\)\*\/}/\1/g <CR>]])
+
 
 -- js
 nmap("cjj", [[:s/^/\/\/ <CR>:noh<CR>]])

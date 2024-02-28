@@ -71,18 +71,6 @@ local plugins = {
 			vim.api.nvim_exec_autocmds("BufRead", {})
 		end,
 	},
-	{
-		"hinell/lsp-timeout.nvim",
-		event = "BufRead",
-		dependencies = { "neovim/nvim-lspconfig" },
-		config = function()
-			vim.g["lsp-timeout-config"] = {
-				stopTimeout = 1000 * 60 * 5, -- ms, timeout before stopping all LSP servers
-				startTimeout = 1000 * 10, -- ms, timeout before restart
-				silent = false,
-			}
-		end,
-	},
 
 	{
 		"nvimdev/lspsaga.nvim",
@@ -127,14 +115,21 @@ local plugins = {
 	},
 
 	-- Themes
-	{
-		dir = "~/.config/nvim/lua/zedd/ui/gruvbox",
-		priority = 100,
-		config = function()
-			vim.cmd("colorscheme gruvbox")
-		end,
-	},
-
+	 	{ 
+	 		dir = "~/.config/nvim/lua/zedd/ui/gruvbox", 
+	 		priority = 100, 
+	 		config = function() 
+	 			vim.cmd("colorscheme gruvbox") 
+	 		end, 
+	 	}, 
+-- 	{ 
+-- 		"ellisonleao/gruvbox.nvim", 
+-- 		priority = 1000, 
+-- 		config = true, 
+-- 		config = function() 
+-- 			require("zedd.ui.gruvbox") 
+-- 		end, 
+-- 	}, 
 	-- Editor
 	{
 		"nvim-treesitter/nvim-treesitter",
@@ -143,15 +138,18 @@ local plugins = {
 		config = function()
 			require("zedd.ui.treesitter")
 		end,
+    dependencies = {
+      "https://github.com/nvim-treesitter/playground"
+    }
 	},
 
 	-- filemanager
 	{
 		"nvim-tree/nvim-tree.lua",
 		version = "*",
-    cmd = {
-      "NvimTreeFocus",
-    },
+		cmd = {
+			"NvimTreeFocus",
+		},
 		keys = { { "<leader>e", "<cmd>NvimTreeFocus<cr>" } },
 		config = function()
 			require("zedd.ui.filemanager")
@@ -173,11 +171,11 @@ local plugins = {
 	-- find files and other
 	{
 		"nvim-telescope/telescope.nvim",
-    cmd = {
-      "Telescope",
-    },
+		cmd = {
+			"Telescope",
+		},
 		keys = {
-      "Telescope buffers",
+			"Telescope buffers",
 			{ "<leader>ff", "<cmd>Telescope find_files<cr>" },
 			{ "<leader>lg", "<cmd>Telescope live_grep<cr>" },
 			{ "<leader>bb", "<cmd>Telescope buffers<cr>" },
