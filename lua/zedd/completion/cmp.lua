@@ -12,38 +12,33 @@ vim.api.nvim_set_hl(0, "BORDER", { fg = "#8ec07c" })
 --
 -- window color and border pop up snippet
 local window = cmp.config.window.bordered({
-	border = "single",
+	border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
 	winhighlight = "Normal:MENU,FloatBorder:BORDER,CursorLine:SELECT,Search:MENU",
 })
 
 -- icons in snippet
 local icons = {
-	Snippet = "",
-	Text = "󰊄",
-	Method = "󰆧",
-	Function = "󰊕",
-	Constructor = "",
-	Field = "󰜢",
-	Array = "󰅪",
-	Variable = "󰡱",
-	Class = "󰠱",
-	Interface = "",
-	Module = "",
-	Property = "󰜢",
-	Unit = "󰑭",
-	Value = "󱁨",
-	Enum = "",
-	Keyword = "",
-	Color = "󰏘",
-	File = "󰈙",
-	Reference = "",
-	Folder = "󰉋",
-	EnumMember = "",
-	Constant = "",
-	Struct = "",
-	Event = "",
-	Operator = "",
-	TypeParameter = "",
+	Class = " ",
+	Color = " ",
+	Constant = " ",
+	Constructor = " ",
+	Enum = " ",
+	EnumMember = " ",
+	Field = "󰄶 ",
+	File = " ",
+	Folder = " ",
+	Function = " ",
+	Interface = "󰜰",
+	Keyword = "󰌆 ",
+	Method = "ƒ ",
+	Module = "󰏗 ",
+	Property = " ",
+	Snippet = "󰘍 ",
+	Struct = " ",
+	Text = " ",
+	Unit = " ",
+	Value = "󰎠 ",
+	Variable = " ",
 }
 
 local function feedkey(key, mode)
@@ -57,9 +52,9 @@ cmp.setup({
 		end,
 	},
 
---   experimental = { 
---     ghost_text = true, 
---   }, 
+	--   experimental = {
+	--     ghost_text = true,
+	--   },
 
 	completion = {
 		autocomplete = { cmp.TriggerEvent.TextChanged },
