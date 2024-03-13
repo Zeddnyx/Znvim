@@ -141,7 +141,7 @@
   },
   "handle change": {
     "prefix": "handle-change",
-    "body": "const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {\n\tconst {name, value} = event.target\n\tsetValues({ ...values, [name]: value })\n}"
+    "body": "const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {\n\tconst { name, value } = event.target\n\tsetForm({ ...form, [name]: value })\n}"
   },
   "handle submit": {
     "prefix": "handle-submit",

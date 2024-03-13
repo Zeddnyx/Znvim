@@ -107,13 +107,13 @@ local M = {
 	SpecialComment = { fg = c.red },
 	Debug = { fg = c.red },
 	Underline = { underline = true },
-	Error = { fg = c.red, bg = c.dark0, undercurl = true },
+	Error = { fg = c.dark0, bg = c.light0, bold = true },
 	Todo = { fg = c.dark0, bg = c.light0, bold = true },
 	OnProgress = { fg = c.dark0, bg = c.light0, bold = true },
 	Underlined = { fg = c.bright_aqua, underline = true }, -- text link html
 	Attribute = { fg = c.bright_blue }, -- attribute html
-	Tag = { fg = c.orange}, -- tag html
-	TagBuiltin = { fg = c.orange}, -- tag html
+	Tag = { fg = c.orange }, -- tag html
+	TagBuiltin = { fg = c.orange }, -- tag html
 
 	--See :h html
 	htmlTag = { fg = c.bright_red },
@@ -159,9 +159,9 @@ local M = {
 	["@text.title"] = { link = "Title" },
 	["@text.uri"] = { link = "Underlined", fg = c.bright_aqua },
 	["@text.underline"] = { link = "Underlined", fg = c.bright_aqua },
-	["@text.error"] = { link = "Error" },
+	["@comment.error"] = { link = "Error" },
+	["@comment.onprogress"] = { link = "OnProgress" },
 	["@text.todo"] = { link = "Todo" },
-	["@text.onprogress"] = { link = "OnProgress" },
 	["@comment"] = { link = "Comment" },
 	["@punctuation"] = { link = "Delimiter" },
 	["@punctuation.bracket"] = { link = "Delimiter" },
@@ -241,10 +241,10 @@ local M = {
 	GitSignUnstaged = { link = "DiffUnstaged" },
 	--
 	--See telescope.nvim/plugin/telescope.lua
-	TelescopeSelection = { fg = c.bright_aqua},
+	TelescopeSelection = { fg = c.bright_aqua },
 	TelescopeSelectionCaret = { fg = c.dark0 },
 	TelescopeMultiSelection = { fg = c.bright_aqua },
-	TelescopeMatching = {  fg = c.bright_aqua},
+	TelescopeMatching = { fg = c.bright_aqua },
 	TelescopePromptPrefix = { fg = c.light0 },
 	TelescopeNormal = { link = "NormalFloat" },
 	TelescopeBorder = { link = "FloatBorder" },
@@ -282,20 +282,20 @@ local M = {
 	NvimTreeGitNew = { fg = c.bright_aqua },
 
 	--See barbar.nvim
-	BufferCurrent = { bg = c.dark0, fg = c.light0 },
-	BufferCurrentIndex = { bg = c.dark3, fg = c.light0 },
+	BufferCurrent = { bg = c.dark0, fg = c.bright_aqua, bold = true }, -- current buffer
+	BufferCurrentIndex = { bg = c.dark3, fg = c.dark0 },
 	BufferCurrentMod = { bg = c.dark0, fg = c.red },
-	BufferCurrentSign = { bg = c.dark0, fg = c.light0 },
+	BufferCurrentSign = { bg = c.dark0, fg = c.dark0 },
 	BufferCurrentTarget = { bg = c.dark0, fg = c.orange },
 	BufferVisible = { bg = c.dark0, fg = c.light0 },
 	BufferVisibleIndex = { bg = c.dark0, fg = c.light0 },
 	BufferVisibleMod = { bg = c.dark0, fg = c.red },
-	BufferVisibleSign = { bg = c.dark0, fg = c.light0 },
+	BufferVisibleSign = { bg = c.dark0, fg = c.dark0 },
 	BufferVisibleTarget = { bg = c.dark0, fg = c.orange },
-	BufferInactive = { bg = c.dark2, fg = c.light3 },
-	BufferInactiveIndex = { bg = c.dark2, fg = c.dark3 },
-	BufferInactiveMod = { bg = c.dark2, fg = c.red },
-	BufferInactiveSign = { bg = c.dark0, fg = c.light0 },
+	BufferInactive = { bg = c.dark1, fg = c.light3 },
+	BufferInactiveIndex = { bg = c.dark1, fg = c.dark3 },
+	BufferInactiveMod = { bg = c.dark1, fg = c.red },
+	BufferInactiveSign = { bg = c.dark1, fg = c.dark0 },
 
 	--See lspsaga.nvim
 	SagaWinbarFolder = { bg = c.dark0, fg = c.yellow },

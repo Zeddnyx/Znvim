@@ -80,6 +80,8 @@ local mappings = {
 		l = { "<cmd>bnext<cr>", "Next buffer" },
 		c = { "<cmd>bd<cr>", "Close buffer" },
 		q = { "<cmd>%bd|e#<cr>", "Close all buffers except current" },
+    p = { "<cmd>BufferPin<cr>", "Pin/Unpin buffer" },
+    r = { "<cmd>BufferRestore<cr>", "Restore buffer" },
 	},
 	-- 	c = {
 	-- 		name = "󱗡 Comment",

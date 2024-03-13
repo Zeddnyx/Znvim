@@ -30,5 +30,7 @@ local M = {
 	bright_aqua =   "#8ec07c",
 	bright_gray =   "#a89984",
 	bright_orange = "#fe8019",
+  -- dark color
+  dark_red = "#9d0006",
 }
 return M

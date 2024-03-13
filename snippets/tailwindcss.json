@@ -3,6 +3,10 @@
     "prefix": "aspect",
     "body": "aspect-${1|auto,square,video,[]|}"
   },
+  "columns": {
+    "prefix": "columns",
+    "body": "columns-${1}"
+  },
   "display": {
     "prefix": "display",
     "body": "${1|flex,grid,block,inline,hidden|}"
