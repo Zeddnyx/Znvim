@@ -18,6 +18,7 @@ vim.opt.mouse = "a"
 vim.opt.shell = "fish"
 vim.opt.swapfile = false
 vim.opt.list = true
+vim.o.foldtext = 'v:lua.fold_text()'
 vim.opt.fillchars:append({
 	eob = " ",
 })
@@ -47,3 +48,12 @@ vim.opt.wildoptions = "pum"
 vim.opt.pumblend = 5
 vim.opt.background = "dark"
 -- vim.opt.signcolumn = "no"
+
+function fold_text()
+    local line = vim.fn.getline(vim.v.foldstart)
+    local folded_line_num = vim.v.foldend - vim.v.foldstart
+    local line_text = string.gsub(line, '^"{\\+', '')
+    local fillcharcount = vim.o.textwidth - #line_text - #tostring(folded_line_num)
+    return 'Fold ' .. string.rep('-', 4) .. line_text .. string.rep('.', fillcharcount) .. ' (' .. folded_line_num .. ' L)'
+end
+

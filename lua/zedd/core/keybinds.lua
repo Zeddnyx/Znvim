@@ -92,7 +92,9 @@ nmap("<C-z>", "<Nop>") -- disable z
 -- comment
 -- react tag
 nmap("crr", [[:s/<\(.*\)/{\/*\<\1 *\/}<CR>:noh<CR>]])
+nmap("cr", [[vat :s/\(.*\)/{\/* \1 *\/}<CR>:noh<CR>]])
 vmap("cr", [[:s/\(.*\)/{\/* \1 *\/}<CR>:noh<CR>]])
+
 -- vmap("cr", [[:s@^\(\s*\)<\(.*\)>@\1{/* \2 */}@g<CR>:noh<CR>]]) not ready yet
 vmap("ur", [[:s/{\/\*\(.\{-}\)\*\/}/\1/g <CR>]])
 

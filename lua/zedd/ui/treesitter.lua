@@ -1,5 +1,5 @@
 local option = {
-	ensure_installed = { "markdown", "markdown_inline", "lua", "javascript", "tsx", "typescript", "html", "json", "http" },
+	ensure_installed = {"comment", "markdown", "markdown_inline", "lua", "javascript", "tsx", "typescript", "html", "json", "http" },
 	auto_install = true,
 	-- autotag = { enable = true },
 	autopairs = { enable = true },
