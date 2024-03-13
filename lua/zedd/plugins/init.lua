@@ -115,21 +115,21 @@ local plugins = {
 	},
 
 	-- Themes
-	 	{ 
-	 		dir = "~/.config/nvim/lua/zedd/ui/gruvbox", 
-	 		priority = 100, 
-	 		config = function() 
-	 			vim.cmd("colorscheme gruvbox") 
-	 		end, 
-	 	}, 
--- 	{ 
--- 		"ellisonleao/gruvbox.nvim", 
--- 		priority = 1000, 
--- 		config = true, 
--- 		config = function() 
--- 			require("zedd.ui.gruvbox") 
--- 		end, 
--- 	}, 
+	{
+		dir = "~/.config/nvim/lua/zedd/ui/gruvbox",
+		priority = 100,
+		config = function()
+			vim.cmd("colorscheme gruvbox")
+		end,
+	},
+	-- 	{
+	-- 		"ellisonleao/gruvbox.nvim",
+	-- 		priority = 1000,
+	-- 		config = true,
+	-- 		config = function()
+	-- 			require("zedd.ui.gruvbox")
+	-- 		end,
+	-- 	},
 	-- Editor
 	{
 		"nvim-treesitter/nvim-treesitter",
@@ -138,9 +138,9 @@ local plugins = {
 		config = function()
 			require("zedd.ui.treesitter")
 		end,
-    dependencies = {
-      "https://github.com/nvim-treesitter/playground"
-    }
+		dependencies = {
+			"https://github.com/nvim-treesitter/playground",
+		},
 	},
 
 	-- filemanager

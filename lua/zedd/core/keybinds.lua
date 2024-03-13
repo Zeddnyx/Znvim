@@ -37,6 +37,7 @@ nmap("<S-s>a", "<CMD>Lspsaga show_workspace_diagnostics<CR>")
 -- search and replace
 -- nmap("<S-s>s", [[/\<\\><Left><Left>]]) -- /\<word1\>
 nmap("<S-s>/", [[:%s/]])
+nmap("<S-d>", [[:%s/\d\+/number/g]]) -- replace all number to number
 
 -- folding line
 nmap("zft", "vatzf<CR>") -- tag html
@@ -70,6 +71,8 @@ nmap("<leader>a", "gg<S-v>G") -- select all
 nmap("<leader>c", ":noh<CR>") -- clean higlight
 nmap("<leader>y", "yiw") -- yank forward
 nmap("<leader>v", "viw") -- yank backward
+nmap("m", "]m") -- next func
+nmap("<S-m>", "[m") -- prev func
 
 vmap("<S-j>", ":m '>+1<CR>gv=gv")
 vmap("<S-k>", ":m '<-2<CR>gv=gv")
