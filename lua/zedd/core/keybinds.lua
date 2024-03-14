@@ -37,8 +37,8 @@ nmap("<S-s>a", "<CMD>Lspsaga show_workspace_diagnostics<CR>")
 -- search and replace
 -- nmap("<S-s>s", [[/\<\\><Left><Left>]]) -- /\<word1\>
 nmap("<S-s>/", [[:%s/]])
-nmap("<S-d>", [[:%s/\d\+/number/g]]) -- replace all number to number
-nmap("<S-s>", [[:%s/"[^"]*"/string/g]]) -- replace all text to strig 
+nmap("<leader>d", [[:%s/\d\+/number/g]]) -- replace all number to number
+nmap("<leader>s", [[:%s/"[^"]*"/string/g]]) -- replace all text to strig 
 
 -- folding line
 nmap("zft", "vatzf<CR>") -- tag html

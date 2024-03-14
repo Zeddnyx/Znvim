@@ -9,6 +9,7 @@ vim.g.vsnip_filetypes = {
 		"javascript/react",
 		"javascript/typescript",
 		"javascript/javascript",
+    "tailwindcss",
 		"html",
 	},
 	javascript = { "javascript/javascript" },
