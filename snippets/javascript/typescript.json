@@ -145,7 +145,7 @@
   },
   "handle submit": {
     "prefix": "handle-submit",
-    "body": "const handlesubmit= (event: react.formevent<htmlformelement>) => {\n\t event.preventdefault()\n\t $0\n}"
+    "body": "const handleSubmit= (event: React.FormEvent<HTMLFormElement>) => {\n\t event.preventDefault()\n\t $0\n}"
   },
   "set state ": {
     "prefix": "set-state",

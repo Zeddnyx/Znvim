@@ -12,7 +12,7 @@ local M = {
 	light2 = "#bdae93",
 	light3 = "#a89984",
 	-- normal color
-	red =    "#E74633",
+	red =    "#F44A30",
 	green =  "#98971a",
 	yellow = "#D69820",
 	blue =   "#83A598",
