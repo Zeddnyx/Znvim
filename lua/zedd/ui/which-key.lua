@@ -95,6 +95,13 @@ local mappings = {
 	-- 		["cs"] = { [[:s/\(.*\)/\/* \1 *\/<CR>:noh<CR>]], "css (block)" },
 	-- 		["us"] = { [[:s/\/\*\(.\{-}\)\*\//\1/g<CR>:noh<CR>]], "Uncomment css (block)" },
 	-- 	},
+  T = {
+    name = " Telescope",
+    f = { "<cmd>Telescope find_files<cr>", "Find files" },
+    g = { "<cmd>Telescope live_grep<cr>", "Live grep" },
+    r = { "<cmd>Telescope lsp_references<cr>", "Lsp references" },
+    d = { "<cmd>Telescope lsp_definitions<cr>", "Lsp diagnostics" },
+  }
 	f = {
 		name = "󰺮 Find & Replace",
 		s = { [[/\<\\><Left><Left>]], "Search specific word" },

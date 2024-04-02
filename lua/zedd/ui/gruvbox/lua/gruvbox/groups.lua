@@ -8,7 +8,7 @@ local M = {
 	Cursor = { bg = c.blue, fg = c.dark0 },
 	ICursor = { link = "Cursor" },
 	CursorIM = { link = "Cursor" },
-	CursorColumn = { bg = c.dark2 },
+	CursorColumn = { bg = c.dark1 },
 	CursorLine = { link = "CursorColumn" },
 	Directory = { fg = c.bright_green, bold = true },
 	DiffAdd = { fg = c.bright_green, bold = true },

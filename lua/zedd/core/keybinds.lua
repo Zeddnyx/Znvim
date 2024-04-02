@@ -56,7 +56,7 @@ nmap("<C-Left>", "<CMD>vertical resize +5<CR>")
 nmap("<C-Up>", "<CMD>resize -5<CR>")
 nmap("<C-Right>", "<CMD>vertical resize -5<CR>")
 nmap("<C-Down>", "<CMD>resize +5<CR>")
-nmap("<C-c>", "<CMD>close<CR>") -- close window
+map("<C-c>", "<CMD>close<CR>") -- close window
 
 -- file manager built in
 -- nmap("<leader>e", "<CMD>Lex<CR><CR><CMD>vertical resize 30<CR>")
