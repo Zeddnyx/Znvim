@@ -1,5 +1,10 @@
 function map(mode, shortcut, command)
-	vim.api.nvim_set_keymap(mode, shortcut, command, { noremap = true, silent = true })
+	--vim.api.nvim_set_keymap(mode, shortcut, command, { noremap = true, silent = true })
+  if type(command) == 'string' then
+        vim.api.nvim_set_keymap(mode, shortcut, command, { noremap = true, silent = true })
+    else
+        print("Error: Command must be a string")
+    end
 end
 -- custome shortcut
 function short(mode, shortcut, command)
@@ -56,7 +61,7 @@ nmap("<C-Left>", "<CMD>vertical resize +5<CR>")
 nmap("<C-Up>", "<CMD>resize -5<CR>")
 nmap("<C-Right>", "<CMD>vertical resize -5<CR>")
 nmap("<C-Down>", "<CMD>resize +5<CR>")
-map("<C-c>", "<CMD>close<CR>") -- close window
+nmap("<C-c>", "<CMD>close<CR>") -- close window
 
 -- file manager built in
 -- nmap("<leader>e", "<CMD>Lex<CR><CR><CMD>vertical resize 30<CR>")
