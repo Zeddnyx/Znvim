@@ -94,14 +94,14 @@ local mappings = {
 	-- 		["css"] = { [[:s/\(.*\)/\/* \1 *\/<CR>:noh<CR>]], "css" },
 	-- 		["cs"] = { [[:s/\(.*\)/\/* \1 *\/<CR>:noh<CR>]], "css (block)" },
 	-- 		["us"] = { [[:s/\/\*\(.\{-}\)\*\//\1/g<CR>:noh<CR>]], "Uncomment css (block)" },
-	-- 	},
+	--},
   T = {
     name = " Telescope",
     f = { "<cmd>Telescope find_files<cr>", "Find files" },
     g = { "<cmd>Telescope live_grep<cr>", "Live grep" },
     r = { "<cmd>Telescope lsp_references<cr>", "Lsp references" },
     d = { "<cmd>Telescope lsp_definitions<cr>", "Lsp diagnostics" },
-  }
+  },
 	f = {
 		name = "󰺮 Find & Replace",
 		s = { [[/\<\\><Left><Left>]], "Search specific word" },
@@ -146,6 +146,7 @@ local mappings = {
 			"Workspace Diagnostics",
 		},
 		f = { "<cmd>lua vim.lsp.buf.format{async=true}<cr>", "Format" },
+    c = { "<cmd>%!clang-format<cr>", "Format C/C++/C#" },
 		i = { "<cmd>LspInfo<cr>", "Info" },
 		j = {
 			"<cmd>Lspsaga diagnostic_jump_next<CR>",
