@@ -225,7 +225,7 @@ local plugins = {
 }
 
 require("lazy").setup(plugins, {
-	-- 	ui = {
-	-- 		border = "none",
-	-- 	},
+	ui = {
+		border = "none",
+	},
 })

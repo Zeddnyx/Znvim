@@ -17,4 +17,5 @@ vim.g.vsnip_filetypes = {
 	css = { "tailwindcss" },
 	html = { "angular/html" },
 	http = { "http" },
+  c = { "c" },
 }
