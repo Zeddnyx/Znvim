@@ -49,5 +49,21 @@
   "union": { "prefix": "union", "body": "union $1 {\n\t$2\n}" },
   "include": { "prefix": "include", "body": "#include <${1:stdio.h}>" },
   "#inc": { "prefix": "#inc", "body": "#include <${1:stdio.h}>","description": "include library" },
-  "#def": { "prefix": "#def", "body": "#define $1 $2","description": "define macro" }
+  "#def": { "prefix": "#def", "body": "#define $1 $2","description": "define macro" },
+  "integer": { "prefix": "integer", "body": "int $1;" },
+  "float": { "prefix": "float", "body": "float $1;" },
+  "double": { "prefix": "double", "body": "double $1;" },
+  "char": { "prefix": "char", "body": "char $1;" },
+  "short int": { "prefix": "short int", "body": "short int $1;" },
+  "unsigned int": { "prefix": "unsigned int", "body": "unsigned int $1;" },
+  "long int": { "prefix": "long int", "body": "long int $1;" },
+  "long long int": { "prefix": "long long int", "body": "long long int $1;" },
+  "long double": { "prefix": "long double", "body": "long double $1;" },
+  "unsigned long int": { "prefix": "unsigned long int", "body": "unsigned long int $1;" },
+  "unsigned long long int": { "prefix": "unsigned long long int", "body": "unsigned long long int $1;" },
+  "signed char": { "prefix": "signed char", "body": "signed char $1;" },
+  "unsigned char": { "prefix": "unsigned char", "body": "unsigned char $1;" },
+  "print": { "prefix": "print", "body": "printf(\"$1\");" },
+  "scanf": { "prefix": "scanf", "body": "scanf(\"$1\");" },
+  "pointer": { "prefix": "*", "body": "*$1;" }
 }
