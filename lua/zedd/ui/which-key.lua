@@ -145,7 +145,7 @@ local mappings = {
 			"<cmd>Lspsaga show_workspace_diagnostics<cr>",
 			"Workspace Diagnostics",
 		},
-		f = { "<cmd>lua vim.lsp.buf.format{async=true}<cr>", "Format" },
+-- 		f = { "<cmd>lua vim.lsp.buf.format{async=true}<cr>", "Format" },
     c = { "<cmd>%!clang-format<cr>", "Format C/C++/C#" },
 		i = { "<cmd>LspInfo<cr>", "Info" },
 		j = {

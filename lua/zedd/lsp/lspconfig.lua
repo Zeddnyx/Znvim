@@ -27,6 +27,10 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 lsp.tsserver.setup({
 	on_attach = on_attach,
 })
+lsp.clangd.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+})
 lsp.cssls.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
