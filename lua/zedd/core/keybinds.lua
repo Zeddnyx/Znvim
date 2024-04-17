@@ -1,10 +1,10 @@
 function map(mode, shortcut, command)
 	--vim.api.nvim_set_keymap(mode, shortcut, command, { noremap = true, silent = true })
-  if type(command) == 'string' then
-        vim.api.nvim_set_keymap(mode, shortcut, command, { noremap = true, silent = true })
-    else
-        print("Error: Command must be a string")
-    end
+	if type(command) == "string" then
+		vim.api.nvim_set_keymap(mode, shortcut, command, { noremap = true, silent = true })
+	else
+		print("Error: Command must be a string")
+	end
 end
 -- custome shortcut
 function short(mode, shortcut, command)
@@ -25,8 +25,8 @@ function vmap(shortcut, command)
 end
 
 --buffer
--- nmap("<S-h>", "<CMD>bprevious<CR>", { desc = "Buffer: focus to previous buffer" }) 
--- nmap("<S-l>", "<CMD>bnext<CR>", { desc = "Buffer: focus to next buffer" }) 
+-- nmap("<S-h>", "<CMD>bprevious<CR>", { desc = "Buffer: focus to previous buffer" })
+-- nmap("<S-l>", "<CMD>bnext<CR>", { desc = "Buffer: focus to next buffer" })
 nmap("<S-c>", "<CMD>bd<CR>", { desc = "Buffer: delete buffer" })
 nmap("<S-q>", "<CMD>%bd|e#<CR>", { desc = "Buffer: delete all buffer except current buffer" })
 nmap("<S-l>", "<CMD>BufferNext<CR>")
@@ -43,12 +43,12 @@ nmap("<S-s>a", "<CMD>Lspsaga show_workspace_diagnostics<CR>")
 -- nmap("<S-s>s", [[/\<\\><Left><Left>]]) -- /\<word1\>
 nmap("<S-s>/", [[:%s/]])
 nmap("<leader>d", [[:%s/\d\+/number/g]]) -- replace all number to number
-nmap("<leader>s", [[:%s/"[^"]*"/string/g]]) -- replace all text to strig 
+nmap("<leader>s", [[:%s/"[^"]*"/string/g]]) -- replace all text to strig
 
 -- folding line
 nmap("zft", "vatzf<CR>") -- tag html
 nmap("zff", "vaBzf") -- function that match {}
-nmap("zfa","mz?\\[<CR>%mz`z")
+nmap("zfa", "mz?\\[<CR>%mz`z")
 
 -- switch split screen
 nmap("<leader>h", "<C-w>h<CR>::j:")
@@ -70,6 +70,7 @@ nmap("<C-c>", "<CMD>close<CR>") -- close window
 nmap("<leader>ww", "<CMD>w<CR>")
 nmap("<leader>wa", "<CMD>wa<CR>")
 nmap("<leader>wq", "<CMD>wq<CR>")
+nmap("<leader>wc", ":lua getFilename()<CR>") 
 
 nmap("r", "<C-r>")
 
@@ -87,7 +88,7 @@ vmap("<S-k>", ":m '<-2<CR>gv=gv")
 imap("(", "()<left>")
 imap("[", "[]<left>")
 imap("{", "{}<left>")
-imap("<", "<><left>")
+imap("<>", "<><><left><left>")
 imap("'", "''<left>")
 imap('"', '""<left>')
 
@@ -106,7 +107,6 @@ vmap("cr", [[:s/\(.*\)/{\/* \1 *\/}<CR>:noh<CR>]])
 
 -- vmap("cr", [[:s@^\(\s*\)<\(.*\)>@\1{/* \2 */}@g<CR>:noh<CR>]]) not ready yet
 vmap("ur", [[:s/{\/\*\(.\{-}\)\*\/}/\1/g <CR>]])
-
 
 -- js
 nmap("cjj", [[:s/^/\/\/ <CR>:noh<CR>]])

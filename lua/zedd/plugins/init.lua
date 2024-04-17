@@ -108,7 +108,7 @@ local plugins = {
 			vim.keymap.set("i", "<c-g>", function()
 				return vim.fn["codeium#Accept"]()
 			end, { expr = true })
-			vim.keymap.set("i", "<c-x>", function()
+			vim.keymap.set("i", "<c-c>", function()
 				return vim.fn["codeium#Clear"]()
 			end, { expr = true })
 		end,
@@ -221,6 +221,12 @@ local plugins = {
 		config = function()
 			require("zedd.ui.which-key")
 		end,
+	},
+
+	{
+		"NStefan002/screenkey.nvim",
+		cmd = "Screenkey",
+		config = true,
 	},
 }
 

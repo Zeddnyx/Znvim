@@ -14,6 +14,7 @@ vim.opt.laststatus = 1 -- show where are you in at the bottom
 vim.opt.statusline="%{expand('%:~:.')}"
 vim.opt.clipboard = "unnamedplus" -- copy from nvim to  clipboard
 vim.opt.scrolloff = 4
+
 vim.opt.mouse = "a"
 vim.opt.shell = "fish"
 vim.opt.swapfile = false

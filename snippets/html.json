@@ -198,7 +198,7 @@
     "scope": "text.html"
   },
   "div 3 times": {
-    "prefix": "div",
+    "prefix": "div3",
     "body": [
       "<div>",
       "\t$1",
@@ -208,8 +208,12 @@
       "\t$1",
       "</div>"
     ],
-    "description": "HTML - Defines a section in a document",
-    "scope": "text.html"
+    "description": "HTML - Defines a section in a document"
+  },
+  "div 5 times": {
+    "prefix": "div5",
+    "body": "<div>$1</div>\n<div>$1</div>\n<div>$1</div>\n<div>$1</div>\n<div>$1</div>",
+    "description": "HTML - Defines a section in a document"
   },
   "dl": {
     "prefix": "dl",
