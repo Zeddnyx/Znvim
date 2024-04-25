@@ -184,7 +184,7 @@ local plugins = {
 			{ "<leader>ld", "<cmd>Telescope lsp_definitions<cr>" },
 		},
 		lazy = true,
-		dependencies = { "nvim-lua/plenary.nvim" },
+		dependencies = { "nvim-lua/plenary.nvim", },
 		config = function()
 			require("zedd.ui.telescope")
 		end,
@@ -196,9 +196,9 @@ local plugins = {
 		event = "BufRead",
 		main = "ibl",
 		opts = {},
-		config = function()
-			require("zedd.ui.indentline")
-		end,
+-- 		config = function() 
+-- 			require("zedd.ui.indentline") 
+-- 		end, 
 	},
 
 	-- color preview
@@ -226,7 +226,7 @@ local plugins = {
 	{
 		"NStefan002/screenkey.nvim",
 		cmd = "Screenkey",
-		config = true,
+		opts = {},
 	},
 }
 

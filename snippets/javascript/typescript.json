@@ -83,33 +83,6 @@
     "body": ["//#endregion"],
     "description": "Folding Region End"
   },
-  "zustant create": {
-    "prefix": "zustand-create-types",
-    "body": [
-      "import { create } from 'zustand';",
-      "import { persist } from 'zustand/middleware';",
-      "",
-      "type TStore = {\n\tcount: number;\n\tsetCount: () => void;\n}",
-      "",
-      "export const store = create(",
-      "\tpersist<TStore>(",
-      "\t\t(set) => ({",
-      "\t\t\tcount: 0,\n\t\t\tsetCount: () => set((state) => ({ count: state.count + 1 })),",
-      "\t\t}),",
-      "\t\t{ name: 'storage' }",
-      "\t)",
-      ");"
-    ]
-  },
-  "zustand store": {
-    "prefix": "zustand-store",
-    "body": [
-      "import { store } from '$1'",
-      "import { shallow } from 'zustand/shallow'",
-      "",
-      "const [${2:val1}, ${3:val2}] = store((state) => {\n\t\treturn [state.${2}, state.${3}];\n}, shallow);"
-    ]
-  },
   "type": {
     "prefix": "type-types",
     "body": "type T${1} = {\n\t${2}: ${3}\n}"
@@ -158,5 +131,10 @@
   "set state array": {
     "prefix": "set-state-array",
     "body": "React.Dispatch<React.SetStateAction<string[]>>;"
+  },
+  "Log to the console": {
+    "prefix": "clo",
+    "body": "console.log($1);",
+    "description": "Log to the console"
   }
 }

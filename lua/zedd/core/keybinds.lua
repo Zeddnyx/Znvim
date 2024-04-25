@@ -104,34 +104,18 @@ nmap("<C-z>", "<Nop>") -- disable z
 nmap("crr", [[:s/<\(.*\)/{\/*\<\1 *\/}<CR>:noh<CR>]])
 nmap("cr", [[vat :s/\(.*\)/{\/* \1 *\/}<CR>:noh<CR>]])
 vmap("cr", [[:s/\(.*\)/{\/* \1 *\/}<CR>:noh<CR>]])
-
 -- vmap("cr", [[:s@^\(\s*\)<\(.*\)>@\1{/* \2 */}@g<CR>:noh<CR>]]) not ready yet
 vmap("ur", [[:s/{\/\*\(.\{-}\)\*\/}/\1/g <CR>]])
-
--- js
-nmap("cjj", [[:s/^/\/\/ <CR>:noh<CR>]])
-vmap("cj", [[:s/\(.*\)/\/\/ \1<CR>:noh<CR>]])
-vmap("uj", [[:s/\/\/\(.*\)/\1 <CR>:noh<CR>]])
 
 -- css
 nmap("css", [[:s/\(.*\)/\/* \1 *\/<CR>:noh<CR>]])
 vmap("cs", [[:s/\(.*\)/\/* \1 *\/<CR>:noh<CR>]])
 vmap("us", [[:s/\/\*\(.\{-}\)\*\//\1/g<CR>:noh<CR>]])
 
--- lua
-nmap("cll", [[:s/^/-- <CR>:noh<CR>]])
-vmap("cl", [[:s/\(.*\)/-- \1 <CR>:noh<CR>]])
-vmap("ul", [[:s/--\(.*\)/\1 <CR>:noh<CR>]])
-
 -- html
 nmap("chh", [[:s/<\(.*\)/<!-- <\1 --><CR>:noh<CR>]])
 vmap("ch", [[:s/\(.*\)/<!-- \1 --><CR>:noh<CR>]])
 vmap("uh", [[:s/<!--\(.\{-}\)\-->/\1/g <CR>:noh<CR>]])
-
--- global (#)
-nmap("cgg", [[:s/^/# <CR>:noh<CR>]])
-vmap("cg", [[:s/\(.*\)/# \1 <CR>:noh<CR>]])
-vmap("ug", [[:s/#\(.\{-}\)\1 <CR>]])
 
 -- vim regex
 -- (.*) -- find all word

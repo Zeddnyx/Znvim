@@ -114,11 +114,6 @@
     ],
     "description": "React useMemo() hook"
   },
-  "Log to the console": {
-    "prefix": "clo",
-    "body": "console.log($1);",
-    "description": "Log to the console"
-  },
   "Log warning to console": {
     "prefix": "clw",
     "body": ["console.warn($1);", "$0"],

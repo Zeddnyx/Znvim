@@ -243,7 +243,7 @@ local M = {
 	GitSignUnstaged = { link = "DiffUnstaged" },
 	--
 	--See telescope.nvim/plugin/telescope.lua
-	TelescopeSelection = { fg = c.bright_aqua },
+	TelescopeSelection = { fg = c.bright_aqua,bg= c.dark1 },
 	TelescopeSelectionCaret = { fg = c.dark0 },
 	TelescopeMultiSelection = { fg = c.bright_aqua },
 	TelescopeMatching = { fg = c.bright_aqua },
