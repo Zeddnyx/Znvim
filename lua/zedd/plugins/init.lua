@@ -20,14 +20,6 @@ local plugins = {
 			require("zedd.ui.webdevicons")
 		end,
 	},
-	{
-		"romgrk/barbar.nvim",
-		event = "BufRead",
-		init = function()
-			vim.g.barbar_auto_setup = false
-		end,
-		opts = {},
-	},
 
 	{ "nvim-lua/plenary.nvim", lazy = true },
 
@@ -122,15 +114,7 @@ local plugins = {
 			vim.cmd("colorscheme gruvbox")
 		end,
 	},
-	-- 	{
-	-- 		"ellisonleao/gruvbox.nvim",
-	-- 		priority = 1000,
-	-- 		config = true,
-	-- 		config = function()
-	-- 			require("zedd.ui.gruvbox")
-	-- 		end,
-	-- 	},
-	-- Editor
+
 	{
 		"nvim-treesitter/nvim-treesitter",
 		lazy = true,
@@ -141,6 +125,15 @@ local plugins = {
 		dependencies = {
 			"https://github.com/nvim-treesitter/playground",
 		},
+	},
+
+	{
+		"NvChad/nvim-colorizer.lua",
+		event = "BufRead",
+		lazy = true,
+		config = function()
+			require("zedd.ui.colorizer")
+		end,
 	},
 
 	-- filemanager
@@ -184,34 +177,22 @@ local plugins = {
 			{ "<leader>ld", "<cmd>Telescope lsp_definitions<cr>" },
 		},
 		lazy = true,
-		dependencies = { "nvim-lua/plenary.nvim", },
+		dependencies = { "nvim-lua/plenary.nvim" },
 		config = function()
 			require("zedd.ui.telescope")
 		end,
 	},
 
-	-- blank line
 	{
 		"lukas-reineke/indent-blankline.nvim",
 		event = "BufRead",
 		main = "ibl",
 		opts = {},
--- 		config = function() 
--- 			require("zedd.ui.indentline") 
--- 		end, 
+		-- 		config = function()
+		-- 			require("zedd.ui.indentline")
+		-- 		end,
 	},
 
-	-- color preview
-	{
-		"NvChad/nvim-colorizer.lua",
-		event = "BufRead",
-		lazy = true,
-		config = function()
-			require("zedd.ui.colorizer")
-		end,
-	},
-
-	-- which-key
 	{
 		"folke/which-key.nvim",
 		init = function()
@@ -224,9 +205,22 @@ local plugins = {
 	},
 
 	{
+		"romgrk/barbar.nvim",
+		event = "BufRead",
+		init = function()
+			vim.g.barbar_auto_setup = false
+		end,
+		opts = {},
+	},
+
+	{
 		"NStefan002/screenkey.nvim",
 		cmd = "Screenkey",
 		opts = {},
+	},
+	{
+		"vim-test/vim-test",
+		cmd = { "TestNearest", "TestFile", "TestSuite", "TestLast", "TestVisit" },
 	},
 }
 
