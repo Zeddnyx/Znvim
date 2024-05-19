@@ -95,13 +95,6 @@ local mappings = {
 	-- 		["cs"] = { [[:s/\(.*\)/\/* \1 *\/<CR>:noh<CR>]], "css (block)" },
 	-- 		["us"] = { [[:s/\/\*\(.\{-}\)\*\//\1/g<CR>:noh<CR>]], "Uncomment css (block)" },
 	--},
-  T = {
-    name = " Telescope",
-    f = { "<cmd>Telescope find_files<cr>", "Find files" },
-    g = { "<cmd>Telescope live_grep<cr>", "Live grep" },
-    r = { "<cmd>Telescope lsp_references<cr>", "Lsp references" },
-    d = { "<cmd>Telescope lsp_definitions<cr>", "Lsp diagnostics" },
-  },
 	f = {
 		name = "󰺮 Find & Replace",
 		s = { [[/\<\\><Left><Left>]], "Search specific word" },
@@ -114,7 +107,7 @@ local mappings = {
 		a = { "v%zf", "Folding match word first to end" },
 		o = { "zo", "UnFolding" },
 	},
-	g = {
+	G = {
 		name = " Git",
 		g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
 		j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
@@ -136,7 +129,7 @@ local mappings = {
 			"Diff",
 		},
 	},
-	l = {
+	L = {
 		name = " LSP",
 		r = { "<cmd>Lspsaga rename<cr>", "Rename" },
 		t = { "<cmd>Lspsaga peek_definition<cr>", "Peek definition" },
@@ -158,38 +151,40 @@ local mappings = {
 		},
 	},
 
-	q = {
+	Q = {
 		name = "󰿅 Quit",
 		q = { "<cmd>q<cr>", "Quit" },
 		f = { "<cmd>qa!<cr>", "Force quit" },
 	},
-	s = {
+	S = {
 		name = " Split Screen",
 		v = { "<C-w>v<CR>", "Vertical split" },
 		h = { "<C-w>s<CR>", "Horizontal split" },
 		c = { "<cmd>close<cr>", "Close window" },
 		s = { "<cmd>split<cr>", "Split window" },
 	},
-	t = {
+	T = {
 		name = " Telescope",
 		f = { "<cmd>Telescope find_files<cr>", "Find file" },
 		g = { "<cmd>Telescope live_grep<cr>", "Grep" },
 		h = { "<cmd>Telescope oldfiles<cr>", "History" },
 		i = { "<cmd>Telescope git_files<cr>", "Git files" },
 		j = { "<cmd>Telescope jumplist<cr>", "Jumplist" },
+    r = { "<cmd>Telescope lsp_references<cr>", "Lsp references" },
+    d = { "<cmd>Telescope lsp_definitions<cr>", "Lsp diagnostics" },
 	},
-	w = {
+	W = {
 		name = " Save",
 		w = { "<cmd>w<cr>", "Save" },
 		a = { "<cmd>wa<cr>", "Save all" },
 		q = { "<cmd>wq<cr>", "Save and quit" },
 	},
-	y = {
+	Y = {
 		name = " Copy",
 		w = { "yiw", "Copy forward" },
 		b = { "yib", "Copy backward" },
 	},
-	z = {
+	Z = {
 		name = " Window",
 		h = { "<cmd>vertical resize +5<cr>", "Horizontal resize +5" },
 		l = { "<cmd>vertical resize -5<cr>", "Horizontal resize -5" },

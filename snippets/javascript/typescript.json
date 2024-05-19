@@ -134,7 +134,7 @@
   },
   "Log to the console": {
     "prefix": "clo",
-    "body": "console.log($1);",
+    "body": "console.log($1)",
     "description": "Log to the console"
   }
 }
