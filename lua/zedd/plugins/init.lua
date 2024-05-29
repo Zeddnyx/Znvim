@@ -97,7 +97,7 @@ local plugins = {
 		"Exafunction/codeium.vim",
 		event = "VeryLazy",
 		config = function()
-			vim.keymap.set("i", "<c-g>", function()
+			vim.keymap.set("i", "<c-a>", function()
 				return vim.fn["codeium#Accept"]()
 			end, { expr = true })
 			vim.keymap.set("i", "<c-c>", function()
@@ -114,6 +114,14 @@ local plugins = {
 			vim.cmd("colorscheme gruvbox")
 		end,
 	},
+	{
+		"brenoprata10/nvim-highlight-colors",
+		lazy = true,
+		event = "BufRead",
+		config = function()
+			require("zedd.ui.colorizer")
+		end,
+	},
 
 	{
 		"nvim-treesitter/nvim-treesitter",
@@ -126,13 +134,12 @@ local plugins = {
 			"https://github.com/nvim-treesitter/playground",
 		},
 	},
-
 	{
-		"NvChad/nvim-colorizer.lua",
-		event = "BufRead",
+		"nvimdev/indentmini.nvim",
 		lazy = true,
+		event = "BufRead",
 		config = function()
-			require("zedd.ui.colorizer")
+			require("indentmini").setup() -- use default config
 		end,
 	},
 
@@ -184,16 +191,6 @@ local plugins = {
 	},
 
 	{
-		"lukas-reineke/indent-blankline.nvim",
-		event = "BufRead",
-		main = "ibl",
-		opts = {},
-		-- 		config = function()
-		-- 			require("zedd.ui.indentline")
-		-- 		end,
-	},
-
-	{
 		"folke/which-key.nvim",
 		init = function()
 			vim.o.timeout = true
@@ -204,14 +201,14 @@ local plugins = {
 		end,
 	},
 
-	{
-		"romgrk/barbar.nvim",
-		event = "BufRead",
-		init = function()
-			vim.g.barbar_auto_setup = false
-		end,
-		opts = {},
-	},
+	--{
+	--	"romgrk/barbar.nvim",
+	--	event = "BufRead",
+	--	init = function()
+	--		vim.g.barbar_auto_setup = false
+	--	end,
+	--	opts = {},
+	--},
 
 	{
 		"NStefan002/screenkey.nvim",

@@ -72,7 +72,6 @@ local mappings = {
 		a = { "gg<S-v>G", "Select all" },
 		f = { "v%", "Select match word first to end" },
 	},
-	b = { "<cmd>Telescope buffers<cr>", "Buffers" },
 	c = { "<cmd>noh<cr>", "Clean highlight" },
 	B = {
 		name = "󰕸 Buffer",
