@@ -97,7 +97,7 @@ local plugins = {
 		"Exafunction/codeium.vim",
 		event = "VeryLazy",
 		config = function()
-			vim.keymap.set("i", "<c-a>", function()
+			vim.keymap.set("i", "<A-g>", function()
 				return vim.fn["codeium#Accept"]()
 			end, { expr = true })
 			vim.keymap.set("i", "<c-c>", function()

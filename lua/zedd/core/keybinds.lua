@@ -69,8 +69,6 @@ nmap("<C-c>", "<CMD>close<CR>") -- close window
 -- custome keybind
 nmap("<leader>ww", "<CMD>w<CR>")
 nmap("<leader>wa", "<CMD>wa<CR>")
-nmap("<leader>wq", "<CMD>wq<CR>")
-nmap("<leader>wc", ":lua getFilename()<CR>") 
 
 nmap("r", "<C-r>")
 
@@ -88,7 +86,7 @@ vmap("<S-k>", ":m '<-2<CR>gv=gv")
 imap("(", "()<left>")
 imap("[", "[]<left>")
 imap("{", "{}<left>")
-imap("<>", "<><><left><left>")
+imap("<", "<><left>")
 imap("'", "''<left>")
 imap('"', '""<left>')
 
