@@ -237,13 +237,18 @@ local M = {
 	--
 	--See :h gitsigns-highlight-groups
 	GitSignAdd = { link = "DiffAdd" },
+	GitSignsAddNr = { link = "DiffAdd" },
 	GitSignChange = { link = "DiffChange" },
+	GitSignChangeNr = { link = "DiffChange" },
 	GitSignDelete = { link = "DiffDelete" },
+	GitSignDeleteNr = { link = "DiffDelete" },
 	GitSignChangeDelete = { link = "DiffText" },
+	GitSignChangeDeleteNr = { link = "DiffText" },
 	GitSignUnstaged = { link = "DiffUnstaged" },
+	GitSignUnstagedNr = { link = "DiffUnstaged" },
 	--
 	--See telescope.nvim/plugin/telescope.lua
-	TelescopeSelection = { fg = c.bright_aqua,bg= c.dark1 },
+	TelescopeSelection = { fg = c.bright_aqua, bg = c.dark1 },
 	TelescopeSelectionCaret = { fg = c.dark0 },
 	TelescopeMultiSelection = { fg = c.bright_aqua },
 	TelescopeMatching = { fg = c.bright_aqua },

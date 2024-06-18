@@ -5,7 +5,7 @@ if not vim.loop.fs_stat(lazypath) then
 		"clone",
 		"--filter=blob:none",
 		"https://github.com/folke/lazy.nvim.git",
-		"--branch=stable", -- latest stable release
+		"--branch=stable",
 		lazypath,
 	})
 end
@@ -92,21 +92,21 @@ local plugins = {
 		lazy = true,
 	},
 
-	-- codeium
 	{
 		"Exafunction/codeium.vim",
-		event = "VeryLazy",
+		event = "InsertEnter",
+		version = "1.8.37",
 		config = function()
 			vim.keymap.set("i", "<A-g>", function()
 				return vim.fn["codeium#Accept"]()
-			end, { expr = true })
+			end, { expr = true, silent = true })
 			vim.keymap.set("i", "<c-c>", function()
 				return vim.fn["codeium#Clear"]()
 			end, { expr = true })
 		end,
 	},
 
-	-- Themes
+	-- ui
 	{
 		dir = "~/.config/nvim/lua/zedd/ui/gruvbox",
 		priority = 100,
@@ -143,7 +143,6 @@ local plugins = {
 		end,
 	},
 
-	-- filemanager
 	{
 		"nvim-tree/nvim-tree.lua",
 		version = "*",
@@ -156,7 +155,6 @@ local plugins = {
 		end,
 	},
 
-	-- git signs
 	{
 		"lewis6991/gitsigns.nvim",
 		enabled = vim.fn.executable("git") == 1,
@@ -200,15 +198,6 @@ local plugins = {
 			require("zedd.ui.which-key")
 		end,
 	},
-
-	--{
-	--	"romgrk/barbar.nvim",
-	--	event = "BufRead",
-	--	init = function()
-	--		vim.g.barbar_auto_setup = false
-	--	end,
-	--	opts = {},
-	--},
 
 	{
 		"NStefan002/screenkey.nvim",
