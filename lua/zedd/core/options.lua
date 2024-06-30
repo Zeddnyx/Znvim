@@ -51,10 +51,8 @@ vim.opt.background = "dark"
 -- vim.opt.signcolumn = "no"
 
 function fold_text()
-    local line = vim.fn.getline(vim.v.foldstart)
-    local folded_line_num = vim.v.foldend - vim.v.foldstart
-    local line_text = string.gsub(line, '^"{\\+', '')
-    local fillcharcount = vim.o.textwidth - #line_text - #tostring(folded_line_num)
-    return 'Fold ' .. string.rep('-', 4) .. line_text .. string.rep('.', fillcharcount) .. ' (' .. folded_line_num .. ' L)'
+  local line = vim.fn.getline(vim.v.foldstart)
+  local line_text = string.gsub(line, '^"{\\+', '')
+  return line_text
 end
 
