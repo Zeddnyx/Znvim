@@ -92,7 +92,7 @@ pickers.buffers = {
 	previewer = false,
 	mappings = {
 		i = {
-			["<C-d>"] = require("telescope.actions").delete_buffer,
+			["<S-c>"] = require("telescope.actions").delete_buffer,
 		},
 	},
 }

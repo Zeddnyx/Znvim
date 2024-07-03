@@ -25,8 +25,8 @@ function vmap(shortcut, command)
 end
 
 --buffer
-nmap("<S-h>", "<CMD>bprevious<CR>", { desc = "Buffer: focus to previous buffer" })
-nmap("<S-l>", "<CMD>bnext<CR>", { desc = "Buffer: focus to next buffer" })
+-- nmap("<S-h>", "<CMD>bprevious<CR>", { desc = "Buffer: focus to previous buffer" })
+-- nmap("<S-l>", "<CMD>bnext<CR>", { desc = "Buffer: focus to next buffer" })
 nmap("<S-c>", "<CMD>bd<CR>", { desc = "Buffer: delete buffer" })
 nmap("<S-q>", "<CMD>%bd|e#<CR>", { desc = "Buffer: delete all buffer except current buffer" })
 --nmap("<S-l>", "<CMD>BufferNext<CR>")
@@ -42,7 +42,7 @@ nmap("<S-s>a", "<CMD>Lspsaga show_workspace_diagnostics<CR>")
 -- search and replace
 -- nmap("<S-s>s", [[/\<\\><Left><Left>]]) -- /\<word1\>
 nmap("<S-s>/", [[:%s/]])
-nmap("<leader>d", [[:%s/\d\+/number/g]]) -- replace all number to number
+nmap("<leader>n", [[:%s/\d\+/number/g]]) -- replace all number to number
 nmap("<leader>s", [[:%s/"[^"]*"/string/g]]) -- replace all text to strig
 
 -- folding line
@@ -82,13 +82,14 @@ nmap("<S-m>", "[m") -- prev func
 vmap("<S-j>", ":m '>+1<CR>gv=gv")
 vmap("<S-k>", ":m '<-2<CR>gv=gv")
 
--- autoclose
+-- auto pair
 imap("(", "()<left>")
 imap("[", "[]<left>")
 imap("{", "{}<left>")
 imap("<", "<><left>")
 imap("'", "''<left>")
 imap('"', '""<left>')
+imap('<C-f>', '`${}`<left><left>')
 
 -- disable default keybind
 nmap("<up>", "<Nop>") -- disable arrow up

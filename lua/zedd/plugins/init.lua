@@ -107,13 +107,13 @@ local plugins = {
 	},
 
 	-- ui
-	{
-		dir = "~/.config/nvim/lua/zedd/ui/gruvbox",
-		priority = 100,
-		config = function()
-			vim.cmd("colorscheme gruvbox")
-		end,
-	},
+	-- {
+	-- 	dir = "~/.config/nvim/lua/zedd/ui/gruvbox",
+	-- 	priority = 100,
+	-- 	config = function()
+	-- 		vim.cmd("colorscheme gruvbox")
+	-- 	end,
+	-- },
 	{
 		"brenoprata10/nvim-highlight-colors",
 		lazy = true,
@@ -190,6 +190,7 @@ local plugins = {
 
 	{
 		"folke/which-key.nvim",
+    event = "BufRead",
 		init = function()
 			vim.o.timeout = true
 			vim.o.timeoutlen = 500
