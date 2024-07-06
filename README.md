@@ -1,2 +1,2 @@
 ## Znvim
-This version is minimalism
+fast as f*** for front end developer

@@ -109,7 +109,7 @@ local plugins = {
 	-- ui
 	{
 		dir = "~/.config/nvim/lua/zedd/ui/gruvbox",
-		priority = 100,
+    event = "BufRead",
 		config = function()
 			vim.cmd("colorscheme gruvbox")
 		end,
