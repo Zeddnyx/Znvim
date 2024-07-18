@@ -42,8 +42,8 @@ nmap("<S-s>a", "<CMD>Lspsaga show_workspace_diagnostics<CR>")
 -- search and replace
 -- nmap("<S-s>s", [[/\<\\><Left><Left>]]) -- /\<word1\>
 nmap("<S-s>/", [[:%s/]])
-nmap("<leader>n", [[:%s/\d\+/number/g]]) -- replace all number to number
-nmap("<leader>s", [[:%s/"[^"]*"/string/g]]) -- replace all text to strig
+nmap("<leader>n", [[:%s/\d\+/number/g]]) -- replace all digit to number
+nmap("<leader>s", [[:%s/"[^"]*"/string/g]]) -- replace all text to string
 
 -- folding line
 nmap("zft", "vatzf<CR>") -- tag html
@@ -69,8 +69,8 @@ nmap("<C-c>", "<CMD>close<CR>") -- close window
 -- custome keybind
 nmap("<leader>ww", "<CMD>w<CR>")
 nmap("<leader>wa", "<CMD>wa<CR>")
-
-nmap("r", "<C-r>")
+nmap("r", "<C-r>") 
+imap("jjj", "<ESC>")
 
 nmap("<leader>a", "gg<S-v>G") -- select all
 nmap("<leader>c", ":noh<CR>") -- clean higlight
@@ -86,10 +86,10 @@ vmap("<S-k>", ":m '<-2<CR>gv=gv")
 imap("(", "()<left>")
 imap("[", "[]<left>")
 imap("{", "{}<left>")
-imap("<", "<><left>")
+imap("<>", "<></><left><left><left>")
 imap("'", "''<left>")
 imap('"', '""<left>')
-imap('<C-f>', '`${}`<left><left>')
+imap("<C-f>", "`${}`<left><left>")
 
 -- disable default keybind
 nmap("<up>", "<Nop>") -- disable arrow up

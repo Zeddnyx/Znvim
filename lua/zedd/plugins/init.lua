@@ -176,7 +176,7 @@ local plugins = {
 			"Telescope buffers",
 			{ "<leader>ff", "<cmd>Telescope find_files<cr>" },
 			{ "<leader>lg", "<cmd>Telescope live_grep<cr>" },
-			{ "<leader>bb", "<cmd>Telescope buffers<cr>" },
+			{ "<leader><Tab>", "<cmd>Telescope buffers<cr>" },
 			{ "<leader>gs", "<cmd>Telescope git_status<cr>" },
 			{ "<leader>lr", "<cmd>Telescope lsp_references<cr>" },
 			{ "<leader>ld", "<cmd>Telescope lsp_definitions<cr>" },
