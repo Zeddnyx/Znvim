@@ -42,8 +42,6 @@ nmap("<S-s>a", "<CMD>Lspsaga show_workspace_diagnostics<CR>")
 -- search and replace
 -- nmap("<S-s>s", [[/\<\\><Left><Left>]]) -- /\<word1\>
 nmap("<S-s>/", [[:%s/]])
-nmap("<leader>n", [[:%s/\d\+/number/g]]) -- replace all digit to number
-nmap("<leader>s", [[:%s/"[^"]*"/string/g]]) -- replace all text to string
 
 -- folding line
 nmap("zft", "vatzf<CR>") -- tag html
@@ -61,7 +59,7 @@ nmap("<C-Left>", "<CMD>vertical resize +5<CR>")
 nmap("<C-Up>", "<CMD>resize -5<CR>")
 nmap("<C-Right>", "<CMD>vertical resize -5<CR>")
 nmap("<C-Down>", "<CMD>resize +5<CR>")
-nmap("<C-c>", "<CMD>close<CR>") -- close window
+nmap("<C-c>", "<CMD>close<CR>")
 
 -- file manager built in
 -- nmap("<leader>e", "<CMD>Lex<CR><CR><CMD>vertical resize 30<CR>")
@@ -69,18 +67,19 @@ nmap("<C-c>", "<CMD>close<CR>") -- close window
 -- custome keybind
 nmap("<leader>ww", "<CMD>w<CR>")
 nmap("<leader>wa", "<CMD>wa<CR>")
-nmap("r", "<C-r>") 
+nmap("r", "<C-r>") -- redo
 imap("jjj", "<ESC>")
-
+imap("<C-f>", "${}<left>") -- ${}
+vmap("<S-j>", ":m '>+1<CR>gv=gv") -- move line
+vmap("<S-k>", ":m '<-2<CR>gv=gv") -- move line
 nmap("<leader>a", "gg<S-v>G") -- select all
 nmap("<leader>c", ":noh<CR>") -- clean higlight
 nmap("<leader>y", "yiw") -- yank forward
 nmap("<leader>v", "viw") -- yank backward
 nmap("m", "]m") -- next func
 nmap("<S-m>", "[m") -- prev func
-
-vmap("<S-j>", ":m '>+1<CR>gv=gv")
-vmap("<S-k>", ":m '<-2<CR>gv=gv")
+nmap("<leader>n", [[:%s/\d\+/number/g]]) -- replace all digit to type number
+nmap("<leader>s", [[:%s/"[^"]*"/string/g]]) -- replace all text to type string
 
 -- auto pair
 imap("(", "()<left>")
@@ -89,7 +88,6 @@ imap("{", "{}<left>")
 imap("<>", "<></><left><left><left>")
 imap("'", "''<left>")
 imap('"', '""<left>')
-imap("<C-f>", "`${}`<left><left>")
 
 -- disable default keybind
 nmap("<up>", "<Nop>") -- disable arrow up
@@ -97,24 +95,6 @@ nmap("<left>", "<Nop>") -- disable arrow left
 nmap("<right>", "<Nop>") -- disable arrow right
 nmap("<down>", "<Nop>") -- disable arrow down
 nmap("<C-z>", "<Nop>") -- disable z
-
--- comment
--- react tag
-nmap("crr", [[:s/<\(.*\)/{\/*\<\1 *\/}<CR>:noh<CR>]])
-nmap("cr", [[vat :s/\(.*\)/{\/* \1 *\/}<CR>:noh<CR>]])
-vmap("cr", [[:s/\(.*\)/{\/* \1 *\/}<CR>:noh<CR>]])
--- vmap("cr", [[:s@^\(\s*\)<\(.*\)>@\1{/* \2 */}@g<CR>:noh<CR>]]) not ready yet
-vmap("ur", [[:s/{\/\*\(.\{-}\)\*\/}/\1/g <CR>]])
-
--- css
-nmap("css", [[:s/\(.*\)/\/* \1 *\/<CR>:noh<CR>]])
-vmap("cs", [[:s/\(.*\)/\/* \1 *\/<CR>:noh<CR>]])
-vmap("us", [[:s/\/\*\(.\{-}\)\*\//\1/g<CR>:noh<CR>]])
-
--- html
-nmap("chh", [[:s/<\(.*\)/<!-- <\1 --><CR>:noh<CR>]])
-vmap("ch", [[:s/\(.*\)/<!-- \1 --><CR>:noh<CR>]])
-vmap("uh", [[:s/<!--\(.\{-}\)\-->/\1/g <CR>:noh<CR>]])
 
 -- vim regex
 -- (.*) -- find all word

@@ -20,6 +20,12 @@ local plugins = {
 			require("zedd.ui.webdevicons")
 		end,
 	},
+	{
+		"folke/ts-comments.nvim",
+		opts = {},
+		event = "VeryLazy",
+		enabled = vim.fn.has("nvim-0.10.0") == 1,
+	},
 
 	{ "nvim-lua/plenary.nvim", lazy = true },
 
@@ -109,7 +115,7 @@ local plugins = {
 	-- ui
 	{
 		dir = "~/.config/nvim/lua/zedd/ui/gruvbox",
-    event = "BufRead",
+		event = "BufRead",
 		config = function()
 			vim.cmd("colorscheme gruvbox")
 		end,
@@ -190,7 +196,7 @@ local plugins = {
 
 	{
 		"folke/which-key.nvim",
-    event = "BufRead",
+		event = "BufRead",
 		init = function()
 			vim.o.timeout = true
 			vim.o.timeoutlen = 500
