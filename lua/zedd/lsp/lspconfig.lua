@@ -6,9 +6,10 @@ local on_attach = function(client, bufnr)
 		signs = true,
 		update_in_insert = true,
 	})
+
 	-- Show line diagnostics automatically in hover window
-	vim.o.updatetime = 999999 -- change to 500 if u want to see msg on hover
-	vim.cmd([[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]])
+	vim.o.updatetime = 1000
+	vim.cmd([[lua vim.diagnostic.open_float(nil, {focus=false})]])
 
 	-- show diagnostic color line number
 	vim.cmd([[
@@ -35,9 +36,12 @@ lsp.cssls.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
 	settings = {
-		css = { validate = true, lint = {
-			unknownAtRules = "ignore", -- hide unknownAtRules warning in tailwind css
-		} },
+		css = {
+			validate = true,
+			lint = {
+				unknownAtRules = "ignore", -- hide unknownAtRules warning in tailwind css
+			},
+		},
 		scss = { validate = true, lint = {
 			unknownAtRules = "ignore",
 		} },
