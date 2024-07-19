@@ -1,5 +1,4 @@
 function map(mode, shortcut, command)
-	--vim.api.nvim_set_keymap(mode, shortcut, command, { noremap = true, silent = true })
 	if type(command) == "string" then
 		vim.api.nvim_set_keymap(mode, shortcut, command, { noremap = true, silent = true })
 	else
@@ -49,7 +48,7 @@ nmap("zff", "vaBzf") -- function that match {}
 nmap("zfa", "mz?\\[<CR>%mz`z")
 
 -- switch split screen
-nmap("<leader>h", "<C-w>h<CR>::j:")
+nmap("<leader>h", "<C-w>h<CR>")
 nmap("<leader>j", "<C-w>j<CR>")
 nmap("<leader>k", "<C-w>k<CR>")
 nmap("<leader>l", "<C-w>l<CR>")
@@ -68,7 +67,7 @@ nmap("<C-c>", "<CMD>close<CR>")
 nmap("<leader>ww", "<CMD>w<CR>")
 nmap("<leader>wa", "<CMD>wa<CR>")
 nmap("r", "<C-r>") -- redo
-imap("jjj", "<ESC>")
+imap("jk", "<ESC>")
 imap("<C-f>", "${}<left>") -- ${}
 vmap("<S-j>", ":m '>+1<CR>gv=gv") -- move line
 vmap("<S-k>", ":m '<-2<CR>gv=gv") -- move line
@@ -88,6 +87,7 @@ imap("{", "{}<left>")
 imap("<>", "<></><left><left><left>")
 imap("'", "''<left>")
 imap('"', '""<left>')
+imap("`", "``<left>")
 
 -- disable default keybind
 nmap("<up>", "<Nop>") -- disable arrow up

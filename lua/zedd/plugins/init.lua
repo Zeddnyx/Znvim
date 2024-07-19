@@ -23,6 +23,7 @@ local plugins = {
 	{
 		"folke/ts-comments.nvim",
 		opts = {},
+		lazy = true,
 		event = "VeryLazy",
 		enabled = vim.fn.has("nvim-0.10.0") == 1,
 	},
@@ -35,23 +36,14 @@ local plugins = {
 		event = "InsertEnter",
 		lazy = true,
 		dependencies = {
-			"hrsh7th/cmp-buffer",
 			"hrsh7th/cmp-nvim-lsp",
-			"hrsh7th/cmp-nvim-lua",
+			-- "hrsh7th/cmp-nvim-lua", -- uncomment if you wanna use nvim lua api
 			"hrsh7th/cmp-path",
 			{
 				"hrsh7th/cmp-vsnip",
 				dependencies = "hrsh7th/vim-vsnip",
 				config = function()
 					require("zedd.ui.snippet")
-				end,
-			},
-			{
-				"windwp/nvim-autopairs",
-				event = "InsertEnter",
-				lazy = true,
-				config = function()
-					require("zedd.completion.autopairs")
 				end,
 			},
 		},
@@ -74,12 +66,7 @@ local plugins = {
 		"nvimdev/lspsaga.nvim",
 		event = "LspAttach",
 		config = function()
-			require("lspsaga").setup({
-				ui = {
-					border = "rounded",
-					code_action = "",
-				},
-			})
+			require("zedd.lsp.lspsaga")
 		end,
 	},
 
@@ -115,7 +102,7 @@ local plugins = {
 	-- ui
 	{
 		dir = "~/.config/nvim/lua/zedd/ui/gruvbox",
-		event = "BufRead",
+		priority = 100,
 		config = function()
 			vim.cmd("colorscheme gruvbox")
 		end,

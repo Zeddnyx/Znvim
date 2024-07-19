@@ -79,8 +79,8 @@ local mappings = {
 		l = { "<cmd>bnext<cr>", "Next buffer" },
 		c = { "<cmd>bd<cr>", "Close buffer" },
 		q = { "<cmd>%bd|e#<cr>", "Close all buffers except current" },
-    p = { "<cmd>BufferPin<cr>", "Pin/Unpin buffer" },
-    r = { "<cmd>BufferRestore<cr>", "Restore buffer" },
+		p = { "<cmd>BufferPin<cr>", "Pin/Unpin buffer" },
+		r = { "<cmd>BufferRestore<cr>", "Restore buffer" },
 	},
 	-- 	c = {
 	-- 		name = "󱗡 Comment",
@@ -129,17 +129,16 @@ local mappings = {
 		},
 	},
 	L = {
-		name = " LSP",
+		name = " LSP SAGA",
+		o = { "<cmd>Lspsaga outline<cr>", "Outline" },
 		r = { "<cmd>Lspsaga rename<cr>", "Rename" },
 		t = { "<cmd>Lspsaga peek_definition<cr>", "Peek definition" },
-		f = { "<cmd>Lspsaga lsp_finder<cr>", "Finder" },
 		w = {
 			"<cmd>Lspsaga show_workspace_diagnostics<cr>",
 			"Workspace Diagnostics",
 		},
--- 		f = { "<cmd>lua vim.lsp.buf.format{async=true}<cr>", "Format" },
-    c = { "<cmd>%!clang-format<cr>", "Format C/C++/C#" },
-		i = { "<cmd>LspInfo<cr>", "Info" },
+		f = { "<cmd>lua vim.lsp.buf.format{async=true}<cr>", "Format" },
+		c = { "<cmd>%!clang-format<cr>", "Format C/C++/C#" },
 		j = {
 			"<cmd>Lspsaga diagnostic_jump_next<CR>",
 			"Next Diagnostic",
@@ -169,8 +168,8 @@ local mappings = {
 		h = { "<cmd>Telescope oldfiles<cr>", "History" },
 		i = { "<cmd>Telescope git_files<cr>", "Git files" },
 		j = { "<cmd>Telescope jumplist<cr>", "Jumplist" },
-    r = { "<cmd>Telescope lsp_references<cr>", "Lsp references" },
-    d = { "<cmd>Telescope lsp_definitions<cr>", "Lsp diagnostics" },
+		r = { "<cmd>Telescope lsp_references<cr>", "Lsp references" },
+		d = { "<cmd>Telescope lsp_definitions<cr>", "Lsp diagnostics" },
 	},
 	W = {
 		name = " Save",
