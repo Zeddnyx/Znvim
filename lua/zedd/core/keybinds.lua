@@ -38,10 +38,6 @@ nmap("<S-s>h", "<CMD>Lspsaga hover_doc<CR>")
 nmap("<S-s>d", "<CMD>Lspsaga diagnostic_jump_next<CR>")
 nmap("<S-s>a", "<CMD>Lspsaga show_workspace_diagnostics<CR>")
 
--- search and replace
--- nmap("<S-s>s", [[/\<\\><Left><Left>]]) -- /\<word1\>
-nmap("<S-s>/", [[:%s/]])
-
 -- folding line
 nmap("zft", "vatzf<CR>") -- tag html
 nmap("zff", "vaBzf") -- function that match {}
@@ -67,7 +63,6 @@ nmap("<C-c>", "<CMD>close<CR>")
 nmap("<leader>ww", "<CMD>w<CR>")
 nmap("<leader>wa", "<CMD>wa<CR>")
 nmap("r", "<C-r>") -- redo
-imap("jk", "<ESC>")
 imap("<C-f>", "${}<left>") -- ${}
 vmap("<S-j>", ":m '>+1<CR>gv=gv") -- move line
 vmap("<S-k>", ":m '<-2<CR>gv=gv") -- move line
@@ -79,15 +74,8 @@ nmap("m", "]m") -- next func
 nmap("<S-m>", "[m") -- prev func
 nmap("<leader>n", [[:%s/\d\+/number/g]]) -- replace all digit to type number
 nmap("<leader>s", [[:%s/"[^"]*"/string/g]]) -- replace all text to type string
-
--- auto pair
-imap("(", "()<left>")
-imap("[", "[]<left>")
-imap("{", "{}<left>")
-imap("<>", "<></><left><left><left>")
-imap("'", "''<left>")
-imap('"', '""<left>')
-imap("`", "``<left>")
+nmap("<S-s>s", [[:%s/\<\\>/<Left><Left><Left>]]) -- search specific word and replace
+nmap("<S-s>/", [[:%s/]]) -- search and replace
 
 -- disable default keybind
 nmap("<up>", "<Nop>") -- disable arrow up

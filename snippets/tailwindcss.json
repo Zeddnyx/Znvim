@@ -1,4 +1,9 @@
 {
+  "class": {
+    "prefix": "class",
+    "body": ".${1:name} {\n\t@apply ${0}\n}",
+    "description": "class name"
+  },
   "aspect ration": {
     "prefix": "aspect",
     "body": "aspect-${1|auto,square,video,[]|}"

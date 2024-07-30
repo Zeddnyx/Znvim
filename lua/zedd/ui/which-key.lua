@@ -82,6 +82,16 @@ local mappings = {
 		p = { "<cmd>BufferPin<cr>", "Pin/Unpin buffer" },
 		r = { "<cmd>BufferRestore<cr>", "Restore buffer" },
 	},
+	C = {
+		name = " Git Conflict",
+		c = { "<cmd>GitConflictChooseOurs<CR>", "Select the current changes" },
+		i = { "<cmd>GitConflictChooseTheirs<CR>", "Select the incoming changes" },
+		b = { "<cmd>GitConflictChooseBoth<CR>", "Select both changes" },
+		n = { "<cmd>GitConflictChooseNone<CR>", "Select none of the changes" },
+		m = { "<cmd>GitConflictNextConflict<CR>", "Move to the next conflict" },
+		p = { "<cmd>GitConflictPrevConflict<CR>", "Move to the prev conflict" },
+		l = { "<cmd>GitConflictListQf<CR>", "Get all conflict to quickfix" },
+	},
 	-- 	c = {
 	-- 		name = "󱗡 Comment",
 	-- 		["crr"] = { [[:s/\(.*\)/{\/* \1 *\/}<CR>:noh<CR>]], "jsx" },

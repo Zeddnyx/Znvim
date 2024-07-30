@@ -1,4 +1,9 @@
 {
+  "class": {
+    "prefix": "class",
+    "body": ".${1:name} {\n\t${0}\n}",
+    "description": "class name"
+  },
   "align-items": {
     "prefix": "ai",
     "body": "align-items: ${1|flex-start,flex-end,center,baseline,stretch,start,end,self-start,self-end|};",

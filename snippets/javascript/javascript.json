@@ -27,10 +27,6 @@
     "prefix": "doc-querySelector",
     "body": "document.querySelector(\"${1:selector}\")"
   },
-  "querySelectorAll": {
-    "prefix": "array-from",
-    "body": "Array.from(${1:document}.querySelectorAll(\"${2:selector}\"))"
-  },
   "createElement": {
     "prefix": "create-element",
     "body": "${1:document}.createElement(${2:elem})"
@@ -107,6 +103,10 @@
     "prefix": "const-destructuring-array",
     "body": "const [ ${2:prop} ] = ${1:value}"
   },
+  "const statement from obj destructuring": {
+    "prefix": "const-destructuring-obj",
+    "body": "const { ${2:prop} } = ${1:value}"
+  },
   "const assignment awaited": {
     "prefix": "await",
     "body": "const ${1:name} = await ${2:value}"
@@ -132,7 +132,7 @@
     "body": "export default ${1:member}"
   },
   "Import": {
-    "prefix": "import",
+    "prefix": "import-default",
     "body": ["import $1 from \"${2}\";"],
     "description": "Import module"
   },
@@ -300,11 +300,6 @@
     "prefix": "elif",
     "body": "else if (${1:condition}) {\n\t${0}\n}"
   },
-  "New Statement": {
-    "prefix": "new",
-    "body": ["const ${1:name} = new ${2:type}(${3:arguments});$0"],
-    "description": "New Statement"
-  },
   "Switch Statement": {
     "prefix": "switch",
     "body": [
@@ -333,5 +328,25 @@
     "prefix": "setinterval",
     "body": ["setInterval(() => {", "\t$0", "}, ${1:interval});"],
     "description": "Set Interval Function"
+  },
+  "Array of obj": {
+    "prefix": "array-of-obj",
+    "body": "[\n\t{\n\t\t${0}\n\t}\n]",
+    "description": "Array of obj"
+  },
+  "Array ": {
+    "prefix": "array",
+    "body": "[\t${0}\t]",
+    "description": "Array of obj"
+  },
+  "Object": {
+    "prefix": "obj",
+    "body": "{\n\t${0}\n}",
+    "description": "Object"
+  },
+  "Obj return null": {
+    "prefix": "obj-return-null",
+    "body": "{\n\t${0}\n\treturn null;\n}",
+    "description": "Obj return null"
   }
 }

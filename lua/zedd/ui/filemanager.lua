@@ -85,7 +85,7 @@ local options = {
 		root_folder_label = true,
 		highlight_git = false,
 		highlight_opened_files = "none",
-		special_files = { "Cargo.toml", "Makefile", "README.md", "readme.md", "LICENSE","Dockerfile" },
+		special_files = { "Cargo.toml", "Makefile", "README.md", "readme.md", "LICENSE", "Dockerfile" },
 
 		indent_markers = {
 			enable = true,
