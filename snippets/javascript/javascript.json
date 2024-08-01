@@ -129,7 +129,7 @@
   },
   "module default export": {
     "prefix": "export-default",
-    "body": "export default ${1:member}"
+    "body": "export default ${1:func}(${2:arguments}) {\n\treturn ${0}\n}"
   },
   "Import": {
     "prefix": "import-default",

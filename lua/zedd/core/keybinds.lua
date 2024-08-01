@@ -77,6 +77,15 @@ nmap("<leader>s", [[:%s/"[^"]*"/string/g]]) -- replace all text to type string
 nmap("<S-s>s", [[:%s/\<\\>/<Left><Left><Left>]]) -- search specific word and replace
 nmap("<S-s>/", [[:%s/]]) -- search and replace
 
+-- auto pair
+imap("(", "()<left>")
+imap("[", "[]<left>")
+imap("{", "{}<left>")
+imap("<", "<><left>")
+imap("'", "''<left>")
+imap('"', '""<left>')
+imap("`", "``<left>")
+
 -- disable default keybind
 nmap("<up>", "<Nop>") -- disable arrow up
 nmap("<left>", "<Nop>") -- disable arrow left

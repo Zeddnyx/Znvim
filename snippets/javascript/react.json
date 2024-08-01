@@ -213,5 +213,13 @@
   "onKeyUp": {
     "prefix": "onkeyup",
     "body": "onKeyUp={handle${1:}}"
+  },
+  "use client": {
+    "prefix": "use-c",
+    "body": "\"use client\""
+  },
+  "use server": {
+    "prefix": "use-s",
+    "body": "\"use server\""
   }
 }
