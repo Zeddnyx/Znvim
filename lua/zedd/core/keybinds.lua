@@ -76,6 +76,8 @@ nmap("<leader>n", [[:%s/\d\+/number/g]]) -- replace all digit to type number
 nmap("<leader>s", [[:%s/"[^"]*"/string/g]]) -- replace all text to type string
 nmap("<S-s>s", [[:%s/\<\\>/<Left><Left><Left>]]) -- search specific word and replace
 nmap("<S-s>/", [[:%s/]]) -- search and replace
+nmap("<S-s>u", [[:%s//\U&/g<Left><Left><Left><Left><Left><Left>]]) -- search word and transform to uppercase
+nmap("<C-t>", "vat<Esc>j") -- jump between tag html
 
 -- auto pair
 imap("(", "()<left>")
