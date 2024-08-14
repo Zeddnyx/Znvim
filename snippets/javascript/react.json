@@ -11,7 +11,7 @@
   },
   "reactFunctionComponent": {
     "prefix": "rfce",
-    "body": "\n export default function ${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}() {\n\treturn (\n\t\t<div>\n\t\t\t${TM_FILENAME_BASE}\n\t\t</div>\n\t)\n}",
+    "body": "\n export default function ${2}${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}() {\n\treturn (\n\t\t<div>\n\t\t\t${TM_FILENAME_BASE}${3}\n\t\t</div>\n\t)\n}",
     "description": "Creates a React functional component without PropTypes"
   },
   "arrowFunctionComponent": {
