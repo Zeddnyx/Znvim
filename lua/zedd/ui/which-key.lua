@@ -72,15 +72,12 @@ local mappings = {
 		a = { "gg<S-v>G", "Select all" },
 		f = { "v%", "Select match word first to end" },
 	},
-	c = { "<cmd>noh<cr>", "Clean highlight" },
 	B = {
 		name = "󰕸 Buffer",
 		h = { "<cmd>bprevious<cr>", "Previous buffer" },
 		l = { "<cmd>bnext<cr>", "Next buffer" },
 		c = { "<cmd>bd<cr>", "Close buffer" },
 		q = { "<cmd>%bd|e#<cr>", "Close all buffers except current" },
-		p = { "<cmd>BufferPin<cr>", "Pin/Unpin buffer" },
-		r = { "<cmd>BufferRestore<cr>", "Restore buffer" },
 	},
 	C = {
 		name = " Git Conflict",
@@ -92,18 +89,6 @@ local mappings = {
 		p = { "<cmd>GitConflictPrevConflict<CR>", "Move to the prev conflict" },
 		l = { "<cmd>GitConflictListQf<CR>", "Get all conflict to quickfix" },
 	},
-	-- 	c = {
-	-- 		name = "󱗡 Comment",
-	-- 		["crr"] = { [[:s/\(.*\)/{\/* \1 *\/}<CR>:noh<CR>]], "jsx" },
-	-- 		["cr"] = { [[:s/<\(.*\)>/{\/\*<\1>\*\/}/g<CR>:noh<CR>]], "jsx (block)" },
-	-- 		["ur"] = { [[:s/{\/\*\(.\{-}\)\*\/}/\1/g <CR>]], "Uncomennt jsx (block)" },
-	-- 		["cjj"] = { [[:s/^/\/\/ <CR>:noh<CR>]], "js" },
-	-- 		["cj"] = { [[:s/\(.*\)/\/\/ \1<CR>:noh<CR>]], "js (block)" },
-	-- 		["uj"] = { [[:s/\/\/\(.*\)/\1 <CR>:noh<CR>]], "Uncomment js (block)" },
-	-- 		["css"] = { [[:s/\(.*\)/\/* \1 *\/<CR>:noh<CR>]], "css" },
-	-- 		["cs"] = { [[:s/\(.*\)/\/* \1 *\/<CR>:noh<CR>]], "css (block)" },
-	-- 		["us"] = { [[:s/\/\*\(.\{-}\)\*\//\1/g<CR>:noh<CR>]], "Uncomment css (block)" },
-	--},
 	f = {
 		name = "󰺮 Find & Replace",
 		s = { [[/\<\\><Left><Left>]], "Search specific word" },
@@ -159,11 +144,6 @@ local mappings = {
 		},
 	},
 
-	Q = {
-		name = "󰿅 Quit",
-		q = { "<cmd>q<cr>", "Quit" },
-		f = { "<cmd>qa!<cr>", "Force quit" },
-	},
 	S = {
 		name = " Split Screen",
 		v = { "<C-w>v<CR>", "Vertical split" },
@@ -181,17 +161,6 @@ local mappings = {
 		r = { "<cmd>Telescope lsp_references<cr>", "Lsp references" },
 		d = { "<cmd>Telescope lsp_definitions<cr>", "Lsp diagnostics" },
 	},
-	W = {
-		name = " Save",
-		w = { "<cmd>w<cr>", "Save" },
-		a = { "<cmd>wa<cr>", "Save all" },
-		q = { "<cmd>wq<cr>", "Save and quit" },
-	},
-	Y = {
-		name = " Copy",
-		w = { "yiw", "Copy forward" },
-		b = { "yib", "Copy backward" },
-	},
 	Z = {
 		name = " Window",
 		h = { "<cmd>vertical resize +5<cr>", "Horizontal resize +5" },
@@ -203,4 +172,4 @@ local mappings = {
 
 local opt = { prefix = "<leader>" }
 wk.setup(setup)
-wk.register(mappings, opt)
+wk.add(mappings, opt)

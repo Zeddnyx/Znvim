@@ -2,7 +2,7 @@ local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
 	vim.fn.system({
 		"git",
-	 󱚠	"clone",
+	 	"clone",
 		"--filter=blob:none",
 		"https://github.com/folke/lazy.nvim.git",
 		"--branch=stable",
@@ -182,17 +182,17 @@ local plugins = {
 		end,
 	},
 
-	{
-		"folke/which-key.nvim",
-		event = "BufRead",
-		init = function()
-			vim.o.timeout = true
-			vim.o.timeoutlen = 500
-		end,
-		config = function()
-			require("zedd.ui.which-key")
-		end,
-	},
+	-- {
+	-- 	"folke/which-key.nvim",
+	-- 	event = "BufRead",
+	-- 	init = function()
+	-- 		vim.o.timeout = true
+	-- 		vim.o.timeoutlen = 500
+	-- 	end,
+	-- 	config = function()
+	-- 		require("zedd.ui.which-key")
+	-- 	end,
+	-- },
 
 	{
 		"NStefan002/screenkey.nvim",

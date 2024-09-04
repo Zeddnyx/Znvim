@@ -111,6 +111,10 @@
     "prefix": "await",
     "body": "const ${1:name} = await ${2:value}"
   },
+  "arrow function ": {
+    "prefix": "()",
+    "body": "() => "
+  },
   "const arrow function assignment": {
     "prefix": "const-arrow-func",
     "body": "const ${1:name} = (${2:arguments}) => {\n\treturn ${0}\n}"
@@ -175,6 +179,10 @@
   "console.log": {
     "prefix": "clo",
     "body": "console.log(${0})"
+  },
+  "console.log with string": {
+    "prefix": "clo-string",
+    "body": "console.log(${0}, '${0}')"
   },
   "console.log with JSON.stringify": {
     "prefix": "clo-json",

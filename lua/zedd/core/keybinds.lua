@@ -78,6 +78,7 @@ nmap("<S-s>s", [[:%s/\<\\>/<Left><Left><Left>]]) -- search specific word and rep
 nmap("<S-s>/", [[:%s/]]) -- search and replace
 nmap("<S-s>u", [[:%s//\U&/g<Left><Left><Left><Left><Left><Left>]]) -- search word and transform to uppercase
 nmap("<C-t>", "vat<Esc>j") -- jump between tag html
+nmap("<C-e>", [[:s/\([a-zA-Z]\)\(-\)\([a-zA-Z]\)/\1\u\3/g<CR>]]) -- remove - between text and change to uppercase, ex: Hello-world-> HelloWorld
 
 -- auto pair
 imap("(", "()<left>")

@@ -27,6 +27,11 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 -- comment this tsserver below if using tsc from nulls
 lsp.tsserver.setup({
 	on_attach = on_attach,
+	handlers = {
+		["workspace/applyEdit"] = function()
+			return { applied = false }
+		end,
+	},
 })
 lsp.clangd.setup({
 	on_attach = on_attach,
