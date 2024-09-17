@@ -112,7 +112,7 @@
     "body": "const ${1:name} = await ${2:value}"
   },
   "arrow function ": {
-    "prefix": "()",
+    "prefix": "arrow-func",
     "body": "() => "
   },
   "const arrow function assignment": {

@@ -7,7 +7,7 @@ config.defaults = {
 		horizontal = { preview_width = 80 },
 	},
 	prompt_prefix = "   ",
-	selection_caret = "󱞩 ",
+	selection_caret = " ",
 	dynamic_preview_title = true,
 	results_title = false,
 	mappings = {

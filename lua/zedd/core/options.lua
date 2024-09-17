@@ -11,15 +11,16 @@ vim.opt.hlsearch = true -- highlight when match search words
 vim.opt.showcmd = true
 vim.opt.cmdheight = 2 -- height of laststatus at the bottom
 vim.opt.laststatus = 1 -- show where are you in at the bottom
-vim.opt.statusline="%{expand('%:~:.')}"
+vim.opt.statusline = "%{expand('%:~:.')}"
 vim.opt.clipboard = "unnamedplus" -- copy from nvim to  clipboard
 vim.opt.scrolloff = 4
+vim.opt.foldlevelstart = 99
 
 vim.opt.mouse = "a"
 vim.opt.shell = "fish"
 vim.opt.swapfile = false
 vim.opt.list = true
-vim.o.foldtext = 'v:lua.fold_text()'
+vim.o.foldtext = "v:lua.fold_text()"
 vim.opt.fillchars:append({
 	eob = " ",
 })
@@ -51,8 +52,7 @@ vim.opt.background = "dark"
 -- vim.opt.signcolumn = "no"
 
 function fold_text()
-  local line = vim.fn.getline(vim.v.foldstart)
-  local line_text = string.gsub(line, '^"{\\+', '')
-  return line_text
+	local line = vim.fn.getline(vim.v.foldstart)
+	local line_text = string.gsub(line, '^"{\\+', "")
+	return line_text
 end
-
