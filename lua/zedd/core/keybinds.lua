@@ -23,7 +23,7 @@ function vmap(shortcut, command)
 	map("v", shortcut, command)
 end
 
---buffer
+-- BUFFER
 nmap("<S-h>", "<CMD>bprevious<CR>", { desc = "Buffer: focus to previous buffer" })
 nmap("<S-l>", "<CMD>bnext<CR>", { desc = "Buffer: focus to next buffer" })
 nmap("<S-c>", "<CMD>bd<CR>", { desc = "Buffer: delete buffer" })
@@ -31,25 +31,23 @@ nmap("<S-q>", "<CMD>%bd|e#<CR>", { desc = "Buffer: delete all buffer except curr
 --nmap("<S-l>", "<CMD>BufferNext<CR>")
 --nmap("<S-h>", "<CMD>BufferPrevious<CR>")
 
--- lsp saga
-nmap("<S-s>t", "<CMD>Lspsaga peek_definition<CR>")
-nmap("<S-s>r", "<CMD>Lspsaga rename<CR>")
-nmap("<S-s>h", "<CMD>Lspsaga hover_doc<CR>")
-nmap("<S-s>d", "<CMD>Lspsaga diagnostic_jump_next<CR>")
-nmap("<S-s>a", "<CMD>Lspsaga show_workspace_diagnostics<CR>")
+-- LSP
+nmap("<S-s>r", "<CMD>Lspsaga rename<CR>", { desc = "Rename globaly" })
+nmap("<S-s>h", "<CMD>Lspsaga hover_doc<CR>", { desc = "Hover type" })
+nmap("<S-s>d", "<CMD>Lspsaga diagnostic_jump_next<CR>", { desc = "Next diagnostic" })
 
--- folding line
-nmap("zft", "vatzf<CR>") -- tag html
-nmap("zff", "vaBzf") -- function that match {}
-nmap("zfa", "mz?\\[<CR>%mz`z")
+-- FOLDING LINE
+nmap("ft", "vatzf<CR>", { desc = "Tag html" })
+nmap("ff", "vaBzf", { desc = "func" })
+nmap("fo", "zo", { desc = "Unfold" })
 
--- switch split screen
+-- SPLIT WINDOW
 nmap("<leader>h", "<C-w>h<CR>")
 nmap("<leader>j", "<C-w>j<CR>")
 nmap("<leader>k", "<C-w>k<CR>")
 nmap("<leader>l", "<C-w>l<CR>")
 
--- resize window
+-- RESIZE WINDOW
 nmap("<C-Left>", "<CMD>vertical resize +5<CR>")
 nmap("<C-Up>", "<CMD>resize -5<CR>")
 nmap("<C-Right>", "<CMD>vertical resize -5<CR>")
@@ -59,28 +57,36 @@ nmap("<C-c>", "<CMD>close<CR>")
 -- file manager built in
 -- nmap("<leader>e", "<CMD>Lex<CR><CR><CMD>vertical resize 30<CR>")
 
--- custome keybind
-nmap("<leader>ww", "<CMD>w<CR>")
-nmap("<leader>wa", "<CMD>wa<CR>")
-nmap("r", "<C-r>") -- redo
-imap("<C-f>", "${}<left>") -- ${}
-vmap("<S-j>", ":m '>+1<CR>gv=gv") -- move line
-vmap("<S-k>", ":m '<-2<CR>gv=gv") -- move line
-nmap("<leader>a", "gg<S-v>G") -- select all
-nmap("<leader>c", ":noh<CR>") -- clean higlight
-nmap("<leader>y", "yiw") -- yank forward
-nmap("<leader>v", "viw") -- yank backward
-nmap("m", "]m") -- next func
-nmap("<S-m>", "[m") -- prev func
-nmap("<leader>n", [[:%s/\d\+/number/g]]) -- replace all digit to type number
-nmap("<leader>s", [[:%s/"[^"]*"/string/g]]) -- replace all text to type string
-nmap("<S-s>s", [[:%s/\<\\>/<Left><Left><Left>]]) -- search specific word and replace
-nmap("<S-s>/", [[:%s/]]) -- search and replace
-nmap("<S-s>u", [[:%s//\U&/g<Left><Left><Left><Left><Left><Left>]]) -- search word and transform to uppercase
-nmap("<C-t>", "vat<Esc>j") -- jump between tag html
-nmap("<C-e>", [[:s/\([a-zA-Z]\)\(-\)\([a-zA-Z]\)/\1\u\3/g<CR>]]) -- remove - between text and change to uppercase, ex: Hello-world-> HelloWorld
+-- CUSTOME
+nmap("<leader>ww", "<CMD>w<CR>", { desc = "Save" })
+nmap("<leader>wa", "<CMD>wa<CR>", { desc = "Save all" })
+nmap("r", "<C-r>", { desc = "Redo" })
+imap("<C-f>", "${}<left>", { desc = "Insert ${}" })
+vmap("<S-j>", ":m '>+1<CR>gv=gv", { desc = "Move down line" })
+vmap("<S-k>", ":m '<-2<CR>gv=gv", { desc = "Move up line" })
+nmap("<leader>a", "gg<S-v>G", { desc = "Select all" })
+nmap("<leader>c", ":noh<CR>", { desc = "Clear higlight" })
+nmap("<leader>y", "yiw", { desc = "Yank/Copy forward" })
+nmap("<leader>v", "viw", { desc = "Yank/Copy backward" })
 
--- auto pair
+-- JUMP LINE
+nmap("m", "]m", { desc = "Next func" })
+nmap("<S-m>", "[m", { desc = "Prev func" })
+nmap("<S-t>", "vat<Esc>j", { desc = "Between tag html" })
+
+-- SEARCH AND REPLACE
+nmap("<leader>n", [[:%s/\d\+/number/g]], { desc = "All number to type number" })
+nmap("<leader>s", [[:%s/"[^"]*"/string/g]], { desc = "All string to type string" })
+nmap("<C-e>", [[:s/\([a-zA-Z]\)\(-\)\([a-zA-Z]\)/\1\u\3/g<CR>]], { desc = "Rmv - and change to capitalize" })
+nmap("<S-s>s", [[:%s/\<\\>/<Left><Left><Left>]], { desc = "Search specific word and replace" })
+nmap("<S-s>/", [[:%s/]], { desc = "Search and replace" })
+
+-- GIT
+nmap("<leader>gd", "<CMD>Gitsign toggle_deleted<CR>", { desc = "Show deleted lines" })
+nmap("<leader>gcl", "<CMD>Gitsign toggle_current_line_blame<CR>", { desc = "Show who made changes" })
+nmap("<leader>gbl", "<CMD>Gitsign blame_line<CR>", { desc = "Blame line" })
+
+-- AUTP PAIR
 imap("(", "()<left>")
 imap("[", "[]<left>")
 imap("{", "{}<left>")
@@ -89,21 +95,9 @@ imap("'", "''<left>")
 imap('"', '""<left>')
 imap("`", "``<left>")
 
--- disable default keybind
-nmap("<up>", "<Nop>") -- disable arrow up
-nmap("<left>", "<Nop>") -- disable arrow left
-nmap("<right>", "<Nop>") -- disable arrow right
-nmap("<down>", "<Nop>") -- disable arrow down
-nmap("<C-z>", "<Nop>") -- disable z
-
--- vim regex
--- (.*) -- find all word
--- ^ -- start of line
--- $ -- end of line
--- %s -- subtitute (find and replace)
--- \v -- very magic
--- (abc|cba) -- match either abc or cba
--- :%s/\v(abc|cba)//g  -- find and remove abc and cba
--- :s/\(.*\)/abc \1 abc -- add abc first and last word, using visual mode
--- :s/<\(.*\)/{\/*\<\1 *\/} -- find < and add {*/ *\} before and after
--- :4,9s/^/#/ -- add # at first line 4-9
+-- DISABLE KEY
+nmap("<up>", "<Nop>")
+nmap("<left>", "<Nop>")
+nmap("<right>", "<Nop>")
+nmap("<down>", "<Nop>")
+nmap("<C-z>", "<Nop>")
