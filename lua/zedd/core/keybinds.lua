@@ -28,6 +28,7 @@ nmap("<S-h>", "<CMD>bprevious<CR>", { desc = "Buffer: focus to previous buffer" 
 nmap("<S-l>", "<CMD>bnext<CR>", { desc = "Buffer: focus to next buffer" })
 nmap("<S-c>", "<CMD>bd<CR>", { desc = "Buffer: delete buffer" })
 nmap("<S-q>", "<CMD>%bd|e#<CR>", { desc = "Buffer: delete all buffer except current buffer" })
+nmap("<A-Tab>", "<C-6>", { desc = "Buffer: delete all buffer except current buffer" })
 --nmap("<S-l>", "<CMD>BufferNext<CR>")
 --nmap("<S-h>", "<CMD>BufferPrevious<CR>")
 
