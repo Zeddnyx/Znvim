@@ -86,6 +86,11 @@ nmap("<S-s>/", [[:%s/]], { desc = "Search and replace" })
 nmap("<leader>gd", "<CMD>Gitsign toggle_deleted<CR>", { desc = "Show deleted lines" })
 nmap("<leader>gcl", "<CMD>Gitsign toggle_current_line_blame<CR>", { desc = "Show who made changes" })
 nmap("<leader>gbl", "<CMD>Gitsign blame_line<CR>", { desc = "Blame line" })
+nmap("<leader>cb", "<CMD>GitConflictBoth<CR>", { desc = "Choose both" })
+nmap("<leader>co", "<CMD>GitConflictOurs<CR>", { desc = "Choose Ours" })
+nmap("<leader>ct", "<CMD>GitConflictTheirs<CR>", { desc = "Choose Theirs" })
+nmap("<leader>cn", "<CMD>GitConflictNextConflict<CR>", { desc = "Next conflict" })
+nmap("<leader>cp", "<CMD>GitConflictPrevConflict<CR>", { desc = "Prev conflict" })
 
 -- AUTP PAIR
 imap("(", "()<left>")
