@@ -28,7 +28,7 @@ nmap("<S-h>", "<CMD>bprevious<CR>", { desc = "Buffer: focus to previous buffer" 
 nmap("<S-l>", "<CMD>bnext<CR>", { desc = "Buffer: focus to next buffer" })
 nmap("<S-c>", "<CMD>bd<CR>", { desc = "Buffer: delete buffer" })
 nmap("<S-q>", "<CMD>%bd|e#<CR>", { desc = "Buffer: delete all buffer except current buffer" })
-nmap("<A-Tab>", "<C-6>", { desc = "Buffer: delete all buffer except current buffer" })
+nmap("<A-Tab>", "<C-6>", { desc = "Buffer: jump to next/prev buffer" })
 --nmap("<S-l>", "<CMD>BufferNext<CR>")
 --nmap("<S-h>", "<CMD>BufferPrevious<CR>")
 
@@ -41,19 +41,6 @@ nmap("<S-s>d", "<CMD>Lspsaga diagnostic_jump_next<CR>", { desc = "Next diagnosti
 nmap("ft", "vatzf<CR>", { desc = "Tag html" })
 nmap("ff", "vaBzf", { desc = "func" })
 nmap("fo", "zo", { desc = "Unfold" })
-
--- SPLIT WINDOW
-nmap("<leader>h", "<C-w>h<CR>")
-nmap("<leader>j", "<C-w>j<CR>")
-nmap("<leader>k", "<C-w>k<CR>")
-nmap("<leader>l", "<C-w>l<CR>")
-
--- RESIZE WINDOW
-nmap("<C-Left>", "<CMD>vertical resize +5<CR>")
-nmap("<C-Up>", "<CMD>resize -5<CR>")
-nmap("<C-Right>", "<CMD>vertical resize -5<CR>")
-nmap("<C-Down>", "<CMD>resize +5<CR>")
-nmap("<C-c>", "<CMD>close<CR>")
 
 -- file manager built in
 -- nmap("<leader>e", "<CMD>Lex<CR><CR><CMD>vertical resize 30<CR>")
@@ -86,9 +73,10 @@ nmap("<S-s>/", [[:%s/]], { desc = "Search and replace" })
 nmap("<leader>gd", "<CMD>Gitsign toggle_deleted<CR>", { desc = "Show deleted lines" })
 nmap("<leader>gcl", "<CMD>Gitsign toggle_current_line_blame<CR>", { desc = "Show who made changes" })
 nmap("<leader>gbl", "<CMD>Gitsign blame_line<CR>", { desc = "Blame line" })
-nmap("<leader>cb", "<CMD>GitConflictBoth<CR>", { desc = "Choose both" })
-nmap("<leader>co", "<CMD>GitConflictOurs<CR>", { desc = "Choose Ours" })
-nmap("<leader>ct", "<CMD>GitConflictTheirs<CR>", { desc = "Choose Theirs" })
+nmap("<leader>c0", "<CMD>GitConflictChooseNone<CR>", { desc = "Choose None" })
+nmap("<leader>cb", "<CMD>GitConflictChooseBoth<CR>", { desc = "Choose Both" })
+nmap("<leader>co", "<CMD>GitConflictChooseOurs<CR>", { desc = "Choose Ours" })
+nmap("<leader>ct", "<CMD>GitConflictChooseTheirs<CR>", { desc = "Choose Theirs" })
 nmap("<leader>cn", "<CMD>GitConflictNextConflict<CR>", { desc = "Next conflict" })
 nmap("<leader>cp", "<CMD>GitConflictPrevConflict<CR>", { desc = "Prev conflict" })
 
