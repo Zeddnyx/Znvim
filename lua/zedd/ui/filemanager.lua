@@ -1,7 +1,7 @@
 local options = {
 	filters = {
 		dotfiles = true,
-		custom = { "node_modules", "\\.cache", ".git", "dist" },
+		custom = { "node_modules", "\\.cache", ".git",".next", "dist" },
 	},
 	disable_netrw = true,
 	hijack_netrw = true,
@@ -83,7 +83,7 @@ local options = {
 	},
 	renderer = {
 		root_folder_label = true,
-		highlight_git = false,
+		highlight_git = true,
 		highlight_opened_files = "none",
 		special_files = { "Cargo.toml", "Makefile", "README.md", "readme.md", "LICENSE", "Dockerfile" },
 
@@ -119,12 +119,12 @@ local options = {
 				},
 				git = {
 					unstaged = "[U]",
-					staged = "✓",
-					unmerged = " ",
+					staged = "[S]",
+					unmerged = "[ ]",
 					renamed = "[R]",
 					untracked = "[?]",
 					deleted = "[D]",
-					ignored = "◌",
+					ignored = "[I]",
 				},
 			},
 		},
