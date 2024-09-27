@@ -95,3 +95,11 @@ nmap("<left>", "<Nop>")
 nmap("<right>", "<Nop>")
 nmap("<down>", "<Nop>")
 nmap("<C-z>", "<Nop>")
+
+-- TIPS
+--
+-- find specific text green in a line that have NvimTree
+-- /\vNvimTree.*green
+--
+-- to replace green to another value
+-- :%s/\(NvimTree.*\)green/\1blue/gc
