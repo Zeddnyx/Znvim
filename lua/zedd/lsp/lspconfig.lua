@@ -16,7 +16,7 @@ local on_attach = function(client, bufnr)
 	  sign define DiagnosticSignError text= texthl=DiagnosticSignError linehl= numhl=DiagnosticLineNrError
 	  sign define DiagnosticSignWarn text= texthl=DiagnosticSignWarn linehl= numhl=DiagnosticLineNrWarn
 	  sign define DiagnosticSignInfo text= texthl=DiagnosticSignInfo linehl= numhl=DiagnosticLineNrInfo
-	  sign define DiagnosticSignHint text= texthl=DiagnosticSignHint linehl= numhl=DiagnosticLineNrHint
+	  sign define DiagnosticSignHint text= texthl=DiagnosticSignHint linehl= numhl=DiagnosticLineNjrHint
 	]])
 end
 
@@ -24,8 +24,8 @@ end
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
--- comment this tsserver below if using tsc from nulls
-lsp.tsserver.setup({
+-- tsserver is deprecated so we use ts_ls
+lsp.ts_ls.setup({
 	on_attach = on_attach,
 	handlers = {
 		["workspace/applyEdit"] = function()
