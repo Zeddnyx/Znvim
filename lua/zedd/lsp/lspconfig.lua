@@ -8,6 +8,8 @@ local on_attach = function(client, bufnr)
 		update_in_insert = true,
 		severity_sort = true,
 	})
+
+	vim.o.updatetime = 500
 end
 
 --Enable (broadcasting) snippet capability for completion
