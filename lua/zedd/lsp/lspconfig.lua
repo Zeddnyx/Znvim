@@ -2,30 +2,21 @@ local lsp = require("lspconfig")
 
 local on_attach = function(client, bufnr)
 	vim.diagnostic.config({
+		underline = true,
 		virtual_text = false,
 		signs = true,
 		update_in_insert = true,
+		severity_sort = true,
 	})
 
-	-- Show line diagnostics automatically in hover window
-	vim.o.updatetime = 1000
-	vim.cmd([[lua vim.diagnostic.open_float(nil, {focus=false})]])
-
-	-- show diagnostic color line number
-	vim.cmd([[
-	  sign define DiagnosticSignError text= texthl=DiagnosticSignError linehl= numhl=DiagnosticLineNrError
-	  sign define DiagnosticSignWarn text= texthl=DiagnosticSignWarn linehl= numhl=DiagnosticLineNrWarn
-	  sign define DiagnosticSignInfo text= texthl=DiagnosticSignInfo linehl= numhl=DiagnosticLineNrInfo
-	  sign define DiagnosticSignHint text= texthl=DiagnosticSignHint linehl= numhl=DiagnosticLineNrHint
-	]])
+	vim.o.updatetime = 500
 end
 
 --Enable (broadcasting) snippet capability for completion
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
--- comment this tsserver below if using tsc from nulls
-lsp.tsserver.setup({
+lsp.ts_ls.setup({
 	on_attach = on_attach,
 	handlers = {
 		["workspace/applyEdit"] = function()
