@@ -16,7 +16,7 @@ end
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-lsp.ts_ls.setup({
+lsp.tsserver.setup({
 	on_attach = on_attach,
 	handlers = {
 		["workspace/applyEdit"] = function()
