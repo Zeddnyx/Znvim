@@ -1,70 +1,40 @@
 {
-  "Lorem 10 Words Paragraph": {
-    "prefix": "lorem-10",
-    "body": "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
-    "description": "Lorem Ipsum Paragraph"
-  },
-  "Lorem 20 Words Paragraph": {
-    "prefix": "lorem-20",
+  "todo": {
+    "prefix": ["todo"],
     "body": [
-      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
-      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit"
+      "TODO(${VIM:system('git config github.user | tr -d \"\n\"')}): ${0:Summary}"
     ],
-    "description": "Lorem Ipsum Paragraph"
+    "description": "TODO reminder"
   },
-  "Lorem 30 Words Paragraph": {
-    "prefix": "lorem-30",
+  "note": {
+    "prefix": ["note"],
     "body": [
-      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
-      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
-      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit"
+      "NOTE(${VIM:system('git config github.user | tr -d \"\n\"')}): ${0:Summary}"
     ],
-    "description": "Lorem Ipsum Paragraph"
+    "description": "TODO reminder"
   },
-  "Lorem 40 Words Paragraph": {
-    "prefix": "lorem-40",
+
+  "fixme": {
+    "prefix": ["fixme"],
     "body": [
-      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
-      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
-      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
-      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit"
+      "FIXME(${VIM:system('git config github.user | tr -d \"\n\"')}): ${0:Summary}"
     ],
-    "description": "Lorem Ipsum Paragraph"
+    "description": "FIXME reminder"
   },
-  "Lorem 50 Words Paragraph": {
-    "prefix": "lorem-50",
-    "body": [
-      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
-      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
-      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
-      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
-      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit"
-    ],
-    "description": "Lorem Ipsum Paragraph"
+  "pwgen16": {
+    "prefix": ["pwgen16"],
+    "body": ["${VIM:system('pwgen -s 16 -1 | tr -d \"\n\"')}"],
+    "description": "Generate password with 16 characters"
   },
-  "Lorem 60 Words Paragraph": {
-    "prefix": "lorem-60",
-    "body": [
-      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
-      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
-      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
-      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
-      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
-      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit"
-    ],
-    "description": "Lorem Ipsum Paragraph"
+  "Lorem Ipsum Sentence": {
+    "prefix": "loremSent",
+    "body": "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
+    "description": "Lorem Ipsum Sentence"
   },
-  "Lorem 70 Words Paragraph": {
-    "prefix": "lorem-70",
-    "body": [
-      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
-      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
-      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
-      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
-      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
-      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
-      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit"
-    ],
+
+  "Lorem Ipsum Paragraph": {
+    "prefix": "loremPara",
+    "body": "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.",
     "description": "Lorem Ipsum Paragraph"
   },
   "MIT": {

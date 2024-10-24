@@ -33,9 +33,10 @@ nmap("<A-Tab>", "<C-6>", { desc = "Buffer: jump to next/prev buffer" })
 --nmap("<S-h>", "<CMD>BufferPrevious<CR>")
 
 -- LSP
-nmap("<S-s>r", "<CMD>Lspsaga rename<CR>", { desc = "Rename globaly" })
-nmap("<S-s>h", "<CMD>Lspsaga hover_doc<CR>", { desc = "Hover type" })
-nmap("<S-s>d", "<CMD>Lspsaga diagnostic_jump_next<CR>", { desc = "Next diagnostic" })
+nmap("<A-r>", "<CMD>Lspsaga rename<CR>", { desc = "Rename globaly" })
+nmap("<A-h>", "<CMD>Lspsaga hover_doc<CR>", { desc = "Hover type" })
+nmap("<leader>[", "<CMD>Lspsaga diagnostic_jump_next<CR>", { desc = "Next diagnostic" })
+nmap("<leader>]", "<CMD>Lspsaga diagnostic_jump_prev<CR>", { desc = "Prev diagnostic" })
 
 -- FOLDING LINE
 nmap("ft", "vatzf<CR>", { desc = "Tag html" })
@@ -44,6 +45,16 @@ nmap("fo", "zo", { desc = "Unfold" })
 
 -- file manager built in
 -- nmap("<leader>e", "<CMD>Lex<CR><CR><CMD>vertical resize 30<CR>")
+nmap("<leader>e", "<cmd>NvimTreeFocus<cr>", { desc = "NvimTree: Focus" })
+
+-- TELESCOPE
+nmap("<Leader>fo", "<CMD>Telescope oldfiles<CR>", { desc = "Telescope: Lists previously open files" })
+nmap("<Leader><Tab>", "<CMD>Telescope buffers<CR>", { desc = "Telescope: Lists open buffers in current neovim instance" })
+nmap("<Leader>ff", "<CMD>Telescope find_files<CR>", { desc = "Telescope: Open files" })
+nmap("<Leader>lg", "<CMD>Telescope live_grep<CR>", { desc = "Telescope: Live grep" })
+nmap("<Leader><Leader>", "<CMD>Telescope builtin<CR>", { desc = "Telescope: Open builtin function" })
+nmap("<Leader>fk", "<CMD>Telescope keymaps<CR>", { desc = "Telescope: Lists normal mode keymappings" })
+nmap("<Leader>fd", "<CMD>Telescope diagnostics<CR>", { desc = "Telescope: Lists diagnostics" })
 
 -- CUSTOME
 vmap("<S-j>", ":m '>+1<CR>gv=gv", { desc = "Move down line" })
@@ -68,6 +79,7 @@ nmap("<leader>s", [[:%s/"[^"]*"/string/g]], { desc = "All string to type string"
 nmap("<C-e>", [[:s/\([a-zA-Z]\)\(-\)\([a-zA-Z]\)/\1\u\3/g<CR>]], { desc = "Rmv - and change to capitalize" })
 nmap("<S-s>s", [[:%s/\<\\>/<Left><Left><Left>]], { desc = "Search specific word and replace" })
 nmap("<S-s>/", [[:%s/]], { desc = "Search and replace" })
+nmap("<S-s>d", [[/init.*/+1;?second?<Left>]], { desc = "Search then follow by another search" }) -- ex: /leader.*/+1;?wa?
 
 -- GIT
 nmap("<leader>gd", "<CMD>Gitsign toggle_deleted<CR>", { desc = "Show deleted lines" })

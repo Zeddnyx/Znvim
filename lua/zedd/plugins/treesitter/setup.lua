@@ -1,5 +1,15 @@
-local option = {
-	ensure_installed = {"comment", "markdown", "markdown_inline", "lua", "javascript", "tsx", "typescript", "html", "json", "http" },
+require("nvim-treesitter.configs").setup({
+	ensure_installed = {
+		"comment",
+		"markdown",
+		"markdown_inline",
+		"lua",
+		"javascript",
+		"tsx",
+		"typescript",
+		"html",
+		"json",
+	},
 	auto_install = true,
 	-- autotag = { enable = true },
 	autopairs = { enable = true },
@@ -45,6 +55,4 @@ local option = {
 			},
 		},
 	},
-}
-
-require("nvim-treesitter.configs").setup(option)
+})
