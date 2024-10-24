@@ -25,6 +25,8 @@ local plugins = {
 	require("zedd.plugins.nvimtree.lazyspec"),
 	require("zedd.plugins.telescope.lazyspec"),
 	require("zedd.plugins.treesitter.lazyspec"),
+	require("zedd.plugins.gitsigns.lazyspec"),
+	require("zedd.plugins.gitconflict.lazyspec"),
 }
 
 require("lazy").setup(plugins, {

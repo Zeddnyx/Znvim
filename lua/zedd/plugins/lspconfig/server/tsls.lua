@@ -15,22 +15,4 @@ local inlayHints = {
 require("lspconfig").ts_ls.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
-
-	settings = {
-		-- Ref: https://github.com/typescript-language-server/typescript-language-server/blob/master/docs/configuration.md
-		preferences = {
-			quotePreference = "double",
-			includeCompletionsWithSnippetText = true,
-			generateReturnInDocTemplate = true,
-			includeInlayParameterNameHints = "all",
-			includeInlayParameterNameHintsWhenArgumentMatchesName = true,
-			includeInlayFunctionParameterTypeHints = true,
-			includeInlayVariableTypeHints = true,
-			includeInlayPropertyDeclarationTypeHints = true,
-			includeInlayFunctionLikeReturnTypeHints = true,
-			includeInlayEnumMemberValueHints = true,
-		},
-		typescript = { inlayHints = inlayHints },
-		javascript = { inlayHints = inlayHints },
-	},
 })
