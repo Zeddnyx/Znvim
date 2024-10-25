@@ -6,6 +6,5 @@ return {
   cmd = { "Telescope" },
 	config = function()
 		require("zedd.plugins.telescope.setup")
-		require("zedd.plugins.telescope.keymap")
 	end,
 }

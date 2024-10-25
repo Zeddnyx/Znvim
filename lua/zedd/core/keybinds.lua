@@ -1,6 +1,6 @@
 function map(mode, shortcut, command)
 	if type(command) == "string" then
-		vim.api.nvim_set_keymap(mode, shortcut, command, { noremap = true, silent = true })
+		vim.api.nvim_set_keymap(mode, shortcut, command, { noremap = true, silent = true,desc = "jasj"})
 	else
 		print("Error: Command must be a string")
 	end
@@ -35,6 +35,7 @@ nmap("<A-Tab>", "<C-6>", { desc = "Buffer: jump to next/prev buffer" })
 -- LSP
 nmap("<A-r>", "<CMD>Lspsaga rename<CR>", { desc = "Rename globaly" })
 nmap("<A-h>", "<CMD>Lspsaga hover_doc<CR>", { desc = "Hover type" })
+nmap("<A-d>", "<CMD>Lspsaga goto_definition<CR>", { desc = "goto definition" })
 nmap("<leader>[", "<CMD>Lspsaga diagnostic_jump_next<CR>", { desc = "Next diagnostic" })
 nmap("<leader>]", "<CMD>Lspsaga diagnostic_jump_prev<CR>", { desc = "Prev diagnostic" })
 
