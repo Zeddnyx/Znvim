@@ -58,9 +58,10 @@ nmap("<Leader>fk", "<CMD>Telescope keymaps<CR>", { desc = "Telescope: Lists norm
 nmap("<Leader>fd", "<CMD>Telescope diagnostics<CR>", { desc = "Telescope: Lists diagnostics" })
 
 -- CUSTOME
+imap("<C-f>", "${}<left>", { desc = "Insert ${}" })
 vmap("<S-j>", ":m '>+1<CR>gv=gv", { desc = "Move down line" })
 vmap("<S-k>", ":m '<-2<CR>gv=gv", { desc = "Move up line" })
-imap("<C-f>", "${}<left>", { desc = "Insert ${}" })
+vmap("<S-m>", ":norm @q<CR>", { desc = "Run macro" })
 nmap("<leader>ww", "<CMD>w<CR>", { desc = "Save" })
 nmap("<leader>wa", "<CMD>wa<CR>", { desc = "Save all" })
 nmap("r", "<C-r>", { desc = "Redo" })
