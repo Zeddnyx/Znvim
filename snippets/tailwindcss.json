@@ -126,19 +126,19 @@
   },
   "min width": {
     "prefix": "min-width",
-    "body": "min-w-${1|[px],0,none,xs,sm,md,lg,xl,2xl,3xl,4xl,5xl,6xl,7xl|}"
+    "body": "min-w-${1|[px],fit,0,none,xs,sm,md,lg,xl,2xl,3xl,4xl,5xl,6xl,7xl|}"
   },
   "min height": {
     "prefix": "min-height",
-    "body": "min-h-${1|[px],0,none,xs,sm,md,lg,xl,2xl,3xl,4xl,5xl,6xl,7xl|}"
+    "body": "min-h-${1|[px],fit,0,none,xs,sm,md,lg,xl,2xl,3xl,4xl,5xl,6xl,7xl|}"
   },
   "max width": {
     "prefix": "max-width",
-    "body": "max-w-${1|[px],0,none,xs,sm,md,lg,xl,2xl,3xl,4xl,5xl,6xl,7xl|}"
+    "body": "max-w-${1|[px],fit,0,none,xs,sm,md,lg,xl,2xl,3xl,4xl,5xl,6xl,7xl|}"
   },
   "max height": {
     "prefix": "max-height",
-    "body": "max-h-${1|[px],0,none,xs,sm,md,lg,xl,2xl,3xl,4xl,5xl,6xl,7xl|}"
+    "body": "max-h-${1|[px],fit,0,none,xs,sm,md,lg,xl,2xl,3xl,4xl,5xl,6xl,7xl|}"
   },
   "text-size": {
     "prefix": "text-size",
@@ -222,7 +222,7 @@
   },
   "rounded": {
     "prefix": "rounded",
-    "body": "rounded-${1|none,sm,md,lg,xl,2xl,full|}"
+    "body": "rounded-${1|[px],none,sm,md,lg,xl,2xl,full|}"
   },
   "divide width": {
     "prefix": "divide",
