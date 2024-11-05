@@ -1,5 +1,4 @@
 return {
-  "rstacruz/vim-closer",
+  "windwp/nvim-autopairs",
   event = "InsertEnter",
-  lazy = true,
 }

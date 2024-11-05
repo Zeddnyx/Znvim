@@ -31,7 +31,7 @@ telescope.setup({
 		grep_previewer = previewers.vim_buffer_vimgrep.new,
 		qflist_previewer = previewers.vim_buffer_qflist.new,
 		-- custom theme
-		sorting_strategy = "descending",
+		sorting_strategy = "ascending",
 		layout_strategy = "bottom_pane",
 		layout_config = {
 			preview_cutoff = 1,
@@ -85,9 +85,9 @@ telescope.setup({
 		},
 		buffers = {
 			initial_mode = "normal",
-			select_current = true,
+			select_current = false,
 			previewer = false,
-			sort_lastused = true,
+			sort_lastused = false,
 		},
 	},
 })
