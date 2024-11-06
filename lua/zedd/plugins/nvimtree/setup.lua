@@ -63,7 +63,7 @@ require("nvim-tree").setup({
 		},
 	},
 	git = {
-		enable = false,
+		enable = true,
 		ignore = true,
 	},
 	filesystem_watchers = {
