@@ -94,12 +94,6 @@ nmap("<leader>ct", "<CMD>GitConflictChooseTheirs<CR>")
 nmap("<leader>cn", "<CMD>GitConflictNextConflict<CR>")
 nmap("<leader>cp", "<CMD>GitConflictPrevConflict<CR>")
 
--- AUTP PAIR
-imap("<", "<><left>")
-imap("'", "''<left>")
-imap('"', '""<left>')
-imap("`", "``<left>")
-
 -- DISABLE KEY
 nmap("<up>", "<Nop>")
 nmap("<left>", "<Nop>")
