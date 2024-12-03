@@ -221,5 +221,17 @@
   "use server": {
     "prefix": "use-s",
     "body": "\"use server\""
+  },
+  "useSearchParams": {
+    "prefix": "searchParams",
+    "body": "const searchParams = useSearchParams()\nconst params= new URLSearchParams(searchParams)\nconst $1"
+  },
+  "set params": {
+    "prefix": "set-params",
+    "body": "params.set(\"$1\", $2)\nwindow.history.pushState(null, '', `?${params.toString()}`)"
+  },
+  "delete params": {
+    "prefix": "delete-params",
+    "body": "params.delete(\"$1\")\nwindow.history.pushState(null, '', `?${params.toString()}`)"
   }
 }

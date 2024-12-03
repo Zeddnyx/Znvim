@@ -1,5 +1,5 @@
 ## Znvim
-fast as f*** for front end developer
+fast as f***
 
 ### Required installation
 ```
