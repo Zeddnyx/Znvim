@@ -26,6 +26,8 @@ local plugins = {
 	require("zedd.plugins.gitsigns.lazyspec"),
 	require("zedd.plugins.gitconflict.lazyspec"),
 	require("zedd.plugins.autopairs.lazyspec"),
+	require("zedd.plugins.screenshot.lazyspec"),
+	require("zedd.plugins.test.lazyspec"),
 }
 
 require("lazy").setup(plugins, {
