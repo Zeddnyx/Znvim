@@ -222,7 +222,7 @@
   },
   "rounded": {
     "prefix": "rounded",
-    "body": "rounded-${1|[px],none,sm,md,lg,xl,2xl,full|}"
+    "body": "rounded-${1|[px],full,none,sm,md,lg,xl,2xl|}"
   },
   "divide width": {
     "prefix": "divide",
