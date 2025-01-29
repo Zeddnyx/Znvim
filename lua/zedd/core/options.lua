@@ -2,7 +2,9 @@ vim.scriptencoding = "utf-8"
 vim.opt.encoding = "utf-8"
 vim.opt.fileencoding = "utf-8"
 vim.opt.backup = true
+
 vim.opt.backupdir = vim.fn.stdpath("data") .. "/backup"
+
 
 vim.opt.wrap = false
 vim.opt.number = true
