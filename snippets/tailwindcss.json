@@ -78,7 +78,7 @@
   },
   "gap": {
     "prefix": "gap",
-    "body": "gap-${1|0,[px],1,2,3,4,5,6,7,8,9,10,11,12,14,16,20,24,28,32,36,40,44,48,52,56,60,64,70,72,80,96,x-0,x-px,x-1,x-2,x-3,x-4,x-5,x-6,x-7,x-8,x-9,x-10,x-11,x-12,x-14,x-16,x-20,x-24,x-28,x-32,x-36,x-40,x-42,x-44,x-48,x-52,x-56,x-60,x-64,x-70,x-72,x-80,x-96,y-0,y-px,y-1,y-2,y-3,y-4,y-5,y-6,y-7,y-8,y-9,y-10,y-11,y-12,y-14,y-16,y-20,y-24,y-28,y-32,y-36,y-40,y-44,y-48,y-52,y-56,y-60,y-64,y-70,y-72,y-80,y-96|}"
+    "body": "gap-${1|0,[4px],[8px],[12px],[px],1,2,3,4,5,6,7,8,9,10,11,12,14,16,20,24,28,32,36,40,44,48,52,56,60,64,70,72,80,96,x-0,x-px,x-1,x-2,x-3,x-4,x-5,x-6,x-7,x-8,x-9,x-10,x-11,x-12,x-14,x-16,x-20,x-24,x-28,x-32,x-36,x-40,x-42,x-44,x-48,x-52,x-56,x-60,x-64,x-70,x-72,x-80,x-96,y-0,y-px,y-1,y-2,y-3,y-4,y-5,y-6,y-7,y-8,y-9,y-10,y-11,y-12,y-14,y-16,y-20,y-24,y-28,y-32,y-36,y-40,y-44,y-48,y-52,y-56,y-60,y-64,y-70,y-72,y-80,y-96|}"
   },
   "justify content": {
     "prefix": "justify-content",
@@ -126,19 +126,19 @@
   },
   "min width": {
     "prefix": "min-width",
-    "body": "min-w-${1|[px],fit,0,none,xs,sm,md,lg,xl,2xl,3xl,4xl,5xl,6xl,7xl|}"
+    "body": "min-w-${1|[px],fit,full,0,none,xs,sm,md,lg,xl,2xl,3xl,4xl,5xl,6xl,7xl|}"
   },
   "min height": {
     "prefix": "min-height",
-    "body": "min-h-${1|[px],fit,0,none,xs,sm,md,lg,xl,2xl,3xl,4xl,5xl,6xl,7xl|}"
+    "body": "min-h-${1|[px],fit,full,0,none,xs,sm,md,lg,xl,2xl,3xl,4xl,5xl,6xl,7xl|}"
   },
   "max width": {
     "prefix": "max-width",
-    "body": "max-w-${1|[px],fit,0,none,xs,sm,md,lg,xl,2xl,3xl,4xl,5xl,6xl,7xl|}"
+    "body": "max-w-${1|[px],fit,full,0,none,xs,sm,md,lg,xl,2xl,3xl,4xl,5xl,6xl,7xl|}"
   },
   "max height": {
     "prefix": "max-height",
-    "body": "max-h-${1|[px],fit,0,none,xs,sm,md,lg,xl,2xl,3xl,4xl,5xl,6xl,7xl|}"
+    "body": "max-h-${1|[px],fit,full,0,none,xs,sm,md,lg,xl,2xl,3xl,4xl,5xl,6xl,7xl|}"
   },
   "text-size": {
     "prefix": "text-size",
@@ -222,7 +222,7 @@
   },
   "rounded": {
     "prefix": "rounded",
-    "body": "rounded-${1|[px],full,none,sm,md,lg,xl,2xl|}"
+    "body": "rounded-${1|[4px],[8px],[12px],[px],full,none,sm,md,lg,xl,2xl|}"
   },
   "divide width": {
     "prefix": "divide",
